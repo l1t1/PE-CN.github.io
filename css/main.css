@@ -1135,7 +1135,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #71037c;
+  background: #ff37f6;
 }
 .sidebar-nav {
   margin: 0;
@@ -1673,7 +1673,7 @@ body {
 }
 .back-to-top {
   position: fixed;
-  bottom: 80px;
+  bottom: 19px;
   right: 50px;
   z-index: 1050;
   width: 15px;
