@@ -331,6 +331,97 @@
           
           
             
+              <a class="post-title-link" href="/2015/06/28/Problem405/">
+                Problem 2
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <hr>
+<p><strong>A rectangular tiling</strong></p>
+<p>We wish to tile a rectangle whose length is twice its width.<br>Let <var>T</var>(0) be the tiling consisting of a single rectangle.<br>For <var>n</var> &gt; 0, let <var>T</var>(<var>n</var>) be obtained from <var>T</var>(<var>n</var>-1) by replacing all tiles in the following manner:</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile1.png"></center>
+
+<p>The following animation demonstrates the tilings <var>T</var>(<var>n</var>) for <var>n</var> from 0 to 5:</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile2.gif"></center>
+
+<p>Let <var>f</var>(<var>n</var>) be the number of points where four tiles meet in <var>T</var>(<var>n</var>).<br>For example, <var>f</var>(1) = 0, <var>f</var>(4) = 82 and <var>f</var>(10<sup>9</sup>) mod 17<sup>7</sup> = 126897180.</p>
+<p>Find <var>f</var>(10<sup><var>k</var></sup>) for <var>k</var> = 10<sup>18</sup>, give your answer modulo 17<sup>7</sup>.</p>
+<hr>
+<p><strong>给长方形铺地砖</strong></p>
+<p>我们希望给一个长是宽的两倍的长方形铺上地砖。<br><var>T</var>(0)表示只用一个长方形的铺法。<br>对于<var>n</var> &gt; 0，<var>T</var>(<var>n</var>)表示以<var>T</var>(<var>n</var>-1)为基础，将后者的每一块地砖作如下替换得到的新铺法：</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile1.png"></center>
+
+<p>以下动画演示了<var>n</var>从0到5的<var>T</var>(<var>n</var>)：</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile2.gif"></center>
+
+<p>记<var>f</var>(<var>n</var>)是<var>T</var>(<var>n</var>)中有四块地砖相遇的点的数目。<br>已知<var>f</var>(1) = 0，<var>f</var>(4) = 82，以及<var>f</var>(10<sup>9</sup>) mod 17<sup>7</sup> = 126897180。</p>
+<p>当<var>k</var> = 10<sup>18</sup>时，求<var>f</var>(10<sup><var>k</var></sup>)，并将其模17<sup>7</sup>取余作为你的答案。</p>
+<hr>
+<p><a href="https://projecteuler.net/problem=405" target="_blank" rel="external">回到原题</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/06/28/Problem2/">
                 Problem 2
               </a>
@@ -403,6 +494,95 @@
 
 
     
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/06/28/Problem201/">
+                Problem 201
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <hr>
+<p><strong>Subsets with a unique sum</strong></p>
+<p>For any set A of numbers, let sum(A) be the sum of the elements of A.<br>Consider the set B = {1,3,6,8,10,11}.<br>There are 20 subsets of B containing three elements, and their sums are:</p>
+<blockquote>
+<p>sum({1,3,6}) = 10,<br>sum({1,3,8}) = 12,<br>sum({1,3,10}) = 14,<br>sum({1,3,11}) = 15,<br>sum({1,6,8}) = 15,<br>sum({1,6,10}) = 17,<br>sum({1,6,11}) = 18,<br>sum({1,8,10}) = 19,<br>sum({1,8,11}) = 20,<br>sum({1,10,11}) = 22,<br>sum({3,6,8}) = 17,<br>sum({3,6,10}) = 19,<br>sum({3,6,11}) = 20,<br>sum({3,8,10}) = 21,<br>sum({3,8,11}) = 22,<br>sum({3,10,11}) = 24,<br>sum({6,8,10}) = 24,<br>sum({6,8,11}) = 25,<br>sum({6,10,11}) = 27,<br>sum({8,10,11}) = 29.</p>
+</blockquote>
+<p>Some of these sums occur more than once, others are unique.<br>For a set A, let U(A,k) be the set of unique sums of k-element subsets of A, in our example we find U(B,3) = {10,12,14,18,21,25,27,29} and sum(U(B,3)) = 156.</p>
+<p>Now consider the 100-element set S = {1<sup>2</sup>, 2<sup>2</sup>, … , 100<sup>2</sup>}.<br>S has 100891344545564193334812497256 50-element subsets.</p>
+<p>Determine the sum of all integers which are the sum of exactly one of the 50-element subsets of S, i.e. find sum(U(S,50)).</p>
+<hr>
+<p><strong>拥有唯一出现的元素和的子集</strong></p>
+<p>对于任意数集A，记A中所有元素的和为sum(A)。<br>考虑集合B = {1,3,6,8,10,11}。<br>B有20个子集包含恰好三个元素，而这些子集的元素和分别是：</p>
+<blockquote>
+<p>sum({1,3,6}) = 10,<br>sum({1,3,8}) = 12,<br>sum({1,3,10}) = 14,<br>sum({1,3,11}) = 15,<br>sum({1,6,8}) = 15,<br>sum({1,6,10}) = 17,<br>sum({1,6,11}) = 18,<br>sum({1,8,10}) = 19,<br>sum({1,8,11}) = 20,<br>sum({1,10,11}) = 22,<br>sum({3,6,8}) = 17,<br>sum({3,6,10}) = 19,<br>sum({3,6,11}) = 20,<br>sum({3,8,10}) = 21,<br>sum({3,8,11}) = 22,<br>sum({3,10,11}) = 24,<br>sum({6,8,10}) = 24,<br>sum({6,8,11}) = 25,<br>sum({6,10,11}) = 27,<br>sum({8,10,11}) = 29.</p>
+</blockquote>
+<p>这其中的有些元素和出现了不止一次，其它元素和则是唯一出现的。<br>对于任意集合A，先求A所有恰好包含k个元素的子集的元素和，其中唯一出现的元素和构成集合U(A,k)。在我们的例子中，我们发现U(B,3) = {10,12,14,18,21,25,27,29}，因而sum(U(B,3)) = 156。</p>
+<p>现在考虑有100个元素的集合S = {1<sup>2</sup>, 2<sup>2</sup>, … , 100<sup>2</sup>}。<br>S有100891344545564193334812497256个子集恰好包含50个元素。</p>
+<p>在这些子集的元素和中，找出那些唯一出现的元素和并求和，也即求sum(U(S,50))。</p>
+<hr>
+<p><a href="https://projecteuler.net/problem=201" target="_blank" rel="external">回到原题</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
   </div>
 
   
@@ -437,7 +617,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

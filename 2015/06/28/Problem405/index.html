@@ -47,7 +47,7 @@
 
 
 
-  <title> Problem 1 // 盗泉 | sx349's blog </title>
+  <title> Problem 2 // 盗泉 | sx349's blog </title>
 </head>
 
 <body>
@@ -176,7 +176,7 @@
           
           
             
-              Problem 1
+              Problem 2
             
           
         </h1>
@@ -213,15 +213,27 @@
 
       
         <hr>
-<p><strong>Multiples of 3 and 5</strong></p>
-<p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
-<p>Find the sum of all the multiples of 3 or 5 below 1000.</p>
+<p><strong>A rectangular tiling</strong></p>
+<p>We wish to tile a rectangle whose length is twice its width.<br>Let <var>T</var>(0) be the tiling consisting of a single rectangle.<br>For <var>n</var> &gt; 0, let <var>T</var>(<var>n</var>) be obtained from <var>T</var>(<var>n</var>-1) by replacing all tiles in the following manner:</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile1.png"></center>
+
+<p>The following animation demonstrates the tilings <var>T</var>(<var>n</var>) for <var>n</var> from 0 to 5:</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile2.gif"></center>
+
+<p>Let <var>f</var>(<var>n</var>) be the number of points where four tiles meet in <var>T</var>(<var>n</var>).<br>For example, <var>f</var>(1) = 0, <var>f</var>(4) = 82 and <var>f</var>(10<sup>9</sup>) mod 17<sup>7</sup> = 126897180.</p>
+<p>Find <var>f</var>(10<sup><var>k</var></sup>) for <var>k</var> = 10<sup>18</sup>, give your answer modulo 17<sup>7</sup>.</p>
 <hr>
-<p><strong>3的倍数和5的倍数</strong></p>
-<p>如果我们列出10以内所有3或5的倍数，我们将得到3、5、6和9，这些数的和是23。</p>
-<p>求1000以内所有3或5的倍数的和。</p>
+<p><strong>给长方形铺地砖</strong></p>
+<p>我们希望给一个长是宽的两倍的长方形铺上地砖。<br><var>T</var>(0)表示只用一个长方形的铺法。<br>对于<var>n</var> &gt; 0，<var>T</var>(<var>n</var>)表示以<var>T</var>(<var>n</var>-1)为基础，将后者的每一块地砖作如下替换得到的新铺法：</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile1.png"></center>
+
+<p>以下动画演示了<var>n</var>从0到5的<var>T</var>(<var>n</var>)：</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile2.gif"></center>
+
+<p>记<var>f</var>(<var>n</var>)是<var>T</var>(<var>n</var>)中有四块地砖相遇的点的数目。<br>已知<var>f</var>(1) = 0，<var>f</var>(4) = 82，以及<var>f</var>(10<sup>9</sup>) mod 17<sup>7</sup> = 126897180。</p>
+<p>当<var>k</var> = 10<sup>18</sup>时，求<var>f</var>(10<sup><var>k</var></sup>)，并将其模17<sup>7</sup>取余作为你的答案。</p>
 <hr>
-<p><a href="https://projecteuler.net/problem=1" target="_blank" rel="external">回到原题</a></p>
+<p><a href="https://projecteuler.net/problem=405" target="_blank" rel="external">回到原题</a></p>
 
       
     </div>
@@ -233,13 +245,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/28/ProjectEuler/">Project Euler | 欧拉计划 说明</a>
+              <a href="/2015/06/28/Problem1/">Problem 1</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/28/Problem405/">Problem 2</a>
+              <a href="/2015/06/28/Problem2/">Problem 2</a>
             
           </div>
         </div>
