@@ -47,13 +47,7 @@
 
 
 
-  <title>
-  
-
-  
-    标签 // 盗泉 | sx349's blog
-  
-</title>
+  <title> Problem 402 // 盗泉 | sx349's blog </title>
 </head>
 
 <body>
@@ -67,7 +61,7 @@
   </div>
 <![endif]-->
 
-  <div class="container one-column ">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <div id="header" class="header">
@@ -172,14 +166,107 @@
 
   <div id="posts" class="posts-expand">
     
-    
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            暂无标签
-        </div>
-        <div class="tag-cloud-tags">
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
           
+          
+            
+              Problem 402
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <hr>
+<p><strong>Integer-valued polynomials</strong></p>
+<p>It can be shown that the polynomial n<sup>4</sup> + 4n<sup>3</sup> + 2n<sup>2</sup> + 5n is a multiple of 6 for every integer n. It can also be shown that 6 is the largest integer satisfying this property.</p>
+<p>Define M(a, b, c) as the maximum m such that n<sup>4</sup> + an<sup>3</sup> + bn<sup>2</sup> + cn is a multiple of m for all integers n. For example, M(4, 2, 5) = 6.</p>
+<p>Also, define S(N) as the sum of M(a, b, c) for all 0 &lt; a, b, c ≤ N.</p>
+<p>We can verify that S(10) = 1972 and S(10000) = 2024258331114.</p>
+<p>Let F<sub>k</sub> be the Fibonacci sequence:<br>F<sub>0</sub> = 0, F<sub>1</sub> = 1 and<br>F<sub>k</sub> = F<sub>k-1</sub> + F<sub>k-2</sub> for k ≥ 2.</p>
+<p>Find the last 9 digits of Σ S(F<sub>k</sub>) for 2 ≤ k ≤ 1234567890123.</p>
+<hr>
+<p><strong>值为整数的多项式</strong></p>
+<p>可以验证，对于任意整数n，n<sup>4</sup> + 4n<sup>3</sup> + 2n<sup>2</sup> + 5n是6的倍数，而6是最大的满足这一性质的整数。</p>
+<p>若对于任意整数n，n<sup>4</sup> + an<sup>3</sup> + bn<sup>2</sup> + cn是整数m的倍数，记M(a, b, c)为m的最大值。例如，M(4, 2, 5) = 6。</p>
+<p>记S(N)是所有满足0 &lt; a, b, c ≤ N的M(a, b, c)的和。</p>
+<p>我们可以验证S(10) = 1972，以及S(10000) = 2024258331114。</p>
+<p>记F<sub>k</sub>为斐波那契数列：<br>F<sub>0</sub> = 0，F<sub>1</sub> = 1 并且对于任意k ≥ 2<br>F<sub>k</sub> = F<sub>k-1</sub> + F<sub>k-2</sub>。</p>
+<p>对于2 ≤ k ≤ 1234567890123，求Σ S(F<sub>k</sub>)的最后9位数字。</p>
+<hr>
+<p><a href="https://projecteuler.net/problem=402" target="_blank" rel="external">回到原题</a></p>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/06/28/Problem401/">Problem 401</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/06/28/Problem403/">Problem 403</a>
+            
+          </div>
         </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+
+    
+      <div class="comments" id="comments">
+        
       </div>
     
   </div>
@@ -204,6 +291,15 @@
   <div id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
       
 
       <div class="site-overview">
@@ -273,6 +369,17 @@
       </div>
 
       
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
 
     </div>
   </div>
@@ -336,6 +443,145 @@
   <script type="text/javascript" src="/js/search-toggle.js"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -369,6 +615,13 @@
 
 
   
+  
+  
+
+  
+
+
+
 
   
   

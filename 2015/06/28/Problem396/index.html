@@ -47,13 +47,7 @@
 
 
 
-  <title>
-  
-
-  
-    标签 // 盗泉 | sx349's blog
-  
-</title>
+  <title> Problem 396 // 盗泉 | sx349's blog </title>
 </head>
 
 <body>
@@ -67,7 +61,7 @@
   </div>
 <![endif]-->
 
-  <div class="container one-column ">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <div id="header" class="header">
@@ -172,14 +166,112 @@
 
   <div id="posts" class="posts-expand">
     
-    
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            暂无标签
-        </div>
-        <div class="tag-cloud-tags">
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
           
+          
+            
+              Problem 396
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <hr>
+<p><strong>Weak Goodstein sequence</strong></p>
+<p>For any positive integer n, the <b>nth weak Goodstein sequence</b> {g<sub>1</sub>, g<sub>2</sub>, g<sub>3</sub>, …} is defined as:</p>
+<ul><br><li> g<sub>1</sub> = n </li><br><li> for k &gt; 1, g<sub>k</sub> is obtained by writing g<sub>k-1</sub> in base k, interpreting it as a base k + 1 number, and subtracting 1.</li><br></ul>
+
+<p>The sequence terminates when g<sub>k</sub> becomes 0.</p>
+<p>For example, the 6th weak Goodstein sequence is {6, 11, 17, 25, …}:</p>
+<ul><br><li> g<sub>1</sub> = 6.</li><br><li> g<sub>2</sub> = 11 since 6 = 110<sub>2</sub>, 110<sub>3</sub> = 12, and 12 - 1 = 11.</li><br><li> g<sub>3</sub> = 17 since 11 = 102<sub>3</sub>, 102<sub>4</sub> = 18, and 18 - 1 = 17.</li><br><li> g<sub>4</sub> = 25 since 17 = 101<sub>4</sub>, 101<sub>5</sub> = 26, and 26 - 1 = 25.</li><br></ul><br>and so on.<br><br>It can be shown that every weak Goodstein sequence terminates.<br><br>Let G(n) be the number of nonzero elements in the nth weak Goodstein sequence.<br>It can be verified that G(2) = 3, G(4) = 21 and G(6) = 381.<br>It can also be verified that ΣG(n) = 2517 for 1 ≤ n &lt; 8.<br><br>Find the last 9 digits of ΣG(n) for 1 ≤ n &lt; 16.<br><br><strong>*
+
+</strong>弱古德斯坦序列**<br><br>对于任意正整数n，<b>第n个弱古德斯坦序列</b> {g<sub>1</sub>, g<sub>2</sub>, g<sub>3</sub>, …}按如下方式定义：<br><ul><br><li> g<sub>1</sub> = n </li><br><li> 对于k &gt; 1，将g<sub>k-1</sub>写成k进制表示，然后将其视为k+1进制的数，最后减去1，得到g<sub>k</sub>。</li><br></ul>
+
+<p>当g<sub>k</sub>变为0时序列终止。</p>
+<p>例如，第6个弱古德斯坦序列为{6, 11, 17, 25, …}：</p>
+<p><ul></ul></p>
+<p><li> g<sub>1</sub> = 6。</li></p>
+<p><li> g<sub>2</sub> = 11，因为6 = 110<sub>2</sub>，然后110<sub>3</sub> = 12，最后12 - 1 = 11。</li></p>
+<p><li> g<sub>3</sub> = 17，因为11 = 102<sub>3</sub>，然后102<sub>4</sub> = 18，最后18 - 1 = 17。</li></p>
+<p><li> g<sub>4</sub> = 25，因为17 = 101<sub>4</sub>，然后101<sub>5</sub> = 26，最后26 - 1 = 25。</li><br><br>依此类推。</p>
+<p>可以证明所有弱古德斯坦序列都会终止。</p>
+<p>记G(n)为第n个弱古德斯坦序列中的非零元素个数。<br>可以验证G(2) = 3，G(4) = 21以及G(6) = 381。<br>同样可以验证，对于1 ≤ n &lt; 8，ΣG(n) = 2517。</p>
+<p>对于1 ≤ n &lt; 16，求ΣG(n)的最后9位数字。</p>
+<hr>
+<p><a href="https://projecteuler.net/problem=396" target="_blank" rel="external">回到原题</a></p>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/06/28/Problem395/">Problem 395</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/06/28/Problem397/">Problem 397</a>
+            
+          </div>
         </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+
+    
+      <div class="comments" id="comments">
+        
       </div>
     
   </div>
@@ -204,6 +296,15 @@
   <div id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
       
 
       <div class="site-overview">
@@ -273,6 +374,17 @@
       </div>
 
       
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
 
     </div>
   </div>
@@ -336,6 +448,145 @@
   <script type="text/javascript" src="/js/search-toggle.js"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -369,6 +620,13 @@
 
 
   
+  
+  
+
+  
+
+
+
 
   
   

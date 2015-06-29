@@ -503,8 +503,8 @@
           
           
             
-              <a class="post-title-link" href="/2015/06/28/Problem405/">
-                Problem 405
+              <a class="post-title-link" href="/2015/06/28/Problem394/">
+                Problem 394
               </a>
             
           
@@ -543,27 +543,463 @@
       
         
           <hr>
-<p><strong>A rectangular tiling</strong></p>
-<p>We wish to tile a rectangle whose length is twice its width.<br>Let <var>T</var>(0) be the tiling consisting of a single rectangle.<br>For <var>n</var> &gt; 0, let <var>T</var>(<var>n</var>) be obtained from <var>T</var>(<var>n</var>-1) by replacing all tiles in the following manner:</p>
-<center><img src="https://projecteuler.net/project/images/p405_tile1.png"></center>
+<p><strong>Eating pie</strong></p>
+<p>Jeff eats a pie in an unusual way.<br>The pie is circular. He starts with slicing an initial cut in the pie along a radius.<br>While there is at least a given fraction F of pie left, he performs the following procedure:</p>
+<ul>
+<li>He makes two slices from the pie centre to any point of what is remaining of the pie border, any point on the remaining pie border equally likely. This will divide the remaining pie into three pieces. </li>
+<li>Going counterclockwise from the initial cut, he takes the first two pie pieces and eats them.<br>When less than a fraction F of pie remains, he does not repeat this procedure. Instead, he eats all of the remaining pie.</li>
+</ul>
+<center><img src="https://projecteuler.net/project/images/p394_eatpie.gif"></center>
 
-<p>The following animation demonstrates the tilings <var>T</var>(<var>n</var>) for <var>n</var> from 0 to 5:</p>
-<center><img src="https://projecteuler.net/project/images/p405_tile2.gif"></center>
-
-<p>Let <var>f</var>(<var>n</var>) be the number of points where four tiles meet in <var>T</var>(<var>n</var>).<br>For example, <var>f</var>(1) = 0, <var>f</var>(4) = 82 and <var>f</var>(10<sup>9</sup>) mod 17<sup>7</sup> = 126897180.</p>
-<p>Find <var>f</var>(10<sup><var>k</var></sup>) for <var>k</var> = 10<sup>18</sup>, give your answer modulo 17<sup>7</sup>.</p>
+<p>For x ≥ 1, let E(x) be the expected number of times Jeff repeats the procedure above with F = <sup>1</sup>/<sub>x</sub>.<br>It can be verified that  E(1) = 1, E(2) ≈ 1.2676536759, and E(7.5) ≈ 2.1215732071.</p>
+<p>Find E(40) rounded to 10 decimal places behind the decimal point.</p>
 <hr>
-<p><strong>给长方形铺地砖</strong></p>
-<p>我们希望给一个长是宽的两倍的长方形铺上地砖。<br><var>T</var>(0)表示只用一个长方形的铺法。<br>对于<var>n</var> &gt; 0，<var>T</var>(<var>n</var>)表示以<var>T</var>(<var>n</var>-1)为基础，将后者的每一块地砖作如下替换得到的新铺法：</p>
-<center><img src="https://projecteuler.net/project/images/p405_tile1.png"></center>
+<p><strong>吃馅饼</strong></p>
+<p>杰夫用一种不同寻常的方式吃馅饼。<br>馅饼是圆形的，他先沿着一条半径在馅饼上切一刀。<br>如果剩下的馅饼不少于某个给定的比例F，他就进行如下步骤：</p>
+<ul>
+<li>他在剩下的馅饼边缘上等概率地选择两个点，然后从馅饼的中心到这两个点切两刀。这样剩下的馅饼就分为三份。</li>
+<li>他从切这两刀之前切的位置处开始，按逆时针拿走前两份馅饼然后吃掉它们。<br>如果剩下的馅饼不足上述比例F，他就不再重复这些步骤，而是把剩下的馅饼全部拿走吃掉。</li>
+</ul>
+<center><img src="https://projecteuler.net/project/images/p394_eatpie.gif"></center>
 
-<p>以下动画演示了<var>n</var>从0到5时的<var>T</var>(<var>n</var>)：</p>
-<center><img src="https://projecteuler.net/project/images/p405_tile2.gif"></center>
-
-<p>记<var>f</var>(<var>n</var>)是<var>T</var>(<var>n</var>)中有四块地砖相遇的点的数目。<br>已知<var>f</var>(1) = 0，<var>f</var>(4) = 82，以及<var>f</var>(10<sup>9</sup>) mod 17<sup>7</sup> = 126897180。</p>
-<p>当<var>k</var> = 10<sup>18</sup>时，求<var>f</var>(10<sup><var>k</var></sup>)，并将其模17<sup>7</sup>取余作为你的答案。</p>
+<p>对于x ≥ 1，取F = <sup>1</sup>/<sub>x</sub>，记E(x)是杰夫重复上述步骤的期望次数。<br>可以验证E(1) = 1，E(2) ≈ 1.2676536759，以及E(7.5) ≈ 2.1215732071。</p>
+<p>求E(40)，并四舍五入到小数点后10位小数。</p>
 <hr>
-<p><a href="https://projecteuler.net/problem=405" target="_blank" rel="external">回到原题</a></p>
+<p><a href="https://projecteuler.net/problem=394" target="_blank" rel="external">回到原题</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/06/28/Problem395/">
+                Problem 395
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <hr>
+<p><strong>Pythagorean tree</strong></p>
+<p>The <b>Pythagorean tree</b> is a fractal generated by the following procedure:</p>
+<p>Start with a unit square. Then, calling one of the sides its base (in the animation, the bottom side is the base):</p>
+<p><ol></ol></p>
+<p><li> Attach a right triangle to the side opposite the base, with the hypotenuse coinciding with that side and with the sides in a 3-4-5 ratio. Note that the smaller side of the triangle must be on the ‘right’ side with respect to the base (see animation).</li></p>
+<p><li> Attach a square to each leg of the right triangle, with one of its sides coinciding with that leg.</li></p>
+<p><li> Repeat this procedure for both squares, considering as their bases the sides touching the triangle.</li><br><br>The resulting figure, after an infinite number of iterations, is the Pythagorean tree.</p>
+<center><img src="https://projecteuler.net/project/images/p395_pythagorean.gif"></center>
+
+<p>It can be shown that there exists at least one rectangle, whose sides are parallel to the largest square of the Pythagorean tree, which encloses the Pythagorean tree completely.</p>
+<p>Find the smallest area possible for such a bounding rectangle, and give your answer rounded to 10 decimal places.</p>
+<hr>
+<p><strong>毕达哥拉斯树</strong></p>
+<p><b>毕达哥拉斯树</b>是按如下步骤生成的分形图形：</p>
+<p>从一个单位正方形开始，以其中一条边为基底（在图示动画中，单位正方形下放的边作为基底）：</p>
+<p><ol></ol></p>
+<p><li>给基底所对的边粘连上一个三边长之比为3-4-5的直角三角形，其中基底所对的边为斜边。注意直角三角形较短的直角边始终处在相对基底来说的右侧（参见动画演示）。</li></p>
+<p><li>给直角三角形的两条直角边分别粘连上一个正方形，该直角边充当正方形的其中一条边。</li></p>
+<p><li>对这两个正方形重复以上操作，并将正方形与之粘连的直角边作为基底。</li><br><br>经过无数次迭代所最终得到的三角形就是毕达哥拉斯树。</p>
+<center><img src="https://projecteuler.net/project/images/p395_pythagorean.gif"></center>
+
+<p>可以证明，至少存在一个长方形，其各边与初始的单位正方形各边分别平行，且该长方形完整包含了整棵毕达哥拉斯树在其内部。</p>
+<p>求这个长方形的最小面积，并将你的答案四舍五入至10位小数。</p>
+<hr>
+<p><a href="https://projecteuler.net/problem=395" target="_blank" rel="external">回到原题</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/06/28/Problem396/">
+                Problem 396
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <hr>
+<p><strong>Weak Goodstein sequence</strong></p>
+<p>For any positive integer n, the <b>nth weak Goodstein sequence</b> {g<sub>1</sub>, g<sub>2</sub>, g<sub>3</sub>, …} is defined as:</p>
+<ul><br><li> g<sub>1</sub> = n </li><br><li> for k &gt; 1, g<sub>k</sub> is obtained by writing g<sub>k-1</sub> in base k, interpreting it as a base k + 1 number, and subtracting 1.</li><br></ul>
+
+<p>The sequence terminates when g<sub>k</sub> becomes 0.</p>
+<p>For example, the 6th weak Goodstein sequence is {6, 11, 17, 25, …}:</p>
+<ul><br><li> g<sub>1</sub> = 6.</li><br><li> g<sub>2</sub> = 11 since 6 = 110<sub>2</sub>, 110<sub>3</sub> = 12, and 12 - 1 = 11.</li><br><li> g<sub>3</sub> = 17 since 11 = 102<sub>3</sub>, 102<sub>4</sub> = 18, and 18 - 1 = 17.</li><br><li> g<sub>4</sub> = 25 since 17 = 101<sub>4</sub>, 101<sub>5</sub> = 26, and 26 - 1 = 25.</li><br></ul><br>and so on.<br><br>It can be shown that every weak Goodstein sequence terminates.<br><br>Let G(n) be the number of nonzero elements in the nth weak Goodstein sequence.<br>It can be verified that G(2) = 3, G(4) = 21 and G(6) = 381.<br>It can also be verified that ΣG(n) = 2517 for 1 ≤ n &lt; 8.<br><br>Find the last 9 digits of ΣG(n) for 1 ≤ n &lt; 16.<br><br><strong>*
+
+</strong>弱古德斯坦序列**<br><br>对于任意正整数n，<b>第n个弱古德斯坦序列</b> {g<sub>1</sub>, g<sub>2</sub>, g<sub>3</sub>, …}按如下方式定义：<br><ul><br><li> g<sub>1</sub> = n </li><br><li> 对于k &gt; 1，将g<sub>k-1</sub>写成k进制表示，然后将其视为k+1进制的数，最后减去1，得到g<sub>k</sub>。</li><br></ul>
+
+<p>当g<sub>k</sub>变为0时序列终止。</p>
+<p>例如，第6个弱古德斯坦序列为{6, 11, 17, 25, …}：</p>
+<p><ul></ul></p>
+<p><li> g<sub>1</sub> = 6。</li></p>
+<p><li> g<sub>2</sub> = 11，因为6 = 110<sub>2</sub>，然后110<sub>3</sub> = 12，最后12 - 1 = 11。</li></p>
+<p><li> g<sub>3</sub> = 17，因为11 = 102<sub>3</sub>，然后102<sub>4</sub> = 18，最后18 - 1 = 17。</li></p>
+<p><li> g<sub>4</sub> = 25，因为17 = 101<sub>4</sub>，然后101<sub>5</sub> = 26，最后26 - 1 = 25。</li><br><br>依此类推。</p>
+<p>可以证明所有弱古德斯坦序列都会终止。</p>
+<p>记G(n)为第n个弱古德斯坦序列中的非零元素个数。<br>可以验证G(2) = 3，G(4) = 21以及G(6) = 381。<br>同样可以验证，对于1 ≤ n &lt; 8，ΣG(n) = 2517。</p>
+<p>对于1 ≤ n &lt; 16，求ΣG(n)的最后9位数字。</p>
+<hr>
+<p><a href="https://projecteuler.net/problem=396" target="_blank" rel="external">回到原题</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/06/28/Problem397/">
+                Problem 397
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <hr>
+<p><strong>Triangle on parabola</strong></p>
+<p>On the parabola y = x<sup>2</sup>/k, three points A(a, a<sup>2</sup>/k), B(b, b<sup>2</sup>/k) and C(c, c<sup>2</sup>/k) are chosen.</p>
+<p>Let F(K, X) be the number of the integer quadruplets (k, a, b, c) such that at least one angle of the triangle ABC is 45-degree, with 1 ≤ k ≤ K and -X ≤ a &lt; b &lt; c ≤ X.</p>
+<p>For example, F(1, 10) = 41 and F(10, 100) = 12492.<br>Find F(10<sup>6</sup>, 10<sup>9</sup>).</p>
+<hr>
+<p><strong>双曲线上的三角形</strong></p>
+<p>在双曲线上y = x<sup>2</sup>/k上选择三个点A(a, a<sup>2</sup>/k)、B(b, b<sup>2</sup>/k)和C(c, c<sup>2</sup>/k)。</p>
+<p>若四元整数组(k, a, b, c)满足1 ≤ k ≤ K以及-X ≤ a &lt; b &lt; c ≤ X，且使得三角形ABC至少有一个角为45度，记这样的四元整数组的总数为F(K, X)。</p>
+<p>已知F(1, 10) = 41以及F(10, 100) = 12492。<br>求F(10<sup>6</sup>, 10<sup>9</sup>)。</p>
+<hr>
+<p><a href="https://projecteuler.net/problem=397" target="_blank" rel="external">回到原题</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/06/28/Problem398/">
+                Problem 398
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <hr>
+<p><strong>Cutting rope</strong></p>
+<p>Inside a rope of length n, n-1 points are placed with distance 1 from each other and from the endpoints. Among these points, we choose m-1 points at random and cut the rope at these points to create m segments.</p>
+<p>Let E(n, m) be the expected length of the second-shortest segment.<br>For example, E(3, 2) = 2 and E(8, 3) = 16/7.<br>Note that if multiple segments have the same shortest length the length of the second-shortest segment is defined as the same as the shortest length.</p>
+<p>Find E(10<sup>7</sup>, 100).<br>Give your answer rounded to 5 decimal places behind the decimal point.</p>
+<hr>
+<p><strong>割绳子</strong></p>
+<p>在一条长为n的绳子上，分布有间距（及最外侧与绳子末端距离）为1的n-1个点。在这些点中，我们随机选择m-1个点，并在这些点处切开，使绳子分成m个分段。</p>
+<p>记E(n, m)为第二短的分段的期望长度。<br>例如，E(3, 2) = 2以及E(8, 3) = 16/7。<br>注意如果有多个分段均为最短长度，那么第二短的分段长度即为最短长度。</p>
+<p>求E(10<sup>7</sup>, 100)。<br>将你的答案四舍五入到小数点后5位小数。</p>
+<hr>
+<p><a href="https://projecteuler.net/problem=398" target="_blank" rel="external">回到原题</a></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/06/28/Problem399/">
+                Problem 399
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <hr>
+<p><strong>Squarefree Fibonacci Numbers</strong></p>
+<p>The first 15 fibonacci numbers are:<br>1,1,2,3,5,8,13,21,34,55,89,144,233,377,610.<br>It can be seen that 8 and 144 are not squarefree: 8 is divisible by 4 and 144 is divisible by 4 and by 9.<br>So the first 13 squarefree fibonacci numbers are:<br>1,1,2,3,5,13,21,34,55,89,233,377 and 610.</p>
+<p>The 200th squarefree fibonacci number is: 971183874599339129547649988289594072811608739584170445.<br>The last sixteen digits of this number are: 1608739584170445 and in scientific notation this number can be written as 9.7e53.</p>
+<p>Find the 100 000 000th squarefree fibonacci number.<br>Give as your answer its last sixteen digits followed by a comma followed by the number in scientific notation (rounded to one digit after the decimal point).<br>For the 200th squarefree number the answer would have been: 1608739584170445,9.7e53</p>
+<font size="-1"><br>Note:<br>For this problem, assume that for every prime p, the first fibonacci number divisible by p is not divisible by p<sup>2</sup> (this is part of <b>Wall’s conjecture</b>). This has been verified for primes ≤ 3·10<sup>15</sup>, but has not been proven in general.<br>If it happens that the conjecture is false, then the accepted answer to this problem isn’t guaranteed to be the 100 000 000th squarefree fibonacci number, rather it represents only a lower bound for that number.<br></font>
+
+<hr>
+<p><strong>无平方因子斐波那契数</strong></p>
+<p>前15个斐波那契数是：<br>1，1，2，3，5，8，13，21，34，55，89，144，233，377，610。<br>可以看出8和144都不是无平方因子数：8能被4整除，而144能被4和9整除。<br>所以前13个无平方因子斐波那契数为：<br>1，1，2，3，5，13，21，34，55，89，233，377和610。</p>
+<p>第200个无平方因子斐波那契数为：971183874599339129547649988289594072811608739584170445.<br>这个数的最后十六位数字是：1608739584170445；用科学计数法表示，这个数可以写成9.7e53。</p>
+<p>求第100,000,000个无平方因子斐波那契数。<br>你的答案应当为这个数的最后十六位数字和这个数的科学计数法表示（四舍五入到小数点后一位小数），用半角逗号隔开。<br>对于第200个无平方因子斐波那契数，你的答案应当写成：1608739584170445,9.7e53</p>
+<font size="-1"><br>注意：<br>在这个问题中，我们假定对于任意素数p，第一个能够被p整除的斐波那契数不能够被p<sup>2</sup>整除（这是沃尔猜想的一部分）。目前，对于≤ 3·10<sup>15</sup>的素数，这个假定已经得到验证，然而并没有完全证明。<br>如果最终这个假定被证伪，那么这个问题目前给出的答案并不保证是第100,000,000个无平方因子斐波那契数，而只能作为其下界。<br></font>
+
+<hr>
+<p><a href="https://projecteuler.net/problem=399" target="_blank" rel="external">回到原题</a></p>
 
         
       
@@ -586,6 +1022,10 @@
   </div>
 
   
+  <div class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
+  </div>
+
 
         </div>
 
@@ -617,7 +1057,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
