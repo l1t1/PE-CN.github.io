@@ -47,7 +47,7 @@
 
 
 
-  <title> Problem 402 // 盗泉 | sx349's blog </title>
+  <title> Problem 203 // 盗泉 | sx349's blog </title>
 </head>
 
 <body>
@@ -176,7 +176,7 @@
           
           
             
-              Problem 402
+              Problem 203
             
           
         </h1>
@@ -204,8 +204,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/28/Problem402/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/28/Problem402/"></span>
+            <a href="/2015/06/28/Problem203/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/28/Problem203/"></span>
             </a>
           </span>
           
@@ -220,22 +220,22 @@
 
       
         <hr>
-<p><strong>Integer-valued polynomials</strong><br><a id="more"></a><br>It can be shown that the polynomial n<sup>4</sup> + 4n<sup>3</sup> + 2n<sup>2</sup> + 5n is a multiple of 6 for every integer n. It can also be shown that 6 is the largest integer satisfying this property.</p>
-<p>Define M(a, b, c) as the maximum m such that n<sup>4</sup> + an<sup>3</sup> + bn<sup>2</sup> + cn is a multiple of m for all integers n. For example, M(4, 2, 5) = 6.</p>
-<p>Also, define S(N) as the sum of M(a, b, c) for all 0 &lt; a, b, c ≤ N.</p>
-<p>We can verify that S(10) = 1972 and S(10000) = 2024258331114.</p>
-<p>Let F<sub>k</sub> be the Fibonacci sequence:<br>F<sub>0</sub> = 0, F<sub>1</sub> = 1 and<br>F<sub>k</sub> = F<sub>k-1</sub> + F<sub>k-2</sub> for k ≥ 2.</p>
-<p>Find the last 9 digits of Σ S(F<sub>k</sub>) for 2 ≤ k ≤ 1234567890123.</p>
+<p><strong>Squarefree Binomial Coefficients</strong><br><a id="more"></a><br>The binomial coefficients <sup>n</sup>C<sub>k</sub> can be arranged in triangular form, Pascal’s triangle, like this:</p>
+<center><br><table border="0"><br><tbody><tr><td colspan="7"></td><td>1</td><td colspan="7"></td></tr><br><tr><td colspan="6"></td><td>1</td><td></td><td>1</td><td colspan="6"></td></tr><br><tr><td colspan="5"></td><td>1</td><td></td><td>2</td><td></td><td>1</td><td colspan="5"></td></tr><br><tr><td colspan="4"></td><td>1</td><td></td><td>3</td><td></td><td>3</td><td></td><td>1</td><td colspan="4"></td></tr><br><tr><td colspan="3"></td><td>1</td><td></td><td>4</td><td></td><td>6</td><td></td><td>4</td><td></td><td>1</td><td colspan="3"></td></tr><br><tr><td colspan="2"></td><td>1</td><td></td><td>5</td><td></td><td>10</td><td></td><td>10</td><td></td><td>5</td><td></td><td>1</td><td colspan="2"></td></tr><br><tr><td colspan="1"></td><td>1</td><td></td><td>6</td><td></td><td>15</td><td></td><td>20</td><td></td><td>15</td><td></td><td>6</td><td></td><td>1</td><td colspan="1"></td></tr><br><tr><td>1</td><td></td><td>7</td><td></td><td>21</td><td></td><td>35</td><td></td><td>35</td><td></td><td>21</td><td></td><td>7</td><td></td><td>1</td></tr><br></tbody></table><br>………<br></center>
+
+<p>It can be seen that the first eight rows of Pascal’s triangle contain twelve distinct numbers: 1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5,&nbsp;6,&nbsp;7,&nbsp;10,&nbsp;15,&nbsp;20,&nbsp;21&nbsp;and&nbsp;35.</p>
+<p>A positive integer n is called squarefree if no square of a prime divides n.<br>Of the twelve distinct numbers in the first eight rows of Pascal’s triangle, all except 4 and 20 are squarefree.<br>The sum of the distinct squarefree numbers in the first eight rows is 105.</p>
+<p>Find the sum of the distinct squarefree numbers in the first 51 rows of Pascal’s triangle.</p>
 <hr>
-<p><strong>值为整数的多项式</strong></p>
-<p>可以验证，对于任意整数n，n<sup>4</sup> + 4n<sup>3</sup> + 2n<sup>2</sup> + 5n是6的倍数，而6是最大的满足这一性质的整数。</p>
-<p>若对于任意整数n，n<sup>4</sup> + an<sup>3</sup> + bn<sup>2</sup> + cn是整数m的倍数，记M(a, b, c)为m的最大值。例如，M(4, 2, 5) = 6。</p>
-<p>记S(N)是所有满足0 &lt; a, b, c ≤ N的M(a, b, c)的和。</p>
-<p>我们可以验证S(10) = 1972，以及S(10000) = 2024258331114。</p>
-<p>记F<sub>k</sub>为斐波那契数列：<br>F<sub>0</sub> = 0，F<sub>1</sub> = 1 并且对于任意k ≥ 2<br>F<sub>k</sub> = F<sub>k-1</sub> + F<sub>k-2</sub>。</p>
-<p>对于2 ≤ k ≤ 1234567890123，求Σ S(F<sub>k</sub>)的最后9位数字。</p>
+<p><strong>无平方因子二项式系数</strong></p>
+<p>二项式系数<sup>n</sup>C<sub>k</sub>可以如下排成一个三角形，称为帕斯卡三角形：</p>
+<center><br><table border="0"><br><tbody><tr><td colspan="7"></td><td>1</td><td colspan="7"></td></tr><br><tr><td colspan="6"></td><td>1</td><td></td><td>1</td><td colspan="6"></td></tr><br><tr><td colspan="5"></td><td>1</td><td></td><td>2</td><td></td><td>1</td><td colspan="5"></td></tr><br><tr><td colspan="4"></td><td>1</td><td></td><td>3</td><td></td><td>3</td><td></td><td>1</td><td colspan="4"></td></tr><br><tr><td colspan="3"></td><td>1</td><td></td><td>4</td><td></td><td>6</td><td></td><td>4</td><td></td><td>1</td><td colspan="3"></td></tr><br><tr><td colspan="2"></td><td>1</td><td></td><td>5</td><td></td><td>10</td><td></td><td>10</td><td></td><td>5</td><td></td><td>1</td><td colspan="2"></td></tr><br><tr><td colspan="1"></td><td>1</td><td></td><td>6</td><td></td><td>15</td><td></td><td>20</td><td></td><td>15</td><td></td><td>6</td><td></td><td>1</td><td colspan="1"></td></tr><br><tr><td>1</td><td></td><td>7</td><td></td><td>21</td><td></td><td>35</td><td></td><td>35</td><td></td><td>21</td><td></td><td>7</td><td></td><td>1</td></tr><br></tbody></table><br>………<br></center>
+
+<p>可以看出帕斯卡三角形的前八行包含了十二个不同的数：1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5,&nbsp;6,&nbsp;7,&nbsp;10,&nbsp;15,&nbsp;20,&nbsp;21&nbsp;and&nbsp;35。</p>
+<p>如果正整数不被任何素数的平方整除，n就被称为无平方因子数。<br>在帕斯卡三角形前八行的十二个不同的数中，除了4和20之外都是无平方因子数。<br>这些不同的无平方因子数之和为105。</p>
+<p>求帕斯卡三角形前51行所有不同的无平方因子数之和。</p>
 <hr>
-<p><a href="https://projecteuler.net/problem=402" target="_blank" rel="external">回到原题</a></p>
+<p><a href="https://projecteuler.net/problem=203" target="_blank" rel="external">回到原题</a></p>
 
       
     </div>
@@ -247,13 +247,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/28/Problem401/">Problem 401</a>
+              <a href="/2015/06/28/Problem202/">Problem 202</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/28/Problem403/">Problem 403</a>
+              <a href="/2015/06/28/Problem204/">Problem 204</a>
             
           </div>
         </div>
@@ -273,8 +273,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/06/28/Problem402/"
-               data-title="Problem 402" data-url="http://yoursite.com/2015/06/28/Problem402/">
+          <div class="ds-thread" data-thread-key="2015/06/28/Problem203/"
+               data-title="Problem 203" data-url="http://yoursite.com/2015/06/28/Problem203/">
           </div>
         
       </div>
