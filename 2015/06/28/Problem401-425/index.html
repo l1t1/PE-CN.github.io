@@ -1,0 +1,784 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="阅读·译介·创作" />
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: ''
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+
+
+  <title> Problem 401 - 425 // 盗泉 | sx349's blog </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">盗泉 | sx349's blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            <i class="menu-item-icon icon-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'z6bmYNMJM3AR1esetWJa','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              Problem 401 - 425
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/06/28/Problem401-425/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/28/Problem401-425/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a>
+<hr>
+<h1 id="Problem_401"><a href="https://projecteuler.net/problem=401" target="_blank" rel="external">Problem 401</a></h1><hr>
+<p><strong>Sum of squares of divisors</strong></p>
+<p>The divisors of 6 are 1,2,3 and 6.<br>The sum of the squares of these numbers is 1+4+9+36=50.</p>
+<p>Let sigma2(n) represent the sum of the squares of the divisors of n. Thus sigma2(6)=50.</p>
+<p>Let SIGMA2 represent the summatory function of sigma2, that is SIGMA2(n)=∑sigma2(i) for i=1 to n.<br>The first 6 values of SIGMA2 are: 1,6,16,37,63 and 113.</p>
+<p>Find SIGMA2(10<sup>15</sup>) modulo 10<sup>9</sup>. </p>
+<hr>
+<p><strong>约数的平方和</strong></p>
+<p>6的约数有1、2、3和6。<br>这些数的平方和是1+4+9+36=50。</p>
+<p>我们记sigma2(n)是n的所有约数的平方和。因此sigma2(6)=50.</p>
+<p>我们记SIGMA2是sigma2的和函数，也就是说SIGMA2(n)=∑sigma2(i)，其中i=1~n。<br>SIGMA2的前6项为：1、6、16、37、63和113。</p>
+<p>求SIGMA2(10<sup>15</sup>)模10<sup>9</sup>取余的值。</p>
+<hr>
+<hr>
+<h1 id="Problem_402"><a href="https://projecteuler.net/problem=402" target="_blank" rel="external">Problem 402</a></h1><hr>
+<p><strong>Integer-valued polynomials</strong></p>
+<p>It can be shown that the polynomial n<sup>4</sup> + 4n<sup>3</sup> + 2n<sup>2</sup> + 5n is a multiple of 6 for every integer n. It can also be shown that 6 is the largest integer satisfying this property.</p>
+<p>Define M(a, b, c) as the maximum m such that n<sup>4</sup> + an<sup>3</sup> + bn<sup>2</sup> + cn is a multiple of m for all integers n. For example, M(4, 2, 5) = 6.</p>
+<p>Also, define S(N) as the sum of M(a, b, c) for all 0 &lt; a, b, c ≤ N.</p>
+<p>We can verify that S(10) = 1972 and S(10000) = 2024258331114.</p>
+<p>Let F<sub>k</sub> be the Fibonacci sequence:<br>F<sub>0</sub> = 0, F<sub>1</sub> = 1 and<br>F<sub>k</sub> = F<sub>k-1</sub> + F<sub>k-2</sub> for k ≥ 2.</p>
+<p>Find the last 9 digits of Σ S(F<sub>k</sub>) for 2 ≤ k ≤ 1234567890123.</p>
+<hr>
+<p><strong>值为整数的多项式</strong></p>
+<p>可以验证，对于任意整数n，n<sup>4</sup> + 4n<sup>3</sup> + 2n<sup>2</sup> + 5n是6的倍数，而6是最大的满足这一性质的整数。</p>
+<p>若对于任意整数n，n<sup>4</sup> + an<sup>3</sup> + bn<sup>2</sup> + cn是整数m的倍数，记M(a, b, c)为m的最大值。例如，M(4, 2, 5) = 6。</p>
+<p>记S(N)是所有满足0 &lt; a, b, c ≤ N的M(a, b, c)的和。</p>
+<p>我们可以验证S(10) = 1972，以及S(10000) = 2024258331114。</p>
+<p>记F<sub>k</sub>为斐波那契数列：<br>F<sub>0</sub> = 0，F<sub>1</sub> = 1 并且对于任意k ≥ 2<br>F<sub>k</sub> = F<sub>k-1</sub> + F<sub>k-2</sub>。</p>
+<p>对于2 ≤ k ≤ 1234567890123，求Σ S(F<sub>k</sub>)的最后9位数字。</p>
+<hr>
+<hr>
+<h1 id="Problem_403"><a href="https://projecteuler.net/problem=403" target="_blank" rel="external">Problem 403</a></h1><hr>
+<p><strong>Lattice points enclosed by parabola and line</strong></p>
+<p>For integers a and b, we define D(a, b) as the domain enclosed by the parabola y = x<sup>2</sup> and the line y = a·x + b:<br>D(a, b) = { (x, y) | x<sup>2</sup> ≤ y ≤ a·x + b }.</p>
+<p>L(a, b) is defined as the number of lattice points contained in D(a, b).<br>For example, L(1, 2) = 8 and L(2, -1) = 1.</p>
+<p>We also define S(N) as the sum of L(a, b) for all the pairs (a, b) such that the area of D(a, b) is a rational number and |a|,|b| ≤ N.<br>We can verify that S(5) = 344 and S(100) = 26709528.</p>
+<p>Find S(10<sup>12</sup>). Give your answer mod 10<sup>8</sup>.</p>
+<hr>
+<p><strong>被双曲线和直线包围的格点</strong></p>
+<p>对于正整数a和b，我们用D(a, b)表示被双曲线y = x<sup>2</sup>和直线y = a·x + b包围的区域：<br>D(a, b) = { (x, y) | x<sup>2</sup> ≤ y ≤ a·x + b }.</p>
+<p>定义L(a, b)为D(a, b)内的格点数目。<br>例如，L(1, 2) = 8，以及L(2, -1) = 1。</p>
+<p>若整数对(a, b)满足D(a, b)的面积是有理数，且|a|,|b| ≤ N，我们定义所有相应的L(a, b)的和为S(N)。<br>我们可以验证S(5) = 344以及S(100) = 26709528。</p>
+<p>求S(10<sup>12</sup>)。将你的答案模10<sup>8</sup>取余。</p>
+<hr>
+<hr>
+<h1 id="Problem_404"><a href="https://projecteuler.net/problem=404" target="_blank" rel="external">Problem 404</a></h1><hr>
+<p><strong>Crisscross Ellipses</strong></p>
+<p>E<sub><var>a</var></sub> is an ellipse with an equation of the form x<sup>2</sup> + 4y<sup>2</sup> = 4<var>a</var><sup>2</sup>.<br>E<sub><var>a</var></sub>‘ is the rotated image of E<sub><var>a</var></sub> by θ degrees counterclockwise around the origin O(0, 0) for 0° &lt; θ &lt; 90°.</p>
+<center><img src="https://projecteuler.net/project/images/p404_c_ellipse.gif"></center>
+
+<p><var>b</var> is the distance to the origin of the two intersection points closest to the origin and <var>c</var> is the distance of the two other intersection points.<br>We call an ordered triplet (<var>a</var>, <var>b</var>, <var>c</var>) a <i>canonical ellipsoidal triplet</i> if <var>a</var>, <var>b</var> and <var>c</var> are positive integers.<br>For example, (209, 247, 286) is a canonical ellipsoidal triplet.</p>
+<p>Let C(<var>N</var>) be the number of distinct canonical ellipsoidal triplets (<var>a</var>, <var>b</var>, <var>c</var>) for <var>a</var> ≤ <var>N</var>.<br>It can be verified that C(10<sup>3</sup>) = 7, C(10<sup>4</sup>) = 106 and C(10<sup>6</sup>) = 11845.</p>
+<p>Find C(10<sup>17</sup>).</p>
+<hr>
+<p><strong>交错的椭圆</strong></p>
+<p>E<sub><var>a</var></sub>是一个椭圆，其方程为x<sup>2</sup> + 4y<sup>2</sup> = 4<var>a</var><sup>2</sup>。<br>E<sub><var>a</var></sub>‘是将E<sub><var>a</var></sub>绕原点O(0, 0)逆时针旋转角θ得到的图形，其中0° &lt; θ &lt; 90°。</p>
+<center><img src="https://projecteuler.net/project/images/p404_c_ellipse.gif"></center>
+
+<p><var>b</var>是两个椭圆离原点较近的两个交点到原点的距离，而<var>c</var>是另外两个较远的交点到远点的距离。<br>如果有序三元组(<var>a</var>, <var>b</var>, <var>c</var>)中<var>a</var>、<var>b</var>和<var>c</var>均为正整数，我们称之为<i>规范椭圆三元组</i>。<br>例如，(209, 247, 286)就是一个规范椭圆三元组。</p>
+<p>记C(<var>N</var>)为所有满足<var>a</var> ≤ <var>N</var>的规范椭圆三元组(<var>a</var>, <var>b</var>, <var>c</var>)的数目。<br>可以验证C(10<sup>3</sup>) = 7，C(10<sup>4</sup>) = 106，以及C(10<sup>6</sup>) = 11845。</p>
+<p>求C(10<sup>17</sup>)。</p>
+<hr>
+<hr>
+<h1 id="Problem_405"><a href="https://projecteuler.net/problem=405" target="_blank" rel="external">Problem 405</a></h1><hr>
+<p><strong>A rectangular tiling</strong></p>
+<p>We wish to tile a rectangle whose length is twice its width.<br>Let T(0) be the tiling consisting of a single rectangle.<br>For n &gt; 0, let T(n) be obtained from T(n-1) by replacing all tiles in the following manner:</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile1.png"></center>
+
+<p>The following animation demonstrates the tilings T(n) for n from 0 to 5:</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile2.gif"></center>
+
+<p>Let f(n) be the number of points where four tiles meet in T(n).<br>For example, f(1) = 0, f(4) = 82 and f(10<sup>9</sup>) mod 17<sup>7</sup> = 126897180.</p>
+<p>Find f(10<sup>k</sup>) for k = 10<sup>18</sup>, give your answer modulo 17<sup>7</sup>.</p>
+<hr>
+<p><strong>给长方形铺地砖</strong></p>
+<p>我们希望给一个长是宽的两倍的长方形铺上地砖。<br>T(0)表示只用一个长方形的铺法。<br>对于n &gt; 0，T(n)表示以T(n-1)为基础，将后者的每一块地砖作如下替换得到的新铺法：</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile1.png"></center>
+
+<p>以下动画演示了n从0到5时的T(n)：</p>
+<center><img src="https://projecteuler.net/project/images/p405_tile2.gif"></center>
+
+<p>记f(n)是T(n)中有四块地砖相遇的点的数目。<br>已知f(1) = 0，f(4) = 82，以及f(10<sup>9</sup>) mod 17<sup>7</sup> = 126897180。</p>
+<p>当k = 10<sup>18</sup>时，求f(10<sup>k</sup>)，并将其模17<sup>7</sup>取余作为你的答案。</p>
+<hr>
+<hr>
+<h1 id="Problem_406"><a href="https://projecteuler.net/problem=406" target="_blank" rel="external">Problem 406</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_407"><a href="https://projecteuler.net/problem=407" target="_blank" rel="external">Problem 407</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_408"><a href="https://projecteuler.net/problem=408" target="_blank" rel="external">Problem 408</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_409"><a href="https://projecteuler.net/problem=409" target="_blank" rel="external">Problem 409</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_410"><a href="https://projecteuler.net/problem=410" target="_blank" rel="external">Problem 410</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_411"><a href="https://projecteuler.net/problem=411" target="_blank" rel="external">Problem 411</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_412"><a href="https://projecteuler.net/problem=412" target="_blank" rel="external">Problem 412</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_413"><a href="https://projecteuler.net/problem=413" target="_blank" rel="external">Problem 413</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_414"><a href="https://projecteuler.net/problem=414" target="_blank" rel="external">Problem 414</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_415"><a href="https://projecteuler.net/problem=415" target="_blank" rel="external">Problem 415</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_416"><a href="https://projecteuler.net/problem=416" target="_blank" rel="external">Problem 416</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_417"><a href="https://projecteuler.net/problem=417" target="_blank" rel="external">Problem 417</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_418"><a href="https://projecteuler.net/problem=418" target="_blank" rel="external">Problem 418</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_419"><a href="https://projecteuler.net/problem=419" target="_blank" rel="external">Problem 419</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_420"><a href="https://projecteuler.net/problem=420" target="_blank" rel="external">Problem 420</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_421"><a href="https://projecteuler.net/problem=421" target="_blank" rel="external">Problem 421</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_422"><a href="https://projecteuler.net/problem=422" target="_blank" rel="external">Problem 422</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_423"><a href="https://projecteuler.net/problem=423" target="_blank" rel="external">Problem 423</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_424"><a href="https://projecteuler.net/problem=424" target="_blank" rel="external">Problem 424</a></h1><hr>
+<hr>
+<hr>
+<h1 id="Problem_425"><a href="https://projecteuler.net/problem=425" target="_blank" rel="external">Problem 425</a></h1><hr>
+<hr>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/06/28/Problem376-400/">Problem 376 - 400</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/06/28/Problem426-450/">Problem 426 - 450</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+
+    
+      <div class="comments" id="comments">
+        
+          <div class="ds-thread" data-thread-key="2015/06/28/Problem401-425/"
+               data-title="Problem 401 - 425" data-url="http://yoursite.com/2015/06/28/Problem401-425/">
+          </div>
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/avatar.jpg" alt="sx349" />
+          <p class="site-author-name">sx349</p>
+        </div>
+        <p class="site-description motion-element">阅读·译介·创作</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://projecteuler.net" target="_blank">Project Euler</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://pe.spiritzhang.com/" target="_blank">官方汉化</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://jakwings.is-programmer.com/Project_Euler" target="_blank">饮水思源汉化</a>
+              </span>
+            
+          
+        </div>
+        
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_401"><span class="nav-number">1.</span> <span class="nav-text">Problem 401</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_402"><span class="nav-number">2.</span> <span class="nav-text">Problem 402</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_403"><span class="nav-number">3.</span> <span class="nav-text">Problem 403</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_404"><span class="nav-number">4.</span> <span class="nav-text">Problem 404</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_405"><span class="nav-number">5.</span> <span class="nav-text">Problem 405</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_406"><span class="nav-number">6.</span> <span class="nav-text">Problem 406</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_407"><span class="nav-number">7.</span> <span class="nav-text">Problem 407</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_408"><span class="nav-number">8.</span> <span class="nav-text">Problem 408</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_409"><span class="nav-number">9.</span> <span class="nav-text">Problem 409</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_410"><span class="nav-number">10.</span> <span class="nav-text">Problem 410</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_411"><span class="nav-number">11.</span> <span class="nav-text">Problem 411</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_412"><span class="nav-number">12.</span> <span class="nav-text">Problem 412</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_413"><span class="nav-number">13.</span> <span class="nav-text">Problem 413</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_414"><span class="nav-number">14.</span> <span class="nav-text">Problem 414</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_415"><span class="nav-number">15.</span> <span class="nav-text">Problem 415</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_416"><span class="nav-number">16.</span> <span class="nav-text">Problem 416</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_417"><span class="nav-number">17.</span> <span class="nav-text">Problem 417</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_418"><span class="nav-number">18.</span> <span class="nav-text">Problem 418</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_419"><span class="nav-number">19.</span> <span class="nav-text">Problem 419</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_420"><span class="nav-number">20.</span> <span class="nav-text">Problem 420</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_421"><span class="nav-number">21.</span> <span class="nav-text">Problem 421</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_422"><span class="nav-number">22.</span> <span class="nav-text">Problem 422</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_423"><span class="nav-number">23.</span> <span class="nav-text">Problem 423</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_424"><span class="nav-number">24.</span> <span class="nav-text">Problem 424</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_425"><span class="nav-number">25.</span> <span class="nav-text">Problem 425</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp; 
+  2015
+  
+  <span class="author">sx349</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  vividking
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist 
+  </a>by <a href="http://notes.iissnan.com/">IIssNan</a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sx349"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+
+
+  
+  
+
+</body>
+</html>
