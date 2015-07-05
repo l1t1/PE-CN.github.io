@@ -222,79 +222,368 @@
         <hr>
 <a id="more"></a>
 <hr>
-<h1 id="Problem_51"><a href="https://projecteuler.net/problem=51" target="_blank" rel="external">Problem 51</a></h1><hr>
+<h1 id="Problem_251"><a href="https://projecteuler.net/problem=251" target="_blank" rel="external">Problem 251</a></h1><hr>
+<p><strong>Cardano Triplets</strong></p>
+<p>A triplet of positive integers (a,b,c) is called a Cardano Triplet if it satisfies the condition:</p>
+<center><img src="https://projecteuler.net/project/images/p251_cardano.gif" alt=""></center>
+
+<p>For example, (2,1,5) is a Cardano Triplet.</p>
+<p>There exist 149 Cardano Triplets for which a+b+c ≤ 1000.</p>
+<p>Find how many Cardano Triplets exist such that a+b+c ≤ 110,000,000.</p>
 <hr>
 <hr>
-<h1 id="Problem_52"><a href="https://projecteuler.net/problem=52" target="_blank" rel="external">Problem 52</a></h1><hr>
+<h1 id="Problem_252"><a href="https://projecteuler.net/problem=252" target="_blank" rel="external">Problem 252</a></h1><hr>
+<p><strong>Convex Holes</strong></p>
+<p>Given a set of points on a plane, we define a convex hole to be a convex polygon having as vertices any of the given points and not containing any of the given points in its interior (in addition to the vertices, other given points may lie on the perimeter of the polygon). </p>
+<p>As an example, the image below shows a set of twenty points and a few such convex holes. The convex hole shown as a red heptagon has an area equal to 1049694.5 square units, which is the highest possible area for a convex hole on the given set of points.</p>
+<center><img src="https://projecteuler.net/project/images/p252_convexhole.gif" alt=""></center>
+
+<p>For our example, we used the first 20 points (T<sub>2k−1</sub>,&thinsp;T<sub>2k</sub>), for k&thinsp;=&thinsp;1,2,…,20, produced with the pseudo-random number generator:</p>
+<center>$S_0=290797$<br>$S_{n+1}=S_n^2 \text{ mod } 50515093$<br>$T_n=\text{(}S_n \text{ mod } 2000 \text{)}-1000$<br></center>
+
+<p><em>i.e.</em> (527,&thinsp;144), (−488,&thinsp;732), (−454,&thinsp;−947), …</p>
+<p>What is the maximum area for a convex hole on the set containing the first 500 points in the pseudo-random sequence? Specify your answer including one digit after the decimal point.</p>
 <hr>
 <hr>
-<h1 id="Problem_53"><a href="https://projecteuler.net/problem=53" target="_blank" rel="external">Problem 53</a></h1><hr>
+<h1 id="Problem_253"><a href="https://projecteuler.net/problem=253" target="_blank" rel="external">Problem 253</a></h1><hr>
+<p><strong>Tidying up</strong></p>
+<p>A small child has a “number caterpillar” consisting of forty jigsaw pieces, each with one number on it, which, when connected together in a line, reveal the numbers 1 to 40 in order.</p>
+<p>Every night, the child’s father has to pick up the pieces of the caterpillar that have been scattered across the play room. He picks up the pieces at random and places them in the correct order. As the caterpillar is built up in this way, it forms distinct segments that gradually merge together. The number of segments starts at zero (no pieces placed), generally increases up to about eleven or twelve, then tends to drop again before finishing at a single segment (all pieces placed).</p>
+<p>For example:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Piece Placed</strong></th>
+<th style="text-align:center"><strong>Segments So Far</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">34</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">35</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">…</td>
+<td style="text-align:center">…</td>
+</tr>
+</tbody>
+</table>
+<p>Let M be the maximum number of segments encountered during a random tidy-up of the caterpillar.<br>For a caterpillar of ten pieces, the number of possibilities for each M is</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>M</strong></th>
+<th style="text-align:center"><strong>Possibilities</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">512</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">250912</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1815264</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1418112</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">144000</td>
+</tr>
+</tbody>
+</table>
+<p>so the most likely value of M is 3 and the average value is <sup>385643</sup>⁄<sub>113400</sub> = 3.400732, rounded to six decimal places.</p>
+<p>The most likely value of M for a forty-piece caterpillar is 11; but what is the average value of M?</p>
+<p>Give your answer rounded to six decimal places.</p>
 <hr>
 <hr>
-<h1 id="Problem_54"><a href="https://projecteuler.net/problem=54" target="_blank" rel="external">Problem 54</a></h1><hr>
+<h1 id="Problem_254"><a href="https://projecteuler.net/problem=254" target="_blank" rel="external">Problem 254</a></h1><hr>
+<p><strong>Sums of Digit Factorials</strong></p>
+<p>Define f(n) as the sum of the factorials of the digits of n. For example, f(342) = 3! + 4! + 2! = 32.</p>
+<p>Define sf(n) as the sum of the digits of f(n). So sf(342) = 3 + 2 = 5.</p>
+<p>Define g(i) to be the smallest positive integer n such that sf(n) = i. Though sf(342) is 5, sf(25) is also 5, and it can be verified that g(5) is 25.</p>
+<p>Define sg(i) as the sum of the digits of g(i). So sg(5) = 2 + 5 = 7.</p>
+<p>Further, it can be verified that g(20) is 267 and ∑&thinsp;sg(i) for 1 ≤ i ≤ 20 is 156.</p>
+<p>What is ∑&thinsp;sg(i) for 1 ≤ i ≤ 150?</p>
 <hr>
 <hr>
-<h1 id="Problem_55"><a href="https://projecteuler.net/problem=55" target="_blank" rel="external">Problem 55</a></h1><hr>
+<h1 id="Problem_255"><a href="https://projecteuler.net/problem=255" target="_blank" rel="external">Problem 255</a></h1><hr>
+<p><strong>Rounded Square Roots</strong></p>
+<p>We define the <em>rounded-square-root</em> of a positive integer n as the square root of n rounded to the nearest integer.</p>
+<p>The following procedure (essentially Heron’s method adapted to integer arithmetic) finds the rounded-square-root of n:</p>
+<p>Let d be the number of digits of the number n.<br>If d is odd, set x<sub>0</sub> = 2×10<sup>(d-1)⁄2</sup>.<br>If d is even, set x<sub>0</sub> = 7×10<sup>(d-2)⁄2</sup>.<br>Repeat:</p>
+<center><img src="https://projecteuler.net/project/images/p255_Heron.gif"></center>
+
+<p>until x<sub>k+1</sub> = x<sub>k</sub>.</p>
+<p>As an example, let us find the rounded-square-root of n = 4321.<br>n has 4 digits, so x<sub>0</sub> = 7×10<sup>(4-2)⁄2</sup> = 70.<br><img src="https://projecteuler.net/project/images/p255_Example.gif"><br>Since x<sub>2</sub> = x<sub>1</sub>, we stop here.<br>So, after just two iterations, we have found that the rounded-square-root of 4321 is 66 (the actual square root is 65.7343137…).</p>
+<p>The number of iterations required when using this method is surprisingly low.<br>For example, we can find the rounded-square-root of a 5-digit integer (10,000 ≤ n ≤ 99,999) with an average of 3.2102888889 iterations (the average value was rounded to 10 decimal places).</p>
+<p>Using the procedure described above, what is the average number of iterations required to find the rounded-square-root of a 14-digit number (10<sup>13</sup> ≤ n &lt; 10<sup>14</sup>)?<br>Give your answer rounded to 10 decimal places.</p>
+<p>Note: The symbols ⌊x⌋ and ⌈x⌉ represent the <dfn title="the largest integer not greater than x">floor function</dfn> and <dfn title="the smallest integer not less than x">ceiling function</dfn> respectively.</p>
 <hr>
 <hr>
-<h1 id="Problem_56"><a href="https://projecteuler.net/problem=56" target="_blank" rel="external">Problem 56</a></h1><hr>
+<h1 id="Problem_256"><a href="https://projecteuler.net/problem=256" target="_blank" rel="external">Problem 256</a></h1><hr>
+<p><strong>Tatami-Free Rooms</strong></p>
+<p>Tatami are rectangular mats, used to completely cover the floor of a room, without overlap.</p>
+<p>Assuming that the only type of available tatami has dimensions 1×2, there are obviously some limitations for the shape and size of the rooms that can be covered.</p>
+<p>For this problem, we consider only rectangular rooms with integer dimensions a, b and even size s = a·b.<br>We use the term ‘size’ to denote the floor surface area of the room, and — without loss of generality — we add the condition a ≤ b.</p>
+<p>There is one rule to follow when laying out tatami: there must be no points where corners of four different mats meet.<br>For example, consider the two arrangements below for a 4×4 room:</p>
+<center><img src="https://projecteuler.net/project/images/p256_tatami3.gif"></center>
+
+<p>The arrangement on the left is acceptable, whereas the one on the right is not: a red “<span style="color:red"><strong>X</strong></span>“ in the middle, marks the point where four tatami meet.</p>
+<p>Because of this rule, certain even-sized rooms cannot be covered with tatami: we call them tatami-free rooms.<br>Further, we define T(s) as the number of tatami-free rooms of size s.</p>
+<p>The smallest tatami-free room has size s = 70 and dimensions 7×10.<br>All the other rooms of size s = 70 can be covered with tatami; they are: 1×70, 2×35 and 5×14.<br>Hence, T(70) = 1.</p>
+<p>Similarly, we can verify that T(1320) = 5 because there are exactly 5 tatami-free rooms of size s = 1320:<br>20×66, 22×60, 24×55, 30×44 and 33×40.<br>In fact, s = 1320 is the smallest room-size s for which T(s) = 5.</p>
+<p>Find the smallest room-size s for which T(s) = 200.</p>
 <hr>
 <hr>
-<h1 id="Problem_57"><a href="https://projecteuler.net/problem=57" target="_blank" rel="external">Problem 57</a></h1><hr>
+<h1 id="Problem_257"><a href="https://projecteuler.net/problem=257" target="_blank" rel="external">Problem 257</a></h1><hr>
+<p><strong>Angular Bisectors</strong></p>
+<p>Given is an integer sided triangle ABC with sides a ≤ b ≤ c. (AB = c, BC = a and AC = b).<br>The angular bisectors of the triangle intersect the sides at points E, F and G (see picture below).</p>
+<center><img src="https://projecteuler.net/project/images/p257_bisector.gif"></center>
+
+<p>The segments EF, EG and FG partition the triangle ABC into four smaller triangles: AEG, BFE, CGF and EFG.<br>It can be proven that for each of these four triangles the ratio area(ABC)/area(subtriangle) is rational.<br>However, there exist triangles for which some or all of these ratios are integral.</p>
+<p>How many triangles ABC with perimeter≤100,000,000 exist so that the ratio area(ABC)/area(AEG) is integral?</p>
 <hr>
 <hr>
-<h1 id="Problem_58"><a href="https://projecteuler.net/problem=58" target="_blank" rel="external">Problem 58</a></h1><hr>
+<h1 id="Problem_258"><a href="https://projecteuler.net/problem=258" target="_blank" rel="external">Problem 258</a></h1><hr>
+<p><strong>A lagged Fibonacci sequence</strong></p>
+<p>A sequence is defined as:</p>
+<ul>
+<li>g<sub>k</sub> = 1, for 0 ≤ k ≤ 1999</li>
+<li>g<sub>k</sub> = g<sub>k-2000</sub> + g<sub>k-1999</sub>, for k ≥ 2000.</li>
+</ul>
+<p>Find g<sub>k</sub> mod 20092010 for k = 10<sup>18</sup>.</p>
 <hr>
 <hr>
-<h1 id="Problem_59"><a href="https://projecteuler.net/problem=59" target="_blank" rel="external">Problem 59</a></h1><hr>
+<h1 id="Problem_259"><a href="https://projecteuler.net/problem=259" target="_blank" rel="external">Problem 259</a></h1><hr>
+<p><strong>Reachable Numbers</strong></p>
+<p>A positive integer will be called <em>reachable</em> if it can result from an arithmetic expression obeying the following rules:</p>
+<ul>
+<li>Uses the digits 1 through 9, in that order and exactly once each.</li>
+<li>Any successive digits can be concatenated (for example, using the digits 2, 3 and 4 we obtain the number 234).</li>
+<li>Only the four usual binary arithmetic operations (addition, subtraction, multiplication and division) are allowed.</li>
+<li>Each operation can be used any number of times, or not at all.</li>
+<li><dfn title="A minus sign applied to a single operand (as opposed to a subtraction operator between two operands)">Unary minus</dfn> is not allowed.</li>
+<li>Any number of (possibly nested) parentheses may be used to define the order of operations.</li>
+</ul>
+<p>For example, 42 is reachable, since (1/23) <em> ((4</em>5)-6) * (78-9) = 42.</p>
+<p>What is the sum of all positive reachable integers?</p>
 <hr>
 <hr>
-<h1 id="Problem_60"><a href="https://projecteuler.net/problem=60" target="_blank" rel="external">Problem 60</a></h1><hr>
+<h1 id="Problem_260"><a href="https://projecteuler.net/problem=260" target="_blank" rel="external">Problem 260</a></h1><hr>
+<p><strong>Stone Game</strong></p>
+<p>A game is played with three piles of stones and two players.<br>At her turn, a player removes one or more stones from the piles. However, if she takes stones from more than one pile, she must remove the same number of stones from each of the selected piles.</p>
+<p>In other words, the player chooses some N&gt;0 and removes:</p>
+<ul>
+<li>N stones from any single pile; or</li>
+<li>N stones from each of any two piles (2N total); or</li>
+<li>N stones from each of the three piles (3N total).</li>
+</ul>
+<p>The player taking the last stone(s) wins the game.</p>
+<p>A <em>winning configuration</em> is one where the first player can force a win.<br>For example, (0,0,13), (0,11,11) and (5,5,5) are winning configurations because the first player can immediately remove all stones.</p>
+<p>A <em>losing configuration</em> is one where the second player can force a win, no matter what the first player does.<br>For example, (0,1,2) and (1,3,3) are losing configurations: any legal move leaves a winning configuration for the second player.</p>
+<p>Consider all  losing configurations (x<sub>i</sub>,y<sub>i</sub>,z<sub>i</sub>) where x<sub>i</sub> ≤ y<sub>i</sub> ≤ z<sub>i</sub> ≤ 100.<br>We can verify that Σ(x<sub>i</sub>+y<sub>i</sub>+z<sub>i</sub>) = 173895 for these.</p>
+<p>Find Σ(x<sub>i</sub>+y<sub>i</sub>+z<sub>i</sub>) where (x<sub>i</sub>,y<sub>i</sub>,z<sub>i</sub>) ranges over the losing configurations<br>with x<sub>i</sub> ≤ y<sub>i</sub> ≤ z<sub>i</sub> ≤ 1000.</p>
 <hr>
 <hr>
-<h1 id="Problem_61"><a href="https://projecteuler.net/problem=61" target="_blank" rel="external">Problem 61</a></h1><hr>
+<h1 id="Problem_261"><a href="https://projecteuler.net/problem=261" target="_blank" rel="external">Problem 261</a></h1><hr>
+<p><strong>Pivotal Square Sums</strong></p>
+<p>Let us call a positive integer k a square-pivot, if there is a pair of integers m &gt; 0 and n ≥ k, such that the sum of the (m+1) consecutive squares up to k equals the sum of the m consecutive squares from (n+1) on:</p>
+<center>(k-m)<sup>2</sup> + … + k<sup>2</sup> = (n+1)<sup>2</sup> + … + (n+m)<sup>2</sup>.</center>
+
+<p>Some small square-pivots are</p>
+<ul>
+<li><strong>4</strong>: 3<sup>2</sup> + <strong>4</strong><sup>2</sup> = 5<sup>2</sup></li>
+<li><strong>21</strong>: 20<sup>2</sup> + <strong>21</strong><sup>2</sup> = 29<sup>2</sup></li>
+<li><strong>24</strong>: 21<sup>2</sup> + 22<sup>2</sup> + 23<sup>2</sup> + <strong>24</strong><sup>2</sup> = 25<sup>2</sup> + 26<sup>2</sup> + 27<sup>2</sup></li>
+<li><strong>110</strong>: 108<sup>2</sup> + 109<sup>2</sup> + <strong>110</strong><sup>2</sup> = 133<sup>2</sup> + 134<sup>2</sup></li>
+</ul>
+<p>Find the sum of all <strong>distinct</strong> square-pivots ≤ 10<sup>10</sup>.</p>
 <hr>
 <hr>
-<h1 id="Problem_62"><a href="https://projecteuler.net/problem=62" target="_blank" rel="external">Problem 62</a></h1><hr>
+<h1 id="Problem_262"><a href="https://projecteuler.net/problem=262" target="_blank" rel="external">Problem 262</a></h1><hr>
+<p><strong>Mountain Range</strong></p>
+<p>The following equation represents the <em>continuous</em> topography of a mountainous region, giving the <dfn title="height above sea level">elevation</dfn> h at any point (x,y):</p>
+<center><img src="https://projecteuler.net/project/images/p262_formula1.gif"></center>
+
+<p>A mosquito intends to fly from A(200,200) to B(1400,1400), without leaving the area given by 0&nbsp;≤&nbsp;x,&nbsp;y&nbsp;≤&nbsp;1600.</p>
+<p>Because of the intervening mountains, it first rises straight up to a point A’, having elevation f. Then, while remaining at the same elevation f, it flies around any obstacles until it arrives at a point B’ directly above B.</p>
+<p>First, determine f<sub>min</sub> which is the minimum constant elevation allowing such a trip from A to B, while remaining in the specified area.<br>Then, find the length of the shortest path between A’ and B’, while flying at that constant elevation f<sub>min</sub>.</p>
+<p>Give that length as your answer, rounded to three decimal places.</p>
+<p><u>Note</u>: For convenience, the elevation function shown above is repeated below, in a form suitable for most programming languages:<br>h=( 5000-0.005<em>(x</em>x+y<em>y+x</em>y)+12.5<em>(x+y) ) </em> exp( -abs(0.000001<em>(x</em>x+y<em>y)-0.0015</em>(x+y)+0.7) )</p>
 <hr>
 <hr>
-<h1 id="Problem_63"><a href="https://projecteuler.net/problem=63" target="_blank" rel="external">Problem 63</a></h1><hr>
+<h1 id="Problem_263"><a href="https://projecteuler.net/problem=263" target="_blank" rel="external">Problem 263</a></h1><hr>
+<p><strong>An engineers’ dream come true</strong></p>
+<p>Consider the number 6. The divisors of 6 are: 1,2,3 and 6.<br>Every number from 1 up to and including 6 can be written as a sum of distinct divisors of 6:<br>1=1, 2=2, 3=1+2, 4=1+3, 5=2+3, 6=6.<br>A number n is called a practical number if every number from 1 up to and including n can be expressed as a sum of distinct divisors of n.</p>
+<p>A pair of consecutive prime numbers with a difference of six is called a sexy pair (since “sex” is the Latin word for “six”). The first sexy pair is (23, 29).</p>
+<p>We may occasionally find a triple-pair, which means three consecutive sexy prime pairs, such that the second member of each pair is the first member of the next pair.</p>
+<p>We shall call a number n such that:</p>
+<ul>
+<li>(n-9, n-3), (n-3,n+3), (n+3, n+9) form a triple-pair, and </li>
+<li>the numbers n-8, n-4, n, n+4 and n+8 are all practical,<br>an engineers’ paradise.</li>
+</ul>
+<p>Find the sum of the first four engineers’ paradises.</p>
 <hr>
 <hr>
-<h1 id="Problem_64"><a href="https://projecteuler.net/problem=64" target="_blank" rel="external">Problem 64</a></h1><hr>
+<h1 id="Problem_264"><a href="https://projecteuler.net/problem=264" target="_blank" rel="external">Problem 264</a></h1><hr>
+<p><strong>Triangle Centres</strong></p>
+<p>Consider all the triangles having:</p>
+<ul>
+<li>All their vertices on <dfn title="Integer coordinates">lattice points</dfn>.</li>
+<li><dfn title="Centre of the circumscribed circle">Circumcentre</dfn> at the origin O.</li>
+<li><dfn title="Point where the three altitudes meet">Orthocentre</dfn> at the point H(5, 0).</li>
+</ul>
+<p>There are nine such triangles having a perimeter ≤ 50.<br>Listed and shown in ascending order of their perimeter, they are:</p>
+<center>A(-4, 3), B(5, 0), C(4, -3)<br>A(4, 3), B(5, 0), C(-4, -3)<br>A(-3, 4), B(5, 0), C(3, -4)<br>A(3, 4), B(5, 0), C(-3, -4)<br>A(0, 5), B(5, 0), C(0, -5)<br>A(1, 8), B(8, -1), C(-4, -7)<br>A(8, 1), B(1, -8), C(-4, 7)<br>A(2, 9), B(9, -2), C(-6, -7)<br>A(9, 2), B(2, -9), C(-6, 7)<br><img src="https://projecteuler.net/project/images/p264_TriangleCentres.gif"><br></center>
+
+<p>The sum of their perimeters, rounded to four decimal places, is 291.0089.</p>
+<p>Find all such triangles with a perimeter ≤ 10<sup>5</sup>.<br>Enter as your answer the sum of their perimeters rounded to four decimal places.</p>
 <hr>
 <hr>
-<h1 id="Problem_65"><a href="https://projecteuler.net/problem=65" target="_blank" rel="external">Problem 65</a></h1><hr>
+<h1 id="Problem_265"><a href="https://projecteuler.net/problem=265" target="_blank" rel="external">Problem 265</a></h1><hr>
+<p><strong>Binary Circles</strong></p>
+<p>2<sup>N</sup> binary digits can be placed in a circle so that all the N-digit clockwise subsequences are distinct.</p>
+<p>For N=3, two such circular arrangements are possible, ignoring rotations:</p>
+<center><img src="https://projecteuler.net/project/images/p265_BinaryCircles.gif"></center>
+
+<p>For the first arrangement, the 3-digit subsequences, in clockwise order, are: 000, 001, 010, 101, 011, 111, 110 and 100.</p>
+<p>Each circular arrangement can be encoded as a number by concatenating the binary digits starting with the subsequence of all zeros as the most significant bits and proceeding clockwise. The two arrangements for N=3 are thus represented as 23 and 29:</p>
+<center>00010111&thinsp;<sub>2</sub> = 23<br>00011101&thinsp;<sub>2</sub> = 29</center>
+
+<p>Calling S(N) the sum of the unique numeric representations, we can see that S(3) = 23 + 29 = 52.</p>
+<p>Find S(5).</p>
 <hr>
 <hr>
-<h1 id="Problem_66"><a href="https://projecteuler.net/problem=66" target="_blank" rel="external">Problem 66</a></h1><hr>
+<h1 id="Problem_266"><a href="https://projecteuler.net/problem=266" target="_blank" rel="external">Problem 266</a></h1><hr>
+<p><strong>Pseudo Square Root</strong></p>
+<p>The divisors of 12 are: 1,2,3,4,6 and 12.<br>The largest divisor of 12 that does not exceed the square root of 12 is 3.<br>We shall call the largest divisor of an integer n that does not exceed the square root of n the pseudo square root (PSR) of n.<br>It can be seen that PSR(3102)=47.</p>
+<p>Let p be the product of the primes below 190.<br>Find PSR(p) mod 10<sup>16</sup>.</p>
 <hr>
 <hr>
-<h1 id="Problem_67"><a href="https://projecteuler.net/problem=67" target="_blank" rel="external">Problem 67</a></h1><hr>
+<h1 id="Problem_267"><a href="https://projecteuler.net/problem=267" target="_blank" rel="external">Problem 267</a></h1><hr>
+<p><strong>Billionaire</strong></p>
+<p>You are given a unique investment opportunity.</p>
+<p>Starting with £1 of capital, you can choose a fixed proportion, f, of your capital to bet on a fair coin toss repeatedly for 1000 tosses.</p>
+<p>Your return is double your bet for heads and you lose your bet for tails.</p>
+<p>For example, if f&thinsp;=&thinsp;1/4,  for the first toss you bet £0.25, and if heads comes up you win £0.5 and so then have £1.5. You then bet £0.375 and if the second toss is tails, you have £1.125.</p>
+<p>Choosing f to maximize your chances of having at least £1,000,000,000 after 1,000 flips, what is the chance that you become a billionaire?</p>
+<p>All computations are assumed to be exact (no rounding), but give your answer rounded to 12 digits behind the decimal point in the form 0.abcdefghijkl.</p>
 <hr>
 <hr>
-<h1 id="Problem_68"><a href="https://projecteuler.net/problem=68" target="_blank" rel="external">Problem 68</a></h1><hr>
+<h1 id="Problem_268"><a href="https://projecteuler.net/problem=268" target="_blank" rel="external">Problem 268</a></h1><hr>
+<p><strong>Counting numbers with at least four distinct prime factors less than 100</strong></p>
+<p>It can be verified that there are 23 positive integers less than 1000 that are divisible by at least four distinct primes less than 100.</p>
+<p>Find how many positive integers less than 10<sup>16</sup> are divisible by at least four distinct primes less than 100.</p>
 <hr>
 <hr>
-<h1 id="Problem_69"><a href="https://projecteuler.net/problem=69" target="_blank" rel="external">Problem 69</a></h1><hr>
+<h1 id="Problem_269"><a href="https://projecteuler.net/problem=269" target="_blank" rel="external">Problem 269</a></h1><hr>
+<p><strong>Polynomials with at least one integer root</strong></p>
+<p>A root or zero of a polynomial P(x) is a solution to the equation P(x) = 0.<br>Define P<sub>n</sub> as the polynomial whose coefficients are the digits of n.<br>For example, P<sub>5703</sub>(x) = 5x<sup>3</sup> + 7x<sup>2</sup> + 3.</p>
+<p>We can see that:</p>
+<ul>
+<li>P<sub>n</sub>(0) is the last digit of n,</li>
+<li>P<sub>n</sub>(1) is the sum of the digits of n,</li>
+<li>P<sub>n</sub>(10) is n itself.</li>
+</ul>
+<p>Define Z(k) as the number of positive integers, n, not exceeding k for which the polynomial P<sub>n</sub> has at least one integer root.</p>
+<p>It can be verified that Z(100 000) is 14696.</p>
+<p>What is Z(10<sup>16</sup>)?</p>
 <hr>
 <hr>
-<h1 id="Problem_70"><a href="https://projecteuler.net/problem=70" target="_blank" rel="external">Problem 70</a></h1><hr>
+<h1 id="Problem_270"><a href="https://projecteuler.net/problem=270" target="_blank" rel="external">Problem 270</a></h1><hr>
+<p><strong>Cutting Squares</strong></p>
+<p>A square piece of paper with integer dimensions N×N is placed with a corner at the origin and two of its sides along the x- and y-axes. Then, we cut it up respecting the following rules:</p>
+<ul>
+<li>We only make straight cuts between two points lying on different sides of the square, and having integer coordinates.</li>
+<li>Two cuts cannot cross, but several cuts can meet at the same border point.</li>
+<li>Proceed until no more legal cuts can be made.</li>
+</ul>
+<p>Counting any reflections or rotations as distinct, we call C(N) the number of ways to cut an N×N square. For example, C(1)&thinsp;=&thinsp;2 and C(2)&thinsp;=&thinsp;30 (shown below).</p>
+<center><img src="https://projecteuler.net/project/images/p270_CutSquare.gif"></center>
+
+<p>What is C(30) mod 10<sup>8</sup> ?</p>
 <hr>
 <hr>
-<h1 id="Problem_71"><a href="https://projecteuler.net/problem=71" target="_blank" rel="external">Problem 71</a></h1><hr>
+<h1 id="Problem_271"><a href="https://projecteuler.net/problem=271" target="_blank" rel="external">Problem 271</a></h1><hr>
+<p><strong>Modular Cubes, part 1</strong></p>
+<p>For a positive number n, define S(n) as the sum of the integers x, for which 1&lt;x&lt;n and x<sup>3</sup>≡1 mod n.</p>
+<p>When n=91, there are 8 possible values for x, namely : 9, 16, 22, 29, 53, 74, 79, 81.<br>Thus, S(91)=9+16+22+29+53+74+79+81=363.</p>
+<p>Find S(13082761331670030).</p>
 <hr>
 <hr>
-<h1 id="Problem_72"><a href="https://projecteuler.net/problem=72" target="_blank" rel="external">Problem 72</a></h1><hr>
+<h1 id="Problem_272"><a href="https://projecteuler.net/problem=272" target="_blank" rel="external">Problem 272</a></h1><hr>
+<p><strong>Modular Cubes, part 2</strong></p>
+<p>For a positive number n, define C(n) as the number of the integers x, for which 1&lt;x&lt;n and x<sup>3</sup>≡1 mod n.</p>
+<p>When n=91, there are 8 possible values for x, namely : 9, 16, 22, 29, 53, 74, 79, 81.<br>Thus, C(91)=8.</p>
+<p>Find the sum of the positive numbers n≤10<sup>11</sup> for which C(n)=242.</p>
 <hr>
 <hr>
-<h1 id="Problem_73"><a href="https://projecteuler.net/problem=73" target="_blank" rel="external">Problem 73</a></h1><hr>
+<h1 id="Problem_273"><a href="https://projecteuler.net/problem=273" target="_blank" rel="external">Problem 273</a></h1><hr>
+<p><strong>Sum of Squares</strong></p>
+<p>Consider equations of the form: a<sup>2</sup> + b<sup>2</sup> = N, 0 ≤ a ≤ b, a, b and N integer.</p>
+<p>For N=65 there are two solutions:</p>
+<p>a=1, b=8 and a=4, b=7.</p>
+<p>We call S(N) the sum of the values of a of all solutions of a<sup>2</sup> + b<sup>2</sup> = N, 0 ≤ a ≤ b, a, b and N integer.</p>
+<p>Thus S(65) = 1 + 4 = 5.</p>
+<p>Find ∑S(N), for all squarefree N only divisible by primes of the form 4k+1 with 4k+1 &lt; 150.</p>
 <hr>
 <hr>
-<h1 id="Problem_74"><a href="https://projecteuler.net/problem=74" target="_blank" rel="external">Problem 74</a></h1><hr>
+<h1 id="Problem_274"><a href="https://projecteuler.net/problem=274" target="_blank" rel="external">Problem 274</a></h1><hr>
+<p><strong>Divisibility Multipliers</strong></p>
+<p>For each integer p &gt; 1 coprime to 10 there is a positive <em>divisibility multiplier</em> m &lt; p which preserves divisibility by p for the following function on any positive integer, n:</p>
+<p>f(n) = (all but the last digit of n) + (the last digit of n) * m</p>
+<p>That is, if m is the divisibility multiplier for p, then f(n) is divisible by p if and only if n is divisible by p.</p>
+<p>(When n is much larger than p, f(n) will be less than n and repeated application of f provides a multiplicative divisibility test for p.)</p>
+<p>For example, the divisibility multiplier for 113 is 34.</p>
+<p>f(76275) = 7627 + 5 <em> 34 = 7797 : 76275 and 7797 are both divisible by 113<br>f(12345) = 1234 + 5 </em> 34 = 1404 : 12345 and 1404 are both not divisible by 113</p>
+<p>The sum of the divisibility multipliers for the primes that are coprime to 10 and less than 1000 is 39517. What is the sum of the divisibility multipliers for the primes that are coprime to 10 and less than 10<sup>7</sup>?</p>
 <hr>
 <hr>
-<h1 id="Problem_75"><a href="https://projecteuler.net/problem=75" target="_blank" rel="external">Problem 75</a></h1><hr>
+<h1 id="Problem_275"><a href="https://projecteuler.net/problem=275" target="_blank" rel="external">Problem 275</a></h1><hr>
+<p><strong>Balanced Sculptures</strong></p>
+<p>Let us define a <em>balanced sculpture</em> of order n as follows:</p>
+<ul>
+<li>A <dfn title="An arrangement of identical squares connected through shared edges; holes are allowed.">polyomino</dfn> made up of n+1 tiles known as the <em>blocks</em> (n tiles) and the <em>plinth</em> (remaining tile);</li>
+<li>the plinth has its centre at position (x&thinsp;=&thinsp;0, y&thinsp;=&thinsp;0);</li>
+<li>the blocks have y-coordinates greater than zero (so the plinth is the unique lowest tile);</li>
+<li>the centre of mass of all the blocks, combined, has x-coordinate equal to zero.</li>
+</ul>
+<p>When counting the sculptures, any arrangements which are simply reflections about the y-axis, are <u>not</u> counted as distinct. For example, the 18 balanced sculptures of order 6 are shown below; note that each pair of mirror images (about the y-axis) is counted as one sculpture:</p>
+<center><img src="https://projecteuler.net/project/images/p275_sculptures2.gif"></center>
+
+<p>There are 964 balanced sculptures of order 10 and 360505 of order 15.How many balanced sculptures are there of order 18?</p>
 <hr>
 
       
@@ -444,7 +733,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_51"><span class="nav-number">1.</span> <span class="nav-text">Problem 51</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_52"><span class="nav-number">2.</span> <span class="nav-text">Problem 52</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_53"><span class="nav-number">3.</span> <span class="nav-text">Problem 53</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_54"><span class="nav-number">4.</span> <span class="nav-text">Problem 54</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_55"><span class="nav-number">5.</span> <span class="nav-text">Problem 55</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_56"><span class="nav-number">6.</span> <span class="nav-text">Problem 56</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_57"><span class="nav-number">7.</span> <span class="nav-text">Problem 57</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_58"><span class="nav-number">8.</span> <span class="nav-text">Problem 58</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_59"><span class="nav-number">9.</span> <span class="nav-text">Problem 59</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_60"><span class="nav-number">10.</span> <span class="nav-text">Problem 60</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_61"><span class="nav-number">11.</span> <span class="nav-text">Problem 61</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_62"><span class="nav-number">12.</span> <span class="nav-text">Problem 62</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_63"><span class="nav-number">13.</span> <span class="nav-text">Problem 63</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_64"><span class="nav-number">14.</span> <span class="nav-text">Problem 64</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_65"><span class="nav-number">15.</span> <span class="nav-text">Problem 65</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_66"><span class="nav-number">16.</span> <span class="nav-text">Problem 66</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_67"><span class="nav-number">17.</span> <span class="nav-text">Problem 67</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_68"><span class="nav-number">18.</span> <span class="nav-text">Problem 68</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_69"><span class="nav-number">19.</span> <span class="nav-text">Problem 69</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_70"><span class="nav-number">20.</span> <span class="nav-text">Problem 70</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_71"><span class="nav-number">21.</span> <span class="nav-text">Problem 71</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_72"><span class="nav-number">22.</span> <span class="nav-text">Problem 72</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_73"><span class="nav-number">23.</span> <span class="nav-text">Problem 73</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_74"><span class="nav-number">24.</span> <span class="nav-text">Problem 74</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_75"><span class="nav-number">25.</span> <span class="nav-text">Problem 75</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_251"><span class="nav-number">1.</span> <span class="nav-text">Problem 251</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_252"><span class="nav-number">2.</span> <span class="nav-text">Problem 252</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_253"><span class="nav-number">3.</span> <span class="nav-text">Problem 253</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_254"><span class="nav-number">4.</span> <span class="nav-text">Problem 254</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_255"><span class="nav-number">5.</span> <span class="nav-text">Problem 255</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_256"><span class="nav-number">6.</span> <span class="nav-text">Problem 256</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_257"><span class="nav-number">7.</span> <span class="nav-text">Problem 257</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_258"><span class="nav-number">8.</span> <span class="nav-text">Problem 258</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_259"><span class="nav-number">9.</span> <span class="nav-text">Problem 259</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_260"><span class="nav-number">10.</span> <span class="nav-text">Problem 260</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_261"><span class="nav-number">11.</span> <span class="nav-text">Problem 261</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_262"><span class="nav-number">12.</span> <span class="nav-text">Problem 262</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_263"><span class="nav-number">13.</span> <span class="nav-text">Problem 263</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_264"><span class="nav-number">14.</span> <span class="nav-text">Problem 264</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_265"><span class="nav-number">15.</span> <span class="nav-text">Problem 265</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_266"><span class="nav-number">16.</span> <span class="nav-text">Problem 266</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_267"><span class="nav-number">17.</span> <span class="nav-text">Problem 267</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_268"><span class="nav-number">18.</span> <span class="nav-text">Problem 268</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_269"><span class="nav-number">19.</span> <span class="nav-text">Problem 269</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_270"><span class="nav-number">20.</span> <span class="nav-text">Problem 270</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_271"><span class="nav-number">21.</span> <span class="nav-text">Problem 271</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_272"><span class="nav-number">22.</span> <span class="nav-text">Problem 272</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_273"><span class="nav-number">23.</span> <span class="nav-text">Problem 273</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_274"><span class="nav-number">24.</span> <span class="nav-text">Problem 274</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_275"><span class="nav-number">25.</span> <span class="nav-text">Problem 275</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
