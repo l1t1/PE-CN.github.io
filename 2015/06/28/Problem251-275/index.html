@@ -438,10 +438,28 @@
 <center><img src="https://projecteuler.net/project/images/p255_Heron.gif"></center>
 
 <p>until x<sub>k+1</sub> = x<sub>k</sub>.</p>
-<p>As an example, let us find the rounded-square-root of n = 4321.<br>n has 4 digits, so x<sub>0</sub> = 7×10<sup>(4-2)⁄2</sup> = 70.<br><img src="https://projecteuler.net/project/images/p255_Example.gif"><br>Since x<sub>2</sub> = x<sub>1</sub>, we stop here.<br>So, after just two iterations, we have found that the rounded-square-root of 4321 is 66 (the actual square root is 65.7343137…).</p>
+<p>As an example, let us find the rounded-square-root of n = 4321.<br>n has 4 digits, so x<sub>0</sub> = 7×10<sup>(4-2)⁄2</sup> = 70.</p>
+<center><img src="https://projecteuler.net/project/images/p255_Example.gif"></center>
+
+<p>Since x<sub>2</sub> = x<sub>1</sub>, we stop here.<br>So, after just two iterations, we have found that the rounded-square-root of 4321 is 66 (the actual square root is 65.7343137…).</p>
 <p>The number of iterations required when using this method is surprisingly low.<br>For example, we can find the rounded-square-root of a 5-digit integer (10,000 ≤ n ≤ 99,999) with an average of 3.2102888889 iterations (the average value was rounded to 10 decimal places).</p>
 <p>Using the procedure described above, what is the average number of iterations required to find the rounded-square-root of a 14-digit number (10<sup>13</sup> ≤ n &lt; 10<sup>14</sup>)?<br>Give your answer rounded to 10 decimal places.</p>
 <p>Note: The symbols ⌊x⌋ and ⌈x⌉ represent the <dfn title="the largest integer not greater than x">floor function</dfn> and <dfn title="the smallest integer not less than x">ceiling function</dfn> respectively.</p>
+<hr>
+<p><strong>近似平方根</strong></p>
+<p>我们定义正整数n的<em>近似平方根</em>为与n的实际平方根最接近的整数。</p>
+<p>如下的过程（实际上就是将希罗求平方根的方法应用在整数算术上）能够给出n的近似平方根：</p>
+<p>记n的位数为d。<br>如果d是奇数，则令x<sub>0</sub> = 2×10<sup>(d-1)⁄2</sup>。<br>如果d是偶数，则令x<sub>0</sub> = 7×10<sup>(d-2)⁄2</sup>。<br>依此类推：</p>
+<center><img src="https://projecteuler.net/project/images/p255_Heron.gif"></center>
+
+<p>直到x<sub>k+1</sub> = x<sub>k</sub>。</p>
+<p>举例来说，我们来寻找n = 4321的近似平方根。<br>n是4位数，因此x<sub>0</sub> = 7×10<sup>(4-2)⁄2</sup> = 70。</p>
+<center><img src="https://projecteuler.net/project/images/p255_Example.gif"></center>
+
+<p>因为x<sub>2</sub> = x<sub>1</sub>，就不用再继续下去了。<br>所以，仅仅经过两次迭代，我们就得到了4321的近似平方根为66（实际平方根为65.7343137…）。</p>
+<p>这个方法所需的迭代次数少得令人惊讶。<br>例如，对于所有的5位数（10,000 ≤ n ≤ 99,999），我们平均只需要3.2102888889次（四舍五入至10位小数）迭代就能找到其近似平方根。</p>
+<p>使用上面描述的方法，对于所有的14位数（10<sup>13</sup> ≤ n &lt; 10<sup>14</sup>），我们平均需要多少次迭代能够找到其近似平方根？<br>将你的答案四舍五入到10位小数。</p>
+<p>注意：符号⌊x⌋和⌈x⌉分别表示<dfn title="不大于x的最大整数">下取整函数</dfn>和<dfn title="不小于x的最小整数">上取整函数</dfn>。</p>
 <hr>
 <hr>
 <h1 id="Problem_256"><a href="https://projecteuler.net/problem=256" target="_blank" rel="external">Problem 256</a></h1><hr>
@@ -458,6 +476,19 @@
 <p>Similarly, we can verify that T(1320) = 5 because there are exactly 5 tatami-free rooms of size s = 1320:<br>20×66, 22×60, 24×55, 30×44 and 33×40.<br>In fact, s = 1320 is the smallest room-size s for which T(s) = 5.</p>
 <p>Find the smallest room-size s for which T(s) = 200.</p>
 <hr>
+<p><strong>无法铺满榻榻米的房间</strong></p>
+<p>榻榻米是一种长方形的垫子，常常用来不重叠地铺满房间的地板。</p>
+<p>假定现在只有唯一一种形状为1×2的榻榻米，显然这对于能够铺满榻榻米的房间的形状和大小都将有所限制。</p>
+<p>在这个问题中，我们考虑的房间为长方形，相邻两边长为a和b，且面积s=a·b是偶数。<br>我们用“大小”这个词来表示房间的地板面积，此外，不失一般性，我们假定a ≤ b。</p>
+<p>在铺榻榻米的时候必须遵循一个规则：不能有四个榻榻米共用一个顶点。<br>例如，考虑下面两种铺满4×4房间的铺法：</p>
+<center><img src="https://projecteuler.net/project/images/p256_tatami3.gif"></center>
+
+<p>左边的铺法是可行的，而右边的则不是：有一个红色的”<span style="color:red"><strong>X</strong></span>“出现在当中，标记出被四个榻榻米共用的顶点。</p>
+<p>因为这个原因，有些面积为偶数的房间依然不能铺满榻榻米：我们称之为无法铺满榻榻米的房间。<br>进一步地，我们定义T(s)是面积为s且无法铺满榻榻米的房间种数。</p>
+<p>最小的无法铺满榻榻米的房间面积为s = 70，两边长为7×10。<br>其它所有面积为70的房间都能铺满榻榻米；这些房间的大小分别是：1×70， 2×35和5×14。<br>因此，T(70) = 1。</p>
+<p>同样地，我们可以验证T(1320) = 5，因为当房间面积为s = 1320时，恰好有5种房间无法铺满榻榻米：<br>20×66，22×60，24×55，30×44和33×40。<br>事实上，s=1320是使得T(s) = 5的最小房间面积s。</p>
+<p>求出使得T(s) = 200的最小房间面积s。</p>
+<hr>
 <hr>
 <h1 id="Problem_257"><a href="https://projecteuler.net/problem=257" target="_blank" rel="external">Problem 257</a></h1><hr>
 <p><strong>Angular Bisectors</strong></p>
@@ -467,15 +498,30 @@
 <p>The segments EF, EG and FG partition the triangle ABC into four smaller triangles: AEG, BFE, CGF and EFG.<br>It can be proven that for each of these four triangles the ratio area(ABC)/area(subtriangle) is rational.<br>However, there exist triangles for which some or all of these ratios are integral.</p>
 <p>How many triangles ABC with perimeter≤100,000,000 exist so that the ratio area(ABC)/area(AEG) is integral?</p>
 <hr>
+<p><strong>角平分线</strong></p>
+<p>如下是边长均为整数的三角形ABC，其三边长为a ≤ b ≤ c（AB = c，BC = a，AC = b）。<br>三角形的角平分线和对边分别交于点E、F和G（如下图所示）。</p>
+<center><img src="https://projecteuler.net/project/images/p257_bisector.gif"></center>
+
+<p>线段EF、EG和FG将三角形ABC分成四个小三角形：AEG、BFE、CGF和EFG。<br>可以证明，对于这四个小三角形来说，三角形ABC的面积与任一小三角形的面积的比值均为有理数。<br>甚而还存在一些三角形ABC，使得其中部分或全部的比值均为整数。</p>
+<p>在所有边长≤100,000,000的三角形ABC中，有多少个使得三角形ABC的面积与三角形AEG的面积的比值为整数？</p>
+<hr>
 <hr>
 <h1 id="Problem_258"><a href="https://projecteuler.net/problem=258" target="_blank" rel="external">Problem 258</a></h1><hr>
 <p><strong>A lagged Fibonacci sequence</strong></p>
 <p>A sequence is defined as:</p>
 <ul>
 <li>g<sub>k</sub> = 1, for 0 ≤ k ≤ 1999</li>
-<li>g<sub>k</sub> = g<sub>k-2000</sub> + g<sub>k-1999</sub>, for k ≥ 2000.</li>
+<li>g<sub>k</sub> = g<sub>k-2000</sub> + g<sub>k-1999</sub>, for k ≥ 2000</li>
 </ul>
 <p>Find g<sub>k</sub> mod 20092010 for k = 10<sup>18</sup>.</p>
+<hr>
+<p><strong>延迟斐波那契数列</strong></p>
+<p>如下定义了一个数列：</p>
+<ul>
+<li>g<sub>k</sub> = 1，若0 ≤ k ≤ 1999</li>
+<li>g<sub>k</sub> = g<sub>k-2000</sub> + g<sub>k-1999</sub>，若k ≥ 2000</li>
+</ul>
+<p>取k = 10<sup>18</sup>，求g<sub>k</sub> mod 20092010。</p>
 <hr>
 <hr>
 <h1 id="Problem_259"><a href="https://projecteuler.net/problem=259" target="_blank" rel="external">Problem 259</a></h1><hr>
@@ -492,6 +538,19 @@
 <p>For example, 42 is reachable, since (1/23) * ((4*5)-6) * (78-9) = 42.</p>
 <p>What is the sum of all positive reachable integers?</p>
 <hr>
+<p><strong>可达数</strong></p>
+<p>如果正整数可以表示成符合下列规则的算术表达式的结果，就被称为是<em>可达的</em>：</p>
+<ul>
+<li>按照从小到大顺序使用数字1至9恰好各一次。</li>
+<li>任意相邻数字可以连接起来使用（例如，将数字2、3、4连接起来得到234）。</li>
+<li>只能使用四则运算（加法、减法、乘法、除法）。</li>
+<li>每种运算可以使用任意多次，也可以不用。</li>
+<li>禁止使用<dfn title="放在单个运算数前的减号（而不是放在两个运算数当中的减号）">负号</dfn>。</li>
+<li>可以使用（甚至嵌套使用）任意数量的括号以规定运算顺序。</li>
+</ul>
+<p>例如，42是可达的，因为(1/23) * ((4*5)-6) * (78-9) = 42。</p>
+<p>所有可达正整数的和是多少？</p>
+<hr>
 <hr>
 <h1 id="Problem_260"><a href="https://projecteuler.net/problem=260" target="_blank" rel="external">Problem 260</a></h1><hr>
 <p><strong>Stone Game</strong></p>
@@ -506,7 +565,21 @@
 <p>A <em>winning configuration</em> is one where the first player can force a win.<br>For example, (0,0,13), (0,11,11) and (5,5,5) are winning configurations because the first player can immediately remove all stones.</p>
 <p>A <em>losing configuration</em> is one where the second player can force a win, no matter what the first player does.<br>For example, (0,1,2) and (1,3,3) are losing configurations: any legal move leaves a winning configuration for the second player.</p>
 <p>Consider all  losing configurations (x<sub>i</sub>,y<sub>i</sub>,z<sub>i</sub>) where x<sub>i</sub> ≤ y<sub>i</sub> ≤ z<sub>i</sub> ≤ 100.<br>We can verify that Σ(x<sub>i</sub>+y<sub>i</sub>+z<sub>i</sub>) = 173895 for these.</p>
-<p>Find Σ(x<sub>i</sub>+y<sub>i</sub>+z<sub>i</sub>) where (x<sub>i</sub>,y<sub>i</sub>,z<sub>i</sub>) ranges over the losing configurations<br>with x<sub>i</sub> ≤ y<sub>i</sub> ≤ z<sub>i</sub> ≤ 1000.</p>
+<p>Find Σ(x<sub>i</sub>+y<sub>i</sub>+z<sub>i</sub>) where (x<sub>i</sub>,y<sub>i</sub>,z<sub>i</sub>) ranges over the losing configurations with x<sub>i</sub> ≤ y<sub>i</sub> ≤ z<sub>i</sub> ≤ 1000.</p>
+<hr>
+<p><strong>取石子游戏</strong></p>
+<p>取石子游戏需要两名玩家和三堆石子。<br>每一名玩家在自己的回合可以从堆中取走一个或多个石子。然而，如果她从多个堆中取石子，从其中每个堆所取的石子数目必须一致。</p>
+<p>也就是说，每一名玩家选择一个数N&gt;0，然后移走：</p>
+<ul>
+<li>一个堆中的N个石子；或</li>
+<li>两个堆中各N个石子（共2N个）；或</li>
+<li>三个堆中各N个石子（共3N个）。</li>
+</ul>
+<p>拿走所有石子的玩家赢得游戏。</p>
+<p>所谓<em>必胜态</em>，指的是先手玩家必胜的石子分布。<br>例如，(0,0,13)、(0,11,11)和(5,5,5)是必胜态，因为先手玩家可以立刻取走所有的石子。</p>
+<p>所谓<em>必败态</em>，指的是无论先手玩家如何操作，后手玩家必胜的石子分布。<br>例如，(0,1,2)和(1,3,3)是必败态：先手玩家任何符合规则的取法都会给后手玩家留下必胜态。</p>
+<p>考虑所有满足x<sub>i</sub> ≤ y<sub>i</sub> ≤ z<sub>i</sub> ≤ 100的必败态(x<sub>i</sub>,y<sub>i</sub>,z<sub>i</sub>)。<br>我们可以验证，对于所有这些必败态，Σ(x<sub>i</sub>+y<sub>i</sub>+z<sub>i</sub>) = 173895。</p>
+<p>考虑所有满足x<sub>i</sub> ≤ y<sub>i</sub> ≤ z<sub>i</sub> ≤ 1000的必败态(x<sub>i</sub>,y<sub>i</sub>,z<sub>i</sub>)，求Σ(x<sub>i</sub>+y<sub>i</sub>+z<sub>i</sub>)。</p>
 <hr>
 <hr>
 <h1 id="Problem_261"><a href="https://projecteuler.net/problem=261" target="_blank" rel="external">Problem 261</a></h1><hr>
@@ -523,6 +596,19 @@
 </ul>
 <p>Find the sum of all <strong>distinct</strong> square-pivots ≤ 10<sup>10</sup>.</p>
 <hr>
+<p><strong>平方枢轴数</strong></p>
+<p>我们称满足如下性质的正整数k为平方枢轴数：存在整数对m &gt; 0和n ≥ k，使得从k开始往前数(m+1)个连续的数的平方和等于从(n+1)开始往后数m个连续数的平方和。</p>
+<center>(k-m)<sup>2</sup> + … + k<sup>2</sup> = (n+1)<sup>2</sup> + … + (n+m)<sup>2</sup>.</center>
+
+<p>一些较小的平方枢轴数为</p>
+<ul>
+<li><strong>4</strong>: 3<sup>2</sup> + <strong>4</strong><sup>2</sup> = 5<sup>2</sup></li>
+<li><strong>21</strong>: 20<sup>2</sup> + <strong>21</strong><sup>2</sup> = 29<sup>2</sup></li>
+<li><strong>24</strong>: 21<sup>2</sup> + 22<sup>2</sup> + 23<sup>2</sup> + <strong>24</strong><sup>2</sup> = 25<sup>2</sup> + 26<sup>2</sup> + 27<sup>2</sup></li>
+<li><strong>110</strong>: 108<sup>2</sup> + 109<sup>2</sup> + <strong>110</strong><sup>2</sup> = 133<sup>2</sup> + 134<sup>2</sup></li>
+</ul>
+<p>求≤ 10<sup>10</sup>的范围内，所有<strong>不同的</strong>平方枢轴数之和。.</p>
+<hr>
 <hr>
 <h1 id="Problem_262"><a href="https://projecteuler.net/problem=262" target="_blank" rel="external">Problem 262</a></h1><hr>
 <p><strong>Mountain Range</strong></p>
@@ -534,6 +620,16 @@
 <p>First, determine f<sub>min</sub> which is the minimum constant elevation allowing such a trip from A to B, while remaining in the specified area.<br>Then, find the length of the shortest path between A’ and B’, while flying at that constant elevation f<sub>min</sub>.</p>
 <p>Give that length as your answer, rounded to three decimal places.</p>
 <p><u>Note</u>: For convenience, the elevation function shown above is repeated below, in a form suitable for most programming languages:<br>h=(5000-0.005*(x*x+y*y+x*y)+12.5*(x+y))*exp(-abs(0.000001*(x*x+y*y)-0.0015*(x+y)+0.7))</p>
+<hr>
+<p><strong>山的范围</strong></p>
+<p>如下的等式表示了一座山<em>连续的</em>地貌，对于任意一点(x,y)，其<dfn title="超过海平面的高度">海拔</dfn>h为：</p>
+<center><img src="https://projecteuler.net/project/images/p262_formula1.gif"></center>
+
+<p>一只蚊子试图从点A(200,200)飞往点B(1400,1400)，但不能离开0&nbsp;≤&nbsp;x,&nbsp;y&nbsp;≤&nbsp;1600的这片区域。</p>
+<p>为了避免地貌的影响，它先竖直向上飞到一点A’，其还把为f。然后，它保持海拔高度f不变，绕过所有障碍，直到它到达B点正上方的一点B’。</p>
+<p>首先，找出在给定区域内存在由A至B路径的最小海拔高度f<sub>min</sub>。<br>其次，找出A’到B’的最短路径长度，路径上的海拔高度始终为常数f<sub>min</sub>。</p>
+<p>给出最短路径长度并四舍五入至三位小数作为你的答案。</p>
+<p><u>注意</u>：方便起见，上述海拔函数在下面按照方便大多数编程语言习惯的方式重写为：<br>h=(5000-0.005*(x*x+y*y+x*y)+12.5*(x+y))*exp(-abs(0.000001*(x*x+y*y)-0.0015*(x+y)+0.7))</p>
 <hr>
 <hr>
 <h1 id="Problem_263"><a href="https://projecteuler.net/problem=263" target="_blank" rel="external">Problem 263</a></h1><hr>
@@ -548,6 +644,18 @@
 </ul>
 <p>an engineers’ paradise.</p>
 <p>Find the sum of the first four engineers’ paradises.</p>
+<hr>
+<p><strong>工程师美梦成真</strong></p>
+<p>数6的约数为：1、2、3和6。<br>从1到6的每个数都能写成6的不同约数的和：<br>1=1, 2=2, 3=1+2, 4=1+3, 5=2+3, 6=6.<br>如果从1到n的每个数都能写成n的不同约数的和，n就被称为实用数。</p>
+<p>如果一堆连续素数的差为6，则被称为性感数对（因为”sex”（性）恰好是”six”（六）的拉丁语写法）。第一个性感数对是(23, 29)。</p>
+<p>我们偶尔可能会发现性感数对三元组，也就是三组连续的性感数对，其中每一组的第二个数恰好是后一组的第一个数。</p>
+<p>如果数n满足：</p>
+<ul>
+<li>(n-9, n-3)、(n-3,n+3)、(n+3, n+9)构成一个性感数对三元组，而且</li>
+<li>数n-8、n-4、n、n+4和n+8都是实用数，</li>
+</ul>
+<p>我们就称之为工程师的天堂数。</p>
+<p>找出前四个工程师的天堂数，并求它们的和。</p>
 <hr>
 <hr>
 <h1 id="Problem_264"><a href="https://projecteuler.net/problem=264" target="_blank" rel="external">Problem 264</a></h1><hr>
@@ -564,6 +672,19 @@
 <p>The sum of their perimeters, rounded to four decimal places, is 291.0089.</p>
 <p>Find all such triangles with a perimeter ≤ 10<sup>5</sup>.<br>Enter as your answer the sum of their perimeters rounded to four decimal places.</p>
 <hr>
+<p><strong>三角形的心</strong></p>
+<p>考虑满足如下条件的三角形：</p>
+<ul>
+<li>各顶点都在<dfn title="坐标为整数的点">格点</dfn>上。</li>
+<li><dfn title="外接圆圆心">外心</dfn>在原点O处。</li>
+<li><dfn title="三条高的交点">垂心</dfn>位于点H(5, 0)。</li>
+</ul>
+<p>在边长≤ 50的所有三角形中，满足上述条件的三角形有九个。<br>按照它们的周长升序排列，分别是：</p>
+<center>A(-4, 3), B(5, 0), C(4, -3)<br>A(4, 3), B(5, 0), C(-4, -3)<br>A(-3, 4), B(5, 0), C(3, -4)<br>A(3, 4), B(5, 0), C(-3, -4)<br>A(0, 5), B(5, 0), C(0, -5)<br>A(1, 8), B(8, -1), C(-4, -7)<br>A(8, 1), B(1, -8), C(-4, 7)<br>A(2, 9), B(9, -2), C(-6, -7)<br>A(9, 2), B(2, -9), C(-6, 7)<br><img src="https://projecteuler.net/project/images/p264_TriangleCentres.gif"><br></center>
+
+<p>它们的周长之和四舍五入到四位小数是291.0089。</p>
+<p>在边长≤ 10<sup>5</sup>的所有三角形中，找出所有满足上述条件的三角形。<br>将它们的周长之和四舍五入到四位小数作为你的答案。</p>
+<hr>
 <hr>
 <h1 id="Problem_265"><a href="https://projecteuler.net/problem=265" target="_blank" rel="external">Problem 265</a></h1><hr>
 <p><strong>Binary Circles</strong></p>
@@ -578,11 +699,27 @@
 <p>Calling S(N) the sum of the unique numeric representations, we can see that S(3) = 23 + 29 = 52.</p>
 <p>Find S(5).</p>
 <hr>
+<p><strong>二进制圈</strong></p>
+<p>2<sup>N</sup>个二进制位可以排成一圈，使得所有按顺时针顺序得到的N位二进制子串都不一样。</p>
+<p>对于N=3，不考虑旋转，有两种可行的排圈方式：</p>
+<center><img src="https://projecteuler.net/project/images/p265_BinaryCircles.gif"></center>
+
+<p>在第一种排圈方式中，按顺时针顺序得到的3位二进制子串分别是：000、001、010、101、011、111、110和100。</p>
+<p>每一种排圈方式都可以按如下方式编码：以全为0的子串作为起点，将所有的二进制位连接起来。N=3的两种排圈方式于是就可以编码为23和29：</p>
+<center>00010111&thinsp;<sub>2</sub> = 23<br>00011101&thinsp;<sub>2</sub> = 29</center>
+
+<p>记S(N)是所有排圈方式的编码之和，我们可以看到S(3) = 23 + 29 = 52。</p>
+<p>求S(5)。 </p>
+<hr>
 <hr>
 <h1 id="Problem_266"><a href="https://projecteuler.net/problem=266" target="_blank" rel="external">Problem 266</a></h1><hr>
 <p><strong>Pseudo Square Root</strong></p>
 <p>The divisors of 12 are: 1,2,3,4,6 and 12.<br>The largest divisor of 12 that does not exceed the square root of 12 is 3.<br>We shall call the largest divisor of an integer n that does not exceed the square root of n the pseudo square root (PSR) of n.<br>It can be seen that PSR(3102)=47.</p>
 <p>Let p be the product of the primes below 190.<br>Find PSR(p) mod 10<sup>16</sup>.</p>
+<hr>
+<p><strong>伪平方根</strong></p>
+<p>12的约数是：1、2、3、4、6和12。<br>12的所有约数中，不超过其平方根的最大约数是3。<br>我们称n的所有约数中，不超过其平方根的最大约数为n的伪平方根，简称PSR。<br>可以看出PSR(3102)=47。</p>
+<p>记p是所有小于190的素数的乘积。<br>求PSR(p) mod 10<sup>16</sup>。</p>
 <hr>
 <hr>
 <h1 id="Problem_267"><a href="https://projecteuler.net/problem=267" target="_blank" rel="external">Problem 267</a></h1><hr>
@@ -594,11 +731,23 @@
 <p>Choosing f to maximize your chances of having at least £1,000,000,000 after 1,000 flips, what is the chance that you become a billionaire?</p>
 <p>All computations are assumed to be exact (no rounding), but give your answer rounded to 12 digits behind the decimal point in the form 0.abcdefghijkl.</p>
 <hr>
+<p><strong>百万富翁</strong></p>
+<p>现在你面前有一个仅此一次的投资机会。</p>
+<p>一开始，你有£1的资本。你可以选择一个固定的比例f，每一轮投入这个比例的资本，并抛掷一枚标准硬币，这样的过程重复一千轮。</p>
+<p>如果硬币是正面朝上，你的回报是投入资本的两倍，如果是反面朝上则没有回报。</p>
+<p>例如，如果选择f&thinsp;=&thinsp;1/4，第一轮投入的资本是£0.25，假定正面朝上，那么你获得的回报是£0.5，因此总资本变成£1.5。下一轮你投入的资本是£0.375，假定反面朝上，那么你现在的总资本是£1.125。</p>
+<p>经过1,000轮后你有一定几率拥有至少£1,000,000,000的资本。选择最大化这个几率的f时，你有多大的几率成为百万富翁？</p>
+<p>计算过程中必须是精确值（不四舍五入），但将你的答案四舍五入到小数点后12位小数，即形式为0.abcdefghijkl。</p>
+<hr>
 <hr>
 <h1 id="Problem_268"><a href="https://projecteuler.net/problem=268" target="_blank" rel="external">Problem 268</a></h1><hr>
 <p><strong>Counting numbers with at least four distinct prime factors less than 100</strong></p>
 <p>It can be verified that there are 23 positive integers less than 1000 that are divisible by at least four distinct primes less than 100.</p>
 <p>Find how many positive integers less than 10<sup>16</sup> are divisible by at least four distinct primes less than 100.</p>
+<hr>
+<p><strong>拥有四个小于100的不同质因数的数计数</strong></p>
+<p>可以验证，在小于1000的正整数中，有23个能够被至少四个小于100的不同质数整除。</p>
+<p>在小于10<sup>16</sup>的正整数中，求出有多少个能够被至少四个小于100的不同质数整除。</p>
 <hr>
 <hr>
 <h1 id="Problem_269"><a href="https://projecteuler.net/problem=269" target="_blank" rel="external">Problem 269</a></h1><hr>
@@ -614,6 +763,18 @@
 <p>It can be verified that Z(100 000) is 14696.</p>
 <p>What is Z(10<sup>16</sup>)?</p>
 <hr>
+<p><strong>有至少一个整数根的多项式</strong></p>
+<p>多项式P(x)的根或零点，是方程P(x) = 0的解。<br>定义P<sub>n</sub>为系数等于n的各位数字的多项式。<br>例如，P<sub>5703</sub>(x) = 5x<sup>3</sup> + 7x<sup>2</sup> + 3。</p>
+<p>我们可以看出：</p>
+<ul>
+<li>P<sub>n</sub>(0)是n的个位数字。</li>
+<li>P<sub>n</sub>(1)是n的各位数字和。</li>
+<li>P<sub>n</sub>(10)是n本身。</li>
+</ul>
+<p>在不超过k的正整数中，有些数n满足多项式P<sub>n</sub>至少有一个整数根，定义Z(k)为这类数的数目。</p>
+<p>可以验证Z(100 000)为14696。</p>
+<p>Z(10<sup>16</sup>)是多少？</p>
+<hr>
 <hr>
 <h1 id="Problem_270"><a href="https://projecteuler.net/problem=270" target="_blank" rel="external">Problem 270</a></h1><hr>
 <p><strong>Cutting Squares</strong></p>
@@ -628,6 +789,18 @@
 
 <p>What is C(30) mod 10<sup>8</sup> ?</p>
 <hr>
+<p><strong>切割正方形</strong></p>
+<p>将一张边长为整数、大小为N×N的正方形纸的顶点置于原点，两条相邻边分别贴着x轴和y轴。然后，我们根据下面的规则对它进行切割：</p>
+<ul>
+<li>我们只进行这样的切割：从正方形不同的两条边上选择两个坐标为整数的点，并沿着两点的连线切割。</li>
+<li>两次切割不能相交，但多次切割可以经过边上的同一个点。</li>
+<li>一直切割下去，直到不存在合法的切割为止。</li>
+</ul>
+<p>如果翻转或旋转后相同的切割方法视为不同，我们记切割一个N×N方块的方法数记为C(N)。举例而言，C(1)&thinsp;=&thinsp;2，而C(2)&thinsp;=&thinsp;30（如下图所示）。</p>
+<center><img src="https://projecteuler.net/project/images/p270_CutSquare.gif"></center>
+
+<p>C(30) mod 10<sup>8</sup>是多少？</p>
+<hr>
 <hr>
 <h1 id="Problem_271"><a href="https://projecteuler.net/problem=271" target="_blank" rel="external">Problem 271</a></h1><hr>
 <p><strong>Modular Cubes, part 1</strong></p>
@@ -635,12 +808,22 @@
 <p>When n=91, there are 8 possible values for x, namely : 9, 16, 22, 29, 53, 74, 79, 81.<br>Thus, S(91)=9+16+22+29+53+74+79+81=363.</p>
 <p>Find S(13082761331670030).</p>
 <hr>
+<p><strong>立方取模I</strong></p>
+<p>对于正整数n，存在整数x，满足1&lt;x&lt;n，且x<sup>3</sup>≡1 mod n。记所有这样的整数x的和为S(n)。</p>
+<p>当n=91时，x一共有8个可能的取值，分别是：9、16、22、29、53、74、79、81。<br>因此，S(91)=9+16+22+29+53+74+79+81=363。</p>
+<p>求S(13082761331670030).</p>
+<hr>
 <hr>
 <h1 id="Problem_272"><a href="https://projecteuler.net/problem=272" target="_blank" rel="external">Problem 272</a></h1><hr>
 <p><strong>Modular Cubes, part 2</strong></p>
 <p>For a positive number n, define C(n) as the number of the integers x, for which 1&lt;x&lt;n and x<sup>3</sup>≡1 mod n.</p>
 <p>When n=91, there are 8 possible values for x, namely : 9, 16, 22, 29, 53, 74, 79, 81.<br>Thus, C(91)=8.</p>
 <p>Find the sum of the positive numbers n≤10<sup>11</sup> for which C(n)=242.</p>
+<hr>
+<p><strong>立方取模II</strong></p>
+<p>对于正整数n，存在整数x，满足1&lt;x&lt;n，且x<sup>3</sup>≡1 mod n。记所有这样的整数x的数目为C(n)。</p>
+<p>当n=91时，x一共有8个可能的取值，分别是：9、16、22、29、53、74、79、81。<br>因此，C(91)=8。</p>
+<p>对于所有使得C(n)=242的正整数n≤10<sup>11</sup>，求它们的和。</p>
 <hr>
 <hr>
 <h1 id="Problem_273"><a href="https://projecteuler.net/problem=273" target="_blank" rel="external">Problem 273</a></h1><hr>
@@ -652,6 +835,14 @@
 <p>Thus S(65) = 1 + 4 = 5.</p>
 <p>Find ∑S(N), for all squarefree N only divisible by primes of the form 4k+1 with 4k+1 &lt; 150.</p>
 <hr>
+<p><strong>平方的和</strong></p>
+<p>考虑如下形式的方程：a<sup>2</sup> + b<sup>2</sup> = N, 0 ≤ a ≤ b, a、b和N均为整数。</p>
+<p>对于N=65，方程有两个解：</p>
+<p>a=1, b=8 和 a=4, b=7。</p>
+<p>对于方程a<sup>2</sup> + b<sup>2</sup> = N, 0 ≤ a ≤ b, a、b和N均为整数，所有的解中的a值的和记为S(N)。</p>
+<p>因此S(65) = 1 + 4 = 5。</p>
+<p>有一些无平方因子数N，只能被形如4k+1且&lt; 150的素数整除，对所有这样的数求∑S(N)。</p>
+<hr>
 <hr>
 <h1 id="Problem_274"><a href="https://projecteuler.net/problem=274" target="_blank" rel="external">Problem 274</a></h1><hr>
 <p><strong>Divisibility Multipliers</strong></p>
@@ -662,6 +853,15 @@
 <p>For example, the divisibility multiplier for 113 is 34.</p>
 <p>f(76275) = 7627 + 5 * 34 = 7797 : 76275 and 7797 are both divisible by 113<br>f(12345) = 1234 + 5 * 34 = 1404 : 12345 and 1404 are both not divisible by 113</p>
 <p>The sum of the divisibility multipliers for the primes that are coprime to 10 and less than 1000 is 39517. What is the sum of the divisibility multipliers for the primes that are coprime to 10 and less than 10<sup>7</sup>?</p>
+<hr>
+<p><strong>整除性乘数</strong></p>
+<p>对于任意与10互质的正整数p &gt; 1，存在一个正<em>整除性乘数</em> m &lt; p，能够让任意正整数n在下面这个函数的作用下保持其对p的整除性：</p>
+<p>f(n) = (n除最后一位数字之外的部分) + (n的最后一位数字) * m</p>
+<p>也就是说，如果m是p的整除性乘数，那么f(n)能被p整除当且仅当n能被p整除。</p>
+<p>（当n远大于p时，f(n)将会比n小，重复这个过程提供了快速检验能否被p整除的方法。）</p>
+<p>例如，113的整除性乘数是34。</p>
+<p>f(76275) = 7627 + 5 * 34 = 7797 : 76275和7797都能被113整除<br>f(12345) = 1234 + 5 * 34 = 1404 : 12345和1404都不能被112整除</p>
+<p>对于所有小于1000且与10互质的素数，其整除性乘数之和是39517。对于所有小于10<sup>7</sup>且与10互质的素数，其整除性乘数之和是多少？</p>
 <hr>
 <hr>
 <h1 id="Problem_275"><a href="https://projecteuler.net/problem=275" target="_blank" rel="external">Problem 275</a></h1><hr>
@@ -677,6 +877,19 @@
 <center><img src="https://projecteuler.net/project/images/p275_sculptures2.gif"></center>
 
 <p>There are 964 balanced sculptures of order 10 and 360505 of order 15.How many balanced sculptures are there of order 18?</p>
+<hr>
+<p><strong>平衡雕塑</strong></p>
+<p>我们定义n阶<em>平衡雕塑</em>如下：</p>
+<ul>
+<li>是由n+1个方块构成的<dfn title="由一系列相同方块拼接而成的形状，允许有洞。">多联骨牌</dfn>，分为<em>区块</em>（n个方块）和<em>基座</em>（剩下的1个方块）；</li>
+<li>基座的中心位于(x&thinsp;=&thinsp;0, y&thinsp;=&thinsp;0)；</li>
+<li>区块的y坐标大于0（因此基座是唯一最低的方块）；</li>
+<li>所有区块的总体质心的x坐标等于零。</li>
+</ul>
+<p>在数雕塑的种类时，所有关于y轴翻转后相同的形状都<u>不</u>算作不同的形状。例如，如下展示了全部18种6阶的平衡雕塑；注意每一对镜像（关于y轴）都只算做一种雕塑：</p>
+<center><img src="https://projecteuler.net/project/images/p275_sculptures2.gif"></center>
+
+<p>10阶的平衡雕塑一共有964种，15阶平衡雕塑一共有360505种。18阶平衡雕塑一共有多少种？</p>
 <hr>
 
       
