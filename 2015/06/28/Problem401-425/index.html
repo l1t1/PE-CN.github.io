@@ -20,7 +20,7 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
 
 
-    <meta name="description" content="欧拉计划中文翻译站" />
+    <meta name="description" content="Project Euler | 欧拉计划 中文翻译站" />
 
 
 
@@ -293,63 +293,346 @@
 <hr>
 <hr>
 <h1 id="Problem_406"><a href="https://projecteuler.net/problem=406" target="_blank" rel="external">Problem 406</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_407"><a href="https://projecteuler.net/problem=407" target="_blank" rel="external">Problem 407</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_408"><a href="https://projecteuler.net/problem=408" target="_blank" rel="external">Problem 408</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_409"><a href="https://projecteuler.net/problem=409" target="_blank" rel="external">Problem 409</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_410"><a href="https://projecteuler.net/problem=410" target="_blank" rel="external">Problem 410</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_411"><a href="https://projecteuler.net/problem=411" target="_blank" rel="external">Problem 411</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_412"><a href="https://projecteuler.net/problem=412" target="_blank" rel="external">Problem 412</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_413"><a href="https://projecteuler.net/problem=413" target="_blank" rel="external">Problem 413</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_414"><a href="https://projecteuler.net/problem=414" target="_blank" rel="external">Problem 414</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_415"><a href="https://projecteuler.net/problem=415" target="_blank" rel="external">Problem 415</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_416"><a href="https://projecteuler.net/problem=416" target="_blank" rel="external">Problem 416</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_417"><a href="https://projecteuler.net/problem=417" target="_blank" rel="external">Problem 417</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_418"><a href="https://projecteuler.net/problem=418" target="_blank" rel="external">Problem 418</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_419"><a href="https://projecteuler.net/problem=419" target="_blank" rel="external">Problem 419</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_420"><a href="https://projecteuler.net/problem=420" target="_blank" rel="external">Problem 420</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_421"><a href="https://projecteuler.net/problem=421" target="_blank" rel="external">Problem 421</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_422"><a href="https://projecteuler.net/problem=422" target="_blank" rel="external">Problem 422</a></h1><hr>
+<p><b>Guessing Game</b></p>
+<p><b>猜数游戏</b></p>
+<p>We are trying to find a hidden number selected from the set of integers {1, 2, …, <var>n</var>} by asking questions.<br>Each number (question) we ask, we get one of three possible answers:</p>
+
+<p>我们尝试通过提问来确定整数集合{1, 2, …, <var>n</var>}中的某个特定数。<br>每次提问时我们说一个数，可能会得到下面三个回答中的一个：</p>
+
+<ul><br><li> “Your guess is lower than the hidden number” (and you incur a cost of <var>a</var>), or</li><br><li> “你的猜测比准确数要小。”（同时你需要付出成本<var>a</var>），或者</li><br><br><li> “Your guess is higher than the hidden number” (and you incur a cost of <var>b</var>), or</li><br><li> “你的猜测比准确数要大。”（同时你需要付出成本<var>b</var>），或者</li><br><br><li> “你猜对了！”（游戏结束）。</li><br></ul>
+
+<p>Given the value of <var>n</var>, <var>a</var>, and <var>b</var>, an <i>optimal strategy</i> minimizes the total cost <u>for the worst possible case</u>.</p>
+
+<p>给定<var>n</var>, <var>a</var>和<var>b</var>的值，可以找到<i>最优策略</i>最小化<u>在最差的可能情况下</u>的总成本。</p>
+
+<p>For example, if <var>n</var> = 5, <var>a</var> = 2, and <var>b</var> = 3, then we may begin by asking “<b>2</b>“ as our first question.</p>
+
+<p>例如，如果<var>n</var> = 5, <var>a</var> = 2，以及<var>b</var> = 3，那么我们第一次提问应该猜“<b>2</b>”。</p>
+
+<p>If we are told that 2 is higher than the hidden number (for a cost of <var>b</var>=3), then we are sure that “<b>1</b>“ is the hidden number (for a total cost of <span style="color:blue;"><b>3</b></span>).<br><br>If we are told that 2 is lower than the hidden number (for a cost of <var>a</var>=2), then our next question will be “<b>4</b>“.<br><br>If we are told that 4 is higher than the hidden number (for a cost of <var>b</var>=3), then we are sure that “<b>3</b>“ is the hidden number (for a total cost of 2+3=<span style="color:blue;"><b>5</b></span>).<br><br>If we are told that 4 is lower than the hidden number (for a cost of <var>a</var>=2), then we are sure that “<b>5</b>“ is the hidden number (for a total cost of 2+2=<span style="color:blue;"><b>4</b></span>).<br><br>Thus, the worst-case cost achieved by this strategy is <span style="color:red;"><b>5</b></span>. It can also be shown that this is the lowest worst-case cost that can be achieved.<br>So, in fact, we have just described an optimal strategy for the given values of <var>n</var>, <var>a</var>, and <var>b</var>.</p>
+
+<p>如果2比准确数要大（付出成本<var>b</var>=3），我们就知道“<b>1</b>”是准确数（总成本为<span style="color:blue;"><b>3</b></span>）。<br><br>如果2比准确数要小（付出成本<var>a</var>=2），我们下一次提问猜“<b>4</b>”。<br><br>如果4比准确数要大（付出成本<var>b</var>=3），我们确信“<b>3</b>”是准确数（总成本为2+3=<span style="color:blue;"><b>5</b></span>）。<br><br>如果4比准确数要小（付出成本<var>a</var>=2），我们确信“<b>5</b>”是准确数（总成本为2+2=<span style="color:blue;"><b>4</b></span>）。<br><br>因此，这个策略的最差情况总成本是<span style="color:red;"><b>5</b></span>。可以证明这也是最小的最差情况总成本。<br>事实上，以上描述的就是在一个给定的<var>n</var>, <var>a</var>和<var>b</var>值下的最优策略。</p>
+
+
+<p>Let C(<var>n</var>, <var>a</var>, <var>b</var>) be the worst-case cost achieved by an optimal strategy for the given values of <var>n</var>, <var>a</var>, and <var>b</var>.</p>
+
+<p>记C(<var>n</var>, <var>a</var>, <var>b</var>)是在给定<var>n</var>, <var>a</var>和<var>b</var>值下最优策略的最差情况总成本。</p>
+
+
+<p>Here are a few examples:<br><br>如下是其中一些例子：<br><br>C(5, 2, 3) = 5<br><br>C(500, √2, √3) = 13.22073197…<br><br>C(20000, 5, 7) = 82<br><br>C(2000000, √5, √7) = 49.63755955…</p>
+
+<p>Let F<sub><var>k</var></sub> be the Fibonacci numbers: F<sub><var>k</var></sub> = F<sub><var>k</var>-1</sub> + F<sub><var>k</var>-2</sub> with base cases F<sub>1</sub> = F<sub>2</sub> = 1.<br>Find ∑<sub>1≤<var>k</var>≤30</sub>&nbsp;C(10<sup>12</sup>, √<var>k</var>, √F<sub><var>k</var></sub>), and give your answer rounded to 8 decimal places behind the decimal point.</p>
+
+<p>记F<sub><var>k</var></sub>是斐波那契数：F<sub><var>k</var></sub> = F<sub><var>k</var>-1</sub> + F<sub><var>k</var>-2</sub>，起始条件为F<sub>1</sub> = F<sub>2</sub> = 1。<br>求∑<sub>1≤<var>k</var>≤30</sub>&nbsp;C(10<sup>12</sup>, √<var>k</var>, √F<sub><var>k</var></sub>)，并将答案四舍五入到小数点后八位小数。</p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=407" target="_blank" rel="external">Problem 407</a><br><em>*</em><br><b>Idempotents</b><br><br><b>幂等元</b><br><br><p><br>If we calculate <var>a</var><sup>2</sup> mod 6 for 0 ≤ <var>a</var> ≤ 5 we get: 0,1,4,3,4,1.<br></p>
+
+<p><br>对于0 ≤ <var>a</var> ≤ 5，分别计算<var>a</var><sup>2</sup> mod 6，我们得到： 0,1,4,3,4,1。<br></p>
+
+
+<p><br>The largest value of <var>a</var> such that <var>a</var><sup>2</sup> ≡ <var>a</var> mod 6 is 4.<br><br>Let’s call M(<var>n</var>) the largest value of <var>a</var> &lt; <var>n</var> such that <var>a</var><sup>2</sup> ≡ <var>a</var> (mod <var>n</var>).<br><br>So M(6) = 4.<br></p>
+
+<p><br>使得<var>a</var><sup>2</sup> ≡ <var>a</var> mod 6的最大<var>a</var>值为4。<br><br>我们用M(<var>n</var>)表示使得<var>a</var><sup>2</sup> ≡ <var>a</var> (mod <var>n</var>)的最大的<var>a</var> &lt; <var>n</var>。<br><br>因此M(6) = 4。<br></p>
+
+
+<p><br>Find ∑M(<var>n</var>) for 1 ≤ <var>n</var> ≤ 10<sup>7</sup>.<br></p><br><p><br>对于1 ≤ <var>n</var> ≤ 10<sup>7</sup>，求∑M(<var>n</var>)。<br></p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=408" target="_blank" rel="external">Problem 408</a><br><em>*</em><br><b>Admissible paths through a grid</b><br><br><b>穿越方格的容许路径</b><br><br><p>Let’s call a lattice point (<var>x</var>, <var>y</var>) <i>inadmissible</i> if <var>x</var>, <var>y</var> and <var>x</var>&nbsp;+&nbsp;<var>y</var> are all positive perfect squares.<br><br>For example, (9, 16) is inadmissible, while (0, 4), (3, 1) and (9, 4) are not.</p><br><p>我们称格点(<var>x</var>, <var>y</var>) <i>不容许的</i>，如果<var>x</var>, <var>y</var>和<var>x</var>&nbsp;+&nbsp;<var>y</var>均为正平方数。<br><br>例如，(9, 16)是不容许的， 而(0, 4), (3, 1)和(9, 4)都不是。</p>
+
+
+
+<p>Consider a path from point (<var>x</var><sub>1</sub>, <var>y</var><sub>1</sub>) to point (<var>x</var><sub>2</sub>, <var>y</var><sub>2</sub>) using only unit steps north or east.<br><br>Let’s call such a path <i>admissible</i> if none of its intermediate points are inadmissible.</p>
+
+<p>考虑从点(<var>x</var><sub>1</sub>, <var>y</var><sub>1</sub>)到点(<var>x</var><sub>2</sub>, <var>y</var><sub>2</sub>)的路径，路径上每次只能往北或往东走一步。<br><br>我们称路径是<i>容许的</i>，如果路径经过的点都不是不容许的。</p>
+
+<p>Let P(<var>n</var>) be the number of admissible paths from (0, 0) to (<var>n</var>, <var>n</var>).<br><br>It can be verified that P(5) = 252, P(16) = 596994440 and P(1000) mod 1&nbsp;000&nbsp;000&nbsp;007 = 341920854.</p>
+
+<p>记P(<var>n</var>)为从(0, 0)到(<var>n</var>, <var>n</var>)的容许路径总数。<br><br>可以验证P(5) = 252, P(16) = 596994440以及P(1000) mod 1&nbsp;000&nbsp;000&nbsp;007 = 341920854。</p>
+
+<p>Find P(10&nbsp;000&nbsp;000) mod 1&nbsp;000&nbsp;000&nbsp;007.</p><br><p>求P(10&nbsp;000&nbsp;000) mod 1&nbsp;000&nbsp;000&nbsp;007。</p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=409" target="_blank" rel="external">Problem 409</a><br><em>*</em><br><b>Nim Extreme</b><br><br><b>极限取石子游戏</b><br><br><p>Let <var>n</var> be a positive integer. Consider <b>nim</b> positions where:</p><br><p>记 <var>n</var>为正整数。考虑如下的<b>取石子游戏</b>设计：</p>
+
+<ul><br><li>There are <var>n</var> non-empty piles.</li><br><li>有<var>n</var>个非空的堆。</li><br><li>Each pile has size less than 2<sup><var>n</var></sup>.</li><br><li>每个堆的石子数小于2<sup><var>n</var></sup>。</li><br><li>No two piles have the same size.</li><br><li>没有两堆的石子数相同。</li><br></ul>
+
+<p>Let W(<var>n</var>) be the number of winning nim positions satisfying the above<br>conditions (a position is winning if the first player has a winning strategy). For example, W(1) = 1, W(2) = 6, W(3) = 168, W(5) = 19764360 and W(100) mod 1&nbsp;000&nbsp;000&nbsp;007 = 384777056.<br></p>
+
+<p>记W(<var>n</var>)是所有设计中必胜态的数目（必胜态是指先手玩家有必胜策略的状态）。例如，W(1) = 1, W(2) = 6, W(3) = 168, W(5) = 19764360，以及W(100) mod 1&nbsp;000&nbsp;000&nbsp;007 = 384777056。<br></p>
+
+
+<p>Find W(10&nbsp;000&nbsp;000) mod 1&nbsp;000&nbsp;000&nbsp;007.<br></p>
+
+<p>求W(10&nbsp;000&nbsp;000) mod 1&nbsp;000&nbsp;000&nbsp;007。<br></p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=410" target="_blank" rel="external">Problem 410</a><br><em>*</em><br><b>Circle and tangent line</b><br><br><b>圆与切线</b><br><br><p>Let C be the circle with radius <var>r</var>, <var>x</var><sup>2</sup> + <var>y</var><sup>2</sup> = <var>r</var><sup>2</sup>. We choose two points P(<var>a</var>, <var>b</var>) and Q(-<var>a</var>, <var>c</var>) so that the line passing through P and Q is tangent to C.</p>
+
+<p>记C为半径为<var>r</var>的圆，其方程为<var>x</var><sup>2</sup> + <var>y</var><sup>2</sup> = <var>r</var><sup>2</sup>。我们选取两个点P(<var>a</var>, <var>b</var>)和Q(-<var>a</var>, <var>c</var>)，使得过PQ的直线与圆C相切。</p>
+
+<p>For example, the quadruplet (<var>r</var>, <var>a</var>, <var>b</var>, <var>c</var>) = (2, 6, 2, -7) satisfies this property.</p>
+
+<p>例如，四元组(<var>r</var>, <var>a</var>, <var>b</var>, <var>c</var>) = (2, 6, 2, -7)就满足上述性质。</p>
+
+<p>Let F(<var>R</var>, <var>X</var>) be the number of the integer quadruplets (<var>r</var>, <var>a</var>, <var>b</var>, <var>c</var>) with this property, and with 0 &lt; <var>r</var> ≤ <var>R</var> and 0 &lt; <var>a</var> ≤ <var>X</var>.</p>
+
+<p>记F(<var>R</var>, <var>X</var>)是满足上述性质的整数四元组(<var>r</var>, <var>a</var>, <var>b</var>, <var>c</var>)的数目，要求0 &lt; <var>r</var> ≤ <var>R</var>且0 &lt; <var>a</var> ≤ <var>X</var>。</p>
+
+<p>We can verify that F(1, 5) = 10, F(2, 10) = 52 and F(10, 100) = 3384.<br><br>Find F(10<sup>8</sup>, 10<sup>9</sup>) + F(10<sup>9</sup>, 10<sup>8</sup>).</p>
+
+<p>可以验证F(1, 5) = 10, F(2, 10) = 52以及F(10, 100) = 3384。<br><br>求F(10<sup>8</sup>, 10<sup>9</sup>) + F(10<sup>9</sup>, 10<sup>8</sup>)。</p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=411" target="_blank" rel="external">Problem 411</a><br><em>*</em><br><b>Uphill paths</b><br><br><b>上行路径</b><br><br><p><br>Let <var>n</var> be a positive integer. Suppose there are stations at the coordinates (<var>x</var>, <var>y</var>) = (2<sup><var>i</var></sup> mod <var>n</var>, 3<sup><var>i</var></sup> mod <var>n</var>) for 0 ≤ <var>i</var> ≤ 2<var>n</var>. We will consider stations with the same coordinates as the same station.<br></p>
+
+<p><br>记<var>n</var>为正整数。在所有坐标为(<var>x</var>, <var>y</var>) = (2<sup><var>i</var></sup> mod <var>n</var>, 3<sup><var>i</var></sup> mod <var>n</var>)的位置安设站点，其中0 ≤ <var>i</var> ≤ 2<var>n</var>。如果多个站点有相同坐标，我们就合并为同一个站点。<br></p>
+
+<p><br>We wish to form a path from (0, 0) to (<var>n</var>, <var>n</var>) such that the x and y coordinates never decrease.<br><br>Let S(<var>n</var>) be the maximum number of stations such a path can pass through.<br></p><br><p><br>我们希望找到一条从(0, 0)到(<var>n</var>, <var>n</var>)的路径，路径上x和y坐标单调不减。<br><br>记S(<var>n</var>)是这样一条路径最多能够穿过的站点数目。</p>
+
+<p><br>For example, if <var>n</var> = 22, there are 11 distinct stations, and a valid path can pass through at most 5 stations. Therefore, S(22) = 5.<br>The case is illustrated below, with an example of an optimal path:<br></p><br><p><br>例如，当<var>n</var> = 22时，一共有11个不同的站点，一条可行路径最多能穿过5个站点，因此S(22) = 5。<br>如下图所示是其中一条最优的可行路径：<br></p>
+
+
+<p align="center"><img src="https://projecteuler.net/project/images/p411_longpath.png"></p><br><p><br>It can also be verified that S(123) = 14 and S(10000) = 48.<br></p><br><p><br>同样可以验证S(123) = 14以及S(10000) = 48。<br></p><br><p><br>Find ∑ S(<var>k</var><sup>5</sup>) for 1 ≤ <var>k</var> ≤ 30.<br></p><br><p><br>对于1 ≤ <var>k</var> ≤ 30，求∑ S(<var>k</var><sup>5</sup>)。<br></p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=412" target="_blank" rel="external">Problem 412</a><br><em>*</em><br><b>Gnomon numbering</b><br><br><b>圭表填数</b><br><br><p>For integers <var>m</var>, <var>n</var> (0&nbsp;≤&nbsp;<var>n</var>&nbsp;&lt;&nbsp;<var>m</var>), let L(<var>m</var>,&nbsp;<var>n</var>) be an <var>m</var>×<var>m</var> grid with the top-right <var>n</var>×<var>n</var> grid removed.</p>
+
+<p>对于整数<var>m</var>，<var>n</var>（0&nbsp;≤&nbsp;<var>n</var>&nbsp;&lt;&nbsp;<var>m</var>），L(<var>m</var>,&nbsp;<var>n</var>)表示一个<var>m</var>×<var>m</var>的方格被挖去了右上角<var>n</var>×<var>n</var>的方格后留下的L型部分。</p>
+
+<p>For example, L(5, 3) looks like this:</p><br><p>例如，L(5, 3)如下图所示：</p>
+
+<p><img src="https://projecteuler.net/project/images/p412_table53.png"></p>
+
+<p>We want to number each cell of L(<var>m</var>,&nbsp;<var>n</var>) with consecutive integers 1, 2, 3, … such that the number in every cell is smaller than the number below it and to the left of it.</p>
+
+<p>我们给L(<var>m</var>,&nbsp;<var>n</var>)的每一格填上连续整数1, 2, 3, …，并要求每个格子中的数要小于它左侧和下方格子中的数。</p>
+
+<p>For example, here are two valid numberings of L(5,&nbsp;3):</p><br><p>例如，下图是L(5,&nbsp;3)两种可行的填法：</p>
+
+<p><img src="https://projecteuler.net/project/images/p412_tablenums.png"></p>
+
+<p>Let LC(<var>m</var>, <var>n</var>) be the number of valid numberings of L(<var>m</var>, <var>n</var>).<br><br>It can be verified that LC(3,&nbsp;0) = 42, LC(5,&nbsp;3) = 250250, LC(6,&nbsp;3) = 406029023400 and LC(10,&nbsp;5) mod 76543217 = 61251715.</p>
+
+<p>记LC(<var>m</var>, <var>n</var>)是L(<var>m</var>, <var>n</var>)所有可行填法的数目。<br><br>可以验证LC(3,&nbsp;0) = 42, LC(5,&nbsp;3) = 250250, LC(6,&nbsp;3) = 406029023400以及LC(10,&nbsp;5) mod 76543217 = 61251715。</p>
+
+<p>Find LC(10000,&nbsp;5000) mod 76543217.</p><br><p>求LC(10000,&nbsp;5000) mod 76543217。</p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=413" target="_blank" rel="external">Problem 413</a><br><em>*</em><br><b>One-child Numbers</b><br><br><b>独子数</b><br><br><p>We say that a <var>d</var>-digit positive number (no leading zeros) is a one-child number if exactly one of its sub-strings is divisible by <var>d</var>.</p>
+
+<p>我们称一个<var>d</var>位正整数（没有前导零）为独子数，如果它恰好只有一个子串能够被<var>d</var>整除。</p>
+
+<p>For example, 5671 is a 4-digit one-child number. Among all its sub-strings 5, 6, 7, 1, 56, 67, 71, 567, 671 and 5671, only 56 is divisible by 4.<br><br>Similarly, 104 is a 3-digit one-child number because only 0 is divisible by 3.<br><br>1132451 is a 7-digit one-child number because only 245 is divisible by 7.</p>
+
+<p>例如，5671是一个四位独子数。它的所有子串5, 6, 7, 1, 56, 67, 71, 567, 671和5671中，只有56能够被4整除。<br><br>同样的，104是一个三位独子数，因为只有0能够被3整除。<br><br>1132451是一个七位独子数，因为只有245能够被7整除。</p>
+
+<p>Let F(<var>N</var>) be the number of the one-child numbers less than <var>N</var>.<br><br>We can verify that F(10) = 9, F(10<sup>3</sup>) = 389 and F(10<sup>7</sup>) = 277674.</p>
+
+<p>记F(<var>N</var>)是小于<var>N</var>的独子数的数目。<br><br>可以验证F(10) = 9, F(10<sup>3</sup>) = 389以及F(10<sup>7</sup>) = 277674。</p>
+
+
+<p>Find F(10<sup>19</sup>).</p><br><p>求F(10<sup>19</sup>)。</p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=414" target="_blank" rel="external">Problem 414</a><br><em>*</em><br><b>Kaprekar constant</b><br><br><b>卡布列克常数</b><br><br><p><br>6174 is a remarkable number; if we sort its digits in increasing order and subtract that number from the number you get when you sort the digits in decreasing order, we get 7641-1467=6174.<br><br>Even more remarkable is that if we start from any 4 digit number and repeat this process of sorting and subtracting, we’ll eventually end up with 6174 or immediately with 0 if all digits are equal.<br><br>This also works with numbers that have less than 4 digits if we pad the number with leading zeroes until we have 4 digits.<br><br>E.g. let’s start with the number 0837:<br><br>8730-0378=8352<br><br>8532-2358=6174<br></p>
+
+<p><br>6174是个神奇的数；如果我们用将它的数字按降序排列组成的数减去将它的数字按升序排列组成的数，我们得到7641-1467=6174。<br><br>更神奇的是，如果我们从任意四位数出发，重复这个排列和相减的过程，最终我们都会得到6174，或者当每一位数字都相同时得0。<br><br>即使这个数没有4位，我们可以将其补上前导零凑足四位，上述结论同样成立。<br><br>例如，我们从数0837开始：<br><br>8730-0378=8352<br><br>8532-2358=6174<br></p>
+
+
+<p><br>6174 is called the <b>Kaprekar constant</b>. The process of sorting and subtracting and repeating this until either 0 or the Kaprekar constant is reached is called the <b>Kaprekar routine</b>.<br></p>
+
+<p><br>6174被称为<b>卡布列克常数</b>。这个排序和相减直至到达0或卡布列克常数的过程称为<b>卡布列克路径</b>。<br></p>
+
+<p><br>We can consider the Kaprekar routine for other bases and number of digits.<br><br>Unfortunately, it is not guaranteed a Kaprekar constant exists in all cases; either the routine can end up in a cycle for some input numbers or the constant the routine arrives at can be different for different input numbers.<br><br>However, it can be shown that for 5 digits and a base b = 6t+3≠9, a Kaprekar constant exists.<br><br>E.g. base 15: (10,4,14,9,5)<sub>15</sub><br><br>base 21: (14,6,20,13,7)<sub>21</sub><br></p>
+
+<p><br>对于其他进制和位数，我们也可以考察相应的卡布列克路径。<br><br>不幸的是，并不能保证在所有情况下都存在卡布列克常数；有时这个路径会最终进入一个循环，或者从不同的数出发最后会到达不同的常数。<br><br>然而，可以证明，对于5位数，以及b = 6t+3≠9 进制，存在卡布列克常数。<br><br>例如，在15进制下为： (10,4,14,9,5)<sub>15</sub><br><br>在21进制下为： (14,6,20,13,7)<sub>21</sub><br></p>
+
+
+<p><br>Define <var>C<sub>b</sub></var> to be the Kaprekar constant in base <var>b</var> for 5 digits.<br>Define the function <var>sb(i)</var> to be<br></p>
+
+<p><br>记<var>C<sub>b</sub></var>是<var>b</var>进制5位数的卡布列克常数。<br>定义函数<var>sb(i)</var>为<br></p>
+
+<ul><br><li> 0 if i = <var>C<sub>b</sub></var> or if <var>i</var> written in base <var>b</var> consists of 5 identical digits</li><br><li> 0，如果i = <var>C<sub>b</sub></var>，或者<var>i</var>在<var>b</var>进制下5个数字全部相同。</li><br><li> the number of iterations it takes the Kaprekar routine in base <var>b</var> to arrive at <var>C<sub>b</sub></var>, otherwise</li><br><li> 否则为在<var>b</var>进制下从这个数出发经过卡布列克路径到达<var>C<sub>b</sub></var>的迭代次数。</li><br></ul><br><p><br>Note that we can define <var>sb(i)</var> for all integers <var>i</var> &lt; <var>b</var><sup>5</sup>. If <var>i</var> written in base <var>b</var> takes less than 5 digits, the number is padded with leading zero digits until we have 5 digits before applying the Kaprekar routine.<br></p><br><br><p><br>注意<var>sb(i)</var>定义在所有整数<var>i</var> &lt; <var>b</var><sup>5</sup>上。即使<var>i</var>在<var>b</var>进制下不足5位，我们都可以在开始卡布列克路径之前给它加上前导零补足5位。<br></p><br><br><p><br>Define <var>S(b)</var> as the sum of <var>sb(i)</var> for 0 &lt; <var>i</var> &lt; <var>b</var><sup>5</sup>.<br><br>E.g. S(15) = 5274369<br><br>S(111) = 400668930299<br></p><br><br><p><br>定义<var>S(b)</var>是所有0 &lt; <var>i</var> &lt; <var>b</var><sup>5</sup>的函数<var>sb(i)</var>的和。<br><br>例如，S(15) = 5274369<br><br>S(111) = 400668930299<br></p><br><br><br><p><br>Find the sum of S(6k+3) for 2 ≤ k ≤ 300.<br><br>Give the last 18 digits as your answer.<br></p><br><br><p><br>对于2 ≤ k ≤ 300，求S(6k+3)的和。<br><br>给出这个数的最后18位作为你的答案。<br></p><br><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=415" target="_blank" rel="external">Problem 415</a><br><strong><em><br><b>Titanic sets</b><br><br><b>泰坦尼克集</b><br><br><p>A set of lattice points S is called a <i>titanic set</i> if there exists a line passing through exactly two points in S.</p><br><br><p>格点集S被称为<i>泰坦尼克集</i>，如果存在一条直线恰好只穿过S中的两个点。</p><br><br><p>An example of a titanic set is S = {(0, 0), (0, 1), (0, 2), (1, 1), (2, 0), (1, 0)}, where the line passing through (0, 1) and (2, 0) does not pass through any other point in S.</p><br><br><p>泰坦尼克集的一个例子是S = {(0, 0), (0, 1), (0, 2), (1, 1), (2, 0), (1, 0)}，存在直线穿过点(0, 1)和点(2, 0)，而不穿过S中其它的点。</p><br><br><p>On the other hand, the set {(0, 0), (1, 1), (2, 2), (4, 4)} is not a titanic set since the line passing through any two points in the set also passes through the other two.</p><br><br><p>相反的，集合{(0, 0), (1, 1), (2, 2), (4, 4)}不是泰坦尼克集，因为穿过集合中任意两点的直线也穿过集合中另外的两个点。</p><br><br><p>For any positive integer <var>N</var>, let <var>T</var>(<var>N</var>) be the number of titanic sets S whose every point (<var>x</var>, <var>y</var>) satisfies 0 ≤ <var>x</var>, <var>y</var> ≤ <var>N</var>.<br>It can be verified that <var>T</var>(1) = 11, <var>T</var>(2) = 494, <var>T</var>(4) = 33554178, <var>T</var>(111) mod 10<sup>8</sup> = 13500401 and <var>T</var>(10<sup>5</sup>)&nbsp;mod&nbsp;10<sup>8</sup> = 63259062.</p><br><br><p>对于任意正整数<var>N</var>，记<var>T</var>(<var>N</var>)为所有可能的泰坦尼克集S的数目，要求S中所有的点(<var>x</var>, <var>y</var>)满足0 ≤ <var>x</var>, <var>y</var> ≤ <var>N</var>。<br>可以验证<var>T</var>(1) = 11, <var>T</var>(2) = 494, <var>T</var>(4) = 33554178, <var>T</var>(111) mod 10<sup>8</sup> = 13500401以及<var>T</var>(10<sup>5</sup>)&nbsp;mod&nbsp;10<sup>8</sup> = 63259062。</p><br><br><br><p>Find <var>T</var>(10<sup>11</sup>)&nbsp;mod&nbsp;10<sup>8</sup>.</p><br><p>求<var>T</var>(10<sup>11</sup>)&nbsp;mod&nbsp;10<sup>8</sup>。</p>
+</em></strong><br><br><strong><em><br># <a href="https://projecteuler.net/problem=416" target="_blank" rel="external">Problem 416</a>
+</em></strong><br><b>A frog’s trip</b><br><br><b>青蛙的旅途</b><br><br><p>A row of <var>n</var> squares contains a frog in the leftmost square. By successive jumps the frog goes to the rightmost square and then back to the leftmost square. On the outward trip he jumps one, two or three squares to the right, and on the homeward trip he jumps to the left in a similar manner. He cannot jump outside the squares. He repeats the round-trip travel <var>m</var> times.</p><br><br><p>在一列<var>n</var>个方块的最左边一个上有一只青蛙。青蛙通过连续不断的跳跃，先跳到最右边的方块，然后再跳回最左边的方块。它向右跳的时候每次可以跳一个、两个或三个方块，跳回来时也同理。它不能跳出这些方块。这样的往返它一共进行了<var>m</var>次。</p><br><br><br><p>Let F(<var>m</var>, <var>n</var>) be the number of the ways the frog can travel so that at most one square remains unvisited.<br><br>For example, F(1, 3) = 4, F(1, 4) = 15, F(1, 5) = 46, F(2, 3) = 16 and F(2, 100) mod 10<sup>9</sup> = 429619151.</p><br><br><p>记F(<var>m</var>, <var>n</var>)为青蛙在旅途中至多有一个方块从未被跳到过的方式总数。<br><br>例如，F(1, 3) = 4, F(1, 4) = 15, F(1, 5) = 46, F(2, 3) = 16，而F(2, 100) mod 10<sup>9</sup> = 429619151。</p><br><br><p>Find the last 9 digits of F(10, 10<sup>12</sup>).</p><br><br><p>求F(10, 10<sup>12</sup>)的最后9位数字。</p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=417" target="_blank" rel="external">Problem 417</a><br><strong><em><br><b>Reciprocal cycles II</b><br><br><b>倒数循环节 II</b><br><br><p>A unit fraction contains 1 in the numerator. The decimal representation of the unit fractions with denominators 2 to 10 are given:</p><br><br><p>单位分数是以1为分子的分数。以2至10为分母的单位分数的十进制表示如下所示：</p><br><br><blockquote><br><table><br><tbody><tr><br><td><sup>1</sup>/<sub>2</sub></td><td>=&nbsp;</td><td>0.5</td><br></tr><br><tr><br><td><sup>1</sup>/<sub>3</sub></td><td>=&nbsp;</td><td>0.(3)</td><br></tr><br><tr><br><td><sup>1</sup>/<sub>4</sub></td><td>=&nbsp;</td><td>0.25</td><br></tr><br><tr><br><td><sup>1</sup>/<sub>5</sub></td><td>=&nbsp;</td><td>0.2</td><br></tr><br><tr><br><td><sup>1</sup>/<sub>6</sub></td><td>=&nbsp;</td><td>0.1(6)</td><br></tr><br><tr><br><td><sup>1</sup>/<sub>7</sub></td><td>=&nbsp;</td><td>0.(142857)</td><br></tr><br><tr><br><td><sup>1</sup>/<sub>8</sub></td><td>=&nbsp;</td><td>0.125</td><br></tr><br><tr><br><td><sup>1</sup>/<sub>9</sub></td><td>=&nbsp;</td><td>0.(1)</td><br></tr><br><tr><br><td><sup>1</sup>/<sub>10</sub></td><td>=&nbsp;</td><td>0.1</td><br></tr><br></tbody></table><br></blockquote><br><p>Where 0.1(6) means 0.166666…, and has a 1-digit recurring cycle. It can be seen that <sup>1</sup>/<sub>7</sub> has a 6-digit recurring cycle.</p><br><br><p>这里0.1(6)表示0.166666…，括号内表示有一位循环节。可以看出，<sup>1</sup>/<sub>7</sub>有六位循环节。</p><br><br><p><br>Unit fractions whose denominator has no other prime factors than 2 and/or 5 are not considered to have a recurring cycle.<br><br>We define the length of the recurring cycle of those unit fractions as 0.<br></p><br><br><p><br>如果单位分数的分母的质因数只包含2和5，就不存在循环节。<br><br>我们记这些单位分数的循环节长度为0。</p><br><br><br><p><br>Let L(n) denote the length of the recurring cycle of 1/n.<br>You are given that ∑L(n) for 3 ≤ n ≤ 1 000 000 equals 55535191115.<br></p><br><br><p><br>记L(n)为单位分数1/n的循环节长度。<br>已知对于3 ≤ n ≤ 1 000 000，∑L(n)等于55535191115。<br></p><br><br><p><br>Find ∑L(n) for 3 ≤ n ≤ 100 000 000.<br></p><br><br><p><br>对于3 ≤ n ≤ 100 000 000，求∑L(n)。<br></p>
+</em></strong><br><br><strong><em><br># <a href="https://projecteuler.net/problem=418" target="_blank" rel="external">Problem 418</a>
+</em></strong><br><b>Factorisation triples</b><br><br><b>因数三元组</b><br><br><p><br>Let <var>n</var> be a positive integer. An integer triple (<var>a</var>, <var>b</var>, <var>c</var>) is called a <i>factorisation triple</i> of <var>n</var> if:</p><br><br><p><br>记<var>n</var>是一个正整数。一个整数三元组(<var>a</var>, <var>b</var>, <var>c</var>)被称为<var>n</var>的<i>因数三元组</i>，当满足一下条件：</p><br><br><ul><br><li> 1 ≤ <var>a</var> ≤ <var>b</var> ≤ <var>c</var><br></li><li> <var>a</var>·<var>b</var>·<var>c</var> = <var>n</var>.<br></li></ul>
+
+<p><br>Define <var>f</var>(<var>n</var>) to be <var>a</var> + <var>b</var> + <var>c</var> for the factorisation triple (<var>a</var>, <var>b</var>, <var>c</var>) of <var>n</var> which minimises <var>c</var> / <var>a</var>. One can show that this triple is unique.<br></p><br><p><br>在<var>n</var>因数三元组(<var>a</var>, <var>b</var>, <var>c</var>)中，取使得<var>c</var> / <var>a</var>最小化的一组，记<var>f</var>(<var>n</var>)是这三个数的和<var>a</var> + <var>b</var> + <var>c</var>。可以验证这样的三元组总是唯一的。<br></p>
+
+<p><br>For example, <var>f</var>(165) = 19, <var>f</var>(100100) = 142 and <var>f</var>(20!) = 4034872.<br></p>
+
+<p><br>例如<var>f</var>(165) = 19，<var>f</var>(100100) = 142，而<var>f</var>(20!) = 4034872。<br></p>
+
+<p><br>Find <var>f</var>(43!).<br></p><br><p><br>求<var>f</var>(43!)。<br></p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=419" target="_blank" rel="external">Problem 419</a><br><em>*</em><br><b>Look and say sequence</b><br><br><b>看图说话序列</b><br><br><p><br>The <b>look and say</b> sequence goes 1, 11, 21, 1211, 111221, 312211, 13112221, 1113213211, …<br><br>The sequence starts with 1 and all other members are obtained by describing the previous member in terms of consecutive digits.<br><br>It helps to do this out loud:<br><br>1 is ‘one one’ → 11<br><br>11 is ‘two ones’ → 21<br><br>21 is ‘one two and one one’ → 1211 <br><br>1211 is ‘one one, one two and two ones’ → 111221<br><br>111221 is ‘three ones, two twos and one one’ → 312211<br><br>…<br></p>
+
+<p><br><b>看图说话</b>序列是这样一个序列：1, 11, 21, 1211, 111221, 312211, 13112221, 1113213211, …<br><br>这个序列从1开始，之后所有的项都是通过描述前一项的连续数字得到的。<br><br>把过程详细地说明一下有助于对这个序列的理解：<br><br>1是“1个1 → 11<br><br>11是“2个1” → 21<br><br>21是“1个2和1个1” → 1211 <br><br>1211是“1个1，1个2和2个1” → 111221<br><br>111221是“3个1，2个2，1个1” → 312211<br><br>…<br></p>
+
+
+<p><br>Define A(n), B(n) and C(n) as the number of ones, twos and threes in the n’th element of the sequence respectively.<br><br>One can verify that A(40) = 31254, B(40) = 20259 and C(40) = 11625.<br></p>
+
+<p><br>记A(n)，B(n)和C(n)分别表示第n项元素中数字1、2、3的数目。<br><br>可以验证A(40) = 31254，B(40) = 20259，而C(40) = 11625。<br></p>
+
+
+<p><br>Find A(n), B(n) and C(n) for n = 10<sup>12</sup>.<br><br>Give your answer modulo 2<sup>30</sup> and separate your values for A, B and C by a comma.<br><br>E.g. for n = 40 the answer would be 31254,20259,11625<br></p>
+
+<p><br>对于n = 10<sup>12</sup>，求A(n)，B(n)和C(n)。<br><br>将你的答案模2<sup>30</sup>取同余，并用逗号分隔开A，B和C。<br><br>例如，对于n = 40，答案应当是31254,20259,11625。<br></p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=420" target="_blank" rel="external">Problem 420</a><br><em>*</em><br><b>2x2 positive integer matrix</b><br><br><b>2x2正整数矩阵</b><br><br><p>A <i>positive integer matrix</i> is a matrix whose elements are all positive integers.<br><br>Some positive integer matrices can be expressed as a square of a positive integer matrix in two different ways. Here is an example:</p>
+
+
+<p><i>正整数矩阵</i>是元素均为正整数的矩阵。<br><br>有些正整数矩阵可以有多种方式表达为另一个正整数矩阵的平方，下面是一个例子：</p>
+
+<div align="center"><br><img src="https://projecteuler.net/project/images/p420_matrix.gif"><br></div>
+
+<p><br>We define F(<var>N</var>) as the number of the 2x2 positive integer matrices which have a <dfn title="the sum of the elements on the main diagonal">trace</dfn> less than <var>N</var> and which can be expressed as a square of a positive integer matrix in two different ways.<br><br>We can verify that F(50) = 7 and F(1000) = 1019.<br></p>
+
+<p><br>定义F(<var>N</var>)为<dfn title="主对角线元素和">迹</dfn>小于<var>N</var>，且能够表示成两个不同正整数矩阵平方的正整数矩阵数目。<br><br>可以验证F(50) = 7以及F(1000) = 1019。<br></p>
+
+
+<p><br>Find F(10<sup>7</sup>).<br></p>
+
+<p><br>求F(10<sup>7</sup>)。<br></p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=421" target="_blank" rel="external">Problem 421</a><br><em>*</em><br><b>Prime factors of <var>n</var><sup>15</sup>+1</b><br><br><b><var>n</var><sup>15</sup>+1的质因数</b><br><br><p><br>Numbers of the form <var>n</var><sup>15</sup>+1 are composite for every integer <var>n</var> &gt; 1.<br><br>For positive integers <var>n</var> and <var>m</var> let <var>s</var>(<var>n,m</var>) be defined as the sum of the <i>distinct</i> prime factors of <var>n</var><sup>15</sup>+1 not exceeding <var>m</var>.<br></p>
+
+<p><br>可以表示为<var>n</var><sup>15</sup>+1的数，对于任意<var>n</var> &gt; 1都是合数。<br><br>对于正整数<var>n</var>和<var>m</var>，记<var>s</var>(<var>n,m</var>)为<var>n</var><sup>15</sup>+1所有不超过<var>m</var>的<i>不同</i>质因数之和。<br></p>
+
+<p><br>E.g. 2<sup>15</sup>+1 = 3×3×11×331.<br><br>So <var>s</var>(2,10) = 3 and <var>s</var>(2,1000) = 3+11+331 = 345.<br><br></p>
+
+<p><br>例如，2<sup>15</sup>+1 = 3×3×11×331。<br><br>因此<var>s</var>(2,10) = 3，而<var>s</var>(2,1000) = 3+11+331 = 345。<br><br></p>
+
+
+<p><br>Also 10<sup>15</sup>+1 = 7×11×13×211×241×2161×9091.<br><br>So <var>s</var>(10,100) = 31 and <var>s</var>(10,1000) = 483.<br><br></p>
+
+<p><br>同样地，10<sup>15</sup>+1 = 7×11×13×211×241×2161×9091。<br><br>因此<var>s</var>(10,100) = 31而<var>s</var>(10,1000) = 483。<br><br></p>
+
+<p><br>Find ∑ <var>s</var>(<var>n</var>,10<sup>8</sup>) for 1 ≤ <var>n</var> ≤ 10<sup>11</sup>.<br></p>
+
+<p><br>对于1 ≤ <var>n</var> ≤ 10<sup>11</sup>，求∑ <var>s</var>(<var>n</var>,10<sup>8</sup>)。<br></p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=422" target="_blank" rel="external">Problem 422</a><br><em>*</em><br><b>Sequence of points on a hyperbola</b><br><br><b>双曲线上的点序列</b><br><br><p>Let H be the hyperbola defined by the equation 12<var>x</var><sup>2</sup> +<br><br>7<var>x</var><var>y</var> - 12<var>y</var><sup>2</sup> = 625.</p>
+
+<p>双曲线H由方程12<var>x</var><sup>2</sup> +<br><br>7<var>x</var><var>y</var> - 12<var>y</var><sup>2</sup> = 625给出。</p>
+
+
+<p>Next, define X as the point (7, 1). It can be seen that X is in H.</p>
+
+<p>取点X的坐标为(7, 1)，可以看出点X在H上。</p>
+
+<p>Now we define a sequence of points in H, {P<sub><var>i</var></sub> :<br><br><var>i</var> ≥ 1}, as:<br></p><br><p>接下来我们定义H上的一个点序列{P<sub><var>i</var></sub> :<br><br><var>i</var> ≥ 1}如下：<br></p><br><ul><br><li> P<sub>1</sub> = (13, 61/4).<br></li><li> P<sub>2</sub> = (-43/6, -4).<br></li><br><li> For <var>i</var> &gt; 2, P<sub><var>i</var></sub> is the unique point<br><br>in H that is different from P<sub><var>i</var>-1</sub> and such that line<br><br>P<sub><var>i</var></sub>P<sub><var>i</var>-1</sub> is parallel to line<br><br>P<sub><var>i</var>-2</sub>X. It can be shown that P<sub><var>i</var></sub> is<br><br>well-defined, and that its coordinates are always rational.<br></li><br><li> 对于<var>i</var> &gt; 2，P<sub><var>i</var></sub>是在H上异于P<sub><var>i</var>-1</sub>的一点，且满足直线<br><br>P<sub><var>i</var></sub>P<sub><var>i</var>-1</sub>与直线<br><br>P<sub><var>i</var>-2</sub>X平行。可以验证P<sub><var>i</var></sub>是存在的，且它的坐标总是有理数。<br></li><br></ul><br><img src="https://projecteuler.net/project/images/p422_hyperbola.gif"><br><br><br><p>You are given that P<sub>3</sub>  = (-19/2, -229/24), P<sub>4</sub> =<br><br>(1267/144, -37/12) and P<sub>7</sub> = (17194218091/143327232,<br><br>274748766781/1719926784).</p>
+
+<p>已知P<sub>3</sub>  = (-19/2, -229/24)，P<sub>4</sub> =<br><br>(1267/144, -37/12)以及P<sub>7</sub> = (17194218091/143327232,<br><br>274748766781/1719926784)。</p>
+
+
+<p>Find P<sub><var>n</var></sub> for <var>n</var> = 11<sup>14</sup> in the<br><br>following format:<br>If P<sub><var>n</var></sub> = (<var>a</var>/<var>b</var>,<br><br><var>c</var>/<var>d</var>) where the fractions are in lowest terms and the<br><br>denominators are positive, then the answer is (<var>a</var> + <var>b</var> +<br><br><var>c</var> + <var>d</var>) mod 1&nbsp;000&nbsp;000&nbsp;007.</p>
+
+<p>当<var>n</var> = 11<sup>14</sup>时，求P<sub><var>n</var></sub>，并以如下形式给出：<br>如果P<sub><var>n</var></sub> = (<var>a</var>/<var>b</var>,<br><br><var>c</var>/<var>d</var>)，其中的分数均为最简分数且分母为正整数，那么给出的答案应当是(<var>a</var> + <var>b</var> +<br><br><var>c</var> + <var>d</var>) mod 1&nbsp;000&nbsp;000&nbsp;007。</p>
+
+<p>For <var>n</var> = 7, the answer would have been: 806236837.</p>
+
+<p>例如，当<var>n</var> = 7时，答案应当是：806236837。</p>
+
+
+
 <hr>
 <hr>
 <h1 id="Problem_423"><a href="https://projecteuler.net/problem=423" target="_blank" rel="external">Problem 423</a></h1><hr>
+<p><b>Consecutive die throws</b></p>
+<p><b>连续扔骰子</b></p>
+<p>Let <var>n</var> be a positive integer.<br><br>A 6-sided die is thrown <var>n</var> times. Let <var>c</var> be the number of pairs of consecutive throws that give the same value.</p>
+
+<p>取正整数<var>n</var>。<br><br>连续掷一个六面骰子<var>n</var>次，记<var>c</var>是连续两次掷出同样点数的次数。</p>
+
+
+<p>For example, if <var>n</var> = 7 and the values of the die throws are (1,1,5,6,6,6,3), then the following pairs of consecutive throws give the same value:<br><br>例如，如果<var>n</var> = 7，掷出的点数分别是(1,1,5,6,6,6,3)，那么如下几组是连续两次掷出同样的点数：<br><br>(<u>1,1</u>,5,6,6,6,3)<br><br>(1,1,5,<u>6,6</u>,6,3)<br><br>(1,1,5,6,<u>6,6</u>,3)<br><br>Therefore, <var>c</var> = 3 for (1,1,5,6,6,6,3).<br><br>因此，对于(1,1,5,6,6,6,3)来说，<var>c</var> = 3。</p>
+
+<p>Define C(<var>n</var>) as the number of outcomes of throwing a 6-sided die <var>n</var> times such that <var>c</var> does not exceed π(<var>n</var>).<sup>1</sup><br><br>For example, C(3) = 216, C(4) = 1290, C(11) = 361912500 and C(24) = 4727547363281250000.</p>
+
+<p>记C(<var>n</var>)是当连续掷一个六面骰子<var>n</var>次时，连续两次掷出同样点数的次数<var>c</var>不超过π(<var>n</var>)的结果数。<sup>1</sup><br><br>例如，C(3) = 216，C(4) = 1290，C(11) = 361912500，而C(24) = 4727547363281250000。</p>
+
+
+<p>Define S(<var>L</var>) as ∑ C(<var>n</var>) for 1 ≤ <var>n</var> ≤ <var>L</var>.<br><br>For example, S(50) mod 1&nbsp;000&nbsp;000&nbsp;007 = 832833871.</p>
+
+<p>对于1 ≤ <var>n</var> ≤ <var>L</var>，定义S(<var>L</var>)为∑ C(<var>n</var>)。<br><br>例如，S(50) mod 1&nbsp;000&nbsp;000&nbsp;007 = 832833871。</p>
+
+
+<p>Find S(50&nbsp;000&nbsp;000) mod 1&nbsp;000&nbsp;000&nbsp;007.</p>
+
+<p>求S(50&nbsp;000&nbsp;000) mod 1&nbsp;000&nbsp;000&nbsp;007。</p>
+
+<p><sup>1</sup> π denotes the <b>prime-counting function</b>, i.e. π(<var>n</var>) is the number of primes ≤ <var>n</var>.</p>
+
+<p><sup>1</sup> π表示的是<b>素数计数函数</b>，也就是说，π(<var>n</var>)表示 ≤ <var>n</var>的素数个数。</p>
+
+
 <hr>
 <hr>
 <h1 id="Problem_424"><a href="https://projecteuler.net/problem=424" target="_blank" rel="external">Problem 424</a></h1><hr>
-<hr>
-<hr>
-<h1 id="Problem_425"><a href="https://projecteuler.net/problem=425" target="_blank" rel="external">Problem 425</a></h1><hr>
+<p><b>Kakuro</b></p>
+<p><b>数和</b></p>
+<div style="text-align:center;"><img src="https://projecteuler.net/project/images/p424_kakuro1.gif"></div>
+
+<p>The above is an example of a cryptic kakuro (also known as cross sums, or even sums cross) puzzle, with its final solution on the right. (The common rules of kakuro puzzles can be found easily on numerous internet sites. Other related information can also be currently found at <a href="http://krazydad.com/" target="_blank">krazydad.com</a> whose author has provided the puzzle data for this challenge.)</p>
+
+<p>上述是一个数和游戏的题板，右侧是它的解答。（数和游戏的规则可以在很多网站上找到，其它相关的信息也可以在<a href="http://krazydad.com/" target="_blank">krazydad.com</a>上找到，这个网站的作者提供了这道谜题。）</p>
+
+
+<p>The downloadable text file (<a href="https://projecteuler.net/project/resources/p424_kakuro200.txt" target="_blank" rel="external">kakuro200.txt</a>) contains the description of 200 such puzzles, a mix of 5x5 and 6x6 types. The first puzzle in the file is the above example which is coded as follows:</p>
+
+<p>这个文本文档（<a href="https://projecteuler.net/project/resources/p424_kakuro200.txt" target="_blank" rel="external">kakuro200.txt</a>）中包含了200个这样的谜题的描述，其中有5x5和6x6两种大小。文件中的第一个谜题就是上面给出的这个样例，它的代码如下所示：</p>
+
+
+<p>6,X,X,(vCC),(vI),X,X,X,(hH),B,O,(vCA),(vJE),X,(hFE,vD),O,O,O,O,(hA),O,I,(hJC,vB),O,O,(hJC),H,O,O,O,X,X,X,(hJE),O,O,X</p>
+
+<p>The first character is a numerical digit indicating the size of the information grid. It would be either a 6 (for a 5x5 kakuro puzzle) or a 7 (for a 6x6 puzzle) followed by a comma (,). The extra top line and left column are needed to insert information.</p>
+
+<p>第一个字符是一个数字，表示了这个谜题题版的大小，要么是6（表示5x5题板）要么是7（表示6x6题板），随后跟着一个逗号（,）。多余的最上行和最下列是用来提供信息的。</p>
+
+
+<p>The content of each cell is then described and followed by a comma, going left to right and starting with the top line.<br><br>X = Gray cell, not required to be filled by a digit.<br><br>O (upper case letter)= White empty cell to be filled by a digit.<br><br>A = Or any one of the upper case letters from A to J to be replaced by its equivalent digit in the solved puzzle.<br><br>( ) = Location of the encrypted sums. Horizontal sums are preceded by a lower case “h” and vertical sums are preceded by a lower case “v”. Those are followed by one or two upper case letters depending if the sum is a single digit or double digit one. For double digit sums, the first letter would be for the “tens” and the second one for the “units”. When the cell must contain information for both a horizontal and a vertical sum, the first one is always for the horizontal sum and the two are separated by a comma within the same set of brackets, ex.: (hFE,vD). Each set of brackets is also immediately followed by a comma.</p>
+
+<p>每一个的信息随后逐个被表示出来，并用逗号分割，按照从上往下，从左往右的顺序。<br><br>X = 灰色方格，不要求填数字。<br><br>O（大写字母） = 空白方格，要求填一个数字。<br><br>A = 大写字母A至J，等待用对应的数字进行替换。<br><br>( ) = 表示加密的和的位置。横行的和用小写字母“h”开头，竖列的和用小写字母“v”开头，随后是一个或两个大写字母，表示这一行或一列的和是一位或两位数。对于两位数，第一个大写字母是十位数而第二个大写字母是个位。如果一个方格既要指示横行的和又要指示竖列的和，第一个永远是横行的和，而且两者必然在同一个括号内用逗号分开，例如(hFE,vD)。每一组这样的括号也必然跟随着一个逗号。</p>
+
+
+
+<p>The description of the last cell is followed by a Carriage Return/Line Feed (CRLF) instead of a comma.</p>
+
+<p>最后一格的描述之后跟随的是一个回车加换行（CRLF）而非逗号。</p>
+
+<p>The required answer to each puzzle is based on the value of each letter necessary to arrive at the solution and according to the alphabetical order. As indicated under the example puzzle, its answer would be 8426039571. At least 9 out of the 10 encrypting letters are always part of the problem description. When only 9 are given, the missing one must be assigned the remaining digit.</p>
+
+<p>最后给出的答案是将各个大写字母按顺序替换成对应的数字组成的字符串，如上述样例题板的答案将是8426039571，根据题目的描述，至少可以确定其中9个数字和对应的字母，如果只给出了9个数字，则剩下的数字和剩下的字母必然对应。</p>
+
+
+<p>You are given that the sum of the answers for the first 10 puzzles in the file is 64414157580.</p>
+
+<p>已知文件中前10个题板的答案和是64414157580。</p>
+
+<p>Find the sum of the answers for the 200 puzzles.</p>
+
+<p>求这200个题板的答案和。</p><br><strong><em>
+
+</em></strong><br># <a href="https://projecteuler.net/problem=425" target="_blank" rel="external">Problem 425</a><br><em>*</em><br><b>Prime connection</b><br><br><b>素数连接</b><br><br><p><br>Two positive numbers A and B are said to be <i>connected</i> (denoted by “A ↔ B”) if one of these conditions holds:<br><br>(1) A and B have the same length and differ in exactly one digit; for example, 123 ↔ 173.<br><br>(2) Adding one digit to the left of A (or B) makes B (or A); for example, 23 ↔ 223 and 123 ↔ 23.<br></p>
+
+<p><br>两个正整数A和B被称为<i>连接的</i>（用”A ↔ B”表示）如果以下条件之一成立：<br><br>（1）A和B的位数相同，且只有一位数字不同，例如123 ↔ 173。<br><br>（2）在A（或B）的左侧加一位数字即得到B（或A），例如23 ↔ 223和123 ↔ 23。<br></p>
+
+<p><br>We call a prime P a <i>2’s relative</i> if there exists a chain of connected primes between 2 and P and no prime in the chain exceeds P.<br></p>
+
+<p><br>我们称素数P是<i>2的亲戚</i>，如果存在一连串连接的素数使得2和P相连，且这些素数都不超过P。<br></p>
+
+<p><br>For example, 127 is a 2’s relative. One of the possible chains is shown below:<br><br>2 ↔ 3 ↔ 13 ↔ 113 ↔ 103 ↔ 107 ↔ 127<br><br>However, 11 and 103 are not 2’s relatives.<br></p>
+
+<p><br>例如，127是2的亲戚。其中一种素数串如下所示：<br><br>2 ↔ 3 ↔ 13 ↔ 113 ↔ 103 ↔ 107 ↔ 127<br><br>然而，11和103不是2的亲戚。</p>
+
+
+<p><br>Let F(N) be the sum of the primes ≤ N which are not 2’s relatives.<br><br>We can verify that F(10<sup>3</sup>) = 431 and F(10<sup>4</sup>) = 78728.<br></p>
+
+<p><br>记F(N)是所有≤ N且不是2的亲戚的素数和。<br><br>可以验证F(10<sup>3</sup>) = 431以及F(10<sup>4</sup>) = 78728。<br></p>
+
+<p><br>Find F(10<sup>7</sup>).<br></p>
+
+<p></p><p><br>求F(10<sup>7</sup>)。<br></p><p></p>
 <hr>
 
       
@@ -429,10 +712,10 @@
 
       <div class="site-overview">
         <div class="site-author motion-element">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="sx349" />
-          <p class="site-author-name">sx349</p>
+          <img class="site-author-image" src="/images/avatar.png" alt="sx349" />
+          <p class="site-author-name">Leonhard Euler(1707-1783)</p>
         </div>
-        <p class="site-description motion-element">欧拉计划中文翻译站</p>
+        <p class="site-description motion-element"><br>Project Euler | 欧拉计划<br>中文翻译站</p>
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
@@ -474,23 +757,23 @@
 
         <div class="links-of-author motion-element">
           
-            <p class="site-author-name">友情链接</p>
-            
-              <span class="links-of-author-item">
-              <a href="https://projecteuler.net" target="_blank">Project Euler</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://pe.spiritzhang.com/" target="_blank">官方汉化</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://jakwings.is-programmer.com/Project_Euler" target="_blank">饮水思源汉化</a>
-              </span>
+            <p class="site-author-name" style="font-size:14px">友情链接</p>
             
               <span class="links-of-author-item">
               <a href="http://sx349.github.io" target="_blank">译者博客</a>
-              </span>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="https://projecteuler.net" target="_blank">Project Euler</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="http://pe.spiritzhang.com/" target="_blank">官方汉化</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="http://jakwings.is-programmer.com/Project_Euler" target="_blank">饮水思源汉化</a>
+              </span><br>
             
           
         </div>
@@ -503,7 +786,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_401"><span class="nav-number">1.</span> <span class="nav-text">Problem 401</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_402"><span class="nav-number">2.</span> <span class="nav-text">Problem 402</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_403"><span class="nav-number">3.</span> <span class="nav-text">Problem 403</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_404"><span class="nav-number">4.</span> <span class="nav-text">Problem 404</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_405"><span class="nav-number">5.</span> <span class="nav-text">Problem 405</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_406"><span class="nav-number">6.</span> <span class="nav-text">Problem 406</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_407"><span class="nav-number">7.</span> <span class="nav-text">Problem 407</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_408"><span class="nav-number">8.</span> <span class="nav-text">Problem 408</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_409"><span class="nav-number">9.</span> <span class="nav-text">Problem 409</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_410"><span class="nav-number">10.</span> <span class="nav-text">Problem 410</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_411"><span class="nav-number">11.</span> <span class="nav-text">Problem 411</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_412"><span class="nav-number">12.</span> <span class="nav-text">Problem 412</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_413"><span class="nav-number">13.</span> <span class="nav-text">Problem 413</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_414"><span class="nav-number">14.</span> <span class="nav-text">Problem 414</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_415"><span class="nav-number">15.</span> <span class="nav-text">Problem 415</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_416"><span class="nav-number">16.</span> <span class="nav-text">Problem 416</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_417"><span class="nav-number">17.</span> <span class="nav-text">Problem 417</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_418"><span class="nav-number">18.</span> <span class="nav-text">Problem 418</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_419"><span class="nav-number">19.</span> <span class="nav-text">Problem 419</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_420"><span class="nav-number">20.</span> <span class="nav-text">Problem 420</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_421"><span class="nav-number">21.</span> <span class="nav-text">Problem 421</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_422"><span class="nav-number">22.</span> <span class="nav-text">Problem 422</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_423"><span class="nav-number">23.</span> <span class="nav-text">Problem 423</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_424"><span class="nav-number">24.</span> <span class="nav-text">Problem 424</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_425"><span class="nav-number">25.</span> <span class="nav-text">Problem 425</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_401"><span class="nav-number">1.</span> <span class="nav-text">Problem 401</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_402"><span class="nav-number">2.</span> <span class="nav-text">Problem 402</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_403"><span class="nav-number">3.</span> <span class="nav-text">Problem 403</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_404"><span class="nav-number">4.</span> <span class="nav-text">Problem 404</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_405"><span class="nav-number">5.</span> <span class="nav-text">Problem 405</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_406"><span class="nav-number">6.</span> <span class="nav-text">Problem 406</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_423"><span class="nav-number">7.</span> <span class="nav-text">Problem 423</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_424"><span class="nav-number">8.</span> <span class="nav-text">Problem 424</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

@@ -20,7 +20,7 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
 
 
-    <meta name="description" content="欧拉计划中文翻译站" />
+    <meta name="description" content="Project Euler | 欧拉计划 中文翻译站" />
 
 
 
@@ -474,45 +474,220 @@
 <hr>
 <hr>
 <h1 id="Problem_212"><a href="https://projecteuler.net/problem=212" target="_blank" rel="external">Problem 212</a></h1><hr>
+<p><strong>Combined Volume of Cuboids</strong></p>
+<p>An <i>axis-aligned cuboid</i>, specified by parameters { (x<sub>0</sub>,y<sub>0</sub>,z<sub>0</sub>), (dx,dy,dz) }, consists of all points (X,Y,Z) such that x<sub>0</sub> ≤ X ≤ x<sub>0</sub>+dx, y<sub>0</sub> ≤ Y ≤ y<sub>0</sub>+dy and z<sub>0</sub> ≤ Z ≤ z<sub>0</sub>+dz.  The volume of the cuboid is the product, dx × dy × dz.  The <i>combined volume</i> of a collection of cuboids is the volume of their union and will be less than the sum of the individual volumes if any cuboids overlap.</p>
+<p>Let C<sub>1</sub>,…,C<sub>50000</sub> be a collection of 50000 axis-aligned cuboids such that C<sub>n</sub> has parameters</p>
+<p>x<sub>0</sub> = S<sub>6n-5</sub> modulo 10000<br>y<sub>0</sub> = S<sub>6n-4</sub> modulo 10000<br>z<sub>0</sub> = S<sub>6n-3</sub> modulo 10000<br>dx = 1 + (S<sub>6n-2</sub> modulo 399)<br>dy = 1 + (S<sub>6n-1</sub> modulo 399)<br>dz = 1 + (S<sub>6n</sub> modulo 399)</p>
+<p>where S<sub>1</sub>,…,S<sub>300000</sub> come from the “Lagged Fibonacci Generator”:</p>
+<p>For 1 ≤ k ≤ 55, S<sub>k</sub> = [100003 - 200003k + 300007k<sup>3</sup>] &nbsp; (modulo 1000000)<br>For 56 ≤ k, S<sub>k</sub> = [S<sub>k-24</sub> + S<sub>k-55</sub>] &nbsp; (modulo 1000000)</p>
+<p>Thus, C<sub>1</sub> has parameters {(7,53,183),(94,369,56)}, C<sub>2</sub> has parameters {(2383,3563,5079),(42,212,344)}, and so on.</p>
+<p>The combined volume of the first 100 cuboids, C<sub>1</sub>,…,C<sub>100</sub>, is 723581599.</p>
+<p>What is the combined volume of all 50000 cuboids, C<sub>1</sub>,…,C<sub>50000</sub> ?</p>
+<hr>
+<p><strong>立方体组合体积</strong></p>
+<p>一个<i>与轴平行的立方体</i>可以用参数{ (x<sub>0</sub>,y<sub>0</sub>,z<sub>0</sub>), (dx,dy,dz) }表示，包含所有满足x<sub>0</sub> ≤ X ≤ x<sub>0</sub>+dx、y<sub>0</sub> ≤ Y ≤ y<sub>0</sub>+dy和z<sub>0</sub> ≤ Z ≤ z<sub>0</sub>+dz的点(X,Y,Z)。该立方体的体积为乘积dx × dy × dz。一系列立方体的<i>组合体积</i>是它们的并的体积；如果其中有立方体相交，这些立方体的组合体积将会比各自体积之和要来得小。</p>
+<p>记C<sub>1</sub>、……、C<sub>50000</sub>是一系列共50000个与轴平行的立方体，其中C<sub>n</sub>的参数为</p>
+<p>x<sub>0</sub> = S<sub>6n-5</sub> modulo 10000<br>y<sub>0</sub> = S<sub>6n-4</sub> modulo 10000<br>z<sub>0</sub> = S<sub>6n-3</sub> modulo 10000<br>dx = 1 + (S<sub>6n-2</sub> modulo 399)<br>dy = 1 + (S<sub>6n-1</sub> modulo 399)<br>dz = 1 + (S<sub>6n</sub> modulo 399)</p>
+<p>这里的S<sub>1</sub>、……、S<sub>300000</sub>来自如下的“延迟斐波那契生成器”：</p>
+<p>对于1 ≤ k ≤ 55，S<sub>k</sub> = [100003 - 200003k + 300007k<sup>3</sup>] &nbsp; (modulo 1000000)<br>对于56 ≤ k，S<sub>k</sub> = [S<sub>k-24</sub> + S<sub>k-55</sub>] &nbsp; (modulo 1000000)</p>
+<p>因此，C<sub>1</sub>的参数为{(7,53,183),(94,369,56)}，C<sub>2</sub>的参数为{(2383,3563,5079),(42,212,344)}，依此类推。</p>
+<p>前100个立方体C<sub>1</sub>、……、C<sub>100</sub>的组合体积是723581599。</p>
+<p>全部50000个立方体C<sub>1</sub>、……、C<sub>50000</sub>的组合体积是多少？</p>
 <hr>
 <hr>
 <h1 id="Problem_213"><a href="https://projecteuler.net/problem=213" target="_blank" rel="external">Problem 213</a></h1><hr>
+<p><strong>Flea Circus</strong></p>
+<p>A 30×30 grid of squares contains 900 fleas, initially one flea per square.<br>When a bell is rung, each flea jumps to an adjacent square at random (usually 4 possibilities, except for fleas on the edge of the grid or at the corners).</p>
+<p>What is the expected number of unoccupied squares after 50 rings of the bell? Give your answer rounded to six decimal places.</p>
+<hr>
+<p><strong>跳蚤马戏团</strong></p>
+<p>在30×30的方形网格上共有900只跳蚤，初始状态下每个方格上有一只跳蚤。<br>每响起一次钟声，每只跳蚤随机跳向一个相邻的方格（一般有4种选择，除非跳蚤是在网格的边上或角上）。</p>
+<p>在响起50次钟声后，没有跳蚤的方格的期望数目是多少？将你的答案四舍五入到六位小数。</p>
 <hr>
 <hr>
 <h1 id="Problem_214"><a href="https://projecteuler.net/problem=214" target="_blank" rel="external">Problem 214</a></h1><hr>
+<p><strong>Totient Chains</strong></p>
+<p>Let φ be Euler’s totient function, i.e. for a natural number n, φ(n) is the number of k, 1 ≤ k ≤ n, for which gcd(k,n) = 1.</p>
+<p>By iterating φ, each positive integer generates a decreasing chain of numbers ending in 1.<br>E.g. if we start with 5 the sequence 5,4,2,1 is generated.<br>Here is a listing of all chains with length 4:</p>
+<p>&nbsp;5,4,2,1<br>&nbsp;7,6,2,1<br>&nbsp;8,4,2,1<br>&nbsp;9,6,2,1<br>10,4,2,1<br>12,4,2,1<br>14,6,2,1<br>18,6,2,1</p>
+<p>Only two of these chains start with a prime, their sum is 12.</p>
+<p>What is the sum of all primes less than 40000000 which generate a chain of length 25?</p>
+<hr>
+<p><strong>总计函数链</strong></p>
+<p>令φ表示欧拉总计函数，也就是说，对于自然数n，所有1 ≤ k ≤ n且gcd(k,n) = 1的正整数k的数目记为φ(n)。</p>
+<p>通过迭代求φ，每个正整数都能生成一条不断下降最终以1结束的链。<br>例如，如果我们从5开始，生成的序列为5、4、2、1。<br>如下所列是所有长度为4的链：</p>
+<p>5,4,2,1<br>7,6,2,1<br>8,4,2,1<br>9,6,2,1<br>10,4,2,1<br>12,4,2,1<br>14,6,2,1<br>18,6,2,1</p>
+<p>其中只有两条链从素数开始，这两个素数的和为12。</p>
+<p>在小于40000000的素数中，能生成长度为25的链的素数之和是多少？</p>
 <hr>
 <hr>
 <h1 id="Problem_215"><a href="https://projecteuler.net/problem=215" target="_blank" rel="external">Problem 215</a></h1><hr>
+<p><strong>Crack-free Walls</strong></p>
+<p>Consider the problem of building a wall out of 2×1 and 3×1 bricks (horizontal×vertical dimensions) such that, for extra strength, the gaps between horizontally-adjacent bricks never line up in consecutive layers, i.e. never form a “running crack”.</p>
+<p>For example, the following 9×3 wall is not acceptable due to the running crack shown in red:</p>
+<center><img src="https://projecteuler.net/project/images/p215_crackfree.gif" alt=""></center>
+
+<p>There are eight ways of forming a crack-free 9×3 wall, written W(9,3) = 8.</p>
+<p>Calculate W(32,10).</p>
+<hr>
+<p><strong>没有裂纹的墙</strong></p>
+<p>考虑这样一个问题：用大小为2×1和3×1的砖块（均为宽度×高度）来筑墙，而且为了保证强度，两个砖块之间的空隙的上下方均不能是砖块的空隙，也就是说不能有“延伸裂纹”。</p>
+<p>例如，如下的9×3的墙就是不可行的，因为其中有用红色标出的延伸裂纹：</p>
+<center><img src="https://projecteuler.net/project/images/p215_crackfree.gif" alt=""></center>
+
+<p>筑一面没有裂纹的9×3的墙一共有八种方式，记为W(9,3) = 8。</p>
+<p>试计算W(32,10)。</p>
 <hr>
 <hr>
 <h1 id="Problem_216"><a href="https://projecteuler.net/problem=216" target="_blank" rel="external">Problem 216</a></h1><hr>
+<p><strong>Investigating the primality of numbers of the form 2n<sup>2</sup>-1</strong></p>
+<p>Consider numbers t(n) of the form t(n) = 2n<sup>2</sup>-1 with n &gt; 1.<br>The first such numbers are 7, 17, 31, 49, 71, 97, 127 and 161.<br>It turns out that only 49 = 7*7 and 161 = 7*23 are not prime.<br>For n ≤ 10000 there are 2202 numbers t(n) that are prime.</p>
+<p>How many numbers t(n) are prime for n ≤ 50,000,000 ?</p>
+<hr>
+<p><strong>研究形如2n<sup>2</sup>-1的数是否为素数</strong></p>
+<p>考虑形如t(n) = 2n<sup>2</sup>-1的数t(n)，其中n &gt; 1。<br>前几个这样的数分别是7、17、31、49、71、97、127和161。<br>可见只有49 = 7*7和161 = 7*23不是素数。<br>对于n ≤ 10000，一共有2202个t(n)是素数。</p>
+<p>对于n ≤ 50,000,000，一共有多少个t(n)是素数？</p>
 <hr>
 <hr>
 <h1 id="Problem_217"><a href="https://projecteuler.net/problem=217" target="_blank" rel="external">Problem 217</a></h1><hr>
+<p><strong>Balanced Numbers</strong></p>
+<p>A positive integer with k (decimal) digits is called balanced if its first ⌈<sup>k</sup>/<sub>2</sub>⌉ digits sum to the same value as its last ⌈<sup>k</sup>/<sub>2</sub>⌉ digits, where ⌈x⌉, pronounced <i>ceiling</i> of x, is the smallest integer ≥ x, thus ⌈π⌉ = 4 and ⌈5⌉ = 5.</p>
+<p>So, for example, all palindromes are balanced, as is 13722.</p>
+<p>Let T(n) be the sum of all balanced numbers less than 10<sup>n</sup>.<br>Thus: T(1) = 45, T(2) = 540 and T(5) = 334795890. </p>
+<p>Find T(47) mod 3<sup>15</sup>.</p>
+<hr>
+<p><strong>平衡数</strong></p>
+<p>如果一个k位（十进制）正整数，其前⌈<sup>k</sup>/<sub>2</sub>⌉个数字之和等于其后⌈<sup>k</sup>/<sub>2</sub>⌉个数字之和，则称之为平衡数。这里⌈x⌉表示x的<i>上取整</i>函数，也就是≥ x的最小整数，例如⌈π⌉ = 4以及⌈5⌉ = 5。</p>
+<p>举例来说，所有的回文数都是平衡数；13722也是平衡数。</p>
+<p>记T(n)是所有小于10<sup>n</sup>的平衡数之和。<br>因此：T(1) = 45，T(2) = 540以及T(5) = 334795890。</p>
+<p>求T(47) mod 3<sup>15</sup>。</p>
 <hr>
 <hr>
 <h1 id="Problem_218"><a href="https://projecteuler.net/problem=218" target="_blank" rel="external">Problem 218</a></h1><hr>
+<p><strong>Perfect right-angled triangles</strong></p>
+<p>Consider the right angled triangle with sides a=7, b=24 and c=25. The area of this triangle is 84, which is divisible by the perfect numbers 6 and 28.<br>Moreover it is a primitive right angled triangle as gcd(a,b)=1 and gcd(b,c)=1.<br>Also c is a perfect square.</p>
+<p>We will call a right angled triangle perfect if</p>
+<ul>
+<li>it is a primitive right angled triangle</li>
+<li>its hypotenuse is a perfect square</li>
+</ul>
+<p>We will call a right angled triangle super-perfect if</p>
+<ul>
+<li>it is a perfect right angled triangle and</li>
+<li>its area is a multiple of the perfect numbers 6 and 28.</li>
+</ul>
+<p>How many perfect right-angled triangles with c≤10<sup>16</sup> exist that are not super-perfect?</p>
+<hr>
+<p><strong>完美直角三角形</strong></p>
+<p>考虑边长为a=7、b=24以及c=25的直角三角形。这个三角形的面积是84，能够被完全数6和28整除。<br>此外，它还是一个原始直角三角形，因为gcd(a,b)=1且gcd(b,c)=1。<br>同时，c还是一个完全平方数。</p>
+<p>我们称一个直角三角形是完美的，如果</p>
+<ul>
+<li>它是一个原始直角三角形</li>
+<li>它的斜边是一个完全平方数</li>
+</ul>
+<p>我们称一个直角三角形是超级完美的，如果</p>
+<ul>
+<li>它是一个完美的直角三角形，而且</li>
+<li>它的面积是完全数6和28的倍数</li>
+</ul>
+<p>在斜边c≤10<sup>16</sup>的完美直角三角形中，有多少个不是超级完美的？</p>
 <hr>
 <hr>
 <h1 id="Problem_219"><a href="https://projecteuler.net/problem=219" target="_blank" rel="external">Problem 219</a></h1><hr>
+<p><strong>Skew-cost coding</strong></p>
+<p>Let <b>A</b> and <b>B</b> be bit strings (sequences of 0’s and 1’s).<br>If <b>A</b> is equal to the <u>left</u>most length(<b>A</b>) bits of <b>B</b>, then <b>A</b> is said to be a <i>prefix</i> of <b>B</b>.<br>For example, 00110 is a prefix of <u>00110</u>1001, but not of 00111 or 100110.</p>
+<p>A <i>prefix-free code of size n</i> is a collection of n distinct bit strings such that no string is a prefix of any other. For example, this is a prefix-free code of size 6:</p>
+<center>0000, 0001, 001, 01, 10, 11</center>
+
+<p>Now suppose that it costs one penny to transmit a ‘0’ bit, but four pence to transmit a ‘1’.<br>Then the total cost of the prefix-free code shown above is 35 pence, which happens to be the cheapest possible for the skewed pricing scheme in question.<br>In short, we write Cost(6) = 35.</p>
+<p>What is Cost(10<sup>9</sup>) ?</p>
+<hr>
+<p><strong>成本倾斜编码</strong></p>
+<p>记<b>A</b>和<b>B</b>均为比特串（由0和1组成的序列）。<br>如果在<b>B</b>的最<u>左</u>端取和<b>A</b>的长度相等的比特位，所构成的比特串恰好等于<b>A</b>，则称<b>A</b>为<b>B</b>的<i>前缀</i>。<br>举例来说，00110是<u>00110</u>1001的前缀，但不是00111或100110的前缀。</p>
+<p><i>n阶无前缀编码</i>是指n个不同的比特串，其中任意一个都不是另一个的前缀。例如，6阶无前缀编码的其中一种是：</p>
+<center>0000, 0001, 001, 01, 10, 11</center>
+
+<p>现在假设传输比特位“0”的成本是一个便士，而传输比特位“1”的成本是4个便士。<br>那么，上述无前缀编码的总成本是35便士，恰好是这个成本倾斜编码问题最便宜的一种可能。<br>我们将其简记为Cost(6) = 35。</p>
+<p>Cost(10<sup>9</sup>)是多少？</p>
 <hr>
 <hr>
 <h1 id="Problem_220"><a href="https://projecteuler.net/problem=220" target="_blank" rel="external">Problem 220</a></h1><hr>
+<p><strong>Heighway Dragon</strong></p>
+<p>Let <b>D</b><sub>0</sub> be the two-letter string “Fa”. For n≥1, derive <b>D</b><sub>n</sub> from <b>D</b><sub>n-1</sub> by the string-rewriting rules:</p>
+<p>“a” → “aRbFR”<br>“b” → “LFaLb”</p>
+<p>Thus, <b>D</b><sub>0</sub> = “Fa”, <b>D</b><sub>1</sub> = “FaRbFR”, <b>D</b><sub>2</sub> = “FaRbFRRLFaLbFR”, and so on.</p>
+<p>These strings can be interpreted as instructions to a computer graphics program, with “F” meaning “draw forward one unit”, “L” meaning “turn left 90 degrees”, “R” meaning “turn right 90 degrees”, and “a” and “b” being ignored. The initial position of the computer cursor is (0,0), pointing up towards (0,1).</p>
+<p>Then <b>D</b><sub>n</sub> is an exotic drawing known as the <i>Heighway Dragon</i> of order n.  For example, <b>D</b><sub>10</sub> is shown below; counting each “F” as one step, the highlighted spot at (18,16) is the position reached after 500 steps.</p>
+<center><img src="https://projecteuler.net/project/images/p220.gif" alt=""></center>
+
+<p>What is the position of the cursor after 10<sup>12</sup> steps in <b>D</b><sub>50</sub> ?<br>Give your answer in the form x,y with no spaces.</p>
+<hr>
+<p><strong>海韦龙形曲线</strong></p>
+<p>记<b>D</b><sub>0</sub>为包含两个字符的字符串“Fa”。对于n≥1，我们通过如下的字符串重写规则，由<b>D</b><sub>n-1</sub>推出<b>D</b><sub>n</sub>：</p>
+<p>“a” → “aRbFR”<br>“b” → “LFaLb”</p>
+<p>因此，<b>D</b><sub>0</sub> = “Fa”，<b>D</b><sub>1</sub> = “FaRbFR”，<b>D</b><sub>2</sub> = “FaRbFRRLFaLbFR”，依此类推。</p>
+<p>这些字符串可以作为一个计算机绘图程序的指令加以解读，其中“F”表示“向前画一单位”，“L”表示“左转90度”，“R”表示“右转90度”，而“a”和“b”可以忽略。初始状态下，计算机光标的位置是(0,0)，方向指向(0,1)。</p>
+<p>根据<b>D</b><sub>n</sub>绘制的奇异图象被称为n阶<i>海韦龙形曲线</i>。例如，如下所示为<b>D</b><sub>10</sub>；如果把每个“F”算作一步，高亮的点(18,16)是经过500步时所到达的位置。</p>
+<center><img src="https://projecteuler.net/project/images/p220.gif" alt=""></center>
+
+<p>根据<b>D</b><sub>50</sub>绘制图象，经过10<sup>12</sup>步之后，光标的位置在哪里？<br>将你的答案写作“x,y”的形式，中间没有空格。</p>
 <hr>
 <hr>
 <h1 id="Problem_221"><a href="https://projecteuler.net/problem=221" target="_blank" rel="external">Problem 221</a></h1><hr>
+<p><strong>Alexandrian Integers</strong></p>
+<p>We shall call a positive integer A an “Alexandrian integer”, if there exist integers p, q, r such that:</p>
+<p>$$A=p·q·r \text{ and } \frac{1}{A}=\frac{1}{p}+\frac{1}{q}+\frac{1}{r}$$</p>
+<p>For example, 630 is an Alexandrian integer (p&nbsp;=&nbsp;5, q&nbsp;=&nbsp;−7, r&nbsp;=&nbsp;−18). In fact, 630 is the 6<sup>th</sup> Alexandrian integer,  the first 6 Alexandrian integers being: 6, 42, 120, 156, 420 and 630.</p>
+<p>Find the 150000<sup>th</sup> Alexandrian integer.</p>
+<hr>
+<p><strong>亚历山大整数</strong></p>
+<p>我们称一个正整数A为“亚历山大整数”，如果存在整数p、q、r满足：</p>
+<p>$$A=p·q·r \text{ 且 } \frac{1}{A}=\frac{1}{p}+\frac{1}{q}+\frac{1}{r}$$</p>
+<p>例如，630是一个亚历山大整数（p&nbsp;=&nbsp;5，q&nbsp;=&nbsp;−7，r&nbsp;=&nbsp;−18）。事实上，630是第6个亚历山大整数，前6个亚历山大整数分别是6、42、120、156、420和630。</p>
+<p>求第150000个亚历山大整数。</p>
 <hr>
 <hr>
 <h1 id="Problem_222"><a href="https://projecteuler.net/problem=222" target="_blank" rel="external">Problem 222</a></h1><hr>
+<p><strong>Sphere Packing</strong></p>
+<p>What is the length of the shortest pipe, of internal radius 50mm, that can fully contain 21 balls of radii 30mm, 31mm, …, 50mm?</p>
+<p>Give your answer in micrometres (10<sup>-6</sup> m) rounded to the nearest integer.</p>
+<hr>
+<hr>
+<p><strong>球体打包</strong></p>
+<p>将21个半径分别为30mm、31mm、……、50mm的球完全装入一根内径50mm的管子，所需管长最短是多少？</p>
+<p>将你的答案用微米(10<sup>-6</sup> m)表示，并四舍五入到最近的整数。</p>
 <hr>
 <hr>
 <h1 id="Problem_223"><a href="https://projecteuler.net/problem=223" target="_blank" rel="external">Problem 223</a></h1><hr>
+<p><strong>Almost right-angled triangles I</strong></p>
+<p>Let us call an integer sided triangle with sides a ≤ b ≤ c <i>barely acute</i> if the sides satisfy a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> + 1.</p>
+<p>How many barely acute triangles are there with perimeter ≤ 25,000,000?</p>
+<hr>
+<p><strong>几乎直角的三角形I</strong></p>
+<p>如果一个边长为整数a ≤ b ≤ c的三角形满足a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> + 1，我们称其为<i>略微锐角</i>的三角形。</p>
+<p>有多少个周长≤ 25,000,000的略微锐角三角形？</p>
 <hr>
 <hr>
 <h1 id="Problem_224"><a href="https://projecteuler.net/problem=224" target="_blank" rel="external">Problem 224</a></h1><hr>
+<p><strong>Almost right-angled triangles II</strong></p>
+<p>Let us call an integer sided triangle with sides a ≤ b ≤ c <i>barely obtuse</i> if the sides satisfy a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> - 1.</p>
+<p>How many barely obtuse triangles are there with perimeter ≤ 75,000,000?</p>
+<hr>
+<p><strong>几乎执教的三角形II</strong></p>
+<p>如果一个边长为整数a ≤ b ≤ c的三角形满足a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> - 1，我们称其为<i>略微钝角</i>的三角形。</p>
+<p>有多少个周长≤ 75,000,000的略微钝角三角形？</p>
 <hr>
 <hr>
 <h1 id="Problem_225"><a href="https://projecteuler.net/problem=225" target="_blank" rel="external">Problem 225</a></h1><hr>
+<p><strong>Tribonacci non-divisors</strong></p>
+<p>The sequence 1, 1, 1, 3, 5, 9, 17, 31, 57, 105, 193, 355, 653, 1201 …<br>is defined by T<sub>1</sub> = T<sub>2</sub> = T<sub>3</sub> = 1 and T<sub>n</sub> = T<sub>n-1</sub> + T<sub>n-2</sub> + T<sub>n-3</sub>.</p>
+<p>It can be shown that 27 does not divide any terms of this sequence. In fact, 27 is the first odd number with this property.</p>
+<p>Find the 124<sup>th</sup> odd number that does not divide any terms of the above sequence.</p>
+<hr>
+<p><strong>三阶斐波那契数的非约数</strong></p>
+<p>序列1, 1, 1, 3, 5, 9, 17, 31, 57, 105, 193, 355, 653, 1201 …<br>的定义为T<sub>1</sub> = T<sub>2</sub> = T<sub>3</sub> = 1以及T<sub>n</sub> = T<sub>n-1</sub> + T<sub>n-2</sub> + T<sub>n-3</sub>。</p>
+<p>可以说明，27不能整除这个序列中的任何一项。事实上，27是第一个拥有这一性质的奇数。</p>
+<p>求第124个不能整除上述序列中任何一项的奇数。</p>
 <hr>
 
       
@@ -592,10 +767,10 @@
 
       <div class="site-overview">
         <div class="site-author motion-element">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="sx349" />
-          <p class="site-author-name">sx349</p>
+          <img class="site-author-image" src="/images/avatar.png" alt="sx349" />
+          <p class="site-author-name">Leonhard Euler(1707-1783)</p>
         </div>
-        <p class="site-description motion-element">欧拉计划中文翻译站</p>
+        <p class="site-description motion-element"><br>Project Euler | 欧拉计划<br>中文翻译站</p>
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
@@ -637,23 +812,23 @@
 
         <div class="links-of-author motion-element">
           
-            <p class="site-author-name">友情链接</p>
-            
-              <span class="links-of-author-item">
-              <a href="https://projecteuler.net" target="_blank">Project Euler</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://pe.spiritzhang.com/" target="_blank">官方汉化</a>
-              </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://jakwings.is-programmer.com/Project_Euler" target="_blank">饮水思源汉化</a>
-              </span>
+            <p class="site-author-name" style="font-size:14px">友情链接</p>
             
               <span class="links-of-author-item">
               <a href="http://sx349.github.io" target="_blank">译者博客</a>
-              </span>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="https://projecteuler.net" target="_blank">Project Euler</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="http://pe.spiritzhang.com/" target="_blank">官方汉化</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="http://jakwings.is-programmer.com/Project_Euler" target="_blank">饮水思源汉化</a>
+              </span><br>
             
           
         </div>

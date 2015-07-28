@@ -185,7 +185,7 @@ th {
 }
 body {
   position: relative;
-  font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-family: Lato, Verdana, Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   color: #555;
@@ -269,6 +269,9 @@ a {
   text-decoration: none;
   border-bottom: 1px solid #999;
 }
+a.fancybox {
+  border-bottom: 0px;
+}
 a:hover {
   border-bottom-color: #222;
 }
@@ -280,7 +283,6 @@ blockquote {
   padding: 0;
 }
 img {
-  display: block;
   margin: auto 0;
   max-width: 100%;
   height: auto;
@@ -1058,19 +1060,17 @@ body {
 .site-author-image {
   display: block;
   margin: 0 auto;
-  max-width: 96px;
   height: auto;
-  border: 2px solid #333;
-  padding: 2px;
 }
 .site-author-name {
-  margin: 5px 0 0;
+  margin: -15px 0 0;
   color: #f5f5f5;
+  font-size: 10px;
 }
 .site-description {
-  margin-top: 5px;
-  font-size: 14px;
-  color: #555;
+  margin-top: -5px;
+  font-size: 16px;
+  color: #f5f5f5;
 }
 .site-state {
   overflow: hidden;
@@ -1135,7 +1135,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff1dff;
+  background: #ffe;
 }
 .sidebar-nav {
   margin: 0;
@@ -1370,7 +1370,7 @@ body {
   color: #999;
 }
 .posts-expand .post-body {
-  text-align: justify;
+  text-align: left;
 }
 .posts-expand .post-body h2,
 .posts-expand .post-body h3,
@@ -1383,7 +1383,7 @@ body {
   box-sizing: border-box;
   margin: auto;
   padding: 3px;
-  border: 1px solid #ddd;
+  border: 0 solid #ddd;
 }
 .posts-expand .post-tags {
   margin-top: 40px;
@@ -1411,13 +1411,13 @@ body {
   display: inline-block;
   line-height: 25px;
   font-size: 14px;
-  color: #555;
+  color: #999;
   border-bottom: none;
 }
 .post-nav-item a:hover {
   color: #222;
-  font-weight: bold;
   border-bottom: none;
+  text-decoration: underline;
 }
 .post-nav-item a:active {
   top: 2px;
