@@ -1,0 +1,1221 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="Project Euler | 欧拉计划 中文翻译站" />
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: ''
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+
+
+  <title> Problem 426 - 450 // Project Euler | 欧拉计划 </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Project Euler | 欧拉计划</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            <i class="menu-item-icon icon-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'z6bmYNMJM3AR1esetWJa','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              Problem 426 - 450
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/Problem426-450/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="Problem426-450/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a>
+<hr>
+<h1 id="Problem_426"><a href="https://projecteuler.net/problem=426" target="_blank" rel="external">Problem 426</a></h1><hr>
+<p><strong>Box-ball system</strong></p>
+<p>Consider an infinite row of boxes. Some of the boxes contain a ball. For example, an initial configuration of 2 consecutive occupied boxes followed by 2 empty boxes, 2 occupied boxes, 1 empty box, and 2 occupied boxes can be denoted by the sequence (2, 2, 2, 1, 2), in which the number of consecutive occupied and empty boxes appear alternately.</p>
+<p>A turn consists of moving each ball exactly once according to the following rule: Transfer the leftmost ball which has not been moved to the nearest empty box to its right.</p>
+<p>After one turn the sequence (2, 2, 2, 1, 2) becomes (2, 2, 1, 2, 3) as can be seen below; note that we begin the new sequence starting at the first occupied box.</p>
+<center><img src="https://projecteuler.net/project/images/p426_baxball1.gif"></center>
+
+<p>A system like this is called a <strong>Box-Ball System</strong> or <strong>BBS</strong> for short.</p>
+<p>It can be shown that after a sufficient number of turns, the system evolves to a state where the consecutive numbers of occupied boxes is invariant. In the example below, the consecutive numbers of <strong>occupied boxes</strong> evolves to [1, 2, 3]; we shall call this the final state.</p>
+<center><img src="https://projecteuler.net/project/images/p426_baxball2.gif"></center>
+
+<p>We define the sequence {t<sub>i</sub>}:</p>
+<ul>
+<li>s<sub>0</sub> = 290797</li>
+<li>s<sub>k+1</sub> = s<sub>k</sub><sup>2</sup> mod 50515093</li>
+<li>t<sub>k</sub> = (s<sub>k</sub> mod 64) + 1</li>
+</ul>
+<p>Starting from the initial configuration (t<sub>0</sub>, t<sub>1</sub>, …, t<sub>10</sub>), the final state becomes [1, 3, 10, 24, 51, 75].<br>Starting from the initial configuration (t<sub>0</sub>, t<sub>1</sub>, …, t<sub>10 000 000</sub>), find the final state.<br>Give as your answer the sum of the squares of the elements of the final state. For example, if the final state is [1, 2, 3] then 14 ( = 1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup>) is your answer.</p>
+<hr>
+<p><strong>盒子与球系统</strong></p>
+<p>考虑一行无限多个盒子，其中一些盒子放了球。其中一种放置方法是，前两个放球，然后紧跟着两个空箱子，然后再两个放球，再一个空箱子，再两个放球，这样的放置方法可以表示为序列(2, 2, 2, 1, 2)，连续的数轮流表示放球和不放球。</p>
+<p>每一轮，按照下面所述的规则，移动每一个球恰好一次：将最左侧的没有移动过的球移动到右边最近的空格。</p>
+<p>经过一轮后，序列(2, 2, 2, 1, 2)将会变成(2, 2, 1, 2, 3)，如下图所示。注意新序列将从第一个放了球的盒子开始计数。</p>
+<center><img src="https://projecteuler.net/project/images/p426_baxball1.gif"></center>
+
+<p>一个这样的系统被称为<strong>盒子与球系统</strong>或者简称<strong>BBS</strong>。</p>
+<p>可以看出，经过足够多轮之后，这个系统将会进化到一个不变的状态。在下面的例子中，所有<strong>放球的盒子</strong>的序列最终将会进化成[1, 2, 3]；我们称之为最终状态。</p>
+<center><img src="https://projecteuler.net/project/images/p426_baxball2.gif"></center>
+
+<p>我们按如下方式定义序列{t<sub>i</sub>}：</p>
+<ul>
+<li>s<sub>0</sub> = 290797</li>
+<li>s<sub>k+1</sub> = s<sub>k</sub><sup>2</sup> mod 50515093</li>
+<li>t<sub>k</sub> = (s<sub>k</sub> mod 64) + 1</li>
+</ul>
+<p>从初始状态(t<sub>0</sub>, t<sub>1</sub>, …, t<sub>10</sub>)开始，最终状态将是[1, 3, 10, 24, 51, 75]。<br>从初始状态(t<sub>0</sub>, t<sub>1</sub>, …, t<sub>10 000 000</sub>)开始，求最终状态。<br>你的答案将以最终状态各元素的平方和的形式给出，例如，如果最终状态是[1, 2, 3]，那么你的答案应当是14 ( = 1<sup>2</sup> + 2<sup>2</sup> + 3<sup>2</sup>)。</p>
+<hr>
+<hr>
+<h1 id="Problem_427"><a href="https://projecteuler.net/problem=427" target="_blank" rel="external">Problem 427</a></h1><hr>
+<p><strong>n-sequences</strong></p>
+<p>A sequence of integers S = {s<sub>i</sub>} is called an <em>n-sequence</em> if it has n elements and each element s<sub>i</sub> satisfies 1 ≤ s<sub>i</sub> ≤ n. Thus there are n<sup>n</sup> distinct n-sequences in total. For example, the sequence S = {1, 5, 5, 10, 7, 7, 7, 2, 3, 7} is a 10-sequence.</p>
+<p>For any sequence S, let L(S) be the length of the longest contiguous subsequence of S with the same value. For example, for the given sequence S above, L(S) = 3, because of the three consecutive 7’s.</p>
+<p>Let f(n) = ∑ L(S) for all n-sequences S.</p>
+<p>For example, f(3) = 45, f(7) = 1403689 and f(11) = 481496895121.</p>
+<p>Find f(7&nbsp;500&nbsp;000) mod 1&nbsp;000&nbsp;000&nbsp;009.</p>
+<hr>
+<p><strong>n-序列</strong></p>
+<p>整数序列S = {s<sub>i</sub>}被称为<em>n-序列</em>，如果它有n个元素，而且每个元素s<sub>i</sub>满足1 ≤ s<sub>i</sub> ≤ n。因此，一共有n<sup>n</sup>个不同的n-序列。例如，序列S = {1, 5, 5, 10, 7, 7, 7, 2, 3, 7}就是一个10-序列。</p>
+<p>对于任意序列S，记L(S)是其中相同元素连续出现的最大次数。例如，对于上述序列S，L(S) = 3，因为其中有连续出现的3个7。</p>
+<p>对于所有的n-序列S，记f(n) = ∑ L(S)。</p>
+<p>例如，f(3) = 45，f(7) = 1403689，f(11) = 481496895121。</p>
+<p>求f(7&nbsp;500&nbsp;000) mod 1&nbsp;000&nbsp;000&nbsp;009。</p>
+<hr>
+<hr>
+<h1 id="Problem_428"><a href="https://projecteuler.net/problem=428" target="_blank" rel="external">Problem 428</a></h1><hr>
+<p><strong>Necklace of circles</strong></p>
+<p>Let a, b and c be positive numbers.<br>Let W, X, Y, Z be four collinear points where |WX| = a, |XY| = b, |YZ| = c and |WZ| = a + b + c.<br>Let C<sub>in</sub> be the circle having the diameter XY.<br>Let C<sub>out</sub> be the circle having the diameter WZ.</p>
+<p>The triplet (a, b, c) is called a <em>necklace triplet</em> if you can place k ≥ 3 distinct circles C<sub>1</sub>, C<sub>2</sub>, …, C<sub>k</sub> such that:</p>
+<ul>
+<li>C<sub>i</sub> has no common interior points with any C<sub>j</sub> for 1 ≤ i, j ≤ k and i ≠ j,</li>
+<li>C<sub>i</sub> is tangent to both C<sub>in</sub> and C<sub>out</sub> for 1 ≤ i ≤ k,</li>
+<li>C<sub>i</sub> is tangent to C<sub>i+1</sub> for 1 ≤ i &lt; k, and</li>
+<li>C<sub>k</sub> is tangent to C<sub>1</sub>.</li>
+</ul>
+<p>For example, (5, 5, 5) and (4, 3, 21) are necklace triplets, while it can be shown that (2, 2, 5) is not.</p>
+<center><img src="https://projecteuler.net/project/images/p428_necklace.png"></center>
+
+<p>Let T(n) be the number of necklace triplets (a, b, c) such that a, b and c are positive integers, and b ≤ n. For example, T(1)&nbsp;=&nbsp;9, T(20)&nbsp;=&nbsp;732 and T(3000)&nbsp;=&nbsp;438106.</p>
+<p>Find T(1&nbsp;000&nbsp;000&nbsp;000).</p>
+<hr>
+<p><strong>圆圈项链</strong><br>取a，b，c均为正整数。<br>取共线的四点W，X，Y，Z，满足|WX| = a，|XY| = b，|YZ| = c而|WZ| = a + b + c。<br>圆C<sub>in</sub>是以XY为直径的圆。<br>圆C<sub>out</sub>是以WZ为直径的圆。</p>
+<p>三元组(a, b, c)被称为<em>项链三元组</em>，如果存在k ≥ 3个不同的圆C<sub>1</sub>，C<sub>2</sub>，……，C<sub>k</sub>满足：</p>
+<ul>
+<li>对于任意1 ≤ i, j ≤ k且i ≠ j，C<sub>i</sub>和C<sub>j</sub>没有公共内部点。</li>
+<li>对于任意1 ≤ i ≤ k，C<sub>i</sub>和C<sub>in</sub>与C<sub>out</sub>均相切。</li>
+<li>对于任意1 ≤ i &lt; k，C<sub>i</sub>和C<sub>i+1</sub>相切。</li>
+<li>C<sub>k</sub>和C<sub>1</sub>相切。</li>
+</ul>
+<p>例如，(5, 5, 5)和(4, 3, 21)都是项链三元组，而(2, 2, 5)则不是。</p>
+<center><img src="https://projecteuler.net/project/images/p428_necklace.png"></center>
+
+<p>记T(n)是项链三元组(a, b, c)的数量，其中a，b，c均为正整数，且b ≤ n。例如，T(1)&nbsp;=&nbsp;9，T(20)&nbsp;=&nbsp;732以及T(3000)&nbsp;=&nbsp;438106。</p>
+<p>求T(1&nbsp;000&nbsp;000&nbsp;000)。</p>
+<hr>
+<hr>
+<h1 id="Problem_429"><a href="https://projecteuler.net/problem=429" target="_blank" rel="external">Problem 429</a></h1><hr>
+<p><strong>Sum of squares of unitary divisors</strong></p>
+<p>A unitary divisor d of a number n is a divisor of n that has the property gcd(d, n/d) = 1.<br>The unitary divisors of 4! = 24 are 1, 3, 8 and 24.<br>The sum of their squares is 1<sup>2</sup> + 3<sup>2</sup> + 8<sup>2</sup> + 24<sup>2</sup> = 650.</p>
+<p>Let S(n) represent the sum of the squares of the unitary divisors of n. Thus S(4!)=650.</p>
+<p>Find S(100 000 000!) modulo 1 000 000 009.</p>
+<hr>
+<p><strong>元因数的平方和</strong></p>
+<p>n的元因数d指的是满足如下性质的n的因数：gcd(d, n/d) = 1。<br>4! = 24的元因数为1，3，8和24。<br>这些数的平方和是1<sup>2</sup> + 3<sup>2</sup> + 8<sup>2</sup> + 24<sup>2</sup> = 650。</p>
+<p>记S(n)是n的元因子的平方和。因此S(4!)=650。</p>
+<p>求S(100 000 000!) modulo 1 000 000 009。</p>
+<hr>
+<hr>
+<h1 id="Problem_430"><a href="https://projecteuler.net/problem=430" target="_blank" rel="external">Problem 430</a></h1><hr>
+<p><strong>Range flips</strong></p>
+<p>N disks are placed in a row, indexed 1 to N from left to right.<br>Each disk has a black side and white side. Initially all disks show their white side.</p>
+<p>At each turn, two, not necessarily distinct, integers A and B between 1 and N (inclusive) are chosen uniformly at random.<br>All disks with an index from A to B (inclusive) are flipped.</p>
+<p>The following example shows the case N = 8. At the first turn A = 5 and B = 2, and at the second turn A = 4 and B = 6.</p>
+<center><img src="https://projecteuler.net/project/images/p430_flips.gif"></center>
+
+<p>Let E(N, M) be the expected number of disks that show their white side after M turns.<br>We can verify that E(3, 1) = 10/9, E(3, 2) = 5/3, E(10, 4) ≈ 5.157 and E(100, 10) ≈ 51.893.</p>
+<p>Find E(10<sup>10</sup>, 4000).<br>Give your answer rounded to 2 decimal places behind the decimal point.</p>
+<hr>
+<p><strong>区域翻转</strong></p>
+<p>N个盘子放置成一排，从左至右分别标记为1至N。<br>每个盘子都是一面黑一面白，初始时所有的盘子都是白面朝上。</p>
+<p>每一轮,从1至N（包含）中随机等概率选出两个数A和B，这两个数可以相同。<br>所有标记从A至B（包含）的盘子都要翻转。</p>
+<p>下面的例子是N = 8时可能的情景。第一轮A = 5而B = 2，第二轮A = 4而B = 6。</p>
+<center><img src="https://projecteuler.net/project/images/p430_flips.gif"></center>
+
+<p>记E(N, M)是在M轮后白面向上的盘子数目的期望值。<br>可以验证，E(3, 1) = 10/9，E(3, 2) = 5/3，E(10, 4) ≈ 5.157以及E(100, 10) ≈ 51.893。</p>
+<p>求E(10<sup>10</sup>, 4000)。<br>保留小数点后2位小数。</p>
+<hr>
+<hr>
+<h1 id="Problem_431"><a href="https://projecteuler.net/problem=431" target="_blank" rel="external">Problem 431</a></h1><hr>
+<p><strong>Square Space Silo</strong></p>
+<p>Fred the farmer arranges to have a new storage silo installed on his farm and having an obsession for all things square he is absolutely devastated when he discovers that it is circular. Quentin, the representative from the company that installed the silo, explains that they only manufacture cylindrical silos, but he points out that it is resting on a square base. Fred is not amused and insists that it is removed from his property.</p>
+<p>Quick thinking Quentin explains that when granular materials are delivered from above a conical slope is formed and the natural angle made with the horizontal is called the angle of repose. For example if the angle of repose, α=30 degrees, and grain is delivered at the centre of the silo then a perfect cone will form towards the top of the cylinder. In the case of this silo, which has a diameter of 6m, the amount of space wasted would be approximately 32.648388556 m<sup>3</sup>. However, if grain is delivered at a point on the top which has a horizontal distance of x metres from the centre then a cone with a strangely curved and sloping base is formed. He shows Fred a picture.</p>
+<center><img src="https://projecteuler.net/project/images/p431_grain_silo.png"></center>
+
+<p>We shall let the amount of space wasted in cubic metres be given by V(x). If x=1.114785284, which happens to have three squared decimal places, then the amount of space wasted, V(1.114785284)≈36. Given the range of possible solutions to this problem there is exactly one other option: V(2.511167869)≈49. It would be like knowing that the square is king of the silo, sitting in splendid glory on top of your grain.</p>
+<p>Fred’s eyes light up with delight at this elegant resolution, but on closer inspection of Quentin’s drawings and calculations his happiness turns to despondency once more. Fred points out to Quentin that it’s the radius of the silo that is 6 metres, not the diameter, and the angle of repose for his grain is 40 degrees. However, if Quentin can find a set of solutions for this particular silo then he will be more than happy to keep it.</p>
+<p>If Quick thinking Quentin is to satisfy frustratingly fussy Fred the farmer’s appetite for all things square then determine the values of x for all possible square space wastage options and calculate ∑x correct to 9 decimal places.</p>
+<hr>
+<p><strong>浪费了平方数空间的谷仓</strong></p>
+<p>农夫弗雷德在他的农场上造了一个新谷仓，当他发现这个谷仓竟然是圆柱形时，这个有着对正方形狂热的喜好的农夫非常愤怒。谷仓制造商的代表昆廷解释道，他们公司从来都只制造圆柱形的谷仓，同时他指出，这个谷仓的地基是正方形的。弗雷德并没有因此而释然，仍然坚持要拆掉这个谷仓。</p>
+<p>机灵鬼昆廷脑子一转，解释道，当谷物从谷仓的上面往下倒时，顶部会形成一个锥形，锥顶与水平面的角度称为静止角。例如，当静止角α=30，且锥顶位于谷仓的中央时，顶部将是一个标准的圆锥形，而谷仓的直径是6米，所以谷仓中浪费的空间是约32.648388556 m<sup>3</sup>。然而，如果锥顶的位置距离谷仓的中央为x米时，将会形成一个奇特的弯曲斜面。他给弗雷德画了一张示意图。</p>
+<center><img src="https://projecteuler.net/project/images/p431_grain_silo.png"></center>
+
+<p>我们用V(x)来表示浪费的空间，单位是立方米。如果x=1.114785284，保留到3的平方位小数，则浪费的空间V(1.114785284)≈36。在可行的范围内，恰好还有另外一个选择V(2.511167869)≈49。这就好比平方数，也就是正方形数，是谷仓之王，高高地站在你的谷物的顶上。</p>
+<p>弗雷德对于这个优雅的解释眼前一亮，但是当他更仔细地观察昆廷的示意图和计算后，他的笑容马上无影无踪了。弗雷德向昆廷指出，谷物的半径而非直径是6米，而且谷物所形成的静止角是40度。然而，如果昆廷仍然能够找到合适的解，弗雷德将会愿意保留这个谷仓。</p>
+<p>帮助机灵鬼昆廷满足弗雷德折腾人的正方形狂热，找出所有使得浪费的空间为平方数的x值，并计算出∑x，保留9位小数。</p>
+<hr>
+<hr>
+<h1 id="Problem_432"><a href="https://projecteuler.net/problem=432" target="_blank" rel="external">Problem 432</a></h1><hr>
+<p><strong>Totient sum</strong></p>
+<p>Let S(n,m) = ∑φ(n × i) for 1 ≤ i ≤ m. (φ is Euler’s totient function)<br>You are given that S(510510,10<sup>6</sup> )= 45480596821125120. </p>
+<p>Find S(510510,10<sup>11</sup>).<br>Give the last 9 digits of your answer.</p>
+<hr>
+<p><strong>欧拉总计函数和</strong></p>
+<p>对于1 ≤ i ≤ m，记S(n,m) = ∑φ(n × i)。（其中φ指的是欧拉总计函数）<br>已知S(510510,10<sup>6</sup> )= 45480596821125120。 </p>
+<p>求S(510510,10<sup>11</sup>)。<br>给出答案的最后9位数字。</p>
+<hr>
+<hr>
+<h1 id="Problem_433"><a href="https://projecteuler.net/problem=433" target="_blank" rel="external">Problem 433</a></h1><hr>
+<p><strong>Steps in Euclid’s algorithm</strong></p>
+<p>Let E(x<sub>0</sub>, y<sub>0</sub>) be the number of steps it takes to determine the greatest common divisor of x<sub>0</sub> and y<sub>0</sub> with <strong>Euclid’s algorithm</strong>. More formally:<br>x<sub>1</sub> = y<sub>0</sub>, y<sub>1</sub> = x<sub>0</sub> mod y<sub>0</sub><br>x<sub>n</sub> = y<sub>n-1</sub>, y<sub>n</sub> = x<sub>n-1</sub> mod y<sub>n-1</sub><br>E(x<sub>0</sub>, y<sub>0</sub>) is the smallest n such that y<sub>n</sub> = 0.</p>
+<p>We have E(1,1) = 1, E(10,6) = 3 and E(6,10) = 4.</p>
+<p>Define S(N) as the sum of E(x,y) for 1 ≤ x,y ≤ N.<br>We have S(1) = 1, S(10) = 221 and S(100) = 39826.</p>
+<p>Find S(5·10<sup>6</sup>).</p>
+<hr>
+<p><strong>欧几里德算法的步数</strong></p>
+<p>记E(x<sub>0</sub>, y<sub>0</sub>)为运用<strong>欧几里德算法</strong>求x<sub>0</sub>和y<sub>0</sub>的最大公约数的步数。更加正式的说：<br>x<sub>1</sub> = y<sub>0</sub>, y<sub>1</sub> = x<sub>0</sub> mod y<sub>0</sub><br>x<sub>n</sub> = y<sub>n-1</sub>, y<sub>n</sub> = x<sub>n-1</sub> mod y<sub>n-1</sub><br>E(x<sub>0</sub>, y<sub>0</sub>)是使得y<sub>n</sub> = 0的最小的n。</p>
+<p>已知E(1,1) = 1，E(10,6) = 3以及E(6,10) = 4。</p>
+<p>对于1 ≤ x,y ≤ N，定义S(N)为所有E(x,y)的和。<br>已知S(1) = 1，S(10) = 221以及S(100) = 39826。</p>
+<p>求S(5·10<sup>6</sup>)。</p>
+<hr>
+<hr>
+<h1 id="Problem_434"><a href="https://projecteuler.net/problem=434" target="_blank" rel="external">Problem 434</a></h1><hr>
+<p><strong>Rigid graphs</strong></p>
+<p>Recall that a graph is a collection of vertices and edges connecting the vertices, and that two vertices connected by an edge are called adjacent.<br>Graphs can be embedded in Euclidean space by associating each vertex with a point in the Euclidean space.<br>A <strong>flexible</strong> graph is an embedding of a graph where it is possible to move one or more vertices continuously so that the distance between at least two nonadjacent vertices is altered while the distances between each pair of adjacent vertices is kept constant.<br>A <strong>rigid</strong> graph is an embedding of a graph which is not flexible.<br>Informally, a graph is rigid if by replacing the vertices with fully rotating hinges and the edges with rods that are unbending and inelastic, no parts of the graph can be moved independently from the rest of the graph.</p>
+<p>The <strong>grid graphs</strong> embedded in the Euclidean plane are not rigid, as the following animation demonstrates:</p>
+<center><img src="https://projecteuler.net/project/images/p434_rigid.gif"></center>
+
+<p>However, one can make them rigid by adding diagonal edges to the cells. For example, for the 2x3 grid graph, there are 19 ways to make the graph rigid:</p>
+<center><img src="https://projecteuler.net/project/images/p434_rigid23.png"></center>
+
+<p>Note that for the purposes of this problem, we do not consider changing the orientation of a diagonal edge or adding both diagonal edges to a cell as a different way of making a grid graph rigid.</p>
+<p>Let R(m,n) be the number of ways to make the m × n grid graph rigid.<br>E.g. R(2,3) = 19 and R(5,5) = 23679901</p>
+<p>Define S(N) as ∑R(i,j) for 1 ≤ i, j ≤ N.<br>E.g. S(5) = 25021721.<br>Find S(100), give your answer modulo 1000000033</p>
+<hr>
+<p><strong>不可弯折图</strong></p>
+<p>图是一系列点和连接点的边的集合，由边连接的两个点称为邻接点。<br>将图的每个顶点和欧氏空间的一个店相对应，总是可以将图投影到欧氏空间中。<br>我们称一个图为<strong>可弯折</strong>图，如果其在欧氏空间中的投影中的一个或多个顶点可以连续地改变位置，使得至少两个非邻接的顶点的距离发生变化，而任意两个邻接的顶点的距离保持不变。<br>相应地，我们称一个图为<strong>不可弯折</strong>图，如果其不是可弯折图。<br>一种不太正式的表述是，如果一个图是不可弯折的，那么当我们将图中的顶点换成铰链，将边换成不可弯折且无弹性的木棒，则图的任意部分都不能独立于其它部分发生移动。</p>
+<p><strong>方格图</strong>在欧氏空间中的投影是可弯折的，如下面的动画所示：</p>
+<center><img src="https://projecteuler.net/project/images/p434_rigid.gif"></center>
+
+<p>然而，只要在其中一些方格内加上对角线，就可以将它变成不可弯折图。例如，对于2x3的方格图，一共有19种方法把它变为不可弯折图：</p>
+<center><img src="https://projecteuler.net/project/images/p434_rigid23.png"></center>
+
+<p>在本题中，更换对角线的方向或是同时加上一个方格内的两条对角线不被认为是一种不同的方法。</p>
+<p>记R(m,n)是将m × n方格图变为不可弯折图的方法数。<br>例如，R(2,3) = 19，以及R(5,5) = 23679901</p>
+<p>定义S(N)为∑R(i,j)，其中1 ≤ i, j ≤ N。<br>例如，S(5) = 25021721。<br>求S(100)，并将答案模1000000033求余。</p>
+<hr>
+<hr>
+<h1 id="Problem_435"><a href="https://projecteuler.net/problem=435" target="_blank" rel="external">Problem 435</a></h1><hr>
+<p><strong>Polynomials of Fibonacci numbers</strong></p>
+<p>The <strong>Fibonacci numbers</strong> {f<sub>n</sub>, n ≥ 0} are defined recursively as f<sub>n</sub> = f<sub>n-1</sub> + f<sub>n-2</sub> with base cases f<sub>0</sub> = 0 and f<sub>1</sub> = 1.</p>
+<p>Define the polynomials {F<sub>n</sub>, n ≥ 0} as F<sub>n</sub>(x) = ∑f<sub>i</sub>x<sup>i</sup> for 0 ≤ i ≤ n.</p>
+<p>For example, F<sub>7</sub>(x) = x + x<sup>2</sup> + 2x<sup>3</sup> + 3x<sup>4</sup> + 5x<sup>5</sup> + 8x<sup>6</sup> + 13x<sup>7</sup>, and F<sub>7</sub>(11) = 268357683.</p>
+<p>Let n = 10<sup>15</sup>. Find the sum [∑<sub>0≤x≤100</sub> F<sub>n</sub>(x)] mod 1307674368000 (= 15!).</p>
+<hr>
+<p><strong>斐波那契数多项式</strong></p>
+<p><strong>斐波那契数</strong>{f<sub>n</sub>, n ≥ 0}由递归式f<sub>n</sub> = f<sub>n-1</sub> + f<sub>n-2</sub>给出，初值是f<sub>0</sub> = 0和f<sub>1</sub> = 1。</p>
+<p>定义多项式{F<sub>n</sub>, n ≥ 0}为F<sub>n</sub>(x) = ∑f<sub>i</sub>x<sup>i</sup>，其中0 ≤ i ≤ n。</p>
+<p>例如，F<sub>7</sub>(x) = x + x<sup>2</sup> + 2x<sup>3</sup> + 3x<sup>4</sup> + 5x<sup>5</sup> + 8x<sup>6</sup> + 13x<sup>7</sup>，而F<sub>7</sub>(11) = 268357683.</p>
+<p>取n = 10<sup>15</sup>。求[∑<sub>0≤x≤100</sub> F<sub>n</sub>(x)] mod 1307674368000 (= 15!)。</p>
+<hr>
+<hr>
+<h1 id="Problem_436"><a href="https://projecteuler.net/problem=436" target="_blank" rel="external">Problem 436</a></h1><hr>
+<p><strong>Unfair wager</strong></p>
+<p>Julie proposes the following wager to her sister Louise.<br>She suggests they play a game of chance to determine who will wash the dishes.<br>For this game, they shall use a generator of independent random numbers uniformly distributed between 0 and 1.<br>The game starts with S = 0.<br>The first player, Louise, adds to S different random numbers from the generator until S &gt; 1 and records her last random number ‘x’.<br>The second player, Julie, continues adding to S different random numbers from the generator until S &gt; 2 and records her last random number ‘y’.<br>The player with the highest number wins and the loser washes the dishes, i.e. if y &gt; x the second player wins.</p>
+<p>For example, if the first player draws 0.62 and 0.44, the first player turn ends since 0.62+0.44 &gt; 1 and x = 0.44.<br>If the second players draws 0.1, 0.27 and 0.91, the second player turn ends since 0.62+0.44+0.1+0.27+0.91 &gt; 2 and y = 0.91.<br>Since y &gt; x, the second player wins.</p>
+<p>Louise thinks about it for a second, and objects: “That’s not fair”.<br>What is the probability that the second player wins?<br>Give your answer rounded to 10 places behind the decimal point in the form 0.abcdefghij</p>
+<hr>
+<p><strong>不公平的打赌</strong></p>
+<p>朱莉和她的妹妹露易丝打了个赌。<br>她建议来玩一个几率游戏，来决定谁去洗盘子。<br>在这个游戏中，她们将使用一个独立随机数生成器，这些随机数等概率地分布在0到1之间。<br>游戏开始时S = 0。<br>先手玩家露易丝向S中不断加入生成器生成的随机数，直到S &gt; 1，并记下她最后得到的随机数’x’。<br>后手玩家朱莉继续向S中不断加入生成器生成的随机数，知道S &gt; 2，并也记下她最后得到的随机数’y’。<br>得到较大数的玩家获胜，而输掉的一方要去洗盘子，例如，如果y &gt; x，则后手玩家获胜。</p>
+<p>例如，如果先手玩家得到的随机数是0.62和0.44，先手玩家结束操作，因为0.62+0.44 &gt; 1，而她得到的随机数是x = 0.44。<br>如果后手玩家随后得到0.1，0.27和0.91，后手玩家结束操作，因为0.62+0.44+0.1+0.27+0.91 &gt; 2，而她得到的随机数是y = 0.91。<br>因为y &gt; x，后手玩家获胜。</p>
+<p>露易丝考虑了一会儿然后表示反对：“这不公平！”<br>请问后手玩家获胜的概率是多少？<br>将你的答案保留10位小数，即用0.abcdefghij的形式提交。</p>
+<hr>
+<hr>
+<h1 id="Problem_437"><a href="https://projecteuler.net/problem=437" target="_blank" rel="external">Problem 437</a></h1><hr>
+<p><strong>Fibonacci primitive roots</strong></p>
+<p>When we calculate 8<sup>n</sup> modulo 11 for n=0 to 9 we get: 1, 8, 9, 6, 4, 10, 3, 2, 5, 7.<br>As we see all possible values from 1 to 10 occur. So 8 is a <strong>primitive root</strong> of 11.<br>But there is more:<br>If we take a closer look we see:<br>1+8=9<br>8+9=17≡6 mod 11<br>9+6=15≡4 mod 11<br>6+4=10<br>4+10=14≡3 mod 11<br>10+3=13≡2 mod 11<br>3+2=5<br>2+5=7<br>5+7=12≡1 mod 11.</p>
+<p>So the powers of 8 mod 11 are cyclic with period 10, and 8<sup>n</sup> + 8<sup>n+1</sup> ≡ 8<sup>n+2</sup> (mod 11).<br>8 is called a <strong>Fibonacci primitive root</strong> of 11.<br>Not every prime has a Fibonacci primitive root.<br>There are 323 primes less than 10000 with one or more Fibonacci primitive roots and the sum of these primes is 1480491.<br>Find the sum of the primes less than 100,000,000 with at least one Fibonacci primitive root.</p>
+<hr>
+<p><strong>斐波那契原根</strong></p>
+<p>对于n=0至9分别计算8<sup>n</sup>模11的余数，我们得到：1, 8, 9, 6, 4, 10, 3, 2, 5, 7。<br>可以看出，1至10在这些余数中都出现了，因此8被称为11的一个<strong>原根</strong>。<br>但不仅如此：<br>如果我们更加仔细地观察：<br>1+8=9<br>8+9=17≡6 mod 11<br>9+6=15≡4 mod 11<br>6+4=10<br>4+10=14≡3 mod 11<br>10+3=13≡2 mod 11<br>3+2=5<br>2+5=7<br>5+7=12≡1 mod 11.</p>
+<p>因此8的幂模11不仅是以10为周期重复，而且8<sup>n</sup> + 8<sup>n+1</sup> ≡ 8<sup>n+2</sup> (mod 11)。<br>因此，8被称为11的一个<strong>斐波那契原根</strong>。<br>不是所有的素数都有一个斐波那契原根。<br>在小于10000的数中，有323个质数有至少一个斐波那契原根，这些质数的和为1480491。<br>求在小于100,000,000的数中，至少有一个斐波那契原根的素数的和。</p>
+<hr>
+<hr>
+<h1 id="Problem_438"><a href="https://projecteuler.net/problem=438" target="_blank" rel="external">Problem 438</a></h1><hr>
+<p><strong>Integer part of polynomial equation’s solutions</strong></p>
+<p>For an n-tuple of integers t = (a<sub>1</sub>, …, a<sub>n</sub>), let (x<sub>1</sub>, …, x<sub>n</sub>) be the solutions of the polynomial equation x<sup>n</sup> + a<sub>1</sub>x<sup>n-1</sup> + a<sub>2</sub>x<sup>n-2</sup> + … + a<sub>n-1</sub>x + a<sub>n</sub> = 0.</p>
+<p>Consider the following two conditions:</p>
+<ul>
+<li>x<sub>1</sub>, …, x<sub>n</sub> are all real.</li>
+<li>If x<sub>1</sub>, …, x<sub>n</sub> are sorted, [x<sub>i</sub>] = i for 1 ≤ i ≤ n. ([·]: floor function.)</li>
+</ul>
+<p>In the case of n = 4, there are 12 n-tuples of integers which satisfy both conditions.<br>We define S(t) as the sum of the absolute values of the integers in t.<br>For n = 4 we can verify that ∑S(t) = 2087 for all n-tuples t which satisfy both conditions.</p>
+<p>Find ∑S(t) for n = 7.</p>
+<hr>
+<p><strong>多项式方程式解的整数部分</strong></p>
+<p>对于整数n元组t = (a<sub>1</sub>, …, a<sub>n</sub>)，记(x<sub>1</sub>, …, x<sub>n</sub>)是多项式方程x<sup>n</sup> + a<sub>1</sub>x<sup>n-1</sup> + a<sub>2</sub>x<sup>n-2</sup> + … + a<sub>n-1</sub>x + a<sub>n</sub> = 0的解集。</p>
+<p>考虑下面两个条件：</p>
+<ul>
+<li>x<sub>1</sub>, …, x<sub>n</sub>均为实数。</li>
+<li>如果 x<sub>1</sub>, …, x<sub>n</sub>是从小到大排序的，则[x<sub>i</sub>] = i对1 ≤ i ≤ n恒成立。（[·]指向下取整函数。）</li>
+</ul>
+<p>当n = 4时，有12个整数n元组同时满足这两个条件。<br>记S(t)是t中整数的绝对值的和。<br>当n = 4时，对于所有同时满足这两个条件的整数n元组t，可以验证∑S(t) = 2087。</p>
+<p>当n = 7时，求∑S(t)。</p>
+<hr>
+<hr>
+<h1 id="Problem_439"><a href="https://projecteuler.net/problem=439" target="_blank" rel="external">Problem 439</a></h1><hr>
+<p><strong>Sum of sum of divisors</strong></p>
+<p>Let d(k) be the sum of all divisors of k.<br>We define the function S(N) = ∑<sub>1≤i≤N</sub> ∑<sub>1≤j≤N</sub> d(i·j).<br>For example, S(3) = d(1) + d(2) + d(3) + d(2) + d(4) + d(6) + d(3) + d(6) + d(9) = 59.</p>
+<p>You are given that S(10<sup>3</sup>) = 563576517282 and S(10<sup>5</sup>) mod 10<sup>9</sup> = 215766508.<br>Find S(10<sup>11</sup>) mod 10<sup>9</sup>.</p>
+<hr>
+<p><strong>因数之和之和</strong></p>
+<p>记d(k)是k的所有因数之和。<br>定义函数S(N) = ∑<sub>1≤i≤N</sub> ∑<sub>1≤j≤N</sub> d(i·j)。<br>例如，S(3) = d(1) + d(2) + d(3) + d(2) + d(4) + d(6) + d(3) + d(6) + d(9) = 59。</p>
+<p>已知S(10<sup>3</sup>) = 563576517282以及S(10<sup>5</sup>) mod 10<sup>9</sup> = 215766508。<br>求S(10<sup>11</sup>) mod 10<sup>9</sup>。</p>
+<hr>
+<hr>
+<h1 id="Problem_440"><a href="https://projecteuler.net/problem=440" target="_blank" rel="external">Problem 440</a></h1><hr>
+<p><strong>GCD and Tiling</strong></p>
+<p>We want to tile a board of length n and height 1 completely, with either 1 × 2 blocks or 1 × 1 blocks with a single decimal digit on top:</p>
+<center><img src="https://projecteuler.net/project/images/p440_tiles.png"></center>
+
+<p>For example, here are some of the ways to tile a board of length n = 8:</p>
+<center><img src="https://projecteuler.net/project/images/p440_some8.png"></center>
+
+<p>Let T(n) be the number of ways to tile a board of length n as described above.</p>
+<p>For example, T(1) = 10 and T(2) = 101.</p>
+<p>Let S(L) be the triple sum ∑<sub>a,b,c</sub> gcd(T(c<sup>a</sup>), T(c<sup>b</sup>)) for 1 ≤ a, b, c ≤ L.<br>For example:<br>S(2) = 10444<br>S(3) = 1292115238446807016106539989<br>S(4) mod 987&nbsp;898&nbsp;789 = 670616280.</p>
+<p>Find S(2000) mod 987&nbsp;898&nbsp;789.</p>
+<hr>
+<p><strong>最大公约数与摆方格</strong></p>
+<p>我们想要用1 × 2的空白方格或是1 × 1写有一个十进制数字的方格（如下所示）铺满长为n高为1的版面：</p>
+<center><img src="https://projecteuler.net/project/images/p440_tiles.png"></center>
+
+<p>例如，下面是铺满长为n = 8的版面的一些方式：</p>
+<center><img src="https://projecteuler.net/project/images/p440_some8.png"></center>
+
+<p>记铺满长为n的版面的方式数为T(n)。</p>
+<p>例如，T(1) = 10，T(2) = 101。</p>
+<p>对于1 ≤ a, b, c ≤ L，记S(L)是三重求和∑<sub>a,b,c</sub> gcd(T(c<sup>a</sup>), T(c<sup>b</sup>)) 。<br>例如：<br>S(2) = 10444<br>S(3) = 1292115238446807016106539989<br>S(4) mod 987&nbsp;898&nbsp;789 = 670616280.</p>
+<p>求 S(2000) mod 987&nbsp;898&nbsp;789。</p>
+<hr>
+<hr>
+<h1 id="Problem_441"><a href="https://projecteuler.net/problem=441" target="_blank" rel="external">Problem 441</a></h1><hr>
+<p><strong>The inverse summation of coprime couples</strong></p>
+<p>For an integer M, we define R(M) as the sum of 1/(p·q) for all the integer pairs p and q which satisfy all of these conditions:</p>
+<ul>
+<li>1 ≤ p &lt; q ≤ M</li>
+<li>p + q ≥ M</li>
+<li>p and q are coprime.</li>
+</ul>
+<p>We also define S(N) as the sum of R(i) for 2 ≤ i ≤ N.<br>We can verify that S(2) = R(2) = 1/2, S(10) ≈ 6.9147 and S(100) ≈ 58.2962.</p>
+<p>Find S(10<sup>7</sup>). Give your answer rounded to four decimal places.</p>
+<hr>
+<p><strong>互质数对的倒数和</strong></p>
+<p>对于整数M，定义R(M)是所有1/(p·q) 之和，其中整数对p和q满足如下条件：</p>
+<ul>
+<li>1 ≤ p &lt; q ≤ M</li>
+<li>p + q ≥ M</li>
+<li>p和q互质。</li>
+</ul>
+<p>对于2 ≤ i ≤ N，定义S(N)是所有R(i)的和。<br>可以验证S(2) = R(2) = 1/2，S(10) ≈ 6.9147以及S(100) ≈ 58.2962。</p>
+<p>求S(10<sup>7</sup>)，并保留4位小数。</p>
+<hr>
+<hr>
+<h1 id="Problem_442"><a href="https://projecteuler.net/problem=442" target="_blank" rel="external">Problem 442</a></h1><hr>
+<p><strong>Eleven-free integers</strong></p>
+<p>An integer is called <em>eleven-free</em> if its decimal expansion does not contain any substring representing a power of 11 except 1.</p>
+<p>For example, 2404 and 13431 are eleven-free, while 911 and 4121331 are not.</p>
+<p>Let E(n) be the nth positive eleven-free integer. For example, E(3) = 3, E(200) = 213 and E(500&nbsp;000) = 531563.</p>
+<p>Find E(10<sup>18</sup>).</p>
+<hr>
+<p><strong>无11整数</strong></p>
+<p><em>无11</em>整数指的是十进制表达式中不包含有除了1之外11的幂的整数。</p>
+<p>例如，2404和13431都是无11整数，而911和4121331不是。</p>
+<p>记E(n)是第n个无11正整数。例如，E(3) = 3，E(200) = 213，以及E(500&nbsp;000) = 531563。</p>
+<p>求E(10<sup>18</sup>)。</p>
+<hr>
+<hr>
+<h1 id="Problem_443"><a href="https://projecteuler.net/problem=443" target="_blank" rel="external">Problem 443</a></h1><hr>
+<p><strong>GCD sequence</strong></p>
+<p>Let g(n) be a sequence defined as follows:<br>g(4) = 13,<br>g(n) = g(n-1) + gcd(n, g(n-1)), for n &gt; 4.</p>
+<p>The first few values are:</p>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n&nbsp;&nbsp;&nbsp;</td>
+<td>4&nbsp;</td>
+<td>5&nbsp;</td>
+<td>6&nbsp;</td>
+<td>7&nbsp;</td>
+<td>8&nbsp;</td>
+<td>9&nbsp;</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>…</td>
+</tr>
+<tr>
+<td>g(n)</td>
+<td>13</td>
+<td>14</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>27</td>
+<td>28</td>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>32</td>
+<td>33</td>
+<td>34</td>
+<td>51</td>
+<td>54</td>
+<td>55</td>
+<td>60</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>You are given that g(1&nbsp;000) = 2524 and g(1&nbsp;000&nbsp;000) = 2624152.</p>
+<p>Find g(10<sup>15</sup>).</p>
+<hr>
+<p><strong>最大公约数序列</strong></p>
+<p>序列g(n)按如下方式定义：<br>g(4) = 13，<br>g(n) = g(n-1) + gcd(n, g(n-1))，若n &gt; 4。</p>
+<p>序列最初始的一些项是：</p>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n&nbsp;&nbsp;&nbsp;</td>
+<td>4&nbsp;</td>
+<td>5&nbsp;</td>
+<td>6&nbsp;</td>
+<td>7&nbsp;</td>
+<td>8&nbsp;</td>
+<td>9&nbsp;</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>…</td>
+</tr>
+<tr>
+<td>g(n)</td>
+<td>13</td>
+<td>14</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>27</td>
+<td>28</td>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>32</td>
+<td>33</td>
+<td>34</td>
+<td>51</td>
+<td>54</td>
+<td>55</td>
+<td>60</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>已知g(1&nbsp;000) = 2524以及g(1&nbsp;000&nbsp;000) = 2624152。</p>
+<p>求g(10<sup>15</sup>)。</p>
+<hr>
+<hr>
+<h1 id="Problem_444"><a href="https://projecteuler.net/problem=444" target="_blank" rel="external">Problem 444</a></h1><hr>
+<p><strong>The Roundtable Lottery</strong></p>
+<p>A group of p people decide to sit down at a round table and play a lottery-ticket trading game. Each person starts off with a randomly-assigned, unscratched lottery ticket. Each ticket, when scratched, reveals a whole-pound prize ranging anywhere from £1 to £p, with no two tickets alike. The goal of the game is for each person to maximize his ticket winnings upon leaving the game.</p>
+<p>An arbitrary person is chosen to be the first player. Going around the table, each player has only one of two options:</p>
+<ol>
+<li>The player can scratch his ticket and reveal its worth to everyone at the table.</li>
+<li>The player can trade his unscratched ticket for a previous player’s scratched ticket, and then leave the game with that ticket. The previous player then scratches his newly-acquired ticket and reveals its worth to everyone at the table.</li>
+</ol>
+<p>The game ends once all tickets have been scratched. All players still remaining at the table must leave with their currently-held tickets.</p>
+<p>Assume that each player uses the optimal strategy for maximizing the expected value of his ticket winnings. </p>
+<p>Let E(p) represent the expected number of players left at the table when the game ends in a game consisting of p players (e.g. E(111)&nbsp;=&nbsp;5.2912 when rounded to 5 significant digits).</p>
+<p>Let S<sub>1</sub>(N) = <img style="vertical-align:middle" src="https://projecteuler.net/project/images/p444_sum.png"> E(p)<br>Let S<sub>k</sub>(N) = <img style="vertical-align:middle" src="https://projecteuler.net/project/images/p444_sum.png"> S<sub>k-1</sub>(p) for k &gt; 1</p>
+<p>Find S<sub>20</sub>(10<sup>14</sup>) and write the answer in scientific notation rounded to 10 significant digits. Use a lowercase e to separate mantissa and exponent (e.g. S<sub>3</sub>(100) = 5.983679014e5).</p>
+<hr>
+<p><strong>圆桌彩票</strong></p>
+<p>一群共p个人决定围绕圆桌坐下玩一个彩票交易游戏。每个人在开始游戏时有一张随机分配的、未刮开的彩票，彩票刮开之后就会显示从£1至£p的一个随机整数数额，但没有两张彩票的数额相同。每个玩家进行游戏的目标是在离开游戏时最大化他的彩票收益。</p>
+<p>随机选择一个人作为第一个玩家，然后游戏绕着圆桌一次进行，每个玩家有两个选项：</p>
+<ol>
+<li>玩家可以刮开他的彩票，把彩票上的数额展示给所有人看。</li>
+<li>玩家可以将自己未刮开的彩票和之前的玩家已经刮开的一张彩票进行交易，然后拿着已刮开的彩票离开游戏。拿到未刮开彩票的玩家将彩票刮开并展示给所有人看。</li>
+</ol>
+<p>当所有彩票都已经刮开时，游戏结束。所有仍在场上的玩家必须拿着目前持有的彩票离开游戏。</p>
+<p>假定所有玩家使用最优策略以最大化他的彩票收益。</p>
+<p>对于由p个玩家进行的游戏，记E(p)是当游戏结束时还在圆桌上的人数期望值（例如E(111)&nbsp;=&nbsp;5.2912，保留5位小数）。</p>
+<p>记S<sub>1</sub>(N) = <img style="vertical-align:middle" src="https://projecteuler.net/project/images/p444_sum.png"> E(p)<br>记S<sub>k</sub>(N) = <img style="vertical-align:middle" src="https://projecteuler.net/project/images/p444_sum.png"> S<sub>k-1</sub>(p)对于k &gt; 1</p>
+<p>求S<sub>20</sub>(10<sup>14</sup>)，并保留10位有效数字，用小写字母e分隔尾数和指数（例如，S<sub>3</sub>(100) = 5.983679014e5）。</p>
+<hr>
+<hr>
+<h1 id="Problem_445"><a href="https://projecteuler.net/problem=445" target="_blank" rel="external">Problem 445</a></h1><hr>
+<p><strong>Retractions A</strong></p>
+<p>For every integer n&gt;1, the family of functions f<sub>n,a,b</sub>  is defined by f<sub>n,a,b</sub>(x)≡ax+b mod n for a,b,x integer and  0&lt;a&lt;n, 0≤b&lt;n, 0≤x&lt;n.<br>We will call f<sub>n,a,b</sub> a retraction if f<sub>n,a,b</sub>(f<sub>n,a,b</sub>(x))≡f<sub>n,a,b</sub>(x) mod n for every 0≤x&lt;n.<br>Let R(n) be the number of retractions for n.</p>
+<p>You are given that<br>∑ R(c) for c=C(100 000,k), and 1 ≤ k ≤99 999 ≡628701600 (mod 1 000 000 007).<br>(C(n,k) is the binomial coefficient).</p>
+<p>Find ∑ R(c) for c=C(10 000 000,k), and 1 ≤k≤ 9 999 999.<br>Give your answer modulo 1 000 000 007.</p>
+<hr>
+<p><strong>撤销函数 A</strong></p>
+<p>对于任意整数n&gt;1，函数族f<sub>n,a,b</sub>按如下方式定义：f<sub>n,a,b</sub>(x)≡ax+b mod n，其中a,b,x都是整数，且0&lt;a&lt;n，0≤b&lt;n，0≤x&lt;n。<br>我们称f<sub>n,a,b</sub>为撤销函数，当对于0≤x&lt;n均有在模n意义下f<sub>n,a,b</sub>(f<sub>n,a,b</sub>(x))≡f<sub>n,a,b</sub>(x)。<br>记R(n)是给定n下撤销函数的数目。</p>
+<p>已知<br>对于c=C(100 000,k)且1 ≤ k ≤99 999，∑ R(c)≡628701600 (mod 1 000 000 007)。<br>（C(n,k)是二项式系数）。</p>
+<p>对于c=C(100 000,k)且1 ≤ k ≤9 999 999，求∑ R(c)。<br>给出其对1 000 000 007取模的余数。</p>
+<hr>
+<hr>
+<h1 id="Problem_446"><a href="https://projecteuler.net/problem=446" target="_blank" rel="external">Problem 446</a></h1><hr>
+<p><strong>Retractions B</strong></p>
+<p>For every integer n&gt;1, the family of functions f<sub>n,a,b</sub>  is defined by f<sub>n,a,b</sub>(x)≡ax+b mod n for a,b,x integer and  0&lt;a&lt;n, 0≤b&lt;n, 0≤x&lt;n.<br>We will call f<sub>n,a,b</sub> a retraction if f<sub>n,a,b</sub>(f<sub>n,a,b</sub>(x))≡f<sub>n,a,b</sub>(x) mod n for every 0≤x&lt;n.<br>Let R(n) be the number of retractions for n.</p>
+<p>F(N)=∑R(n<sup>4</sup>+4) for 1≤n≤N.<br>F(1024)=77532377300600.</p>
+<p>Find F(10<sup>7</sup>) (mod 1 000 000 007).</p>
+<hr>
+<p><strong>撤销函数 B</strong></p>
+<p>对于任意整数n&gt;1，函数族f<sub>n,a,b</sub>按如下方式定义：f<sub>n,a,b</sub>(x)≡ax+b mod n，其中a,b,x都是整数，且0&lt;a&lt;n，0≤b&lt;n，0≤x&lt;n。<br>我们称f<sub>n,a,b</sub>为撤销函数，当对于0≤x&lt;n均有在模n意义下f<sub>n,a,b</sub>(f<sub>n,a,b</sub>(x))≡f<sub>n,a,b</sub>(x)。<br>记R(n)是给定n下撤销函数的数目。</p>
+<p>记F(N)=∑R(n<sup>4</sup>+4)，其中1≤n≤N。<br>已知F(1024)=77532377300600。</p>
+<p>求F(10<sup>7</sup>) (mod 1 000 000 007)。</p>
+<hr>
+<hr>
+<h1 id="Problem_447"><a href="https://projecteuler.net/problem=447" target="_blank" rel="external">Problem 447</a></h1><hr>
+<p><strong>Retractions C</strong></p>
+<p>For every integer n&gt;1, the family of functions f<sub>n,a,b</sub>  is defined by f<sub>n,a,b</sub>(x)≡ax+b mod n for a,b,x integer and  0&lt;a&lt;n, 0≤b&lt;n, 0≤x&lt;n.<br>We will call f<sub>n,a,b</sub> a retraction if f<sub>n,a,b</sub>(f<sub>n,a,b</sub>(x))≡f<sub>n,a,b</sub>(x) mod n for every 0≤x&lt;n.<br>Let R(n) be the number of retractions for n.</p>
+<p>F(N)=∑R(n) for 2≤n≤N.<br>F(10<sup>7</sup>)≡638042271 (mod 1 000 000 007).</p>
+<p>Find F(10<sup>14</sup>) (mod 1 000 000 007).</p>
+<hr>
+<p><strong>撤销函数 C</strong></p>
+<p>对于任意整数n&gt;1，函数族f<sub>n,a,b</sub>按如下方式定义：f<sub>n,a,b</sub>(x)≡ax+b mod n，其中a,b,x都是整数，且0&lt;a&lt;n，0≤b&lt;n，0≤x&lt;n。<br>我们称f<sub>n,a,b</sub>为撤销函数，当对于0≤x&lt;n均有在模n意义下f<sub>n,a,b</sub>(f<sub>n,a,b</sub>(x))≡f<sub>n,a,b</sub>(x)。<br>记R(n)是给定n下撤销函数的数目。</p>
+<p>记F(N)=∑R(n)，其中2≤n≤N。<br>已知F(10<sup>7</sup>)≡638042271 (mod 1 000 000 007)。</p>
+<p>求F(10<sup>14</sup>) (mod 1 000 000 007)。</p>
+<hr>
+<hr>
+<h1 id="Problem_448"><a href="https://projecteuler.net/problem=448" target="_blank" rel="external">Problem 448</a></h1><hr>
+<p><strong>Average least common multiple</strong></p>
+<p>The function <strong>lcm</strong>(a,b) denotes the least common multiple of a and b.<br>Let A(n) be the average of the values of lcm(n,i) for 1≤i≤n.<br>E.g: A(2)=(2+2)/2=2 and A(10)=(10+10+30+20+10+30+70+40+90+10)/10=32. </p>
+<p>Let S(n)=∑A(k) for 1≤k≤n.<br>S(100)=122726.</p>
+<p>Find S(99999999019) mod 999999017.</p>
+<hr>
+<p><strong>平均最小公倍数</strong></p>
+<p>函数<strong>lcm</strong>(a,b)给出了a和b的最小公倍数<br>对于1≤i≤n，记A(n)是lcm(n,i)的平均值。<br>例如，A(2)=(2+2)/2=2，A(10)=(10+10+30+20+10+30+70+40+90+10)/10=32。 </p>
+<p>记S(n)=∑A(k)，其中1≤k≤n。<br>已知S(100)=122726。</p>
+<p>求S(99999999019) mod 999999017。</p>
+<hr>
+<hr>
+<h1 id="Problem_449"><a href="https://projecteuler.net/problem=449" target="_blank" rel="external">Problem 449</a></h1><hr>
+<p><strong>Chocolate covered candy</strong></p>
+<p>Phil the confectioner is making a new batch of chocolate covered candy. Each candy centre is shaped like an ellipsoid of revolution defined by the equation: b<sup>2</sup>x<sup>2</sup> + b<sup>2</sup>y<sup>2</sup> + a<sup>2</sup>z<sup>2</sup> = a<sup>2</sup>b<sup>2</sup>.</p>
+<p>Phil wants to know how much chocolate is needed to cover one candy centre with a uniform coat of chocolate one millimeter thick.</p>
+<p>If a=1 mm and b=1 mm, the amount of chocolate required is $\frac{28}{3}$π mm<sup>3</sup>.</p>
+<p>If a=2 mm and b=1 mm, the amount of chocolate required is approximately 60.35475635 mm<sup>3</sup>.</p>
+<p>Find the amount of chocolate in mm<sup>3</sup> required if a=3 mm and b=1 mm. Give your answer as the number rounded to 8 decimal places behind the decimal point.</p>
+<hr>
+<p><strong>巧克力糖衣</strong></p>
+<p>糖果师傅菲尔正在制造一种用巧克力做糖衣的新型糖果，每块糖的中心是一个椭球体，由如下方程给出：b<sup>2</sup>x<sup>2</sup> + b<sup>2</sup>y<sup>2</sup> + a<sup>2</sup>z<sup>2</sup> = a<sup>2</sup>b<sup>2</sup>。</p>
+<p>菲尔想知道，给这样一个糖果裹上一毫米厚的巧克力糖衣需要多少巧克力。</p>
+<p>如果a=1 mm且b=1 mm，需要的巧克力是$\frac{28}{3}$π mm<sup>3</sup>。</p>
+<p>如果a=2 mm且b=1 mm，需要的巧克力大概是60.35475635 mm<sup>3</sup>。</p>
+<p>当a=3 mm且b=1 mm时，求需要多少巧克力（单位是mm<sup>3</sup>），并保留小数点后8位数字。</p>
+<hr>
+<hr>
+<h1 id="Problem_450"><a href="https://projecteuler.net/problem=450" target="_blank" rel="external">Problem 450</a></h1><hr>
+<p><strong>Hypocycloid and Lattice points</strong></p>
+<p>A hypocycloid is the curve drawn by a point on a small circle rolling inside a larger circle. The parametric equations of a hypocycloid centered at the origin, and starting at the right most point is given by:</p>
+<p>$$x(t)=(R-r)\cos(t)+r \cos(\frac{R-r}{r}t)$$ $$y(t)=(R-r)\sin(t)-r \sin(\frac{R-r}{r}t)$$</p>
+<p>Where R is the radius of the large circle and r the radius of the small circle.</p>
+<p>Let $C(R,r)$ be the set of distinct points with integer coordinates on the hypocycloid with radius R and r and for which there is a corresponding value of t such that $\sin(t)$ and $\cos(t)$ are rational numbers.</p>
+<p>Let $S(R,r)=\sum_{(x,y) \in C(R,r)}|x|+|y|$ be the sum of the absolute values of the x and y coordinates of the points in $C(R,r)$.</p>
+<p>Let $T(N)=\sum_{R=3}^{N} \sum_{r=1}^{\lfloor \frac{R-1}{2} \rfloor}S(R,r)$ be the sum of $S(R,r)$ for R and r positive integers, $R \le N$ and $2r \lt R$.</p>
+<p>You are given:<br>C(3, 1) = {(3, 0), (-1, 2), (-1,0), (-1,-2)}</p>
+<p>C(2500, 1000) =</p>
+<p>{(2500, 0), (772, 2376), (772, -2376), (516, 1792),(516, -1792), (500, 0), (68, 504), (68, -504),(-1356, 1088), (-1356, -1088), (-1500, 1000), (-1500, -1000)}</p>
+<p><em>Note: (-625, 0) is not an element of C(2500, 1000) because $\sin(t)$ is not a rational number for the corresponding values of t.</em></p>
+<p>S(3, 1) = (|3| + |0|) + (|-1| + |2|) + (|-1| + |0|) + (|-1| + |-2|) = 10</p>
+<p>T(3) = 10; T(10) = 524 ;T(100) = 580442; T(10<sup>3</sup>) = 583108600.</p>
+<p>Find T(10<sup>6</sup>).</p>
+<hr>
+<p><strong>圆内旋轮线与格点</strong></p>
+<p>在大圆内部有一小圆与其相切并不断滚动，由小圆上一点所构成的曲线称为圆内旋轮线。以原点为圆心，以最右侧的点为起点的圆内旋轮线，其参数方程如下所示：</p>
+<p>$$x(t)=(R-r)\cos(t)+r \cos(\frac{R-r}{r}t)$$ $$y(t)=(R-r)\sin(t)-r \sin(\frac{R-r}{r}t)$$</p>
+<p>其中R是大圆的半径，而r是小圆的半径。</p>
+<p>记$C(R,r)$是大小圆半径分别为R和r时落在圆内旋轮线上的格点的集合，且此时对应的t值满足$\sin(t)$和$\cos(t)$都是有理数。</p>
+<p>记$S(R,r)=\sum_{(x,y) \in C(R,r)}|x|+|y|$是$C(R,r)$中所有点的坐标绝对值之和。</p>
+<p>记$T(N)=\sum_{R=3}^{N} \sum_{r=1}^{\lfloor \frac{R-1}{2} \rfloor}S(R,r)$是满足R和r均为正整数，$R \le N$以及$2r \lt R$的所有$S(R,r)$的和。</p>
+<p>已知：<br>C(3, 1) = {(3, 0), (-1, 2), (-1,0), (-1,-2)}</p>
+<p>C(2500, 1000) =</p>
+<p>{(2500, 0), (772, 2376), (772, -2376), (516, 1792),(516, -1792), (500, 0), (68, 504), (68, -504),(-1356, 1088), (-1356, -1088), (-1500, 1000), (-1500, -1000)}</p>
+<p><em class="zh">注意：(-625, 0)不是C(2500, 1000)中的元素，此时对应的t值不满足$\sin(t)$为有理数。</em></p>
+<p>求T(10<sup>6</sup>)。</p>
+<hr>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Problem401-425/">Problem 401 - 425</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Problem451-475/">Problem 451 - 475</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+
+    
+      <div class="comments" id="comments">
+        
+          <div class="ds-thread" data-thread-key="Problem426-450/"
+               data-title="Problem 426 - 450" data-url="http://yoursite.com/Problem426-450/">
+          </div>
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/avatar.png" alt="sx349" />
+          <p class="site-author-name">Leonhard Euler(1707-1783)</p>
+        </div>
+        <p class="site-description motion-element"><br>Project Euler | 欧拉计划<br>中文翻译站</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name" style="font-size:14px">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://sx349.github.io" target="_blank">译者博客</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="https://projecteuler.net" target="_blank">Project Euler</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="http://pe.spiritzhang.com/" target="_blank">官方汉化</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="http://jakwings.is-programmer.com/Project_Euler" target="_blank">饮水思源汉化</a>
+              </span><br>
+            
+          
+        </div>
+        
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_426"><span class="nav-number">1.</span> <span class="nav-text">Problem 426</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_427"><span class="nav-number">2.</span> <span class="nav-text">Problem 427</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_428"><span class="nav-number">3.</span> <span class="nav-text">Problem 428</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_429"><span class="nav-number">4.</span> <span class="nav-text">Problem 429</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_430"><span class="nav-number">5.</span> <span class="nav-text">Problem 430</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_431"><span class="nav-number">6.</span> <span class="nav-text">Problem 431</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_432"><span class="nav-number">7.</span> <span class="nav-text">Problem 432</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_433"><span class="nav-number">8.</span> <span class="nav-text">Problem 433</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_434"><span class="nav-number">9.</span> <span class="nav-text">Problem 434</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_435"><span class="nav-number">10.</span> <span class="nav-text">Problem 435</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_436"><span class="nav-number">11.</span> <span class="nav-text">Problem 436</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_437"><span class="nav-number">12.</span> <span class="nav-text">Problem 437</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_438"><span class="nav-number">13.</span> <span class="nav-text">Problem 438</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_439"><span class="nav-number">14.</span> <span class="nav-text">Problem 439</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_440"><span class="nav-number">15.</span> <span class="nav-text">Problem 440</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_441"><span class="nav-number">16.</span> <span class="nav-text">Problem 441</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_442"><span class="nav-number">17.</span> <span class="nav-text">Problem 442</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_443"><span class="nav-number">18.</span> <span class="nav-text">Problem 443</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_444"><span class="nav-number">19.</span> <span class="nav-text">Problem 444</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_445"><span class="nav-number">20.</span> <span class="nav-text">Problem 445</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_446"><span class="nav-number">21.</span> <span class="nav-text">Problem 446</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_447"><span class="nav-number">22.</span> <span class="nav-text">Problem 447</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_448"><span class="nav-number">23.</span> <span class="nav-text">Problem 448</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_449"><span class="nav-number">24.</span> <span class="nav-text">Problem 449</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_450"><span class="nav-number">25.</span> <span class="nav-text">Problem 450</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  2015
+  <span class="with-love"><i class="icon-heart"></i></span>
+  <span class="author"><a href="http://sx349.github.io">sx349</a></span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist 
+  </a>by <a href="http://notes.iissnan.com/">IIssNan</a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sx349"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+
+
+  
+  
+
+</body>
+</html>

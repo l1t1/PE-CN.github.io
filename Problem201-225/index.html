@@ -1,0 +1,1114 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="Project Euler | 欧拉计划 中文翻译站" />
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: ''
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+
+
+  <title> Problem 201 - 225 // Project Euler | 欧拉计划 </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Project Euler | 欧拉计划</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            <i class="menu-item-icon icon-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'z6bmYNMJM3AR1esetWJa','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              Problem 201 - 225
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/Problem201-225/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="Problem201-225/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a>
+<hr>
+<h1 id="Problem_201"><a href="https://projecteuler.net/problem=201" target="_blank" rel="external">Problem 201</a></h1><hr>
+<p><strong>Subsets with a unique sum</strong></p>
+<p>For any set A of numbers, let sum(A) be the sum of the elements of A.<br>Consider the set B = {1,3,6,8,10,11}.<br>There are 20 subsets of B containing three elements, and their sums are:</p>
+<blockquote>
+<p>sum({1,3,6}) = 10,<br>sum({1,3,8}) = 12,<br>sum({1,3,10}) = 14,<br>sum({1,3,11}) = 15,<br>sum({1,6,8}) = 15,<br>sum({1,6,10}) = 17,<br>sum({1,6,11}) = 18,<br>sum({1,8,10}) = 19,<br>sum({1,8,11}) = 20,<br>sum({1,10,11}) = 22,<br>sum({3,6,8}) = 17,<br>sum({3,6,10}) = 19,<br>sum({3,6,11}) = 20,<br>sum({3,8,10}) = 21,<br>sum({3,8,11}) = 22,<br>sum({3,10,11}) = 24,<br>sum({6,8,10}) = 24,<br>sum({6,8,11}) = 25,<br>sum({6,10,11}) = 27,<br>sum({8,10,11}) = 29.</p>
+</blockquote>
+<p>Some of these sums occur more than once, others are unique.<br>For a set A, let U(A,k) be the set of unique sums of k-element subsets of A, in our example we find U(B,3) = {10,12,14,18,21,25,27,29} and sum(U(B,3)) = 156.</p>
+<p>Now consider the 100-element set S = {1<sup>2</sup>, 2<sup>2</sup>, … , 100<sup>2</sup>}.<br>S has 100891344545564193334812497256 50-element subsets.</p>
+<p>Determine the sum of all integers which are the sum of exactly one of the 50-element subsets of S, i.e. find sum(U(S,50)).</p>
+<hr>
+<p><strong>拥有唯一出现的元素和的子集</strong></p>
+<p>对于任意数集A，记A中所有元素的和为sum(A)。<br>考虑集合B = {1,3,6,8,10,11}。<br>B有20个子集包含恰好三个元素，而这些子集的元素和分别是：</p>
+<blockquote>
+<p>sum({1,3,6}) = 10,<br>sum({1,3,8}) = 12,<br>sum({1,3,10}) = 14,<br>sum({1,3,11}) = 15,<br>sum({1,6,8}) = 15,<br>sum({1,6,10}) = 17,<br>sum({1,6,11}) = 18,<br>sum({1,8,10}) = 19,<br>sum({1,8,11}) = 20,<br>sum({1,10,11}) = 22,<br>sum({3,6,8}) = 17,<br>sum({3,6,10}) = 19,<br>sum({3,6,11}) = 20,<br>sum({3,8,10}) = 21,<br>sum({3,8,11}) = 22,<br>sum({3,10,11}) = 24,<br>sum({6,8,10}) = 24,<br>sum({6,8,11}) = 25,<br>sum({6,10,11}) = 27,<br>sum({8,10,11}) = 29.</p>
+</blockquote>
+<p>这其中的有些元素和出现了不止一次，其它元素和则是唯一出现的。<br>对于任意集合A，先求A所有恰好包含k个元素的子集的元素和，其中唯一出现的元素和构成集合U(A,k)。在我们的例子中，我们发现U(B,3) = {10,12,14,18,21,25,27,29}，因而sum(U(B,3)) = 156。</p>
+<p>现在考虑有100个元素的集合S = {1<sup>2</sup>, 2<sup>2</sup>, … , 100<sup>2</sup>}。<br>S有100891344545564193334812497256个子集恰好包含50个元素。</p>
+<p>在这些子集的元素和中，找出那些唯一出现的元素和并求和，也即求sum(U(S,50))。</p>
+<hr>
+<hr>
+<h1 id="Problem_202"><a href="https://projecteuler.net/problem=202" target="_blank" rel="external">Problem 202</a></h1><hr>
+<p><strong>Laserbeam</strong></p>
+<p>Three mirrors are arranged in the shape of an equilateral triangle, with their reflective surfaces pointing inwards. There is an infinitesimal gap at each vertex of the triangle through which a laser beam may pass.</p>
+<p>Label the vertices A, B and C. There are 2 ways in which a laser beam may enter vertex C, bounce off 11 surfaces, then exit through the same vertex: one way is shown below; the other is the reverse of that.</p>
+<center><img src="https://projecteuler.net/project/images/p201_laserbeam.gif" alt=""></center>
+
+<p>There are 80840 ways in which a laser beam may enter vertex C, bounce off 1000001 surfaces, then exit through the same vertex.</p>
+<p>In how many ways can a laser beam enter at vertex C, bounce off 12017639147 surfaces, then exit through the same vertex?</p>
+<hr>
+<p><strong>激光束</strong></p>
+<p>三面镜子摆成了正三角形的形状，其反射面朝内放置。在三角形的顶点处有一个无穷小的间隙可容一束激光束通过。</p>
+<p>记三个顶点分别为A、B和C。从顶点C射入的激光束，经过11次反射后再从同一个顶点射出，这样的路径一共有两条：其中一条如下所示，另一条即是将其反向。</p>
+<center><img src="https://projecteuler.net/project/images/p201_laserbeam.gif" alt=""></center>
+
+<p>从顶点C射入的激光束，经过1000001次反射后再从同一个顶点射出，这样的路径一共有80840条。</p>
+<p>从顶点C射入的激光束，经过12017639147次反射后再从同一个顶点射出，恶扬的路径一共有多少条？</p>
+<hr>
+<hr>
+<h1 id="Problem_203"><a href="https://projecteuler.net/problem=203" target="_blank" rel="external">Problem 203</a></h1><hr>
+<p><strong>Squarefree Binomial Coefficients</strong></p>
+<p>The binomial coefficients <sup>n</sup>C<sub>k</sub> can be arranged in triangular form, Pascal’s triangle, like this:</p>
+<center><br>1<br><br>1 1<br><br>1 2 1<br><br>1 3 3 1<br><br>1 4 6 4 1<br><br>1 5 10 10 5 1<br><br>1 6 15 20 15 6 1<br><br>1 7 21 35 35 21 7 1<br><br>………<br></center>
+
+<p>It can be seen that the first eight rows of Pascal’s triangle contain twelve distinct numbers: 1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5,&nbsp;6,&nbsp;7,&nbsp;10,&nbsp;15,&nbsp;20,&nbsp;21&nbsp;and&nbsp;35.</p>
+<p>A positive integer n is called squarefree if no square of a prime divides n.<br>Of the twelve distinct numbers in the first eight rows of Pascal’s triangle, all except 4 and 20 are squarefree.<br>The sum of the distinct squarefree numbers in the first eight rows is 105.</p>
+<p>Find the sum of the distinct squarefree numbers in the first 51 rows of Pascal’s triangle.</p>
+<hr>
+<p><strong>无平方因子二项式系数</strong></p>
+<p>二项式系数<sup>n</sup>C<sub>k</sub>可以如下排成一个三角形，称为帕斯卡三角形：</p>
+<center><br>1<br><br>1 1<br><br>1 2 1<br><br>1 3 3 1<br><br>1 4 6 4 1<br><br>1 5 10 10 5 1<br><br>1 6 15 20 15 6 1<br><br>1 7 21 35 35 21 7 1<br><br>………<br></center>
+
+<p>可以看出帕斯卡三角形的前八行包含了十二个不同的数：1,&nbsp;2,&nbsp;3,&nbsp;4,&nbsp;5,&nbsp;6,&nbsp;7,&nbsp;10,&nbsp;15,&nbsp;20,&nbsp;21&nbsp;and&nbsp;35。</p>
+<p>如果正整数不被任何素数的平方整除，n就被称为无平方因子数。<br>在帕斯卡三角形前八行的十二个不同的数中，除了4和20之外都是无平方因子数。<br>这些不同的无平方因子数之和为105。</p>
+<p>求帕斯卡三角形前51行所有不同的无平方因子数之和。</p>
+<hr>
+<hr>
+<h1 id="Problem_204"><a href="https://projecteuler.net/problem=204" target="_blank" rel="external">Problem 204</a></h1><hr>
+<p><strong>Generalised Hamming Numbers</strong></p>
+<p>A Hamming number is a positive number which has no prime factor larger than 5.<br>So the first few Hamming numbers are 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15.<br>There are 1105 Hamming numbers not exceeding 10<sup>8</sup>.</p>
+<p>We will call a positive number a generalised Hamming number of type n, if it has no prime factor larger than n.<br>Hence the Hamming numbers are the generalised Hamming numbers of type 5.</p>
+<p>How many generalised Hamming numbers of type 100 are there which don’t exceed 10<sup>9</sup>?</p>
+<hr>
+<p><strong>广义汉明数</strong></p>
+<p>若一个正整数的所有质因数均不超过5，则被称为汉明数。<br>前几个汉明数分别是1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15。<br>在不超过10<sup>8</sup>的正整数中，一共有1105个汉明数。</p>
+<p>若一个正整数的所有质因数均不超过n，则被称为n型广义汉明数。<br>因此本来的汉明数就是5型广义汉明数。</p>
+<p>在不超过10<sup>9</sup>的整整书中，一共有多少个100型广义汉明数？</p>
+<hr>
+<hr>
+<h1 id="Problem_205"><a href="https://projecteuler.net/problem=205" target="_blank" rel="external">Problem 205</a></h1><hr>
+<p><strong>Dice Game</strong></p>
+<p>Peter has nine four-sided (pyramidal) dice, each with faces numbered 1, 2, 3, 4.<br>Colin has six six-sided (cubic) dice, each with faces numbered 1, 2, 3, 4, 5, 6.</p>
+<p>Peter and Colin roll their dice and compare totals: the highest total wins. The result is a draw if the totals are equal.</p>
+<p>What is the probability that Pyramidal Pete beats Cubic Colin? Give your answer rounded to seven decimal places in the form 0.abcdefg</p>
+<hr>
+<p><strong>骰子游戏</strong></p>
+<p>彼得有九个四面的（金字塔型）骰子，每个面上分别标有1，2，3，4。<br>科林有六个六面的（立方体型）骰子，每个面上分别标有1，2，3，4，5，6。</p>
+<p>彼得和科林分别掷出他们的所有骰子，并比较点数和：点数和更大者获胜。如果点数和相同，双方打成平手。</p>
+<p>金字塔彼得击败立方体科林的概率是多少？你的答案应当四舍五入至七位小数，即格式为0.abcdefg。</p>
+<hr>
+<hr>
+<h1 id="Problem_206"><a href="https://projecteuler.net/problem=206" target="_blank" rel="external">Problem 206</a></h1><hr>
+<p><strong>Concealed Square</strong></p>
+<p>Find the unique positive integer whose square has the form 1_2_3_4_5_6_7_8_9_0,<br>where each “_” is a single digit.</p>
+<hr>
+<p><strong>被遮挡的平方数</strong></p>
+<p>找出唯一一个其平方形如1_2_3_4_5_6_7_8_9_0的正整数，<br>其中每个“_”表示一位数字。</p>
+<hr>
+<hr>
+<h1 id="Problem_207"><a href="https://projecteuler.net/problem=207" target="_blank" rel="external">Problem 207</a></h1><hr>
+<p><strong>Integer partition equations</strong></p>
+<p>For some positive integers k, there exists an integer partition of the form&nbsp;&nbsp; 4<sup>t</sup> = 2<sup>t</sup> + k,<br>where 4<sup>t</sup>, 2<sup>t</sup>, and k are all positive integers and t is a real number.</p>
+<p>The first two such partitions are 4<sup>1</sup> = 2<sup>1</sup> + 2 and 4<sup>1.5849625…</sup> = 2<sup>1.5849625…</sup> + 6.</p>
+<p>Partitions where t is also an integer are called <i>perfect</i>.<br>For any m ≥ 1 let P(m) be the proportion of such partitions that are perfect with k ≤ m.<br>Thus P(6) = 1/2.</p>
+<p>In the following table are listed some values of P(m)</p>
+<blockquote>
+<p>P(5) = 1/1<br>P(10) = 1/2<br>P(15) = 2/3<br>P(20) = 1/2<br>P(25) = 1/2<br>P(30) = 2/5<br>…<br>P(180) = 1/4<br>P(185) = 3/13</p>
+</blockquote>
+<p>Find the smallest m for which P(m) &lt; 1/12345</p>
+<hr>
+<p><strong>整数分拆等式</strong></p>
+<p>对于某些正整数k，存在形如4<sup>t</sup> = 2<sup>t</sup> + k的整数分拆，<br>其中4<sup>t</sup>，2<sup>t</sup>和k均为正整数，而t为实数。</p>
+<p>前两个这样的分拆分别是4<sup>1</sup> = 2<sup>1</sup> + 2和4<sup>1.5849625…</sup> = 2<sup>1.5849625…</sup> + 6。</p>
+<p>如果t也是整数，这样的分拆称为<i>完美的</i>。<br>对于任意m ≥ 1，记P(m)是所有k ≤ m的分拆中完美分拆的比例。<br>因此P(6) = 1/2。</p>
+<p>下面的表格列出了P(m)的部分取值：</p>
+<blockquote>
+<p>P(5) = 1/1<br>P(10) = 1/2<br>P(15) = 2/3<br>P(20) = 1/2<br>P(25) = 1/2<br>P(30) = 2/5<br>…<br>P(180) = 1/4<br>P(185) = 3/13</p>
+</blockquote>
+<p>求出使得P(m) &lt; 1/12345的最小m值。</p>
+<hr>
+<hr>
+<h1 id="Problem_208"><a href="https://projecteuler.net/problem=208" target="_blank" rel="external">Problem 208</a></h1><hr>
+<p><strong>Robot Walks</strong></p>
+<p>A robot moves in a series of one-fifth circular arcs (72°), with a free choice of a clockwise or an anticlockwise arc for each step, but no turning on the spot.</p>
+<p>One of 70932 possible closed paths of 25 arcs starting northward is</p>
+<center><img src="https://projecteuler.net/project/images/p208_robotwalk.gif" alt=""></center>
+
+<p>Given that the robot starts facing North, how many journeys of 70 arcs in length can it take that return it, after the final arc, to its starting position?<br>(Any arc may be traversed multiple times.) </p>
+<hr>
+<p><strong>机器人走路</strong></p>
+<p>一个机器人每步走五分之一个圆弧（72°），它每步都可以选择顺时针走或是逆时针走，但在走的途中不能改变方向。</p>
+<p>机器人从面向正北方开始，连续走25步所构成的闭合路径共有70932条，以下是其中一条：</p>
+<center><img src="https://projecteuler.net/project/images/p208_robotwalk.gif" alt=""></center>
+
+<p>假定机器人仍然从面向正北方开始，连续走70步之后，能够回到出发位置的路径有多少条？<br>（所有圆弧都可以经过多次。）</p>
+<hr>
+<hr>
+<h1 id="Problem_209"><a href="https://projecteuler.net/problem=209" target="_blank" rel="external">Problem 209</a></h1><hr>
+<p><strong>Circular Logic</strong></p>
+<p>A k-input <i>binary truth table</i> is a map from k input bits(binary digits, 0 [false] or 1 [true]) to 1 output bit. For example, the 2-input binary truth tables for the logical AND and XOR functions are:<br></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">x</th>
+<th style="text-align:center">y</th>
+<th style="text-align:center">x AND y</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">x</th>
+<th style="text-align:center">y</th>
+<th style="text-align:center">x XOR y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<p>How many 6-input binary truth tables, τ, satisfy the formula</p>
+<center>τ(a, b, c, d, e, f) AND τ(b, c, d, e, f, a XOR (b AND c)) = 0</center>
+
+<p>for all 6-bit inputs (a, b, c, d, e, f)?</p>
+<hr>
+<p><strong>圆环之理</strong></p>
+<p>k元<i>真值表</i>是从k比特位（即二进制位的简称，其中0代表假，1代表真）输入到1比特位输出的映射。例如，逻辑运算符AND（和）和XOR（异或）的2元真值表如下所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">x</th>
+<th style="text-align:center">y</th>
+<th style="text-align:center">x AND y</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">x</th>
+<th style="text-align:center">y</th>
+<th style="text-align:center">x XOR y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<p>有多少个6元真值表τ，对于所有的6比特位输入(a, b, c, d, e, f)始终满足下述等式？</p>
+<center>τ(a, b, c, d, e, f) AND τ(b, c, d, e, f, a XOR (b AND c)) = 0</center>
+
+<hr>
+<hr>
+<h1 id="Problem_210"><a href="https://projecteuler.net/problem=210" target="_blank" rel="external">Problem 210</a></h1><hr>
+<p><strong>Obtuse Angled Triangles</strong></p>
+<p>Consider the set S(r) of points (x,y) with integer coordinates satisfying |x| + |y| ≤ r.<br>Let O be the point (0,0) and C the point (r/4,r/4).<br>Let N(r) be the number of points B in S(r), so that the triangle OBC has an obtuse angle, i.e. the largest angle α satisfies 90°&lt;α&lt;180°.<br>So, for example, N(4)=24 and N(8)=100.</p>
+<p>What is N(1,000,000,000)?</p>
+<hr>
+<p><strong>锐角三角形</strong></p>
+<p>点集S(r)包含了所有坐标为整数且|x| + |y| ≤ r的点(x,y)。<br>记O为原点(0,0)，C为点(r/4,r/4)。<br>在S(r)中取一点B，使得三角形OBC有一个钝角，也即这个三角形的最大角α满足90°&lt;α&lt;180°，记所有这样的点B的数目为N(r)。<br>例如，N(4)=24以及N(8)=100。</p>
+<p>求问N(1,000,000,000)是多少？</p>
+<hr>
+<hr>
+<h1 id="Problem_211"><a href="https://projecteuler.net/problem=211" target="_blank" rel="external">Problem 211</a></h1><hr>
+<p><strong>Divisor Square Sum</strong></p>
+<p>For a positive integer n, let σ<sub>2</sub>(n) be the sum of the squares of its divisors. For example,</p>
+<center>σ<sub>2</sub>(10) = 1 + 4 + 25 + 100 = 130.</center>
+
+<p>Find the sum of all n, 0 &lt; n &lt; 64,000,000 such that σ<sub>2</sub>(n) is a perfect square.</p>
+<hr>
+<p><strong>约数平方和</strong></p>
+<p>对于正整数n，记σ<sub>2</sub>(n)为其所有约数的平方和。例如，</p>
+<center>σ<sub>2</sub>(10) = 1 + 4 + 25 + 100 = 130.</center>
+
+<p>在0 &lt; n &lt; 64,000,000中，有些n满足σ<sub>2</sub>(n)为完全平方数，求所有这些n的和。</p>
+<hr>
+<hr>
+<h1 id="Problem_212"><a href="https://projecteuler.net/problem=212" target="_blank" rel="external">Problem 212</a></h1><hr>
+<p><strong>Combined Volume of Cuboids</strong></p>
+<p>An <i>axis-aligned cuboid</i>, specified by parameters { (x<sub>0</sub>,y<sub>0</sub>,z<sub>0</sub>), (dx,dy,dz) }, consists of all points (X,Y,Z) such that x<sub>0</sub> ≤ X ≤ x<sub>0</sub>+dx, y<sub>0</sub> ≤ Y ≤ y<sub>0</sub>+dy and z<sub>0</sub> ≤ Z ≤ z<sub>0</sub>+dz.  The volume of the cuboid is the product, dx × dy × dz.  The <i>combined volume</i> of a collection of cuboids is the volume of their union and will be less than the sum of the individual volumes if any cuboids overlap.</p>
+<p>Let C<sub>1</sub>,…,C<sub>50000</sub> be a collection of 50000 axis-aligned cuboids such that C<sub>n</sub> has parameters</p>
+<p>x<sub>0</sub> = S<sub>6n-5</sub> modulo 10000<br>y<sub>0</sub> = S<sub>6n-4</sub> modulo 10000<br>z<sub>0</sub> = S<sub>6n-3</sub> modulo 10000<br>dx = 1 + (S<sub>6n-2</sub> modulo 399)<br>dy = 1 + (S<sub>6n-1</sub> modulo 399)<br>dz = 1 + (S<sub>6n</sub> modulo 399)</p>
+<p>where S<sub>1</sub>,…,S<sub>300000</sub> come from the “Lagged Fibonacci Generator”:</p>
+<p>For 1 ≤ k ≤ 55, S<sub>k</sub> = [100003 - 200003k + 300007k<sup>3</sup>] &nbsp; (modulo 1000000)<br>For 56 ≤ k, S<sub>k</sub> = [S<sub>k-24</sub> + S<sub>k-55</sub>] &nbsp; (modulo 1000000)</p>
+<p>Thus, C<sub>1</sub> has parameters {(7,53,183),(94,369,56)}, C<sub>2</sub> has parameters {(2383,3563,5079),(42,212,344)}, and so on.</p>
+<p>The combined volume of the first 100 cuboids, C<sub>1</sub>,…,C<sub>100</sub>, is 723581599.</p>
+<p>What is the combined volume of all 50000 cuboids, C<sub>1</sub>,…,C<sub>50000</sub> ?</p>
+<hr>
+<p><strong>立方体组合体积</strong></p>
+<p>一个<i>与轴平行的立方体</i>可以用参数{ (x<sub>0</sub>,y<sub>0</sub>,z<sub>0</sub>), (dx,dy,dz) }表示，包含所有满足x<sub>0</sub> ≤ X ≤ x<sub>0</sub>+dx、y<sub>0</sub> ≤ Y ≤ y<sub>0</sub>+dy和z<sub>0</sub> ≤ Z ≤ z<sub>0</sub>+dz的点(X,Y,Z)。该立方体的体积为乘积dx × dy × dz。一系列立方体的<i>组合体积</i>是它们的并的体积；如果其中有立方体相交，这些立方体的组合体积将会比各自体积之和要来得小。</p>
+<p>记C<sub>1</sub>、……、C<sub>50000</sub>是一系列共50000个与轴平行的立方体，其中C<sub>n</sub>的参数为</p>
+<p>x<sub>0</sub> = S<sub>6n-5</sub> modulo 10000<br>y<sub>0</sub> = S<sub>6n-4</sub> modulo 10000<br>z<sub>0</sub> = S<sub>6n-3</sub> modulo 10000<br>dx = 1 + (S<sub>6n-2</sub> modulo 399)<br>dy = 1 + (S<sub>6n-1</sub> modulo 399)<br>dz = 1 + (S<sub>6n</sub> modulo 399)</p>
+<p>这里的S<sub>1</sub>、……、S<sub>300000</sub>来自如下的“延迟斐波那契生成器”：</p>
+<p>对于1 ≤ k ≤ 55，S<sub>k</sub> = [100003 - 200003k + 300007k<sup>3</sup>] &nbsp; (modulo 1000000)<br>对于56 ≤ k，S<sub>k</sub> = [S<sub>k-24</sub> + S<sub>k-55</sub>] &nbsp; (modulo 1000000)</p>
+<p>因此，C<sub>1</sub>的参数为{(7,53,183),(94,369,56)}，C<sub>2</sub>的参数为{(2383,3563,5079),(42,212,344)}，依此类推。</p>
+<p>前100个立方体C<sub>1</sub>、……、C<sub>100</sub>的组合体积是723581599。</p>
+<p>全部50000个立方体C<sub>1</sub>、……、C<sub>50000</sub>的组合体积是多少？</p>
+<hr>
+<hr>
+<h1 id="Problem_213"><a href="https://projecteuler.net/problem=213" target="_blank" rel="external">Problem 213</a></h1><hr>
+<p><strong>Flea Circus</strong></p>
+<p>A 30×30 grid of squares contains 900 fleas, initially one flea per square.<br>When a bell is rung, each flea jumps to an adjacent square at random (usually 4 possibilities, except for fleas on the edge of the grid or at the corners).</p>
+<p>What is the expected number of unoccupied squares after 50 rings of the bell? Give your answer rounded to six decimal places.</p>
+<hr>
+<p><strong>跳蚤马戏团</strong></p>
+<p>在30×30的方形网格上共有900只跳蚤，初始状态下每个方格上有一只跳蚤。<br>每响起一次钟声，每只跳蚤随机跳向一个相邻的方格（一般有4种选择，除非跳蚤是在网格的边上或角上）。</p>
+<p>在响起50次钟声后，没有跳蚤的方格的期望数目是多少？将你的答案四舍五入到六位小数。</p>
+<hr>
+<hr>
+<h1 id="Problem_214"><a href="https://projecteuler.net/problem=214" target="_blank" rel="external">Problem 214</a></h1><hr>
+<p><strong>Totient Chains</strong></p>
+<p>Let φ be Euler’s totient function, i.e. for a natural number n, φ(n) is the number of k, 1 ≤ k ≤ n, for which gcd(k,n) = 1.</p>
+<p>By iterating φ, each positive integer generates a decreasing chain of numbers ending in 1.<br>E.g. if we start with 5 the sequence 5,4,2,1 is generated.<br>Here is a listing of all chains with length 4:</p>
+<p>&nbsp;5,4,2,1<br>&nbsp;7,6,2,1<br>&nbsp;8,4,2,1<br>&nbsp;9,6,2,1<br>10,4,2,1<br>12,4,2,1<br>14,6,2,1<br>18,6,2,1</p>
+<p>Only two of these chains start with a prime, their sum is 12.</p>
+<p>What is the sum of all primes less than 40000000 which generate a chain of length 25?</p>
+<hr>
+<p><strong>总计函数链</strong></p>
+<p>令φ表示欧拉总计函数，也就是说，对于自然数n，所有1 ≤ k ≤ n且gcd(k,n) = 1的正整数k的数目记为φ(n)。</p>
+<p>通过迭代求φ，每个正整数都能生成一条不断下降最终以1结束的链。<br>例如，如果我们从5开始，生成的序列为5、4、2、1。<br>如下所列是所有长度为4的链：</p>
+<p>5,4,2,1<br>7,6,2,1<br>8,4,2,1<br>9,6,2,1<br>10,4,2,1<br>12,4,2,1<br>14,6,2,1<br>18,6,2,1</p>
+<p>其中只有两条链从素数开始，这两个素数的和为12。</p>
+<p>在小于40000000的素数中，能生成长度为25的链的素数之和是多少？</p>
+<hr>
+<hr>
+<h1 id="Problem_215"><a href="https://projecteuler.net/problem=215" target="_blank" rel="external">Problem 215</a></h1><hr>
+<p><strong>Crack-free Walls</strong></p>
+<p>Consider the problem of building a wall out of 2×1 and 3×1 bricks (horizontal×vertical dimensions) such that, for extra strength, the gaps between horizontally-adjacent bricks never line up in consecutive layers, i.e. never form a “running crack”.</p>
+<p>For example, the following 9×3 wall is not acceptable due to the running crack shown in red:</p>
+<center><img src="https://projecteuler.net/project/images/p215_crackfree.gif" alt=""></center>
+
+<p>There are eight ways of forming a crack-free 9×3 wall, written W(9,3) = 8.</p>
+<p>Calculate W(32,10).</p>
+<hr>
+<p><strong>没有裂纹的墙</strong></p>
+<p>考虑这样一个问题：用大小为2×1和3×1的砖块（均为宽度×高度）来筑墙，而且为了保证强度，两个砖块之间的空隙的上下方均不能是砖块的空隙，也就是说不能有“延伸裂纹”。</p>
+<p>例如，如下的9×3的墙就是不可行的，因为其中有用红色标出的延伸裂纹：</p>
+<center><img src="https://projecteuler.net/project/images/p215_crackfree.gif" alt=""></center>
+
+<p>筑一面没有裂纹的9×3的墙一共有八种方式，记为W(9,3) = 8。</p>
+<p>试计算W(32,10)。</p>
+<hr>
+<hr>
+<h1 id="Problem_216"><a href="https://projecteuler.net/problem=216" target="_blank" rel="external">Problem 216</a></h1><hr>
+<p><strong>Investigating the primality of numbers of the form 2n<sup>2</sup>-1</strong></p>
+<p>Consider numbers t(n) of the form t(n) = 2n<sup>2</sup>-1 with n &gt; 1.<br>The first such numbers are 7, 17, 31, 49, 71, 97, 127 and 161.<br>It turns out that only 49 = 7*7 and 161 = 7*23 are not prime.<br>For n ≤ 10000 there are 2202 numbers t(n) that are prime.</p>
+<p>How many numbers t(n) are prime for n ≤ 50,000,000 ?</p>
+<hr>
+<p><strong>研究形如2n<sup>2</sup>-1的数是否为素数</strong></p>
+<p>考虑形如t(n) = 2n<sup>2</sup>-1的数t(n)，其中n &gt; 1。<br>前几个这样的数分别是7、17、31、49、71、97、127和161。<br>可见只有49 = 7*7和161 = 7*23不是素数。<br>对于n ≤ 10000，一共有2202个t(n)是素数。</p>
+<p>对于n ≤ 50,000,000，一共有多少个t(n)是素数？</p>
+<hr>
+<hr>
+<h1 id="Problem_217"><a href="https://projecteuler.net/problem=217" target="_blank" rel="external">Problem 217</a></h1><hr>
+<p><strong>Balanced Numbers</strong></p>
+<p>A positive integer with k (decimal) digits is called balanced if its first ⌈<sup>k</sup>/<sub>2</sub>⌉ digits sum to the same value as its last ⌈<sup>k</sup>/<sub>2</sub>⌉ digits, where ⌈x⌉, pronounced <i>ceiling</i> of x, is the smallest integer ≥ x, thus ⌈π⌉ = 4 and ⌈5⌉ = 5.</p>
+<p>So, for example, all palindromes are balanced, as is 13722.</p>
+<p>Let T(n) be the sum of all balanced numbers less than 10<sup>n</sup>.<br>Thus: T(1) = 45, T(2) = 540 and T(5) = 334795890. </p>
+<p>Find T(47) mod 3<sup>15</sup>.</p>
+<hr>
+<p><strong>平衡数</strong></p>
+<p>如果一个k位（十进制）正整数，其前⌈<sup>k</sup>/<sub>2</sub>⌉个数字之和等于其后⌈<sup>k</sup>/<sub>2</sub>⌉个数字之和，则称之为平衡数。这里⌈x⌉表示x的<i>上取整</i>函数，也就是≥ x的最小整数，例如⌈π⌉ = 4以及⌈5⌉ = 5。</p>
+<p>举例来说，所有的回文数都是平衡数；13722也是平衡数。</p>
+<p>记T(n)是所有小于10<sup>n</sup>的平衡数之和。<br>因此：T(1) = 45，T(2) = 540以及T(5) = 334795890。</p>
+<p>求T(47) mod 3<sup>15</sup>。</p>
+<hr>
+<hr>
+<h1 id="Problem_218"><a href="https://projecteuler.net/problem=218" target="_blank" rel="external">Problem 218</a></h1><hr>
+<p><strong>Perfect right-angled triangles</strong></p>
+<p>Consider the right angled triangle with sides a=7, b=24 and c=25. The area of this triangle is 84, which is divisible by the perfect numbers 6 and 28.<br>Moreover it is a primitive right angled triangle as gcd(a,b)=1 and gcd(b,c)=1.<br>Also c is a perfect square.</p>
+<p>We will call a right angled triangle perfect if</p>
+<ul>
+<li>it is a primitive right angled triangle</li>
+<li>its hypotenuse is a perfect square</li>
+</ul>
+<p>We will call a right angled triangle super-perfect if</p>
+<ul>
+<li>it is a perfect right angled triangle and</li>
+<li>its area is a multiple of the perfect numbers 6 and 28.</li>
+</ul>
+<p>How many perfect right-angled triangles with c≤10<sup>16</sup> exist that are not super-perfect?</p>
+<hr>
+<p><strong>完美直角三角形</strong></p>
+<p>考虑边长为a=7、b=24以及c=25的直角三角形。这个三角形的面积是84，能够被完全数6和28整除。<br>此外，它还是一个原始直角三角形，因为gcd(a,b)=1且gcd(b,c)=1。<br>同时，c还是一个完全平方数。</p>
+<p>我们称一个直角三角形是完美的，如果</p>
+<ul>
+<li>它是一个原始直角三角形</li>
+<li>它的斜边是一个完全平方数</li>
+</ul>
+<p>我们称一个直角三角形是超级完美的，如果</p>
+<ul>
+<li>它是一个完美的直角三角形，而且</li>
+<li>它的面积是完全数6和28的倍数</li>
+</ul>
+<p>在斜边c≤10<sup>16</sup>的完美直角三角形中，有多少个不是超级完美的？</p>
+<hr>
+<hr>
+<h1 id="Problem_219"><a href="https://projecteuler.net/problem=219" target="_blank" rel="external">Problem 219</a></h1><hr>
+<p><strong>Skew-cost coding</strong></p>
+<p>Let <b>A</b> and <b>B</b> be bit strings (sequences of 0’s and 1’s).<br>If <b>A</b> is equal to the <u>left</u>most length(<b>A</b>) bits of <b>B</b>, then <b>A</b> is said to be a <i>prefix</i> of <b>B</b>.<br>For example, 00110 is a prefix of <u>00110</u>1001, but not of 00111 or 100110.</p>
+<p>A <i>prefix-free code of size n</i> is a collection of n distinct bit strings such that no string is a prefix of any other. For example, this is a prefix-free code of size 6:</p>
+<center>0000, 0001, 001, 01, 10, 11</center>
+
+<p>Now suppose that it costs one penny to transmit a ‘0’ bit, but four pence to transmit a ‘1’.<br>Then the total cost of the prefix-free code shown above is 35 pence, which happens to be the cheapest possible for the skewed pricing scheme in question.<br>In short, we write Cost(6) = 35.</p>
+<p>What is Cost(10<sup>9</sup>) ?</p>
+<hr>
+<p><strong>成本倾斜编码</strong></p>
+<p>记<b>A</b>和<b>B</b>均为比特串（由0和1组成的序列）。<br>如果在<b>B</b>的最<u>左</u>端取和<b>A</b>的长度相等的比特位，所构成的比特串恰好等于<b>A</b>，则称<b>A</b>为<b>B</b>的<i>前缀</i>。<br>举例来说，00110是<u>00110</u>1001的前缀，但不是00111或100110的前缀。</p>
+<p><i>n阶无前缀编码</i>是指n个不同的比特串，其中任意一个都不是另一个的前缀。例如，6阶无前缀编码的其中一种是：</p>
+<center>0000, 0001, 001, 01, 10, 11</center>
+
+<p>现在假设传输比特位“0”的成本是一个便士，而传输比特位“1”的成本是4个便士。<br>那么，上述无前缀编码的总成本是35便士，恰好是这个成本倾斜编码问题最便宜的一种可能。<br>我们将其简记为Cost(6) = 35。</p>
+<p>Cost(10<sup>9</sup>)是多少？</p>
+<hr>
+<hr>
+<h1 id="Problem_220"><a href="https://projecteuler.net/problem=220" target="_blank" rel="external">Problem 220</a></h1><hr>
+<p><strong>Heighway Dragon</strong></p>
+<p>Let <b>D</b><sub>0</sub> be the two-letter string “Fa”. For n≥1, derive <b>D</b><sub>n</sub> from <b>D</b><sub>n-1</sub> by the string-rewriting rules:</p>
+<p>“a” → “aRbFR”<br>“b” → “LFaLb”</p>
+<p>Thus, <b>D</b><sub>0</sub> = “Fa”, <b>D</b><sub>1</sub> = “FaRbFR”, <b>D</b><sub>2</sub> = “FaRbFRRLFaLbFR”, and so on.</p>
+<p>These strings can be interpreted as instructions to a computer graphics program, with “F” meaning “draw forward one unit”, “L” meaning “turn left 90 degrees”, “R” meaning “turn right 90 degrees”, and “a” and “b” being ignored. The initial position of the computer cursor is (0,0), pointing up towards (0,1).</p>
+<p>Then <b>D</b><sub>n</sub> is an exotic drawing known as the <i>Heighway Dragon</i> of order n.  For example, <b>D</b><sub>10</sub> is shown below; counting each “F” as one step, the highlighted spot at (18,16) is the position reached after 500 steps.</p>
+<center><img src="https://projecteuler.net/project/images/p220.gif" alt=""></center>
+
+<p>What is the position of the cursor after 10<sup>12</sup> steps in <b>D</b><sub>50</sub> ?<br>Give your answer in the form x,y with no spaces.</p>
+<hr>
+<p><strong>海韦龙形曲线</strong></p>
+<p>记<b>D</b><sub>0</sub>为包含两个字符的字符串“Fa”。对于n≥1，我们通过如下的字符串重写规则，由<b>D</b><sub>n-1</sub>推出<b>D</b><sub>n</sub>：</p>
+<p>“a” → “aRbFR”<br>“b” → “LFaLb”</p>
+<p>因此，<b>D</b><sub>0</sub> = “Fa”，<b>D</b><sub>1</sub> = “FaRbFR”，<b>D</b><sub>2</sub> = “FaRbFRRLFaLbFR”，依此类推。</p>
+<p>这些字符串可以作为一个计算机绘图程序的指令加以解读，其中“F”表示“向前画一单位”，“L”表示“左转90度”，“R”表示“右转90度”，而“a”和“b”可以忽略。初始状态下，计算机光标的位置是(0,0)，方向指向(0,1)。</p>
+<p>根据<b>D</b><sub>n</sub>绘制的奇异图象被称为n阶<i>海韦龙形曲线</i>。例如，如下所示为<b>D</b><sub>10</sub>；如果把每个“F”算作一步，高亮的点(18,16)是经过500步时所到达的位置。</p>
+<center><img src="https://projecteuler.net/project/images/p220.gif" alt=""></center>
+
+<p>根据<b>D</b><sub>50</sub>绘制图象，经过10<sup>12</sup>步之后，光标的位置在哪里？<br>将你的答案写作“x,y”的形式，中间没有空格。</p>
+<hr>
+<hr>
+<h1 id="Problem_221"><a href="https://projecteuler.net/problem=221" target="_blank" rel="external">Problem 221</a></h1><hr>
+<p><strong>Alexandrian Integers</strong></p>
+<p>We shall call a positive integer A an “Alexandrian integer”, if there exist integers p, q, r such that:</p>
+<p>$$A=p·q·r \text{ and } \frac{1}{A}=\frac{1}{p}+\frac{1}{q}+\frac{1}{r}$$</p>
+<p>For example, 630 is an Alexandrian integer (p&nbsp;=&nbsp;5, q&nbsp;=&nbsp;−7, r&nbsp;=&nbsp;−18). In fact, 630 is the 6<sup>th</sup> Alexandrian integer,  the first 6 Alexandrian integers being: 6, 42, 120, 156, 420 and 630.</p>
+<p>Find the 150000<sup>th</sup> Alexandrian integer.</p>
+<hr>
+<p><strong>亚历山大整数</strong></p>
+<p>我们称一个正整数A为“亚历山大整数”，如果存在整数p、q、r满足：</p>
+<p>$$A=p·q·r \text{ 且 } \frac{1}{A}=\frac{1}{p}+\frac{1}{q}+\frac{1}{r}$$</p>
+<p>例如，630是一个亚历山大整数（p&nbsp;=&nbsp;5，q&nbsp;=&nbsp;−7，r&nbsp;=&nbsp;−18）。事实上，630是第6个亚历山大整数，前6个亚历山大整数分别是6、42、120、156、420和630。</p>
+<p>求第150000个亚历山大整数。</p>
+<hr>
+<hr>
+<h1 id="Problem_222"><a href="https://projecteuler.net/problem=222" target="_blank" rel="external">Problem 222</a></h1><hr>
+<p><strong>Sphere Packing</strong></p>
+<p>What is the length of the shortest pipe, of internal radius 50mm, that can fully contain 21 balls of radii 30mm, 31mm, …, 50mm?</p>
+<p>Give your answer in micrometres (10<sup>-6</sup> m) rounded to the nearest integer.</p>
+<hr>
+<hr>
+<p><strong>球体打包</strong></p>
+<p>将21个半径分别为30mm、31mm、……、50mm的球完全装入一根内径50mm的管子，所需管长最短是多少？</p>
+<p>将你的答案用微米(10<sup>-6</sup> m)表示，并四舍五入到最近的整数。</p>
+<hr>
+<hr>
+<h1 id="Problem_223"><a href="https://projecteuler.net/problem=223" target="_blank" rel="external">Problem 223</a></h1><hr>
+<p><strong>Almost right-angled triangles I</strong></p>
+<p>Let us call an integer sided triangle with sides a ≤ b ≤ c <i>barely acute</i> if the sides satisfy a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> + 1.</p>
+<p>How many barely acute triangles are there with perimeter ≤ 25,000,000?</p>
+<hr>
+<p><strong>几乎直角的三角形I</strong></p>
+<p>如果一个边长为整数a ≤ b ≤ c的三角形满足a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> + 1，我们称其为<i>略微锐角</i>的三角形。</p>
+<p>有多少个周长≤ 25,000,000的略微锐角三角形？</p>
+<hr>
+<hr>
+<h1 id="Problem_224"><a href="https://projecteuler.net/problem=224" target="_blank" rel="external">Problem 224</a></h1><hr>
+<p><strong>Almost right-angled triangles II</strong></p>
+<p>Let us call an integer sided triangle with sides a ≤ b ≤ c <i>barely obtuse</i> if the sides satisfy a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> - 1.</p>
+<p>How many barely obtuse triangles are there with perimeter ≤ 75,000,000?</p>
+<hr>
+<p><strong>几乎执教的三角形II</strong></p>
+<p>如果一个边长为整数a ≤ b ≤ c的三角形满足a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup> - 1，我们称其为<i>略微钝角</i>的三角形。</p>
+<p>有多少个周长≤ 75,000,000的略微钝角三角形？</p>
+<hr>
+<hr>
+<h1 id="Problem_225"><a href="https://projecteuler.net/problem=225" target="_blank" rel="external">Problem 225</a></h1><hr>
+<p><strong>Tribonacci non-divisors</strong></p>
+<p>The sequence 1, 1, 1, 3, 5, 9, 17, 31, 57, 105, 193, 355, 653, 1201 …<br>is defined by T<sub>1</sub> = T<sub>2</sub> = T<sub>3</sub> = 1 and T<sub>n</sub> = T<sub>n-1</sub> + T<sub>n-2</sub> + T<sub>n-3</sub>.</p>
+<p>It can be shown that 27 does not divide any terms of this sequence. In fact, 27 is the first odd number with this property.</p>
+<p>Find the 124<sup>th</sup> odd number that does not divide any terms of the above sequence.</p>
+<hr>
+<p><strong>三阶斐波那契数的非约数</strong></p>
+<p>序列1, 1, 1, 3, 5, 9, 17, 31, 57, 105, 193, 355, 653, 1201 …<br>的定义为T<sub>1</sub> = T<sub>2</sub> = T<sub>3</sub> = 1以及T<sub>n</sub> = T<sub>n-1</sub> + T<sub>n-2</sub> + T<sub>n-3</sub>。</p>
+<p>可以说明，27不能整除这个序列中的任何一项。事实上，27是第一个拥有这一性质的奇数。</p>
+<p>求第124个不能整除上述序列中任何一项的奇数。</p>
+<hr>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Problem176-200/">Problem 176 - 200</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Problem226-250/">Problem 226 - 250</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+
+    
+      <div class="comments" id="comments">
+        
+          <div class="ds-thread" data-thread-key="Problem201-225/"
+               data-title="Problem 201 - 225" data-url="http://yoursite.com/Problem201-225/">
+          </div>
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/avatar.png" alt="sx349" />
+          <p class="site-author-name">Leonhard Euler(1707-1783)</p>
+        </div>
+        <p class="site-description motion-element"><br>Project Euler | 欧拉计划<br>中文翻译站</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name" style="font-size:14px">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://sx349.github.io" target="_blank">译者博客</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="https://projecteuler.net" target="_blank">Project Euler</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="http://pe.spiritzhang.com/" target="_blank">官方汉化</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="http://jakwings.is-programmer.com/Project_Euler" target="_blank">饮水思源汉化</a>
+              </span><br>
+            
+          
+        </div>
+        
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_201"><span class="nav-number">1.</span> <span class="nav-text">Problem 201</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_202"><span class="nav-number">2.</span> <span class="nav-text">Problem 202</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_203"><span class="nav-number">3.</span> <span class="nav-text">Problem 203</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_204"><span class="nav-number">4.</span> <span class="nav-text">Problem 204</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_205"><span class="nav-number">5.</span> <span class="nav-text">Problem 205</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_206"><span class="nav-number">6.</span> <span class="nav-text">Problem 206</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_207"><span class="nav-number">7.</span> <span class="nav-text">Problem 207</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_208"><span class="nav-number">8.</span> <span class="nav-text">Problem 208</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_209"><span class="nav-number">9.</span> <span class="nav-text">Problem 209</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_210"><span class="nav-number">10.</span> <span class="nav-text">Problem 210</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_211"><span class="nav-number">11.</span> <span class="nav-text">Problem 211</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_212"><span class="nav-number">12.</span> <span class="nav-text">Problem 212</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_213"><span class="nav-number">13.</span> <span class="nav-text">Problem 213</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_214"><span class="nav-number">14.</span> <span class="nav-text">Problem 214</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_215"><span class="nav-number">15.</span> <span class="nav-text">Problem 215</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_216"><span class="nav-number">16.</span> <span class="nav-text">Problem 216</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_217"><span class="nav-number">17.</span> <span class="nav-text">Problem 217</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_218"><span class="nav-number">18.</span> <span class="nav-text">Problem 218</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_219"><span class="nav-number">19.</span> <span class="nav-text">Problem 219</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_220"><span class="nav-number">20.</span> <span class="nav-text">Problem 220</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_221"><span class="nav-number">21.</span> <span class="nav-text">Problem 221</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_222"><span class="nav-number">22.</span> <span class="nav-text">Problem 222</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_223"><span class="nav-number">23.</span> <span class="nav-text">Problem 223</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_224"><span class="nav-number">24.</span> <span class="nav-text">Problem 224</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_225"><span class="nav-number">25.</span> <span class="nav-text">Problem 225</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  2015
+  <span class="with-love"><i class="icon-heart"></i></span>
+  <span class="author"><a href="http://sx349.github.io">sx349</a></span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist 
+  </a>by <a href="http://notes.iissnan.com/">IIssNan</a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sx349"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+
+
+  
+  
+
+</body>
+</html>

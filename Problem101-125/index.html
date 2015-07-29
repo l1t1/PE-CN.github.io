@@ -1,0 +1,1830 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="Project Euler | 欧拉计划 中文翻译站" />
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: ''
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+
+
+  <title> Problem 101 - 125 // Project Euler | 欧拉计划 </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Project Euler | 欧拉计划</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            <i class="menu-item-icon icon-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'z6bmYNMJM3AR1esetWJa','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              Problem 101 - 125
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-06-28
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/Project-Euler-欧拉计划/">Project Euler | 欧拉计划</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/Problem101-125/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="Problem101-125/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a>
+<hr>
+<h1 id="Problem_101"><a href="https://projecteuler.net/problem=101" target="_blank" rel="external">Problem 101</a></h1><hr>
+<p><strong>Optimum polynomial</strong></p>
+<p>If we are presented with the first k terms of a sequence it is impossible to say with certainty the value of the next term, as there are infinitely many polynomial functions that can model the sequence.</p>
+<p>As an example, let us consider the sequence of cube numbers. This is defined by the generating function,<br>u<sub>n</sub> = n<sup>3</sup>: 1, 8, 27, 64, 125, 216, …</p>
+<p>Suppose we were only given the first two terms of this sequence. Working on the principle that “simple is best” we should assume a linear relationship and predict the next term to be 15 (common difference 7). Even if we were presented with the first three terms, by the same principle of simplicity, a quadratic relationship should be assumed.</p>
+<p>We shall define OP(k, n) to be the n<sup>th</sup> term of the optimum polynomial generating function for the first k terms of a sequence. It should be clear that OP(k, n) will accurately generate the terms of the sequence for n ≤ k, and potentially the <i>first incorrect term</i> (FIT) will be OP(k, k+1); in which case we shall call it a <i>bad OP</i> (BOP).</p>
+<p>As a basis, if we were only given the first term of sequence, it would be most sensible to assume constancy; that is, for n ≥ 2, OP(1, n) = u<sub>1</sub>.</p>
+<p>Hence we obtain the following OPs for the cubic sequence:</p>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OP(1, n) = 1</td>
+<td>1, <span style="color:red;"><strong>1</strong></span>, 1, 1, …</td>
+</tr>
+<tr>
+<td>OP(2, n) = 7n−6</td>
+<td>1, 8, <span style="color:red;"><strong>15</strong></span>, …</td>
+</tr>
+<tr>
+<td>OP(3, n) = 6n<sup>2</sup>−11n+6</td>
+<td>1, 8, 27, <span style="color:red;"><strong>58</strong></span>, …</td>
+</tr>
+<tr>
+<td>OP(4, n) = n<sup>3</sup></td>
+<td>1, 8, 27, 64, 125, …</td>
+</tr>
+</tbody>
+</table>
+<p>Clearly no BOPs exist for k ≥ 4.</p>
+<p>By considering the sum of FITs generated by the BOPs (indicated in <span style="color:red;"><strong>red</strong></span> above), we obtain 1 + 15 + 58 = 74.</p>
+<p>Consider the following tenth degree polynomial generating function:</p>
+<center>u<sub>n</sub> = 1 − n + n<sup>2</sup> − n<sup>3</sup> + n<sup>4</sup> − n<sup>5</sup> + n<sup>6</sup> − n<sup>7</sup> + n<sup>8</sup> − n<sup>9</sup> + n<sup>10</sup></center>
+
+<p>Find the sum of FITs for the BOPs.</p>
+<hr>
+<p><strong>最优多项式</strong></p>
+<p>如果我们知道了一个数列的前k项，我们仍无法确定地给出下一项的值，因为有无穷个多项式生成函数都有可能是这个数列的模型。</p>
+<p>例如，让我们考虑立方数的序列，它可以用如下函数生成，<br>u<sub>n</sub> = n<sup>3</sup>: 1, 8, 27, 64, 125, 216, …</p>
+<p>如果我们只知道数列的前两项，秉承“简单至上”的原则，我们应当假定这个数列遵循线性关系，并且预测下一项为15（公差为7）。即使我们知道了数列的前三项，根据同样的原则，我们也应当首先假定数列遵循二次函数关系。</p>
+<p>给定数列的前k项，定义OP(k, n)是由最优多项式生成函数给出的第n项的值。显然OP(k, n)可以精确地给出n ≤ k的那些项，而可能的<i>第一个不正确项</i>（First Incorrect Term，简记为FIT）将会是OP(k, k+1)；如果事实的确如此，我们称这个多项式为<i>坏最优多项式</i>（Bad OP，简记为BOP）。</p>
+<p>在最基本的情况下，如果我们只得到了数列的第一项，我们应当假定数列为常数，也就是说，对于n ≥ 2，OP(1, n) = u<sub>1</sub>。</p>
+<p>由此，我们得到了立方数列的最优多项式如下：</p>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OP(1, n) = 1</td>
+<td>1, <span style="color:red;"><strong>1</strong></span>, 1, 1, …</td>
+</tr>
+<tr>
+<td>OP(2, n) = 7n−6</td>
+<td>1, 8, <span style="color:red;"><strong>15</strong></span>, …</td>
+</tr>
+<tr>
+<td>OP(3, n) = 6n<sup>2</sup>−11n+6</td>
+<td>1, 8, 27, <span style="color:red;"><strong>58</strong></span>, …</td>
+</tr>
+<tr>
+<td>OP(4, n) = n<sup>3</sup></td>
+<td>1, 8, 27, 64, 125, …</td>
+</tr>
+</tbody>
+</table>
+<p>显然，当k ≥ 4时不存在坏最优多项式。</p>
+<p>所有坏最优多项式的第一个不正确项（用<span style="color:red;"><strong>红色</strong></span>标示的数）之和为1 + 15 + 58 = 74。</p>
+<p>考虑下面这个十阶多项式生成函数：</p>
+<center>u<sub>n</sub> = 1 − n + n<sup>2</sup> − n<sup>3</sup> + n<sup>4</sup> − n<sup>5</sup> + n<sup>6</sup> − n<sup>7</sup> + n<sup>8</sup> − n<sup>9</sup> + n<sup>10</sup></center>
+
+<p>求其所有坏最优多项式的第一个不正确项之和。</p>
+<hr>
+<hr>
+<h1 id="Problem_102"><a href="https://projecteuler.net/problem=102" target="_blank" rel="external">Problem 102</a></h1><hr>
+<p><strong>Triangle containment</strong></p>
+<p>Three distinct points are plotted at random on a Cartesian plane, for which -1000 ≤ x, y ≤ 1000, such that a triangle is formed.</p>
+<p>Consider the following two triangles:</p>
+<center>A(-340,495), B(-153,-910), C(835,-947)</center><center>X(-175,41), Y(-421,-714), Z(574,-645)</center>
+
+<p>It can be verified that triangle ABC contains the origin, whereas triangle XYZ does not.</p>
+<p>Using <a href="https://projecteuler.net/project/resources/p102_triangles.txt" target="_blank" rel="external">triangles.txt</a> (right click and ‘Save Link/Target As…’), a 27K text file containing the co-ordinates of one thousand “random” triangles, find the number of triangles for which the interior contains the origin.</p>
+<p>NOTE: The first two examples in the file represent the triangles in the example given above.</p>
+<hr>
+<p><strong>包含原点的三角形</strong></p>
+<p>从笛卡尔平面中随机选择三个不同的点，其坐标均满足-1000 ≤ x, y ≤ 1000，这三个点构成一个三角形。</p>
+<p>考虑下面两个三角形：</p>
+<center>A(-340,495), B(-153,-910), C(835,-947)</center><center>X(-175,41), Y(-421,-714), Z(574,-645)</center>
+
+<p>可以验证三角形ABC包含原点，而三角形XYZ不包含原点。</p>
+<p>在27K的文本文件<a href="https://projecteuler.net/project/resources/p102_triangles.txt" target="_blank" rel="external">triangles.txt</a>（右击并选择“目标另存为……”）中包含了一千个“随机”三角形的坐标，找出其中包含原点在其内部的三角形的数量。</p>
+<p>注意：文件中的前两个三角形就是上述样例。</p>
+<hr>
+<hr>
+<h1 id="Problem_103"><a href="https://projecteuler.net/problem=103" target="_blank" rel="external">Problem 103</a></h1><hr>
+<p><strong>Special subset sums: optimum</strong></p>
+<p>Let S(A) represent the sum of elements in set A of size n. We shall call it a special sum set if for any two non-empty disjoint subsets, B and C, the following properties are true:</p>
+<ol>
+<li>S(B) ≠ S(C); that is, sums of subsets cannot be equal.</li>
+<li>If B contains more elements than C then S(B) &gt; S(C).</li>
+</ol>
+<p>If S(A) is minimised for a given n, we shall call it an optimum special sum set. The first five optimum special sum sets are given below.</p>
+<p>n = 1: {1}<br>n = 2: {1, 2}<br>n = 3: {2, 3, 4}<br>n = 4: {3, 5, 6, 7}<br>n = 5: {6, 9, 11, 12, 13}</p>
+<p>It <i>seems</i> that for a given optimum set, A = {a<sub>1</sub>, a<sub>2</sub>, … , a<sub>n</sub>}, the next optimum set is of the form B = {b, a<sub>1</sub>+b, a<sub>2</sub>+b, … ,a<sub>n</sub>+b}, where b is the “middle” element on the previous row.</p>
+<p>By applying this “rule” we would expect the optimum set for n = 6 to be A = {11, 17, 20, 22, 23, 24}, with S(A) = 117. However, this is not the optimum set, as we have merely applied an algorithm to provide a near optimum set. The optimum set for n = 6 is A = {11, 18, 19, 20, 22, 25}, with S(A) = 115 and corresponding set string: 111819202225.</p>
+<p>Given that A is an optimum special sum set for n = 7, find its set string.</p>
+<p>NOTE: This problem is related to <a href="/Problem101-125/#Problem_105">Problem 105</a> and <a href="/Problem101-125/#Problem_106">Problem 106</a>.</p>
+<hr>
+<p><strong>特殊的子集和：最优解</strong></p>
+<p>记S(A)是大小为<i>n</i>的集合A中所有元素的和。若任取A的任意两个非空且不相交的子集B和C都满足下列条件，我们称A是一个特殊的和集：</p>
+<ol>
+<li>S(B) ≠ S(C)；也就是说，任意子集的和不相同。</li>
+<li>如果B中的元素比C多，则S(B) &gt; S(C)。</li>
+</ol>
+<p>对于给定的n，我们称使得S(A)最小的集合A为最优特殊和集。前5个最优特殊和集如下所示。</p>
+<p>n = 1: {1}<br>n = 2: {1, 2}<br>n = 3: {2, 3, 4}<br>n = 4: {3, 5, 6, 7}<br>n = 5: {6, 9, 11, 12, 13}</p>
+<p><i>似乎</i>对于一个给定的最优特殊和集A = {a<sub>1</sub>, a<sub>2</sub>, … , a<sub>n</sub>}，下一个最优特殊和集将是B = {b, a<sub>1</sub>+b, a<sub>2</sub>+b, … ,a<sub>n</sub>+b}的形式，其中b是集合A“正中间”的元素。</p>
+<p>应用这条“规则”，我们猜测对于n = 6的最优特殊和集将是A = {11, 17, 20, 22, 23, 24}，相应的S(A) = 117。然而，事实并非如此，我们的方法仅仅只能找出近似最优特殊和集。对于n = 6，最优特殊和集是A = {11, 18, 19, 20, 22, 25}，相应的S(A) = 115，对应的集合数字串是：111819202225。</p>
+<p>若集合A是n = 7时的最优特殊和集，求其对应的集合数字串。</p>
+<p>注意：此题和<a href="/Problem101-125/#Problem_105">第105题</a>及<a href="/Problem101-125/#Problem_106">第106题</a>有关。</p>
+<hr>
+<hr>
+<h1 id="Problem_104"><a href="https://projecteuler.net/problem=104" target="_blank" rel="external">Problem 104</a></h1><hr>
+<p><strong>Pandigital Fibonacci ends</strong></p>
+<p>The Fibonacci sequence is defined by the recurrence relation:</p>
+<center>F<sub>n</sub> = F<sub>n−1</sub> + F<sub>n−2</sub>, where F<sub>1</sub> = 1 and F<sub>2</sub> = 1.</center>
+
+<p>It turns out that F<sub>541</sub>, which contains 113 digits, is the first Fibonacci number for which the last nine digits are 1-9 pandigital (contain all the digits 1 to 9, but not necessarily in order). And F<sub>2749</sub>, which contains 575 digits, is the first Fibonacci number for which the first nine digits are 1-9 pandigital.</p>
+<p>Given that F<sub>k</sub> is the first Fibonacci number for which the first nine digits AND the last nine digits are 1-9 pandigital, find k.</p>
+<hr>
+<p><strong>两端为全数字的斐波那契数</strong></p>
+<p>斐波那契数列由如下递归关系生成：</p>
+<center>F<sub>n</sub> = F<sub>n−1</sub> + F<sub>n−2</sub>，其中F<sub>1</sub> = 1且F<sub>2</sub> = 1。</center>
+
+<p>可以发现，包含有113位数字的F<sub>541</sub>是第一个后9位数字是1至9全数字（包含1至9所有的数字，但不一定按照从小到大的顺序）的斐波那契数，而包含有575位数字的F<sub>2749</sub>是第一个前9位数字是1至9全数字的斐波那契数。</p>
+<p>若F<sub>k</sub>是第一个前9位数字和后9位数字都是1至9全数字的斐波那契数，求k。</p>
+<hr>
+<hr>
+<h1 id="Problem_105"><a href="https://projecteuler.net/problem=105" target="_blank" rel="external">Problem 105</a></h1><hr>
+<p><strong>Special subset sums: testing</strong></p>
+<p>Let S(A) represent the sum of elements in set A of size <i>n</i>. We shall call it a special sum set if for any two non-empty disjoint subsets, B and C, the following properties are true:</p>
+<ol>
+<li>S(B) ≠ S(C); that is, sums of subsets cannot be equal.</li>
+<li>If B contains more elements than C then S(B) &gt; S(C).</li>
+</ol>
+<p>For example, {81, 88, 75, 42, 87, 84, 86, 65} is not a special sum set because 65 + 87 + 88 = 75 + 81 + 84, whereas {157, 150, 164, 119, 79, 159, 161, 139, 158} satisfies both rules for all possible subset pair combinations and S(A) = 1286.</p>
+<p>Using <a href="https://projecteuler.net/project/resources/p105_sets.txt" target="_blank" rel="external">sets.txt</a> (right click and “Save Link/Target As…”), a 4K text file with one-hundred sets containing seven to twelve elements (the two examples given above are the first two sets in the file), identify all the special sum sets, A<sub>1</sub>, A<sub>2</sub>, …, A<sub>k</sub>, and find the value of S(A<sub>1</sub>) + S(A<sub>2</sub>) + … + S(A<sub>k</sub>).</p>
+<p>NOTE: This problem is related to <a href="/Problem101-125/#Problem_103">Problem 103</a> and <a href="/Problem101-125/#Problem_106">Problem 106</a>.</p>
+<hr>
+<p><strong>特殊的子集和：检验</strong></p>
+<p>记S(A)是大小为<i>n</i>的集合A中所有元素的和。若任取A的任意两个非空且不相交的子集B和C都满足下列条件，我们称A是一个特殊的和集：</p>
+<ol>
+<li>S(B) ≠ S(C)；也就是说，任意子集的和不相同。</li>
+<li>如果B中的元素比C多，则S(B) &gt; S(C)。</li>
+</ol>
+<p>例如，{81, 88, 75, 42, 87, 84, 86, 65}不是一个特殊和集，因为65 + 87 + 88 = 75 + 81 + 84，而{157, 150, 164, 119, 79, 159, 161, 139, 158}满足上述规则，且相应的S(A) = 1286。</p>
+<p>在4K的文本文件<a href="https://projecteuler.net/project/resources/p105_sets.txt" target="_blank" rel="external">sets.txt</a>（右击并选择“目标另存为……”）中包含了一百组包含7至12个元素的集合（文档中的前两个例子就是上述样例），找出其中所有的特殊和集A<sub>1</sub>、A<sub>2</sub>、……、A<sub>k</sub>，并求S(A<sub>1</sub>) + S(A<sub>2</sub>) + … + S(A<sub>k</sub>)的值。</p>
+<p>注意：此题和<a href="/Problem101-125/#Problem_103">第103题</a>及<a href="/Problem101-125/#Problem_106">第106题</a>有关。</p>
+<hr>
+<hr>
+<h1 id="Problem_106"><a href="https://projecteuler.net/problem=106" target="_blank" rel="external">Problem 106</a></h1><hr>
+<p><strong>Special subset sums: meta-testing</strong></p>
+<p>Let S(A) represent the sum of elements in set A of size <i>n</i>. We shall call it a special sum set if for any two non-empty disjoint subsets, B and C, the following properties are true:</p>
+<ol>
+<li>S(B) ≠ S(C); that is, sums of subsets cannot be equal.</li>
+<li>If B contains more elements than C then S(B) &gt; S(C).</li>
+</ol>
+<p>For this problem we shall assume that a given set contains n strictly increasing elements and it already satisfies the second rule.</p>
+<p>Surprisingly, out of the 25 possible subset pairs that can be obtained from a set for which n = 4, only 1 of these pairs need to be tested for equality (first rule). Similarly, when n = 7, only 70 out of the 966 subset pairs need to be tested.</p>
+<p>For n = 12, how many of the 261625 subset pairs that can be obtained need to be tested for equality?</p>
+<p>NOTE: This problem is related to <a href="/Problem101-125/#Problem_103">Problem 103</a> and <a href="/Problem101-125/#Problem_105">Problem 105</a>.</p>
+<hr>
+<p><strong>特殊的子集和：元检验</strong></p>
+<p>记S(A)是大小为n的集合A中所有元素的和。若任取A的任意两个非空且不相交的子集B和C都满足下列条件，我们称A是一个特殊的和集：</p>
+<ol>
+<li>S(B) ≠ S(C)；也就是说，任意子集的和不相同。</li>
+<li>如果B中的元素比C多，则S(B) &gt; S(C)。</li>
+</ol>
+<p>在这个问题中我们假定集合中包含有n个严格单调递增的元素，并且已知其满足第二个条件。</p>
+<p>令人惊奇的是，当n = 4时，在所有可能的25组子集对中只有1组需要检验子集和是否相等（第一个条件）。同样地，当n = 7时，在所有可能的966组子集对中只有70组需要检验。</p>
+<p>当n = 12时，在所有可能的261625组子集对中有多少组需要检验？</p>
+<p>注意：此题和<a href="/Problem101-125/#Problem_103">第103题</a>及<a href="/Problem101-125/#Problem_105">第105题</a>有关。</p>
+<hr>
+<hr>
+<h1 id="Problem_107"><a href="https://projecteuler.net/problem=107" target="_blank" rel="external">Problem 107</a></h1><hr>
+<p><strong>Minimal network</strong></p>
+<p>The following undirected network consists of seven vertices and twelve edges with a total weight of 243.</p>
+<center><img src="https://projecteuler.net/project/images/p107_1.gif" width="381" height="278" alt=""></center>
+
+<p>The same network can be represented by the matrix below.</p>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th><strong>A</strong></th>
+<th><strong>B</strong></th>
+<th><strong>C</strong></th>
+<th><strong>D</strong></th>
+<th><strong>E</strong></th>
+<th><strong>F</strong></th>
+<th><strong>G</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>-</td>
+<td>16</td>
+<td>12</td>
+<td>21</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>16</td>
+<td>-</td>
+<td>-</td>
+<td>17</td>
+<td>20</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>12</td>
+<td>-</td>
+<td>-</td>
+<td>28</td>
+<td>-</td>
+<td>31</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>21</td>
+<td>17</td>
+<td>28</td>
+<td>-</td>
+<td>18</td>
+<td>19</td>
+<td>23</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>-</td>
+<td>20</td>
+<td>-</td>
+<td>18</td>
+<td>-</td>
+<td>-</td>
+<td>11</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>F</strong></td>
+<td>-</td>
+<td>-</td>
+<td>31</td>
+<td>19</td>
+<td>-</td>
+<td>-</td>
+<td>27</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>23</td>
+<td>11</td>
+<td>27</td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>However, it is possible to optimise the network by removing some edges and still ensure that all points on the network remain connected. The network which achieves the maximum saving is shown below. It has a weight of 93, representing a saving of 243 − 93 = 150 from the original network.</p>
+<center><img src="https://projecteuler.net/project/images/p107_2.gif" width="385" height="288" alt=""></center>
+
+<p>Using <a href="project/resources/p107_network.txt">network.txt</a> (right click and ‘Save Link/Target As…’), a 6K text file containing a network with forty vertices, and given in matrix form, find the maximum saving which can be achieved by removing redundant edges whilst ensuring that the network remains connected.</p>
+<hr>
+<p><strong>最小网络</strong></p>
+<p>下面这个无向网络包含有7个顶点和12条边，其总重量为243。</p>
+<center><img src="https://projecteuler.net/project/images/p107_1.gif" width="381" height="278" alt=""></center>
+
+<p>这个网络也可以用矩阵的形式表示如下。</p>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th><strong>A</strong></th>
+<th><strong>B</strong></th>
+<th><strong>C</strong></th>
+<th><strong>D</strong></th>
+<th><strong>E</strong></th>
+<th><strong>F</strong></th>
+<th><strong>G</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>-</td>
+<td>16</td>
+<td>12</td>
+<td>21</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>16</td>
+<td>-</td>
+<td>-</td>
+<td>17</td>
+<td>20</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>12</td>
+<td>-</td>
+<td>-</td>
+<td>28</td>
+<td>-</td>
+<td>31</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>21</td>
+<td>17</td>
+<td>28</td>
+<td>-</td>
+<td>18</td>
+<td>19</td>
+<td>23</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>-</td>
+<td>20</td>
+<td>-</td>
+<td>18</td>
+<td>-</td>
+<td>-</td>
+<td>11</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>F</strong></td>
+<td>-</td>
+<td>-</td>
+<td>31</td>
+<td>19</td>
+<td>-</td>
+<td>-</td>
+<td>27</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>23</td>
+<td>11</td>
+<td>27</td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>然而，我们其实可以优化这个网络，移除其中的一些边，同时仍然保证每个顶点之间都是连通的。节省重量最多的网络如下图所示，其总重量为93，相比原来的网络节省了243 − 93 = 150。</p>
+<center><img src="https://projecteuler.net/project/images/p107_2.gif" width="385" height="288" alt=""></center>
+
+<p>在这个6K的文本文件<a href="project/resources/p107_network.txt">network.txt</a>（右击并选择“目标另存为……”）中存放了一个包含有40个顶点的网络的连通矩阵。移除其中冗余的边，同时仍然保证每个顶点之间都是连通的，求最多能节省的重量。</p>
+<hr>
+<hr>
+<h1 id="Problem_108"><a href="https://projecteuler.net/problem=108" target="_blank" rel="external">Problem 108</a></h1><hr>
+<p><strong>Diophantine reciprocals I</strong></p>
+<p>In the following equation x, y, and n are positive integers.</p>
+<p>$$\frac{1}{x}+\frac{1}{y}=\frac{1}{n}$$</p>
+<p>For n = 4 there are exactly three distinct solutions:</p>
+<p>$$\frac{1}{5}+\frac{1}{20}=\frac{1}{4}$$ $$\frac{1}{6}+\frac{1}{12}=\frac{1}{4}$$ $$\frac{1}{8}+\frac{1}{8}=\frac{1}{4}$$</p>
+<p>What is the least value of n for which the number of distinct solutions exceeds one-thousand?</p>
+<p>NOTE: This problem is an easier version of <a href="/Problem101-125/#Problem_110">Problem 110</a>; it is strongly advised that you solve this one first.</p>
+<hr>
+<p><strong>丢番图倒数I</strong></p>
+<p>在如下方程中，x、y、n均为正整数。</p>
+<p>$$\frac{1}{x}+\frac{1}{y}=\frac{1}{n}$$</p>
+<p>对于n = 4，上述方程恰好有3个不同的解：</p>
+<p>$$\frac{1}{5}+\frac{1}{20}=\frac{1}{4}$$ $$\frac{1}{6}+\frac{1}{12}=\frac{1}{4}$$ $$\frac{1}{8}+\frac{1}{8}=\frac{1}{4}$$</p>
+<p>使得不同的解的数目超过1000的最小n值是多少？</p>
+<p>注意：这个问题是<a href="/Problem101-125/#Problem_110">第110题</a>的简单版本；强烈推荐先解决这一题。</p>
+<hr>
+<hr>
+<h1 id="Problem_109"><a href="https://projecteuler.net/problem=109" target="_blank" rel="external">Problem 109</a></h1><hr>
+<p><strong>Darts</strong></p>
+<p>In the game of darts a player throws three darts at a target board which is split into twenty equal sized sections numbered one to twenty.</p>
+<center><img src="https://projecteuler.net/project/images/p109.gif" width="400" height="400" alt=""></center>
+
+<p>The score of a dart is determined by the number of the region that the dart lands in. A dart landing outside the red/green outer ring scores zero. The black and cream regions inside this ring represent single scores. However, the red/green outer ring and middle ring score double and treble scores respectively.</p>
+<p>At the centre of the board are two concentric circles called the bull region, or bulls-eye. The outer bull is worth 25 points and the inner bull is a double, worth 50 points.</p>
+<p>There are many variations of rules but in the most popular game the players will begin with a score 301 or 501 and the first player to reduce their running total to zero is a winner. However, it is normal to play a “doubles out” system, which means that the player must land a double (including the double bulls-eye at the centre of the board) on their final dart to win; any other dart that would reduce their running total to one or lower means the score for that set of three darts is “bust”.</p>
+<p>When a player is able to finish on their current score it is called a “checkout” and the highest checkout is 170: T20 T20 D25 (two treble 20s and double bull).</p>
+<p>There are exactly eleven distinct ways to checkout on a score of 6:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&nbsp;</th>
+<th style="text-align:center">&nbsp;</th>
+<th style="text-align:center">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">D3</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">D2</td>
+<td style="text-align:center">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align:center">S2</td>
+<td style="text-align:center">D2</td>
+<td style="text-align:center">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align:center">D2</td>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align:center">S4</td>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align:center">S1</td>
+<td style="text-align:center">S1</td>
+<td style="text-align:center">D2</td>
+</tr>
+<tr>
+<td style="text-align:center">S1</td>
+<td style="text-align:center">T1</td>
+<td style="text-align:center">D1</td>
+</tr>
+<tr>
+<td style="text-align:center">S1</td>
+<td style="text-align:center">S3</td>
+<td style="text-align:center">D1</td>
+</tr>
+<tr>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">D1</td>
+</tr>
+<tr>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">S2</td>
+<td style="text-align:center">D1</td>
+</tr>
+<tr>
+<td style="text-align:center">S2</td>
+<td style="text-align:center">S2</td>
+<td style="text-align:center">D1</td>
+</tr>
+</tbody>
+</table>
+<p>Note that D1 D2 is considered <strong>different</strong> to D2 D1 as they finish on different doubles. However, the combination S1 T1 D1 is considered the <strong>same</strong> as T1 S1 D1.</p>
+<p>In addition we shall not include misses in considering combinations; for example, D3 is the <strong>same</strong> as 0 D3 and 0 0 D3.</p>
+<p>Incredibly there are 42336 distinct ways of checking out in total.</p>
+<p>How many distinct ways can a player checkout with a score less than 100?</p>
+<hr>
+<p><strong>飞镖</strong></p>
+<p>在飞镖游戏中，玩家需向靶子上投掷三枚飞镖；靶子被分成了二十个相等面积的区域，并分别标上1至20。</p>
+<center><img src="https://projecteuler.net/project/images/p109.gif" width="400" height="400" alt=""></center>
+
+<p>每一枚飞镖的分数还取决于它的位置。落在外围的红/绿色圈以外时为零分，落在黑/白色区域时为一倍得分，而落在外围和中间的红/绿色圈时分别为两倍和三倍得分。</p>
+<p>在把子的正中心有两个同心圆，被称为靶心。射中靶心外圈得25分，射中靶心内圈则得双倍50分。</p>
+<p>飞镖的规则有许多变种，但最热门的一种是，每个玩家从301分或501分开始，轮流投掷飞镖并减去得分，首先将自己的分数减少到恰好为0的玩家获胜。不过，通常会采用“双倍结束”规则，即玩家在最后一镖必须射中一个双倍区域（包括双倍的靶心内圈）才能判定获胜。若这一轮的得分使得玩家的分数减少到1分或更少，但最后一镖未射中双倍区域，则这一轮的得分“作废”。</p>
+<p>玩家在目前的分数下能够获胜则被称为“结分”。最高的结分为170：T20 T20 D25（两个三倍20分和一个双倍靶心）。</p>
+<p>当玩家分数为6时，恰好有11种结分方式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&nbsp;</th>
+<th style="text-align:center">&nbsp;</th>
+<th style="text-align:center">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">D3</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">D2</td>
+<td style="text-align:center">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align:center">S2</td>
+<td style="text-align:center">D2</td>
+<td style="text-align:center">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align:center">D2</td>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align:center">S4</td>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">&nbsp;</td>
+</tr>
+<tr>
+<td style="text-align:center">S1</td>
+<td style="text-align:center">S1</td>
+<td style="text-align:center">D2</td>
+</tr>
+<tr>
+<td style="text-align:center">S1</td>
+<td style="text-align:center">T1</td>
+<td style="text-align:center">D1</td>
+</tr>
+<tr>
+<td style="text-align:center">S1</td>
+<td style="text-align:center">S3</td>
+<td style="text-align:center">D1</td>
+</tr>
+<tr>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">D1</td>
+</tr>
+<tr>
+<td style="text-align:center">D1</td>
+<td style="text-align:center">S2</td>
+<td style="text-align:center">D1</td>
+</tr>
+<tr>
+<td style="text-align:center">S2</td>
+<td style="text-align:center">S2</td>
+<td style="text-align:center">D1</td>
+</tr>
+</tbody>
+</table>
+<p>注意D1 D2被认为是<strong>不同于</strong>D2 D1的结分方式，因为它们最后的双倍不同。不过，组合S1 T1 D1和T1 S1 D1就被认为是<strong>相同的</strong>结分方式。</p>
+<p>另外，我们在计算组合时，我们不考虑脱靶的情况；例如，D3和0 D3以及0 0 D3就是<strong>相同的</strong>结分方式。</p>
+<p>令人惊奇的是一共有42336种不同的结分方式。</p>
+<p>当玩家分数小于100时，一共有多少种不同的结分方式？</p>
+<hr>
+<hr>
+<h1 id="Problem_110"><a href="https://projecteuler.net/problem=110" target="_blank" rel="external">Problem 110</a></h1><hr>
+<p><strong>Diophantine reciprocals II</strong></p>
+<p>In the following equation x, y, and n are positive integers.</p>
+<p>$$\frac{1}{x}+\frac{1}{y}=\frac{1}{n}$$</p>
+<p>For n = 4 there are exactly three distinct solutions:</p>
+<p>$$\frac{1}{5}+\frac{1}{20}=\frac{1}{4}$$ $$\frac{1}{6}+\frac{1}{12}=\frac{1}{4}$$ $$\frac{1}{8}+\frac{1}{8}=\frac{1}{4}$$</p>
+<p>It can be verified that when n = 1260 there are 113 distinct solutions and this is the least value of n for which the total number of distinct solutions exceeds one hundred.</p>
+<p>What is the least value of n for which the number of distinct solutions exceeds four million?</p>
+<p>NOTE: This problem is a much more difficult version of <a href="/Problem101-125/#Problem_108">Problem 108</a> and as it is well beyond the limitations of a brute force approach it requires a clever implementation.</p>
+<hr>
+<p><strong>丢番图倒数II</strong></p>
+<p>在如下方程中，x、y、n均为正整数。</p>
+<p>$$\frac{1}{x}+\frac{1}{y}=\frac{1}{n}$$</p>
+<p>对于n = 4，上述方程恰好有3个不同的解：</p>
+<p>$$\frac{1}{5}+\frac{1}{20}=\frac{1}{4}$$ $$\frac{1}{6}+\frac{1}{12}=\frac{1}{4}$$ $$\frac{1}{8}+\frac{1}{8}=\frac{1}{4}$$</p>
+<p>可以验证当n = 1260时，恰好有113种不同的解，这也是不同的解的总数超过一百种的最小n值。</p>
+<p>不同的解的总数超过四百万种的最小n值是多少？</p>
+<p>注意：这是<a href="/Problem101-125/#Problem_108">第108题</a>一个极其困难的版本，而且远远超过暴力解法的能力范围，因此需要更加聪明的手段。</p>
+<hr>
+<hr>
+<h1 id="Problem_111"><a href="https://projecteuler.net/problem=111" target="_blank" rel="external">Problem 111</a></h1><hr>
+<p><strong>Primes with runs</strong></p>
+<p>Considering 4-digit primes containing repeated digits it is clear that they cannot all be the same: 1111 is divisible by 11, 2222 is divisible by 22, and so on. But there are nine 4-digit primes containing three ones:</p>
+<center>1117, 1151, 1171, 1181, 1511, 1811, 2111, 4111, 8111</center>
+
+<p>We shall say that M(n, d) represents the maximum number of repeated digits for an n-digit prime where d is the repeated digit, N(n, d) represents the number of such primes, and S(n, d) represents the sum of these primes.</p>
+<p>So M(4, 1) = 3 is the maximum number of repeated digits for a 4-digit prime where one is the repeated digit, there are N(4, 1) = 9 such primes, and the sum of these primes is S(4, 1) = 22275. It turns out that for d = 0, it is only possible to have M(4, 0) = 2 repeated digits, but there are N(4, 0) = 13 such cases.</p>
+<p>In the same way we obtain the following results for 4-digit primes.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Digit, d</strong></th>
+<th><strong>M(4, d)</strong></th>
+<th><strong>N(4, d)</strong></th>
+<th><strong>S(4, d)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>2</td>
+<td>13</td>
+<td>67061</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>9</td>
+<td>22275</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+<td>2221</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>12</td>
+<td>46214</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>8888</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+<td>1</td>
+<td>5557</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+<td>1</td>
+<td>6661</td>
+</tr>
+<tr>
+<td>7</td>
+<td>3</td>
+<td>9</td>
+<td>57863</td>
+</tr>
+<tr>
+<td>8</td>
+<td>3</td>
+<td>1</td>
+<td>8887</td>
+</tr>
+<tr>
+<td>9</td>
+<td>3</td>
+<td>7</td>
+<td>48073</td>
+</tr>
+</tbody>
+</table>
+<p>For d = 0 to 9, the sum of all S(4, d) is 273700.</p>
+<p>Find the sum of all S(10, d).</p>
+<hr>
+<p><strong>有重复数字的素数</strong></p>
+<p>考虑一个有重复数字的4位素数，显然这4个数字不能全都一样：1111被11整除，2222被22整除，依此类推；但是，有9个4位素数包含有三个一：</p>
+<center>1117, 1151, 1171, 1181, 1511, 1811, 2111, 4111, 8111</center>
+
+<p>我们记M(n, d)是n位素数中数字d重复出现的最多次数，N(n, d)是这类素数的个数，而S(n, d)是这类素数的和。</p>
+<p>因此M(4, 1) = 3是4位素数中数字1重复出现的最多次数，有N(4, 1) = 9个这类素数，而它们的和是S(4, 1) = 22275。还能得出，对于d = 0，在4位素数中最多重复出现M(4, 0) = 2次，但是有N(4, 0) = 13个这类素数。</p>
+<p>同样地，我们可以得到4位素数的如下结果。</p>
+<table>
+<thead>
+<tr>
+<th><strong>数字d</strong></th>
+<th><strong>M(4, d)</strong></th>
+<th><strong>N(4, d)</strong></th>
+<th><strong>S(4, d)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>2</td>
+<td>13</td>
+<td>67061</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>9</td>
+<td>22275</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+<td>2221</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>12</td>
+<td>46214</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>8888</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+<td>1</td>
+<td>5557</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+<td>1</td>
+<td>6661</td>
+</tr>
+<tr>
+<td>7</td>
+<td>3</td>
+<td>9</td>
+<td>57863</td>
+</tr>
+<tr>
+<td>8</td>
+<td>3</td>
+<td>1</td>
+<td>8887</td>
+</tr>
+<tr>
+<td>9</td>
+<td>3</td>
+<td>7</td>
+<td>48073</td>
+</tr>
+</tbody>
+</table>
+<p>对于d = 0至9，所有S(4, d)的和为273700。</p>
+<p>求所有S(10, d)的和。</p>
+<hr>
+<hr>
+<h1 id="Problem_112"><a href="https://projecteuler.net/problem=112" target="_blank" rel="external">Problem 112</a></h1><hr>
+<p><strong>Bouncy numbers</strong></p>
+<p>Working from left-to-right if no digit is exceeded by the digit to its left it is called an increasing number; for example, 134468.</p>
+<p>Similarly if no digit is exceeded by the digit to its right it is called a decreasing number; for example, 66420.</p>
+<p>We shall call a positive integer that is neither increasing nor decreasing a “bouncy” number; for example, 155349.</p>
+<p>Clearly there cannot be any bouncy numbers below one-hundred, but just over half of the numbers below one-thousand (525) are bouncy. In fact, the least number for which the proportion of bouncy numbers first reaches 50% is 538.</p>
+<p>Surprisingly, bouncy numbers become more and more common and by the time we reach 21780 the proportion of bouncy numbers is equal to 90%.</p>
+<p>Find the least number for which the proportion of bouncy numbers is exactly 99%.</p>
+<hr>
+<p><strong>弹跳数</strong></p>
+<p>从左往右，如果每一位数字都大于等于其左边的数字，这样的数被称为上升数，比如134468。</p>
+<p>同样地，如果每一位数字都大于等于其右边的数字，这样的数被称为下降数，比如66420。</p>
+<p>如果一个正整数既不是上升数也不是下降数，我们就称之为“弹跳”数，比如155349。</p>
+<p>显然不存在小于一百的弹跳数，而在小于一千的数中有略超过一半（525）的弹跳数。事实上，使得弹跳数的比例恰好达到50%的最小数是538。</p>
+<p>令人惊奇的是，弹跳数将变得越来越普遍，到21780时，弹跳数的比例恰好等于90%。</p>
+<p>找出使得弹跳数的比例恰好为99%的最小数。</p>
+<hr>
+<hr>
+<h1 id="Problem_113"><a href="https://projecteuler.net/problem=113" target="_blank" rel="external">Problem 113</a></h1><hr>
+<p><strong>Non-bouncy numbers</strong></p>
+<p>Working from left-to-right if no digit is exceeded by the digit to its left it is called an increasing number; for example, 134468.</p>
+<p>Similarly if no digit is exceeded by the digit to its right it is called a decreasing number; for example, 66420.</p>
+<p>We shall call a positive integer that is neither increasing nor decreasing a “bouncy” number; for example, 155349.</p>
+<p>As n increases, the proportion of bouncy numbers below n increases such that there are only 12951 numbers below one-million that are not bouncy and only 277032 non-bouncy numbers below 10<sup>10</sup>.</p>
+<p>How many numbers below a googol (10<sup>100</sup>) are not bouncy?</p>
+<hr>
+<p><strong>非弹跳数</strong></p>
+<p>从左往右，如果每一位数字都大于等于其左边的数字，这样的数被称为上升数，比如134468。</p>
+<p>同样地，如果每一位数字都大于等于其右边的数字，这样的数被称为下降数，比如66420。</p>
+<p>如果一个正整数既不是上升数也不是下降数，我们就称之为“弹跳”数，比如155349。</p>
+<p>随着n的增长，小于n的弹跳数的比例也随之增长；在小于一百万的数中，只有12951个非弹跳数，而小于10<sup>10</sup>的数中只有277032个非弹跳数。</p>
+<p>在小于一古戈尔（10<sup>100</sup>）的数中有多少个非弹跳数？</p>
+<hr>
+<hr>
+<h1 id="Problem_114"><a href="https://projecteuler.net/problem=114" target="_blank" rel="external">Problem 114</a></h1><hr>
+<p><strong>Counting block combinations I</strong></p>
+<p>A row measuring seven units in length has red blocks with a minimum length of three units placed on it, such that any two red blocks (which are allowed to be different lengths) are separated by at least one black square. There are exactly seventeen ways of doing this.</p>
+<center><img src="\images\pe114.png" alt="pe114"></center>
+
+<p>How many ways can a row measuring fifty units in length be filled?</p>
+<p>NOTE: Although the example above does not lend itself to the possibility, in general it is permitted to mix block sizes. For example, on a row measuring eight units in length you could use red (3), black (1), and red (4).</p>
+<hr>
+<p><strong>方格组合计数I</strong></p>
+<p>用黑色方块和最短长度为3的红色方块摆成长度为7的一行，要求任意两个红色方块（长度可以不同）之间至少有一个黑色方块，恰好有17种不同的摆法。</p>
+<center><img src="\images\pe114.png" alt="pe114"></center>
+
+<p>若要摆成长度为50的一行，有多少种不同的摆法？</p>
+<p>注意：尽管上述样例没有混用不同长度的方格，但这样做是允许的。例如，要摆成长度为8的一行，你可以用红（3）、黑（1）、红（4）。</p>
+<hr>
+<hr>
+<h1 id="Problem_115"><a href="https://projecteuler.net/problem=115" target="_blank" rel="external">Problem 115</a></h1><hr>
+<p><strong>Counting block combinations II</strong></p>
+<p>NOTE: This is a more difficult version of <a href="/Problem101-125/#Problem_114">Problem 114</a>.</p>
+<p>A row measuring n units in length has red blocks with a minimum length of m units placed on it, such that any two red blocks (which are allowed to be different lengths) are separated by at least one black square.</p>
+<p>Let the fill-count function, F(m, n), represent the number of ways that a row can be filled.</p>
+<p>For example, F(3, 29) = 673135 and F(3, 30) = 1089155.</p>
+<p>That is, for m = 3, it can be seen that n = 30 is the smallest value for which the fill-count function first exceeds one million.</p>
+<p>In the same way, for m = 10, it can be verified that F(10, 56) = 880711 and F(10, 57) = 1148904, so n = 57 is the least value for which the fill-count function first exceeds one million.</p>
+<p>For m = 50, find the least value of n for which the fill-count function first exceeds one million.</p>
+<hr>
+<p><strong>方格组合计数II</strong></p>
+<p>注意：这是<a href="/Problem101-125/#Problem_114">第114题</a>一个更难的版本。</p>
+<p>用黑色方块和最短长度为m的红色方块摆成长度为n的一行，要求任意两个红色方块（长度可以不同）之间至少有一个黑色方块。</p>
+<p>我们用摆法计数函数F(m, n)代表符合上述要求的摆法数目。</p>
+<p>例如，F(3, 29) = 673135以及F(3, 30) = 1089155。</p>
+<p>也就是说，当m = 3时，可以看出n = 30是使得摆法计数函数首次超过一百万的最小值。 </p>
+<p>同样地，当m = 10时，可以验证F(10, 56) = 880711以及F(10, 57) = 1148904，因此n = 57是使得摆法计数函数首次超过一百万的最小值。</p>
+<p>当m = 50时，求使得摆法计数函数首次超过一百万的最小n值。</p>
+<hr>
+<hr>
+<h1 id="Problem_116"><a href="https://projecteuler.net/problem=116" target="_blank" rel="external">Problem 116</a></h1><hr>
+<p><strong>Red, green or blue tiles</strong></p>
+<p>A row of five black square tiles is to have a number of its tiles replaced with coloured oblong tiles chosen from red (length two), green (length three), or blue (length four).</p>
+<p>If red tiles are chosen there are exactly seven ways this can be done.</p>
+<center><img src="\images\pe116_1.png" alt="pe116_1"></center>
+
+<p>If green tiles are chosen there are three ways.</p>
+<center><img src="\images\pe116_2.png" alt="pe116_2"></center>
+
+<p>And if blue tiles are chosen there are two ways.</p>
+<center><img src="\images\pe116_3.png" alt="pe116_3"></center>
+
+<p>Assuming that colours cannot be mixed there are 7 + 3 + 2 = 12 ways of replacing the black tiles in a row measuring five units in length.</p>
+<p>How many different ways can the black tiles in a row measuring fifty units in length be replaced if colours cannot be mixed and at least one coloured tile must be used?</p>
+<p>NOTE: This is related to <a href="/Problem101-125/#Problem_117">Problem 117</a>.</p>
+<hr>
+<p><strong>红色、绿色或蓝色的地砖</strong></p>
+<p>将一行五块黑色方形地砖的一部分替换成红色（长度为2）、绿色（长度为3）或蓝色（长度为4）的地砖。</p>
+<p>如果只使用红色地砖，一共有7种不同的替换方式。</p>
+<center><img src="\images\pe116_1.png" alt="pe116_1"></center>
+
+<p>如果只使用绿色地砖，一共有3种不同的替换方式。</p>
+<center><img src="\images\pe116_2.png" alt="pe116_2"></center>
+
+<p>如果只使用蓝色地砖，一共有2种不同的替换方式。</p>
+<center><img src="\images\pe116_3.png" alt="pe116_3"></center>
+
+<p>假定颜色不能混合使用，一共有7 + 3 + 2 = 12种方式替换一行五块黑色地砖。</p>
+<p>假定颜色不能混合使用，且至少使用一种彩色地砖，一共有多少种方式替换一行五十块黑色地砖？</p>
+<p>注意：这道题与<a href="/Problem101-125/#Problem_117">第117题</a>有关。</p>
+<hr>
+<hr>
+<h1 id="Problem_117"><a href="https://projecteuler.net/problem=117" target="_blank" rel="external">Problem 117</a></h1><hr>
+<p><strong>Red, green, and blue tiles</strong></p>
+<p>Using a combination of black square tiles and oblong tiles chosen from: red tiles measuring two units, green tiles measuring three units, and blue tiles measuring four units, it is possible to tile a row measuring five units in length in exactly fifteen different ways.</p>
+<center><img src="\images\pe117.png" alt="pe117"></center>
+
+<p>How many ways can a row measuring fifty units in length be tiled?</p>
+<p>NOTE: This is related to <a href="/Problem101-125/#Problem_116">Problem 116</a>.</p>
+<hr>
+<p><strong>红色、绿色和蓝色的地砖</strong></p>
+<p>使用黑色地砖、长度为2的红色地砖、长度为3的绿色地砖、长度为4的蓝色地砖的组合，一共有恰好15种不同的方式铺满长度为5的一行。</p>
+<center><img src="\images\pe117.png" alt="pe117"></center>
+
+<p>一共有多少种不同的方式铺满长度为50的一行？</p>
+<p>注意：这道题和<a href="/Problem101-125/#Problem_116">第116题</a>有关。</p>
+<hr>
+<hr>
+<h1 id="Problem_118"><a href="https://projecteuler.net/problem=118" target="_blank" rel="external">Problem 118</a></h1><hr>
+<p><strong>Pandigital prime sets</strong></p>
+<p>Using all of the digits 1 through 9 and concatenating them freely to form decimal integers, different sets can be formed. Interestingly with the set {2,5,47,89,631}, all of the elements belonging to it are prime.</p>
+<p>How many distinct sets containing each of the digits one through nine exactly once contain only prime elements?</p>
+<hr>
+<p><strong>全数字素数集合</strong></p>
+<p>使用1至9的全部数字，并自由连接起来组成十进制整数，可以构造不同的集合。其中一个集合{2,5,47,89,631}非常有趣，因为它的所有元素都是素数。</p>
+<p>有些集合包含数字1至9恰好各一次，且所有元素都是素数，这样的集合有多少个？</p>
+<hr>
+<hr>
+<h1 id="Problem_119"><a href="https://projecteuler.net/problem=119" target="_blank" rel="external">Problem 119</a></h1><hr>
+<p><strong>Digit power sum</strong></p>
+<p>The number 512 is interesting because it is equal to the sum of its digits raised to some power: 5 + 1 + 2 = 8, and 8<sup>3</sup> = 512. Another example of a number with this property is 614656 = 28<sup>4</sup>.</p>
+<p>We shall define a<sub>n</sub> to be the n<sup>th</sup> term of this sequence and insist that a number must contain at least two digits to have a sum.</p>
+<p>You are given that a<sub>2</sub> = 512 and a<sub>10</sub> = 614656.</p>
+<p>Find a<sub>30</sub>.</p>
+<hr>
+<p><strong>数字和的幂</strong></p>
+<p>512是一个有趣的数，因为它等于其各位数字和的幂：5 + 1 + 2 = 8，而8<sup>3</sup> = 512。拥有同样性质的数的另一个例子是614656 = 28<sup>4</sup>。</p>
+<p>记a<sub>n</sub>是这类数中的第n个，并且约定一个数至少需要两位数字才有各位数字和。</p>
+<p>已知a<sub>2</sub> = 512以及a<sub>10</sub> = 614656。</p>
+<p>求a<sub>30</sub>。</p>
+<hr>
+<hr>
+<h1 id="Problem_120"><a href="https://projecteuler.net/problem=120" target="_blank" rel="external">Problem 120</a></h1><hr>
+<p><strong>Square remainders</strong></p>
+<p>Let r be the remainder when (a−1)<sup>n</sup> + (a+1)<sup>n</sup> is divided by a<sup>2</sup>.</p>
+<p>For example, if a = 7 and n = 3, then r = 42: 6<sup>3</sup> + 8<sup>3</sup> = 728 ≡ 42 mod 49. And as n varies, so too will r, but for a = 7 it turns out that r<sub>max</sub> = 42.</p>
+<p>For 3 ≤ a ≤ 1000, find ∑r<sub>max</sub>.</p>
+<hr>
+<p><strong>平方余数</strong></p>
+<p>记r是(a−1)<sup>n</sup> + (a+1)<sup>n</sup>被a<sup>2</sup>除所得的余数。</p>
+<p>例如，如果a = 7而n = 3，则r = 42：6<sup>3</sup> + 8<sup>3</sup> = 728 ≡ 42 mod 49。随着n的变化，r也会随之变化，但是对a = 7，可以得出r<sub>max</sub> = 42。</p>
+<p>对于3 ≤ a ≤ 1000，求∑r<sub>max</sub>。</p>
+<hr>
+<hr>
+<h1 id="Problem_121"><a href="https://projecteuler.net/problem=121" target="_blank" rel="external">Problem 121</a></h1><hr>
+<p><strong>Disc game prize fund</strong></p>
+<p>A bag contains one red disc and one blue disc. In a game of chance a player takes a disc at random and its colour is noted. After each turn the disc is returned to the bag, an extra red disc is added, and another disc is taken at random.</p>
+<p>The player pays £1 to play and wins if they have taken more blue discs than red discs at the end of the game.</p>
+<p>If the game is played for four turns, the probability of a player winning is exactly 11/120, and so the maximum prize fund the banker should allocate for winning in this game would be £10 before they would expect to incur a loss. Note that any payout will be a whole number of pounds and also includes the original £1 paid to play the game, so in the example given the player actually wins £9.</p>
+<p>Find the maximum prize fund that should be allocated to a single game in which fifteen turns are played.</p>
+<hr>
+<p><strong>碟子游戏奖金</strong></p>
+<p>一开始，包里装有一个红色碟子和一个蓝色碟子。在一场概率游戏中，每一轮玩家从包中取出一个碟子，记录下其颜色，随后将碟子放回包中，并在包中加入一个红色碟子，再进行下一轮。</p>
+<p>玩家需要付£1来玩这个游戏，如果他们在游戏结束时拿出的蓝色碟子数比红色碟子数更多，则获得胜利。</p>
+<p>如果游戏进行4轮，那么玩家获胜的概率是11/120，因此游戏所设定的最高奖金为£10，否则可能会造成亏损。注意奖金必须是整数，而且包含了玩家付出用于玩游戏的£1，也就是说玩家实际上赢得的数额是£9。</p>
+<p>如果游戏进行15轮，求游戏所设定的最高奖金。</p>
+<hr>
+<hr>
+<h1 id="Problem_122"><a href="https://projecteuler.net/problem=122" target="_blank" rel="external">Problem 122</a></h1><hr>
+<p><strong>Efficient exponentiation</strong></p>
+<p>The most naive way of computing n<sup>15</sup> requires fourteen multiplications:</p>
+<p>n × n × … × n = n<sup>15</sup></p>
+<p>But using a “binary” method you can compute it in six multiplications:</p>
+<p>n × n = n<sup>2</sup><br>n<sup>2</sup> × n<sup>2</sup> = n<sup>4</sup><br>n<sup>4</sup> × n<sup>4</sup> = n<sup>8</sup><br>n<sup>8</sup> × n<sup>4</sup> = n<sup>12</sup><br>n<sup>12</sup> × n<sup>2</sup> = n<sup>14</sup><br>n<sup>14</sup> × n = n<sup>15</sup></p>
+<p>However it is yet possible to compute it in only five multiplications:</p>
+<p>n × n = n<sup>2</sup><br>n<sup>2</sup> × n = n<sup>3</sup><br>n<sup>3</sup> × n<sup>3</sup> = n<sup>6</sup><br>n<sup>6</sup> × n<sup>6</sup> = n<sup>12</sup><br>n<sup>12</sup> × n<sup>3</sup> = n<sup>15</sup></p>
+<p>We shall define m(k) to be the minimum number of multiplications to compute n<sup>k</sup>; for example m(15) = 5.</p>
+<p>For 1 ≤ k ≤ 200, find ∑m(k).</p>
+<hr>
+<p><strong>高效指数计算</strong></p>
+<p>计算n<sup>15</sup>最朴素的方式需要14次乘法：</p>
+<p>n × n × … × n = n<sup>15</sup></p>
+<p>但使用一个“二进制”的算法，你可以只用6次乘法：</p>
+<p>n × n = n<sup>2</sup><br>n<sup>2</sup> × n<sup>2</sup> = n<sup>4</sup><br>n<sup>4</sup> × n<sup>4</sup> = n<sup>8</sup><br>n<sup>8</sup> × n<sup>4</sup> = n<sup>12</sup><br>n<sup>12</sup> × n<sup>2</sup> = n<sup>14</sup><br>n<sup>14</sup> × n = n<sup>15</sup></p>
+<p>然而，实际上仅用5次乘法也是可以的：</p>
+<p>n × n = n<sup>2</sup><br>n<sup>2</sup> × n = n<sup>3</sup><br>n<sup>3</sup> × n<sup>3</sup> = n<sup>6</sup><br>n<sup>6</sup> × n<sup>6</sup> = n<sup>12</sup><br>n<sup>12</sup> × n<sup>3</sup> = n<sup>15</sup></p>
+<p>记m(k)是计算n<sup>k</sup>所需要的最少次数，例如m(15) = 5。</p>
+<p>对于1 ≤ k ≤ 200，求∑m(k)。</p>
+<hr>
+<hr>
+<h1 id="Problem_123"><a href="https://projecteuler.net/problem=123" target="_blank" rel="external">Problem 123</a></h1><hr>
+<p><strong>Prime square remainders</strong></p>
+<p>Let p<sub>n</sub> be the n<sup>th</sup> prime: 2, 3, 5, 7, 11, …, and let r be the remainder when (p<sub>n</sub>−1)<sup>n</sup> + (p<sub>n</sub>+1)<sup>n</sup> is divided by p<sub>n</sub><sup>2</sup>.</p>
+<p>For example, when n = 3, p<sub>3</sub> = 5, and 4<sup>3</sup> + 6<sup>3</sup> = 280 ≡ 5 mod 25.</p>
+<p>The least value of n for which the remainder first exceeds 10<sup>9</sup> is 7037.</p>
+<p>Find the least value of n for which the remainder first exceeds 10<sup>10</sup>.</p>
+<hr>
+<p><strong>素数平方余数</strong></p>
+<p>记p<sub>n</sub>是第n个素数：2、3、5、7、11……；记r是(p<sub>n</sub>−1)<sup>n</sup> + (p<sub>n</sub>+1)<sup>n</sup>被p<sub>n</sub><sup>2</sup>除所得的余数。</p>
+<p>例如，当n = 3时，p<sub>3</sub> = 5，而4<sup>3</sup> + 6<sup>3</sup> = 280 ≡ 5 mod 25。</p>
+<p>使余数首次超过10<sup>9</sup>的最小n值是7037。</p>
+<p>求使余数首次超过10<sup>10</sup>的最小n值。</p>
+<hr>
+<hr>
+<h1 id="Problem_124"><a href="https://projecteuler.net/problem=124" target="_blank" rel="external">Problem 124</a></h1><hr>
+<p><strong>Ordered radicals</strong></p>
+<p>The radical of n, rad(n), is the product of the distinct prime factors of n. For example, 504 = 2<sup>3</sup> × 3<sup>2</sup> × 7, so rad(504) = 2 × 3 × 7 = 42.</p>
+<p>If we calculate rad(n) for 1 ≤ n ≤ 10, then sort them on rad(n), and sorting on n if the radical values are equal, we get:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&nbsp;</th>
+<th style="text-align:center"><strong>Unsorted</strong></th>
+<th style="text-align:center">&nbsp;</th>
+<th style="text-align:center">&nbsp;</th>
+<th style="text-align:center"><strong>Sorted</strong></th>
+<th style="text-align:center">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>n</strong></td>
+<td style="text-align:center"><strong>rad(n)</strong></td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center"><strong>n</strong></td>
+<td style="text-align:center"><strong>rad(n)</strong></td>
+<td style="text-align:center"><strong>k</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">7</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">9</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+</tr>
+</tbody>
+</table>
+<p>Let E(k) be the kth element in the sorted n column; for example, E(4) = 8 and E(6) = 9.</p>
+<p>If rad(n) is sorted for 1 ≤ n ≤ 100000, find E(10000).</p>
+<hr>
+<p><strong>基排序</strong></p>
+<p>数n的基rad(n)，是指n的不同质因数之积。例如，504 = 2<sup>3</sup> × 3<sup>2</sup> × 7，所以rad(504) = 2 × 3 × 7 = 42。</p>
+<p>如果我们计算1 ≤ n ≤ 10的rad(n)，并先按照rad(n)再按照n从小到大排序，我们得到：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&nbsp;</th>
+<th style="text-align:center"><strong>排序前</strong></th>
+<th style="text-align:center">&nbsp;</th>
+<th style="text-align:center">&nbsp;</th>
+<th style="text-align:center"><strong>排序后</strong></th>
+<th style="text-align:center">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>n</strong></td>
+<td style="text-align:center"><strong>rad(n)</strong></td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center"><strong>n</strong></td>
+<td style="text-align:center"><strong>rad(n)</strong></td>
+<td style="text-align:center"><strong>k</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">7</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">9</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">&nbsp;</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+</tr>
+</tbody>
+</table>
+<p>记E(k)是前n个数排序后的第k个数，例如，E(4) = 8以及E(6) = 9。</p>
+<p>对1 ≤ n ≤ 100000按照rad(n)排序后，求E(10000)。</p>
+<hr>
+<hr>
+<h1 id="Problem_125"><a href="https://projecteuler.net/problem=125" target="_blank" rel="external">Problem 125</a></h1><hr>
+<p><strong>Palindromic sums</strong></p>
+<p>The palindromic number 595 is interesting because it can be written as the sum of consecutive squares: 6<sup>2</sup> + 7<sup>2</sup> + 8<sup>2</sup> + 9<sup>2</sup> + 10<sup>2</sup> + 11<sup>2</sup> + 12<sup>2</sup>.</p>
+<p>There are exactly eleven palindromes below one-thousand that can be written as consecutive square sums, and the sum of these palindromes is 4164. Note that 1 = 0<sup>2</sup> + 1<sup>2</sup> has not been included as this problem is concerned with the squares of positive integers.</p>
+<p>Find the sum of all the numbers less than 10<sup>8</sup> that are both palindromic and can be written as the sum of consecutive squares.</p>
+<hr>
+<p><strong>回文和</strong></p>
+<p>回文数595很有趣，因为它可以写成连续平方数的和：6<sup>2</sup> + 7<sup>2</sup> + 8<sup>2</sup> + 9<sup>2</sup> + 10<sup>2</sup> + 11<sup>2</sup> + 12<sup>2</sup>。</p>
+<p>恰好有十一个小于一千的回文数可以写成连续平方数的和，这些回文数的和是4164。注意1 = 0<sup>2</sup> + 1<sup>2</sup>并没有算在内，因为本题只考虑正整数的平方。</p>
+<p>在小于10<sup>8</sup>的数中，找出所有可以写成连续平方数的和的回文数，并求它们的和。</p>
+<hr>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Problem76-100/">Problem 76 - 100</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Problem126-150/">Problem 126 - 150</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+
+    
+      <div class="comments" id="comments">
+        
+          <div class="ds-thread" data-thread-key="Problem101-125/"
+               data-title="Problem 101 - 125" data-url="http://yoursite.com/Problem101-125/">
+          </div>
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/avatar.png" alt="sx349" />
+          <p class="site-author-name">Leonhard Euler(1707-1783)</p>
+        </div>
+        <p class="site-description motion-element"><br>Project Euler | 欧拉计划<br>中文翻译站</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name" style="font-size:14px">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://sx349.github.io" target="_blank">译者博客</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="https://projecteuler.net" target="_blank">Project Euler</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="http://pe.spiritzhang.com/" target="_blank">官方汉化</a>
+              </span><br>
+            
+              <span class="links-of-author-item">
+              <a href="http://jakwings.is-programmer.com/Project_Euler" target="_blank">饮水思源汉化</a>
+              </span><br>
+            
+          
+        </div>
+        
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_101"><span class="nav-number">1.</span> <span class="nav-text">Problem 101</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_102"><span class="nav-number">2.</span> <span class="nav-text">Problem 102</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_103"><span class="nav-number">3.</span> <span class="nav-text">Problem 103</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_104"><span class="nav-number">4.</span> <span class="nav-text">Problem 104</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_105"><span class="nav-number">5.</span> <span class="nav-text">Problem 105</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_106"><span class="nav-number">6.</span> <span class="nav-text">Problem 106</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_107"><span class="nav-number">7.</span> <span class="nav-text">Problem 107</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_108"><span class="nav-number">8.</span> <span class="nav-text">Problem 108</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_109"><span class="nav-number">9.</span> <span class="nav-text">Problem 109</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_110"><span class="nav-number">10.</span> <span class="nav-text">Problem 110</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_111"><span class="nav-number">11.</span> <span class="nav-text">Problem 111</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_112"><span class="nav-number">12.</span> <span class="nav-text">Problem 112</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_113"><span class="nav-number">13.</span> <span class="nav-text">Problem 113</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_114"><span class="nav-number">14.</span> <span class="nav-text">Problem 114</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_115"><span class="nav-number">15.</span> <span class="nav-text">Problem 115</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_116"><span class="nav-number">16.</span> <span class="nav-text">Problem 116</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_117"><span class="nav-number">17.</span> <span class="nav-text">Problem 117</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_118"><span class="nav-number">18.</span> <span class="nav-text">Problem 118</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_119"><span class="nav-number">19.</span> <span class="nav-text">Problem 119</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_120"><span class="nav-number">20.</span> <span class="nav-text">Problem 120</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_121"><span class="nav-number">21.</span> <span class="nav-text">Problem 121</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_122"><span class="nav-number">22.</span> <span class="nav-text">Problem 122</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_123"><span class="nav-number">23.</span> <span class="nav-text">Problem 123</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_124"><span class="nav-number">24.</span> <span class="nav-text">Problem 124</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_125"><span class="nav-number">25.</span> <span class="nav-text">Problem 125</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  2015
+  <span class="with-love"><i class="icon-heart"></i></span>
+  <span class="author"><a href="http://sx349.github.io">sx349</a></span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist 
+  </a>by <a href="http://notes.iissnan.com/">IIssNan</a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sx349"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+
+
+  
+  
+
+</body>
+</html>

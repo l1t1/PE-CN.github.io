@@ -185,7 +185,7 @@ th {
 }
 body {
   position: relative;
-  font-family: Lato, Verdana, Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-family: Verdana, Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   color: #555;
@@ -664,6 +664,11 @@ td {
 .icon-star:before {
   content: "\e62d";
 }
+.zh {
+  font-family: STKaiti, Kaiti, Kai, serif;
+  font-style: normal;
+  font-size: 18px;
+}
 .post pre,
 .post .highlight {
   background: #f7f7f7;
@@ -1135,7 +1140,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffe;
+  background: #ff2dff;
 }
 .sidebar-nav {
   margin: 0;
@@ -1928,6 +1933,7 @@ h6 {
 }
 p {
   margin: 10px 0;
+  padding-bottom: 2px;
 }
 a {
   border-bottom-color: #ccc;
