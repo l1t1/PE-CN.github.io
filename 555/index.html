@@ -47,7 +47,7 @@
 
 
 
-  <title> Problem 445 // Project Euler | 欧拉计划 </title>
+  <title> Problem 555 // Project Euler | 欧拉计划 </title>
 </head>
 
 <body>
@@ -160,7 +160,7 @@
           
           
             
-              Problem 445
+              Problem 555
             
           
         </h1>
@@ -168,7 +168,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2013-11-16
+          发表于 2016-04-10
         </span>
 
         
@@ -177,8 +177,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/445/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="445/"></span>
+            <a href="/555/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="555/"></span>
             </a>
           </span>
           
@@ -193,16 +193,32 @@
 
       
         <hr>
-<h1 id="Problem_445"><a href="https://projecteuler.net/problem=445" target="_blank" rel="external">Problem 445</a></h1><hr>
-<p><strong>Retractions A</strong></p>
-<p>For every integer n&gt;1, the family of functions f<sub>n,a,b</sub>  is defined by f<sub>n,a,b</sub>(x)≡ax+b mod n for a,b,x integer and  0&lt;a&lt;n, 0≤b&lt;n, 0≤x&lt;n.<br>We will call f<sub>n,a,b</sub> a retraction if f<sub>n,a,b</sub>(f<sub>n,a,b</sub>(x))≡f<sub>n,a,b</sub>(x) mod n for every 0≤x&lt;n.<br>Let R(n) be the number of retractions for n.</p>
-<p>You are given that<br>∑ R(c) for c=C(100 000,k), and 1 ≤ k ≤99 999 ≡628701600 (mod 1 000 000 007).<br>(C(n,k) is the binomial coefficient).</p>
-<p>Find ∑ R(c) for c=C(10 000 000,k), and 1 ≤k≤ 9 999 999.<br>Give your answer modulo 1 000 000 007.</p>
+<h1 id="Problem_555"><a href="https://projecteuler.net/problem=555" target="_blank" rel="external">Problem 555</a></h1><hr>
+<p><strong>McCarthy 91 function</strong></p>
+<p>The McCarthy 91 function is defined as follows:</p>
+<p>$M_{91}(n) =  \begin{cases} n - 10 &amp; \text{if } n &gt; 100 \\ M_{91}(M_{91}(n+11)) &amp; \text{if } 0 \leq n \leq 100 \end{cases}$</p>
+<p>We can generalize this definition by abstracting away the constants into new variables:</p>
+<p>$M_{m,k,s}(n) =  \begin{cases} n - s &amp; \text{if } n &gt; m \\ M_{m,k,s}(M_{m,k,s}(n+k)) &amp; \text{if } 0 \leq n \leq m \end{cases}$</p>
+<p>This way, we have $M_{91} = M_{100,11,10}$.</p>
+<p>Let $F_{m,k,s}$ be the set of fixed points of $M_{m,k,s}$. That is, </p>
+<p>$F_{m,k,s}= \{ n \in \mathbb{N} \, | \, M_{m,k,s}(n) = n \}$</p>
+<p>For example, the only fixed point of $M_{91}$ is $n = 91$. In other words, $F_{100,11,10}= \{91\}$.</p>
+<p>Now, define $SF(m,k,s)$ as the sum of the elements in $F_{m,k,s}$ and let $S(p,m) = \displaystyle \sum_{1 \leq s &lt; k \leq p}{SF(m,k,s)}$.</p>
+<p>For example, $S(10, 10) = 225$ and $S(1000, 1000)=208724467$.</p>
+<p>Find $S(10^6, 10^6)$.</p>
 <hr>
-<p><strong>撤销函数 A</strong></p>
-<p>对于任意整数n&gt;1，函数族f<sub>n,a,b</sub>按如下方式定义：f<sub>n,a,b</sub>(x)≡ax+b mod n，其中a,b,x都是整数，且0&lt;a&lt;n，0≤b&lt;n，0≤x&lt;n。<br>我们称f<sub>n,a,b</sub>为撤销函数，当对于0≤x&lt;n均有在模n意义下f<sub>n,a,b</sub>(f<sub>n,a,b</sub>(x))≡f<sub>n,a,b</sub>(x)。<br>记R(n)是给定n下撤销函数的数目。</p>
-<p>已知<br>对于c=C(100 000,k)且1 ≤ k ≤99 999，∑ R(c)≡628701600 (mod 1 000 000 007)。<br>（C(n,k)是二项式系数）。</p>
-<p>对于c=C(100 000,k)且1 ≤ k ≤9 999 999，求∑ R(c)。<br>给出其对1 000 000 007取模的余数。</p>
+<p><strong>麦卡锡91函数</strong></p>
+<p>麦卡锡91函数的定义如下：</p>
+<p>$M_{91}(n) =  \begin{cases} n - 10 &amp; \text{if } n &gt; 100 \\ M_{91}(M_{91}(n+11)) &amp; \text{if } 0 \leq n \leq 100 \end{cases}$</p>
+<p>通过将上述定义中的常数抽象为变量，我们可以将这个定义一般化：</p>
+<p>$M_{m,k,s}(n) =  \begin{cases} n - s &amp; \text{if } n &gt; m \\ M_{m,k,s}(M_{m,k,s}(n+k)) &amp; \text{if } 0 \leq n \leq m \end{cases}$</p>
+<p>这样一来，我们有$M_{91} = M_{100,11,10}$。</p>
+<p>令$F_{m,k,s}$为$M_{m,k,s}$的不动点所构成的集合，也就是说：</p>
+<p>$F_{m,k,s}= \{ n \in \mathbb{N} \, | \, M_{m,k,s}(n) = n \}$</p>
+<p>例如，$M_{91}$只有一个不动点$n = 91$，换言之就是$F_{100,11,10}= \{91\}$。</p>
+<p>定义$SF(m,k,s)$为$F_{m,k,s}$中元素的和，并记$S(p,m) = \displaystyle \sum_{1 \leq s &lt; k \leq p}{SF(m,k,s)}$。</p>
+<p>已知$S(10, 10) = 225$以及$S(1000, 1000)=208724467$。</p>
+<p>求$S(10^6, 10^6)$。</p>
 <hr>
 
       
@@ -215,13 +231,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/446/">Problem 446</a>
+              <a href="/554/">Problem 554</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/448/">Problem 448</a>
+              <a href="/556/">Problem 556</a>
             
           </div>
         </div>
@@ -241,8 +257,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="445/"
-               data-title="Problem 445" data-url="http://yoursite.com/445/">
+          <div class="ds-thread" data-thread-key="555/"
+               data-title="Problem 555" data-url="http://yoursite.com/555/">
           </div>
         
       </div>
@@ -333,7 +349,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_445"><span class="nav-number">1.</span> <span class="nav-text">Problem 445</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_555"><span class="nav-number">1.</span> <span class="nav-text">Problem 555</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

@@ -47,7 +47,7 @@
 
 
 
-  <title> Problem 445 // Project Euler | 欧拉计划 </title>
+  <title> Problem 556 // Project Euler | 欧拉计划 </title>
 </head>
 
 <body>
@@ -160,7 +160,7 @@
           
           
             
-              Problem 445
+              Problem 556
             
           
         </h1>
@@ -168,7 +168,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2013-11-16
+          发表于 2016-04-17
         </span>
 
         
@@ -177,8 +177,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/445/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="445/"></span>
+            <a href="/556/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="556/"></span>
             </a>
           </span>
           
@@ -193,16 +193,24 @@
 
       
         <hr>
-<h1 id="Problem_445"><a href="https://projecteuler.net/problem=445" target="_blank" rel="external">Problem 445</a></h1><hr>
-<p><strong>Retractions A</strong></p>
-<p>For every integer n&gt;1, the family of functions f<sub>n,a,b</sub>  is defined by f<sub>n,a,b</sub>(x)≡ax+b mod n for a,b,x integer and  0&lt;a&lt;n, 0≤b&lt;n, 0≤x&lt;n.<br>We will call f<sub>n,a,b</sub> a retraction if f<sub>n,a,b</sub>(f<sub>n,a,b</sub>(x))≡f<sub>n,a,b</sub>(x) mod n for every 0≤x&lt;n.<br>Let R(n) be the number of retractions for n.</p>
-<p>You are given that<br>∑ R(c) for c=C(100 000,k), and 1 ≤ k ≤99 999 ≡628701600 (mod 1 000 000 007).<br>(C(n,k) is the binomial coefficient).</p>
-<p>Find ∑ R(c) for c=C(10 000 000,k), and 1 ≤k≤ 9 999 999.<br>Give your answer modulo 1 000 000 007.</p>
+<h1 id="Problem_556"><a href="https://projecteuler.net/problem=556" target="_blank" rel="external">Problem 556</a></h1><hr>
+<p><strong>Squarefree Gaussian Integers</strong></p>
+<p>A <b>Gaussian integer</b> is a number z = a + bi where a, b are integers and i<sup>2</sup> = -1.<br>Gaussian integers are a subset of the complex numbers, and the integers are the subset of Gaussian integers for which b = 0.</p>
+<p>A Gaussian integer <b>unit</b> is one for which a<sup>2</sup> + b<sup>2</sup> = 1, i.e. one of 1, i, -1, -i.<br>Let’s define a <i>proper</i> Gaussian integer as one for which a &gt; 0 and b ≥ 0.</p>
+<p>A Gaussian integer z<sub>1</sub> = a<sub>1</sub> + b<sub>1</sub>i is said to be divisible by z<sub>2</sub> = a<sub>2</sub> + b<sub>2</sub>i if z<sub>3</sub> = a<sub>3</sub> + b<sub>3</sub>i = z<sub>1</sub>/z<sub>2</sub> is a Gaussian integer.<br>$$\frac {z_1} {z_2} = \frac {a_1 + b_1 i} {a_2 + b_2 i} = \frac {(a_1 + b_1 i)(a_2 - b_2 i)} {(a_2 + b_2 i)(a_2 - b_2 i)} = \frac {a_1 a_2 + b_1 b_2} {a_2^2 + b_2^2} + \frac  {a_2 b_1 - a_1 b_2}  {a_2^2 + b_2^2}i = a_3 + b_3 i$$<br>So, z<sub>1</sub> is divisible by z<sub>2</sub> if $\frac {a_1 a_2 + b_1 b_2} {a_2^2 + b_2^2}$ and $\frac  {a_2 b_1 - a_1 b_2}  {a_2^2 + b_2^2}$ are integers.<br>For example, 2 is divisible by 1 + i because 2/(1 + i) = 1 - i is a Gaussian integer.</p>
+<p>A <b>Gaussian prime</b> is a Gaussian integer that is divisible only by a unit, itself or itself times a unit.<br>For example, 1 + 2i is a Gaussian prime, because it is only divisible by 1, i, -1, -i, 1 + 2i, i(1 + 2i) = i - 2, -(1 + 2i) = -1 - 2i and -i(1 + 2i) = 2 - i.<br>2 is not a Gaussian prime as it is divisible by 1 + i.</p>
+<p>A Gaussian integer can be uniquely factored as the product of a unit and proper Gaussian primes.<br>For example 2 = -i(1 + i)<sup>2</sup> and 1 + 3i = (1 + i)(2 + i).<br>A Gaussian integer is said to be squarefree if its prime factorization does not contain repeated proper Gaussian primes.<br>So 2 is not squarefree over the Gaussian integers, but 1 + 3i is.<br>Units and Gaussian primes are squarefree by definition.</p>
+<p>Let f(n) be the count of proper squarefree Gaussian integers with a<sup>2</sup> + b<sup>2</sup> ≤ n.<br>For example f(10) = 7 because 1, 1 + i, 1 + 2i, 1 + 3i = (1 + i)(2 + i), 2 + i, 3 and 3 + i = -i(1 + i)(1 + 2i) are squarefree, while 2 = -i(1 + i)<sup>2</sup> and 2 + 2i = -i(1 + i)<sup>3</sup> are not.<br>You are given f(10<sup>2</sup>) = 54, f(10<sup>4</sup>) = 5218 and f(10<sup>8</sup>) = 52126906.</p>
+<p>Find f(10<sup>14</sup>).</p>
 <hr>
-<p><strong>撤销函数 A</strong></p>
-<p>对于任意整数n&gt;1，函数族f<sub>n,a,b</sub>按如下方式定义：f<sub>n,a,b</sub>(x)≡ax+b mod n，其中a,b,x都是整数，且0&lt;a&lt;n，0≤b&lt;n，0≤x&lt;n。<br>我们称f<sub>n,a,b</sub>为撤销函数，当对于0≤x&lt;n均有在模n意义下f<sub>n,a,b</sub>(f<sub>n,a,b</sub>(x))≡f<sub>n,a,b</sub>(x)。<br>记R(n)是给定n下撤销函数的数目。</p>
-<p>已知<br>对于c=C(100 000,k)且1 ≤ k ≤99 999，∑ R(c)≡628701600 (mod 1 000 000 007)。<br>（C(n,k)是二项式系数）。</p>
-<p>对于c=C(100 000,k)且1 ≤ k ≤9 999 999，求∑ R(c)。<br>给出其对1 000 000 007取模的余数。</p>
+<p><strong>无平方因子的高斯整数</strong></p>
+<p><b>高斯整数</b>是指形如z = a + bi的数，其中a, b均为整数，i<sup>2</sup> = -1。<br>高斯整数是复数的一个子集，而一般意义上的整数又是高斯整数取b = 0的一个子集。</p>
+<p>高斯整数的<b>单位</b>满足a<sup>2</sup> + b<sup>2</sup> = 1，这样的数包括1, i, -1, -i。<br>我们定义<i class="zh">真</i>高斯整数为满足a &gt; 0且b ≥ 0的高斯整数。</p>
+<p>如果z<sub>3</sub> = a<sub>3</sub> + b<sub>3</sub>i = z<sub>1</sub>/z<sub>2</sub>仍然是高斯整数，我们就称高斯整数z<sub>1</sub> = a<sub>1</sub> + b<sub>1</sub>i能够被z<sub>2</sub> = a<sub>2</sub> + b<sub>2</sub>i整除。<br>$$\frac {z_1} {z_2} = \frac {a_1 + b_1 i} {a_2 + b_2 i} = \frac {(a_1 + b_1 i)(a_2 - b_2 i)} {(a_2 + b_2 i)(a_2 - b_2 i)} = \frac {a_1 a_2 + b_1 b_2} {a_2^2 + b_2^2} + \frac  {a_2 b_1 - a_1 b_2}  {a_2^2 + b_2^2}i = a_3 + b_3 i$$<br>因此，z<sub>1</sub>被z<sub>2</sub>整除当且仅当$\frac {a_1 a_2 + b_1 b_2} {a_2^2 + b_2^2}$和$\frac  {a_2 b_1 - a_1 b_2}  {a_2^2 + b_2^2}$都是整数。<br>例如，2被1 + i整除，因为2/(1 + i) = 1 - i是高斯整数。</p>
+<p><b>高斯素数</b>是指只能被单位、其本身或其本身乘以单位所整除的高斯整数。<br>例如，1 + 2i是高斯素数，因为它只能被1, i, -1, -i, 1 + 2i, i(1 + 2i) = i - 2, -(1 + 2i) = -1 - 2i和-i(1 + 2i) = 2 - i整除。<br>2不是高斯素数，因为它被1 + i整除。</p>
+<p>任意高斯整数可以唯一地分解为一个单位和一系列真高斯素数的乘积。<br>例如，2 = -i(1 + i)<sup>2</sup>，以及1 + 3i = (1 + i)(2 + i)。<br>如果一个高斯整数的素数分解中不包含重复的真高斯素数，我们称这个高斯整数无平方因子。<br>因此在高斯整数中，2不是无平方因子的，而1 + 3i是无平方因子的。<br>根据定义，单位和高斯素数都是无平方因子的。</p>
+<p>记f(n)为所有满足a<sup>2</sup> + b<sup>2</sup> ≤ n的无平方因子真高斯整数的数目。<br>例如，f(10) = 7因为1, 1 + i, 1 + 2i, 1 + 3i = (1 + i)(2 + i), 2 + i, 3和3 + i = -i(1 + i)(1 + 2i)是无平方因子的，而2 = -i(1 + i)<sup>2</sup>和2 + 2i = -i(1 + i)<sup>3</sup>不是。<br>已知f(10<sup>2</sup>) = 54，f(10<sup>4</sup>) = 5218以及f(10<sup>8</sup>) = 52126906。</p>
+<p>求f(10<sup>14</sup>)。</p>
 <hr>
 
       
@@ -215,13 +223,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/446/">Problem 446</a>
+              <a href="/555/">Problem 555</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/448/">Problem 448</a>
             
           </div>
         </div>
@@ -241,8 +247,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="445/"
-               data-title="Problem 445" data-url="http://yoursite.com/445/">
+          <div class="ds-thread" data-thread-key="556/"
+               data-title="Problem 556" data-url="http://yoursite.com/556/">
           </div>
         
       </div>
@@ -333,7 +339,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_445"><span class="nav-number">1.</span> <span class="nav-text">Problem 445</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem_556"><span class="nav-number">1.</span> <span class="nav-text">Problem 556</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
